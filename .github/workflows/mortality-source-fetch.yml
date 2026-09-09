@@ -1,0 +1,82 @@
+name: Retrieve official mortality sources
+on:
+  push:
+    paths:
+      - '.github/workflows/mortality-source-fetch.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Retrieve public source pages and linked WHO tables
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, urllib.request, urllib.parse
+          from html.parser import HTMLParser
+          root = pathlib.Path('official_sources'); root.mkdir()
+          allowed = {'www.who.int','cdn.who.int','rosstat.gov.ru','www.rosstat.gov.ru'}
+          manifest = {'purpose':'research-only source retrieval; no clinical prediction',
+                      'rights':'External source rights retained; not relicensed under repository license',
+                      'files':[], 'errors':[]}
+          class Links(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.links=[]; self.href=None; self.text=[]
+              def handle_starttag(self, tag, attrs):
+                  if tag=='a': self.href=dict(attrs).get('href'); self.text=[]
+              def handle_data(self, data):
+                  if self.href: self.text.append(data)
+              def handle_endtag(self, tag):
+                  if tag=='a' and self.href:
+                      self.links.append((' '.join(self.text).strip(),self.href)); self.href=None
+          def retrieve(url, name, max_bytes=40000000):
+              p=urllib.parse.urlparse(url)
+              if p.scheme!='https' or p.hostname not in allowed: raise ValueError('Unapproved public-source host')
+              req=urllib.request.Request(url,headers={'User-Agent':'MortalityResearch/0.3 (public-source reproducibility)'})
+              with urllib.request.urlopen(req,timeout=35) as response:
+                  final=urllib.parse.urlparse(response.url)
+                  if final.scheme!='https' or final.hostname not in allowed: raise ValueError('Redirect outside source allowlist')
+                  data=response.read(max_bytes+1)
+                  if len(data)>max_bytes: raise ValueError('Source exceeds size limit')
+                  content_type=response.headers.get('Content-Type','')
+              (root/name).write_bytes(data)
+              record={'url':url,'file':name,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'content_type':content_type}
+              manifest['files'].append(record); print('SOURCE',json.dumps(record),flush=True)
+              return data
+          pages={
+              'who':'https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death',
+              'rosstat':'https://rosstat.gov.ru/folder/210/document/13218'}
+          for key,url in pages.items():
+              try:
+                  data=retrieve(url,key+'.html',3000000)
+                  parser=Links(); parser.feed(data.decode('utf-8',errors='replace'))
+                  links=[{'label':label,'url':urllib.parse.urljoin(url,href)} for label,href in parser.links]
+                  selected=[r for r in links if any(ext in r['url'].lower() for ext in ('.xls','.zip','.rar','.pdf','.htm'))]
+                  (root/(key+'_links.json')).write_text(json.dumps(selected,ensure_ascii=False,indent=2),encoding='utf-8')
+                  print('LINKS',key,json.dumps(selected,ensure_ascii=False),flush=True)
+                  if key=='who':
+                      candidates=[r for r in selected if '.xls' in r['url'].lower() and '2021' in r['label']]
+                      candidates += [r for r in selected if 'ghe2021_cod_methods.pdf' in r['url']]
+                      unique={r['url']:r for r in candidates}
+                      for i,r in enumerate(list(unique.values())[:6]):
+                          try:
+                              base=pathlib.PurePosixPath(urllib.parse.urlparse(r['url']).path).name
+                              retrieve(r['url'],str(i)+'_'+base)
+                          except Exception as exc:
+                              manifest['errors'].append({'url':r['url'],'error':str(exc)})
+              except Exception as exc:
+                  manifest['errors'].append({'url':url,'error':str(exc)})
+          (root/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+          print('MANIFEST',json.dumps(manifest,ensure_ascii=False),flush=True)
+          PY
+      - name: Retain research inputs briefly
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: official-mortality-sources
+          path: official_sources/
+          retention-days: 1
+          if-no-files-found: error
