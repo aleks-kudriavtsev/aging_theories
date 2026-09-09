@@ -1,0 +1,78 @@
+{
+  "version": "0.1",
+  "assembled_on": "2026-09-09",
+  "status": "seed_extraction_not_a_completed_systematic_review",
+  "rules": {"null": "not_extracted_not_proven_absent", "effect_not_absolute_risk": true, "cross_study_delta_C_not_head_to_head": true, "formal_risk_of_bias_assessment": "pending", "independent_second_extraction": "pending", "full_corrected_coefficients": "not_imported"},
+  "estimate_defaults": {"assay_platform": null, "diagnostic_cutoff": null, "reference_interval": null, "country_specific_validation_RU_DE_US": null, "baseline_hazard": null, "usable_as_standalone_absolute_mortality_risk": false},
+  "studies": [
+    {
+      "id": "CKDPC2010", "year": 2010, "doi": "10.1016/S0140-6736(10)60674-5", "pmid": "20483451", "url": "https://pubmed.ncbi.nlm.nih.gov/20483451/", "extraction_level": "original_abstract", "design": "collaborative_cohort_meta_analysis", "population": "general_population", "age_range": null, "sex_age_handling": "pooled_multivariable_adjusted_not_sex_age_specific_coefficients", "horizon_years": null, "outcome": "all_cause_mortality", "note": "Historical eGFR definition must not be silently replaced by CKD-EPI 2021 when reusing risk curves.",
+      "estimates": [
+        {"marker": "eGFR", "contrast": "60 vs 95 mL/min/1.73m2", "metric": "HR", "value": 1.18, "interval": [1.05,1.32], "interval_type": "95% CI"},
+        {"marker": "eGFR", "contrast": "45 vs 95 mL/min/1.73m2", "metric": "HR", "value": 1.57, "interval": [1.39,1.78], "interval_type": "95% CI"},
+        {"marker": "eGFR", "contrast": "15 vs 95 mL/min/1.73m2", "metric": "HR", "value": 3.14, "interval": [2.39,4.13], "interval_type": "95% CI"},
+        {"marker": "UACR", "contrast": "1.1 vs 0.6 mg/mmol", "metric": "HR", "value": 1.20, "interval": [1.15,1.26], "interval_type": "95% CI"},
+        {"marker": "UACR", "contrast": "3.4 vs 0.6 mg/mmol", "metric": "HR", "value": 1.63, "interval": [1.50,1.77], "interval_type": "95% CI"},
+        {"marker": "UACR", "contrast": "33.9 vs 0.6 mg/mmol", "metric": "HR", "value": 2.22, "interval": [1.97,2.51], "interval_type": "95% CI"}
+      ]
+    },
+    {
+      "id": "HF_BIOMARKERS2025", "year": 2025, "doi": null, "pmid": "41168946", "url": "https://pubmed.ncbi.nlm.nih.gov/41168946/", "extraction_level": "original_abstract_search_index", "design": "9_cohort_individual_participant_meta_analysis", "population": "41427_participants_without_HF", "events": 4599, "mean_followup_years": 11, "horizon_years": null, "age_range": null, "sex_age_handling": "subgroup_coefficients_not_extracted", "outcome": "incident_heart_failure_NOT_death", "note": "Mean follow-up is not a validated fixed prediction horizon.",
+      "estimates": [
+        {"marker": "NT-proBNP", "contrast": "per_doubling", "metric": "HR", "value": 1.47, "interval": [1.38,1.56], "interval_type": "95% CI"},
+        {"marker": "NT-proBNP", "contrast": "added_to_study_base_model", "metric": "delta_C", "value": 0.030, "interval": [0.021,0.040], "interval_type": "95% CI"},
+        {"marker": "hs-cTnT", "contrast": "per_doubling", "metric": "HR", "value": 1.41, "interval": [1.30,1.54], "interval_type": "95% CI"},
+        {"marker": "hs-cTnT", "contrast": "added_to_study_base_model", "metric": "delta_C", "value": 0.008, "interval": [0.005,0.011], "interval_type": "95% CI"},
+        {"marker": "hs-cTnT", "contrast": "added_AFTER_NT-proBNP", "metric": "delta_C", "value": 0.002, "interval": [0.001,0.003], "interval_type": "95% CI"}
+      ]
+    },
+    {
+      "id": "NTBNP2016", "year": 2016, "doi": "10.1016/S2213-8587(16)30196-6", "pmid": "27599814", "url": "https://pubmed.ncbi.nlm.nih.gov/27599814/", "extraction_level": "original_abstract", "design": "40_prospective_study_meta_analysis", "population": "95617_without_baseline_CVD", "age_range": null, "sex_age_handling": "full_stratification_not_extracted", "horizon_years": null,
+      "estimates": [
+        {"marker": "NT-proBNP", "outcome": "CHD_or_stroke", "contrast": "top_vs_bottom_third", "metric": "RR", "value": 1.76, "interval": [1.56,1.98], "interval_type": "95% CI"},
+        {"marker": "NT-proBNP", "outcome": "CHD_or_stroke_or_HF", "contrast": "top_vs_bottom_third", "metric": "RR", "value": 2.00, "interval": [1.77,2.26], "interval_type": "95% CI"},
+        {"marker": "NT-proBNP", "outcome": "CHD_or_stroke", "contrast": "added_to_conventional_risk_factors", "metric": "delta_C", "value": 0.012, "interval": [0.010,0.014], "interval_type": "95% CI"},
+        {"marker": "NT-proBNP", "outcome": "CHD_or_stroke_or_HF", "contrast": "added_to_conventional_risk_factors", "metric": "delta_C", "value": 0.019, "interval": [0.016,0.022], "interval_type": "95% CI"}
+      ]
+    },
+    {
+      "id": "CRP2012", "year": 2012, "doi": "10.1056/NEJMoa1107477", "pmid": "23034020", "url": "https://pubmed.ncbi.nlm.nih.gov/23034020/", "extraction_level": "original_abstract", "design": "prospective_cohort_meta_analysis", "population": "primary_CVD_prevention", "age_range": null, "sex_age_handling": "adjusted_not_complete_sex_age_coefficient_extraction", "horizon_years": null, "outcome": "cardiovascular_events_NOT_all_cause_mortality",
+      "estimates": [{"marker": "hs-CRP", "contrast": "added_to_conventional_risk_factors", "metric": "delta_C", "value": 0.0039, "interval": null, "interval_type": null}]
+    },
+    {
+      "id": "PREVENT", "year": 2024, "doi": "10.1161/CIRCULATIONAHA.123.067626", "pmid": "37947085", "url": "https://stanfordhealthcare.org/publications/894/894095.html", "extraction_level": "author_institutional_abstract", "design": "derivation_and_external_validation", "population": "US_no_known_CVD", "age_range": [30,79], "sex_age_handling": "sex_specific_age_timescale", "horizon_years": null, "horizon_note": "Horizon-specific corrected specifications must be extracted before implementation.", "outcome": "incident_CVD_NOT_all_cause_mortality", "derivation_n": 3281919, "external_validation_n": 3330085, "note": "Intervals below are interquartile intervals across validations, NOT 95% confidence intervals. Optional block is UACR+HbA1c+social deprivation jointly.",
+      "estimates": [
+        {"sex": "female", "metric": "median_external_C", "value": 0.794, "interval": [0.763,0.809], "interval_type": "interquartile_interval"},
+        {"sex": "male", "metric": "median_external_C", "value": 0.757, "interval": [0.727,0.778], "interval_type": "interquartile_interval"},
+        {"sex": "female", "metric": "median_calibration_slope", "value": 1.03, "interval": [0.81,1.16], "interval_type": "interquartile_interval"},
+        {"sex": "male", "metric": "median_calibration_slope", "value": 0.94, "interval": [0.81,1.13], "interval_type": "interquartile_interval"},
+        {"marker": "UACR+HbA1c+SDI", "sex": "female", "contrast": "joint_optional_block_added", "metric": "delta_C", "value": 0.004, "interval": [0.004,0.005], "interval_type": "interquartile_interval"},
+        {"marker": "UACR+HbA1c+SDI", "sex": "male", "contrast": "joint_optional_block_added", "metric": "delta_C", "value": 0.005, "interval": [0.004,0.007], "interval_type": "interquartile_interval"}
+      ]
+    },
+    {
+      "id": "KFRE2016", "year": 2016, "doi": "10.1001/jama.2015.18202", "pmid": "26757465", "url": "https://pubmed.ncbi.nlm.nih.gov/26757465/", "extraction_level": "original_abstract", "design": "31_cohort_multinational_validation", "population": "721357_with_CKD_stages_3_to_5", "events": 23829, "age_range": null, "sex_age_handling": "age_and_sex_in_four_variable_model", "outcome": "kidney_failure_dialysis_or_transplant_NOT_death", "note": "Region-specific calibration must be checked; published regional correction factors are not universal national constants.",
+      "estimates": [
+        {"metric": "C", "horizon_years": 2, "value": 0.90, "interval": [0.89,0.92], "interval_type": "95% CI"},
+        {"metric": "C", "horizon_years": 5, "value": 0.88, "interval": [0.86,0.90], "interval_type": "95% CI"}
+      ]
+    },
+    {
+      "id": "BODE2004", "year": 2004, "doi": "10.1056/NEJMoa021322", "pmid": "14999112", "url": "https://pubmed.ncbi.nlm.nih.gov/14999112/", "extraction_level": "original_abstract", "design": "prognostic_index_development_and_validation", "population": "established_COPD", "age_range": null, "sex_age_handling": "subgroup_applicability_not_fully_extracted", "horizon_years": null,
+      "estimates": [
+        {"marker": "BODE_score", "outcome": "all_cause_mortality", "contrast": "per_point", "metric": "HR", "value": 1.34, "interval": [1.26,1.42], "interval_type": "95% CI"},
+        {"marker": "BODE_score", "outcome": "respiratory_mortality", "contrast": "per_point", "metric": "HR", "value": 1.62, "interval": [1.48,1.77], "interval_type": "95% CI"},
+        {"marker": "BODE_score", "outcome": "mortality", "metric": "C", "value": 0.74, "interval": null, "interval_type": null},
+        {"marker": "FEV1", "outcome": "mortality", "metric": "C", "value": 0.65, "interval": null, "interval_type": null}
+      ]
+    },
+    {
+      "id": "MAGGIC_VALIDATION2014", "year": 2014, "doi": "10.1111/ejhf.32", "pmid": "24464911", "url": "https://pubmed.ncbi.nlm.nih.gov/24464911/", "extraction_level": "original_abstract", "design": "external_registry_validation", "population": "51043_Swedish_HF_registry_patients", "age_range": null, "sex_age_handling": "subgroup_metrics_not_extracted", "horizon_years": 3, "outcome": "all_cause_mortality_in_established_HF",
+      "estimates": [
+        {"metric": "C", "value": 0.741, "interval": null, "interval_type": null},
+        {"metric": "observed_death_proportion", "value": 0.394, "interval": null, "interval_type": null},
+        {"metric": "predicted_death_proportion", "value": 0.364, "interval": null, "interval_type": null}
+      ]
+    }
+  ]
+}

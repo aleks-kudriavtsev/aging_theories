@@ -1,0 +1,43 @@
+{
+  "version": "0.1",
+  "assembled_on": "2026-09-09",
+  "status": "partial_source_snapshot_NOT_a_harmonized_top20",
+  "common_comparison_year": null,
+  "rank_policy": "Never rank across aggregation levels or countries until a complete nonoverlapping ICD crosswalk is available.",
+  "sources": {
+    "CDC2024": "https://www.cdc.gov/nchs/fastats/leading-causes-of-death.htm",
+    "DE2024press": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2025/10/PD25_377_23211.html",
+    "DE2024cardio": "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Todesursachen/Tabellen/sterbefaelle-herz-kreislauf-erkrankungen-insgesamt.html"
+  },
+  "coverage": {
+    "RU": {"status": "missing_primary_national_detail", "latest_verified_year": null, "harmonized_top20_complete": false, "note": "National detailed primary counts were not retrieved and verified in this iteration; no inference of zero deaths or public unavailability."},
+    "DE": {"status": "selected_2024_final_tables", "year": 2024, "harmonized_top20_complete": false},
+    "US": {"status": "2024_final_national_top10_source", "year": 2024, "harmonized_top20_complete": false}
+  },
+  "observation_defaults": {"year": 2024, "sex": "both", "age_group": "all_ages", "measure": "death_count", "death_basis": "underlying_cause", "data_status": "final", "standardized_rate": null, "population_denominator": null, "harmonized_rank": null},
+  "observations": [
+    {"country": "US", "source": "CDC2024", "source_rank": 1, "rank_scope": "national_all_cause_top10", "cause": "Heart disease", "icd10": null, "deaths": 683491, "level": "CDC_broad_group", "target_status": "candidate_pending_infectious_subcode_review"},
+    {"country": "US", "source": "CDC2024", "source_rank": 2, "rank_scope": "national_all_cause_top10", "cause": "Cancer", "icd10": null, "deaths": 619876, "level": "CDC_broad_group", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "US", "source": "CDC2024", "source_rank": 3, "rank_scope": "national_all_cause_top10", "cause": "Accidents (unintentional injuries)", "icd10": null, "deaths": 197449, "level": "CDC_broad_group", "target_status": "excluded_external_competing"},
+    {"country": "US", "source": "CDC2024", "source_rank": 4, "rank_scope": "national_all_cause_top10", "cause": "Stroke (cerebrovascular diseases)", "icd10": null, "deaths": 166852, "level": "CDC_broad_group", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "US", "source": "CDC2024", "source_rank": 5, "rank_scope": "national_all_cause_top10", "cause": "Chronic lower respiratory diseases", "icd10": null, "deaths": 145643, "level": "CDC_broad_group", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "US", "source": "CDC2024", "source_rank": 6, "rank_scope": "national_all_cause_top10", "cause": "Alzheimer disease", "icd10": null, "deaths": 116022, "level": "CDC_broad_group", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "US", "source": "CDC2024", "source_rank": 7, "rank_scope": "national_all_cause_top10", "cause": "Diabetes", "icd10": null, "deaths": 94445, "level": "CDC_broad_group", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "US", "source": "CDC2024", "source_rank": 8, "rank_scope": "national_all_cause_top10", "cause": "Nephritis, nephrotic syndrome, nephrosis", "icd10": null, "deaths": 55081, "level": "CDC_broad_group", "target_status": "candidate_pending_infectious_subcode_review"},
+    {"country": "US", "source": "CDC2024", "source_rank": 9, "rank_scope": "national_all_cause_top10", "cause": "Chronic liver disease and cirrhosis", "icd10": null, "deaths": 52274, "level": "CDC_broad_group", "target_status": "candidate_pending_infectious_subcode_review"},
+    {"country": "US", "source": "CDC2024", "source_rank": 10, "rank_scope": "national_all_cause_top10", "cause": "Suicide", "icd10": null, "deaths": 48824, "level": "CDC_broad_group", "target_status": "excluded_external_competing"},
+    {"country": "DE", "source": "DE2024press", "cause": "Circulatory diseases", "icd10": null, "deaths": 339212, "level": "parent_aggregate", "target_status": "candidate_pending_infectious_subcode_review", "overlap_warning": "Contains the cardiovascular children below; do not sum together."},
+    {"country": "DE", "source": "DE2024press", "cause": "Malignant neoplasms", "icd10": null, "deaths": 230392, "level": "parent_aggregate", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "DE", "source": "DE2024press", "cause": "Dementia group reported by Destatis", "icd10": "F00,F01,F02,F03", "deaths": 61927, "level": "selected_group", "target_status": "candidate_pending_infectious_subcode_review", "definition_warning": "Do not relabel as all dementias including G30."},
+    {"country": "DE", "source": "DE2024cardio", "cause": "Chronic ischemic heart disease", "icd10": "I25", "deaths": 70720, "level": "ICD10_3_character", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "DE", "source": "DE2024cardio", "cause": "Acute myocardial infarction", "icd10": "I21", "deaths": 41258, "level": "ICD10_3_character", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "DE", "source": "DE2024cardio", "cause": "Heart failure", "icd10": "I50", "deaths": 37633, "level": "ICD10_3_character", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "DE", "source": "DE2024cardio", "cause": "Hypertensive heart disease", "icd10": "I11", "deaths": 23356, "level": "ICD10_3_character", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "DE", "source": "DE2024cardio", "cause": "Atrial fibrillation and flutter", "icd10": "I48", "deaths": 23184, "level": "ICD10_3_character", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "DE", "source": "DE2024cardio", "cause": "Cerebral infarction", "icd10": "I63", "deaths": 15645, "level": "ICD10_3_character", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "DE", "source": "DE2024cardio", "cause": "Sequelae of cerebrovascular disease", "icd10": "I69", "deaths": 12788, "level": "ICD10_3_character", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "DE", "source": "DE2024cardio", "cause": "Hypertensive heart and renal disease", "icd10": "I13", "deaths": 11735, "level": "ICD10_3_character", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "DE", "source": "DE2024cardio", "cause": "Nonrheumatic aortic valve disorders", "icd10": "I35", "deaths": 10970, "level": "ICD10_3_character", "target_status": "candidate_NCD_pending_crosswalk"},
+    {"country": "DE", "source": "DE2024cardio", "cause": "Essential hypertension", "icd10": "I10", "deaths": 10065, "level": "ICD10_3_character", "target_status": "candidate_NCD_pending_crosswalk"}
+  ]
+}
