@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-10",
+  "tests_run": 142,
+  "passed": 142,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "previous_tests": 95,
+  "new_tests": 47,
+  "isolated_synthetic_probes": 9,
+  "full_upstream_suite_rerun": false,
+  "new_clinical_validation": false,
+  "new_model_fit": false,
+  "command": "GHE_SOURCE_DIR=<official WHO inputs> NHANES_SOURCE_DIR=<official NHANES inputs> NHANES_RESULT_DIR=<nhanes04> python -m unittest discover -s tests -v",
+  "tested_sha256": {
+    "research/mortality/evidence_contract.py": "0d3347cbab57bf7250c18d8d1e78fce18cec7adf3828df5f01515bcb20de1b98",
+    "research/mortality/build_evidence_exchange.py": "6164e369e648dcd1a2d214a143803726b3a141986de81ee21439132f5aa3c2f1",
+    "research/mortality/pr115_regression_probes.py": "3e824e85139e2deeefacbf73419952f11548b55cf07e89b1dc459a403c198cef",
+    "tests/test_evidence_contract.py": "aee696f1b4877ae49e0ad1c7fdb3833322b38e6c0cdcc2be90ba017443b7793a",
+    "research/mortality/nhanes04/validation_intervals.csv": "718e71ad92ce731c587f96eec233b86bfee9f12f11f107d3e83fe49aed09cdff"
+  },
+  "log_sha256": "a6896a379a3ff2afd5b832cb67538aae2c2cf4631ddb15ce00298f5c5075d50a"
+}
