@@ -1,0 +1,7 @@
+# Consistent source checkout on every operating system.
+* text=auto eol=lf
+# These artifacts are fingerprinted byte-for-byte; never change line endings.
+*.json -text
+*.csv -text
+*.xpt -text
+*.dat -text

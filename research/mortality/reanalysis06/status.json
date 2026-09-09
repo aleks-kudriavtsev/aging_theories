@@ -1,0 +1,31 @@
+{
+  "status": "corrective_reanalysis_of_previously_examined_holdout_NOT_independent_validation",
+  "source_integrity": {
+    "checked_files": 89,
+    "errors_in_retrieval_manifest": 1,
+    "sha256_verified": true
+  },
+  "origin": {
+    "kind": "local_corrective_reanalysis_not_independent_validation",
+    "code_base_commit": "fe414dc1957d8c6041dce48e77cf58ee65b30d28",
+    "new_remote_commit": null,
+    "reanalysis_date": "2026-09-10",
+    "pandas_version": "2.2.3",
+    "training_script_sha256": "3e218a3126bddcdf94f31f44d8912c02e7a0649f9315f5e5bfba036e88710292",
+    "reader_sha256": "4a5582fe1b89ce166b6a54f12700576ffb653d5d1418b26a0e79aaa021e74806"
+  },
+  "training_n": 4549,
+  "holdout_n": 2381,
+  "training_deaths_10y": 756,
+  "holdout_deaths_10y": 395,
+  "legacy_training_n": 4552,
+  "legacy_holdout_n": 2384,
+  "legacy_training_deaths_10y": 756,
+  "legacy_holdout_deaths_10y": 395,
+  "trop_all_rows_raw_zero_count": 26,
+  "total_repaired_numeric_cells": 275037,
+  "files_with_repairs": 20,
+  "frozen_legacy_bundle_unchanged": true,
+  "individual_records_exported": false,
+  "clinical_use_ready": false
+}

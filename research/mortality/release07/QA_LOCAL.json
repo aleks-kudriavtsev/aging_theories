@@ -1,0 +1,33 @@
+{
+  "application_version": "0.7.0",
+  "date": "2026-09-10",
+  "python": "3.13.5",
+  "local_tests": {
+    "run": 245,
+    "passed": 245,
+    "skipped": 0,
+    "failures": 0,
+    "previous": 220,
+    "new": 25
+  },
+  "offline_application_tests": 88,
+  "offline_DOM_checks": 9,
+  "live_browser_E2E": false,
+  "live_browser_blocker": "ERR_BLOCKED_BY_ADMINISTRATOR",
+  "installed_wheel_smoke": "passed_outside_source_tree",
+  "probabilities_compared": 39303,
+  "max_absolute_replay_difference": 4.440892098500626e-16,
+  "model_sha256": "7b287f3f4778b2127f2226f79d2e503e1e39087306a172e5f524a561964b07d0",
+  "new_model_fit": false,
+  "new_clinical_validation": false,
+  "remote_CI_status": "see_GitHub_Actions_for_exact_commit",
+  "log_sha256": {
+    "all_tests.log": "5545dd4597097f84dad229313b4bd52b69a74d19e01054ff74069526856b57f3",
+    "runtime_parity.log": "9ab431fb506b05fbc9e78a4af5b755c429a8206d4df060748ab3fcd361839bab",
+    "wheel_installed.log": "78437105b7dadc4e5b9dd5ae41e821661e9bc840562509f28f8b42c63b0b306a",
+    "all_tests_final.log": "c938b914166d68af450990cc42065ee52620c23144711b9f289d94b7b8042332"
+  },
+  "checkout_and_CI_regressions": 4,
+  "initial_Windows_CI": "failed_due_to_CRLF_model_hash_and_nonfatal_PowerShell_native_exit",
+  "Windows_fix": "hashed_JSON_CSV_checkout_preserved_and_bash_fail_fast"
+}
