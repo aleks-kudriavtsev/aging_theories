@@ -1,0 +1,96 @@
+name: Retrieve NHANES mortality benchmark inputs
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/mortality-nhanes-fetch.yml'
+permissions:
+  contents: read
+jobs:
+  inputs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Retrieve only public CDC data and documentation
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures, hashlib, json, pathlib, urllib.request, urllib.parse
+          from html.parser import HTMLParser
+          root=pathlib.Path('nhanes_inputs'); root.mkdir()
+          allowed={'wwwn.cdc.gov','www.cdc.gov','ftp.cdc.gov','stacks.cdc.gov','codeload.github.com'}
+          class SafeRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self,req,fp,code,msg,headers,newurl):
+                  p=urllib.parse.urlparse(newurl)
+                  if p.scheme!='https' or p.hostname not in allowed:
+                      raise ValueError('Redirect outside allowlist')
+                  return super().redirect_request(req,fp,code,msg,headers,newurl)
+          opener=urllib.request.build_opener(SafeRedirect)
+          manifest={'purpose':'Public research benchmark; no patient data or clinical deployment',
+                    'protocol':{'training_cycles':['1999-2000','2001-2002'],'heldout_cycle':'2003-2004',
+                      'age_years':[40,79],'mortality_linkage':'2019 public-use',
+                      'primary_endpoint':'all-cause mortality','primary_horizon_years':10,
+                      'secondary_horizons_years':[1,5],
+                      'panel_comparison':'same eligible cardiac-biomarker subsample',
+                      'weights':'WTSSCB4Y for training, WTSSCB2Y for held-out validation',
+                      'models':['age_sex','clinical_routine','plus_NTproBNP','plus_hsTnT','plus_cystatinC'],
+                      'no_validation_refitting':True,'no_reidentification':True},
+                    'files':[],'errors':[]}
+          def retrieve(job):
+              url,name=job
+              try:
+                  p=urllib.parse.urlparse(url)
+                  if p.scheme!='https' or p.hostname not in allowed: raise ValueError('Host not allowed')
+                  req=urllib.request.Request(url,headers={'User-Agent':'MortalityResearch/0.4 public data reproducibility'})
+                  with opener.open(req,timeout=45) as r:
+                      data=r.read(25000001); content_type=r.headers.get('Content-Type',''); final=r.url
+                  if len(data)>25000000: raise ValueError('File exceeds 25 MB')
+                  if name.endswith('.xpt') and not data.startswith(b'HEADER RECORD'): raise ValueError('Not SAS XPORT data')
+                  if name.endswith('.dat') and b'<html' in data[:200].lower(): raise ValueError('Not mortality fixed-width data')
+                  (root/name).write_bytes(data)
+                  return {'url':url,'resolved_url':final,'file':name,'bytes':len(data),
+                          'sha256':hashlib.sha256(data).hexdigest(),'content_type':content_type}
+              except Exception as e: return {'url':url,'file':name,'error':str(e)}
+          cycle_files={
+            1999:['DEMO','BPX','BMX','SMQ','MCQ','BPQ','DIQ','LAB18','LAB10','LAB13','LAB16','LAB25','LAB11'],
+            2001:['DEMO_B','BPX_B','BMX_B','SMQ_B','MCQ_B','BPQ_B','DIQ_B','L40_B','L10_B','L13_B','L16_B','L25_B','L11_B'],
+            2003:['DEMO_C','BPX_C','BMX_C','SMQ_C','MCQ_C','BPQ_C','DIQ_C','L40_C','L10_C','L13_C','L16_C','L25_C','L11_C']}
+          cycle_files[1999] += ['SSBNP_A','SSCARD_A','SSTROP_A']
+          jobs=[]
+          for year,names in cycle_files.items():
+              for name in names:
+                  for ext in ['xpt','htm']:
+                      jobs.append((f'https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/{year}/DataFiles/{name}.{ext}',f'{year}_{name}.{ext}'))
+              jobs.append((f'https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_{year}_{year+1}_MORT_2019_PUBLIC.dat',f'{year}_mortality.dat'))
+          jobs += [
+            ('https://www.cdc.gov/nchs/linked-data/mortality-files/index.html','mortality_documentation.html'),
+            ('https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/','mortality_directory.html'),
+            ('https://codeload.github.com/aleks-kudriavtsev/aging_theories/zip/eba23c54d9b4f999748fce0fa475e3d66620acb4','repository_base.zip')]
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+              for row in pool.map(retrieve,jobs):
+                  manifest['errors' if 'error' in row else 'files'].append(row)
+                  print(json.dumps(row),flush=True)
+          class Links(HTMLParser):
+              def __init__(self): super().__init__(); self.links=[]
+              def handle_starttag(self,tag,attrs):
+                  if tag=='a':
+                      href=dict(attrs).get('href','')
+                      if href: self.links.append(href)
+          parser=Links()
+          if (root/'mortality_documentation.html').exists():
+              parser.feed((root/'mortality_documentation.html').read_text(errors='replace'))
+          selected=[urllib.parse.urljoin('https://www.cdc.gov',u) for u in parser.links
+                    if any(s in u.lower() for s in ['public','sample']) and any(u.lower().endswith(s) for s in ['.pdf','.r','.sas','.do'])]
+          for i,url in enumerate(selected[:8]):
+              name='mortality_doc_'+str(i)+pathlib.PurePosixPath(urllib.parse.urlparse(url).path).suffix
+              row=retrieve((url,name)); manifest['errors' if 'error' in row else 'files'].append(row)
+              print(json.dumps(row),flush=True)
+          (root/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
+          print('SUMMARY',len(manifest['files']),'files;',len(manifest['errors']),'errors')
+          PY
+      - name: Save research inputs briefly
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nhanes-mortality-inputs
+          path: nhanes_inputs/
+          retention-days: 1
+          if-no-files-found: error
