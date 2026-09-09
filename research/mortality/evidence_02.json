@@ -1,0 +1,113 @@
+{
+  "version": "0.2-addendum",
+  "assembled_on": "2026-09-09",
+  "base_registry": "evidence.json",
+  "status": "targeted_evidence_extension_not_completed_systematic_review",
+  "rules": {"null":"not_extracted_not_proven_absent","independent_second_extraction":"pending","formal_risk_of_bias_assessment":"pending","literature_effects_are_not_fitted_joint_coefficients":true},
+  "studies": [
+    {
+      "id":"FIB4_KOREA2023","pmid":"37164111","doi":"10.1016/j.cgh.2023.04.026","url":"https://pubmed.ncbi.nlm.nih.gov/37164111/",
+      "population":"KNHANES; 46456 adults >=19; excluded HBV/HCV and major baseline diseases","extraction":"original_abstract","age_range":[19,null],"sex_handling":"pooled_not_sex_specific_coefficients","implemented_absolute_individual_risk":false,"country":"Korea","median_followup_years":8.6,"prediction_horizon_years":null,
+      "limitations":["Association only; baseline risk and incremental discrimination not extracted","No RU-DE-US external validation extracted; cancer association not retained after adjustment"],
+      "estimates":[
+        {"marker":"FIB4","metric":"HR","value":1.64,"ci95":[1.23,2.18],"endpoint_class":"mortality","outcome":"all_cause_death","contrast":">=2.67 versus <2.67"},
+        {"marker":"FIB4","metric":"HR","value":2.96,"ci95":[1.60,5.46],"endpoint_class":"mortality","outcome":"cardiovascular_death","contrast":">=2.67 versus <2.67"},
+        {"marker":"FIB4","metric":"HR","value":10.50,"ci95":[4.70,23.44],"endpoint_class":"mortality","outcome":"liver_related_death","contrast":">=2.67 versus <2.67"}
+      ]
+    },
+    {
+      "id":"MELD3_US2021","pmid":"34481845","doi":"10.1053/j.gastro.2021.08.050","url":"https://pubmed.ncbi.nlm.nih.gov/34481845/",
+      "population":"US liver transplant waiting list 2016-2018","extraction":"original_abstract","age_range":null,"sex_handling":"female_indicator_in_model; full sex-specific validation not extracted","implemented_absolute_individual_risk":false,"country":"USA","prediction_horizon_days":90,
+      "limitations":["All-cause waitlist death, not exclusively noninfectious death","Female indicator and interactions present; full bounds/dialysis rules not implemented"],
+      "estimates":[
+        {"marker":"MELD3_with_albumin","metric":"C","value":0.869,"ci95":null,"endpoint_class":"mortality","outcome":"all_cause_death"},
+        {"marker":"MELD_Na","metric":"C","value":0.862,"ci95":null,"endpoint_class":"mortality","outcome":"all_cause_death"}
+      ]
+    },
+    {
+      "id":"MELD_GERMANY2025","pmid":"40996603","doi":"10.1007/s00423-025-03846-x","url":"https://pubmed.ncbi.nlm.nih.gov/40996603/",
+      "population":"206 listed patients; 168 analysed after excluding 38 transplanted within three months","extraction":"publisher_results_text_and_indexed_table","age_range":null,"sex_handling":"reported_sex_stratified_metrics_not_coefficients","implemented_absolute_individual_risk":false,"country":"Germany","prediction_horizon_months":3,"source_location":"Publisher results: Predictive performance; Table 4","fulltext_url":"https://link.springer.com/article/10.1007/s00423-025-03846-x",
+      "limitations":["16 early deaths, including 7 sepsis; not a noninfectious endpoint","Post-baseline transplant exclusion: selection-bias flag; not a reference external-validation benchmark","No CIs extracted; text/table inconsistencies require independent review"],"quality_gate":"quarantine_for_model_training",
+      "estimates":[
+        {"marker":"MELD_Na","metric":"Harrell_C","value":0.824,"ci95":null,"endpoint_class":"mortality","outcome":"all_cause_death","sex":"all"},
+        {"marker":"MELD_Na","metric":"Harrell_C","value":0.702,"ci95":null,"endpoint_class":"mortality","outcome":"all_cause_death","sex":"female"},
+        {"marker":"MELD3_with_albumin","metric":"Harrell_C","value":0.809,"ci95":null,"endpoint_class":"mortality","outcome":"all_cause_death","sex":"all"},
+        {"marker":"MELD3_with_albumin","metric":"Harrell_C","value":0.712,"ci95":null,"endpoint_class":"mortality","outcome":"all_cause_death","sex":"female"},
+        {"marker":"MELD3_without_albumin","metric":"Harrell_C","value":0.827,"ci95":null,"endpoint_class":"mortality","outcome":"all_cause_death","sex":"all"},
+        {"marker":"MELD3_without_albumin","metric":"Harrell_C","value":0.709,"ci95":null,"endpoint_class":"mortality","outcome":"all_cause_death","sex":"female"},
+        {"marker":"reMELD_Na","metric":"Harrell_C","value":0.848,"ci95":null,"endpoint_class":"mortality","outcome":"all_cause_death","sex":"all"},
+        {"marker":"reMELD_Na","metric":"Harrell_C","value":0.755,"ci95":null,"endpoint_class":"mortality","outcome":"all_cause_death","sex":"female"}
+      ]
+    },
+    {
+      "id":"PLCOm2012_2013","pmid":"23425165","doi":"10.1056/NEJMoa1211776","url":"https://pubmed.ncbi.nlm.nih.gov/23425165/",
+      "population":"80375 ever-smokers in model development/validation","extraction":"original_abstract","age_range":null,"sex_handling":"pooled_not_sex_specific_coefficients","implemented_absolute_individual_risk":false,"country":"USA","prediction_horizon_years":6,"primary_record":"https://cdas.cancer.gov/publications/388/","correction":"https://www.nejm.org/doi/full/10.1056/NEJMx130031",
+      "limitations":["Clinical/smoking model, not a blood biomarker panel or death model","Operating metrics apply to the compared selection strategies, not a universal cutoff","Corrected coefficients not extracted or implemented"],
+      "estimates":[
+        {"marker":"PLCOm2012","metric":"AUC","value":0.797,"ci95":null,"endpoint_class":"incidence","outcome":"lung_cancer_diagnosis","sample":"validation"},
+        {"marker":"PLCOm2012_selection","metric":"sensitivity","value":0.830,"ci95":null,"endpoint_class":"incidence","outcome":"lung_cancer_diagnosis"},
+        {"marker":"NLST_selection","metric":"sensitivity","value":0.711,"ci95":null,"endpoint_class":"incidence","outcome":"lung_cancer_diagnosis"},
+        {"marker":"PLCOm2012_selection","metric":"specificity","value":0.629,"ci95":null,"endpoint_class":"incidence","outcome":"lung_cancer_diagnosis"},
+        {"marker":"NLST_selection","metric":"specificity","value":0.627,"ci95":null,"endpoint_class":"incidence","outcome":"lung_cancer_diagnosis"}
+      ]
+    },
+    {
+      "id":"ECLIPSE2024","pmid":"38477985","doi":"10.1056/NEJMoa2304714","url":"https://pubmed.ncbi.nlm.nih.gov/38477985/",
+      "population":"10258 validation participants; 7861 evaluable; average-risk colorectal screening","extraction":"original_abstract","age_range":null,"sex_handling":"pooled_not_sex_specific_coefficients","implemented_absolute_individual_risk":false,"prediction_horizon_years":null,
+      "limitations":["Cross-sectional diagnostic accuracy, not mortality reduction","Specificity is not defined against cancer-only negatives; do not compute CRC PPV from mismatched denominators"],
+      "estimates":[
+        {"marker":"cfDNA_test","metric":"sensitivity","value":0.831,"ci95":[0.722,0.903],"endpoint_class":"diagnosis","outcome":"colorectal_cancer"},
+        {"marker":"cfDNA_test","metric":"sensitivity","value":0.132,"ci95":[0.113,0.153],"endpoint_class":"diagnosis","outcome":"advanced_precancerous_lesion"},
+        {"marker":"cfDNA_test","metric":"specificity","value":0.896,"ci95":[0.888,0.903],"endpoint_class":"diagnosis","outcome":"advanced_colorectal_neoplasia","negative_definition":"absence of BOTH colorectal cancer and advanced precancerous lesions"}
+      ]
+    },
+    {
+      "id":"PTAU_APS2_2024","pmid":"39068545","doi":"10.1001/jama.2024.13855","url":"https://pubmed.ncbi.nlm.nih.gov/39068545/",
+      "population":"1213 symptomatic Swedish patients; mean age 74.2, SD 8.3; 48% women","extraction":"original_abstract","age_range":null,"age_mean_sd":[74.2,8.3],"female_proportion":0.48,"sex_handling":"pooled_not_sex_specific_coefficients","implemented_absolute_individual_risk":false,"country":"Sweden","assay":"Mass-spectrometry percentage p-tau217 plus A-beta42/40 ratio",
+      "limitations":["Symptomatic selected population; AD pathology prevalence approximately 50%","Assay-specific ratio, not an interchangeable p-tau217 concentration cutoff","Diagnostic performance, not future dementia or mortality prediction"],
+      "estimates":[
+        {"marker":"APS2","metric":"AUC","value":0.96,"ci95":[0.94,0.98],"endpoint_class":"diagnosis","outcome":"Alzheimer_pathology","sample":"prospective_primary_care_n208"},
+        {"marker":"APS2","metric":"PPV","value":0.88,"ci95":[0.81,0.94],"endpoint_class":"diagnosis","outcome":"Alzheimer_pathology","sample":"prospective_primary_care_n208"}
+      ]
+    },
+    {
+      "id":"GAIT2011","pmid":"21205966","doi":"10.1001/jama.2010.1923","url":"https://pubmed.ncbi.nlm.nih.gov/21205966/",
+      "population":"9 cohorts; 34485 community adults >=65; 17528 deaths; 59.6% women","extraction":"original_abstract","age_range":[65,null],"sex_handling":"pooled_not_sex_specific_coefficients","implemented_absolute_individual_risk":false,"followup_range_years":[6,21],
+      "limitations":["Age-adjusted pooled association; heterogeneous historical cohorts","Full age-sex absolute-risk tables not implemented; no incremental C extracted"],
+      "estimates":[{"marker":"gait_speed_m_s","metric":"HR","value":0.88,"ci95":[0.87,0.90],"endpoint_class":"mortality","outcome":"all_cause_death","contrast":"per +0.1 m/s"}]
+    },
+    {
+      "id":"GAIT_LONGITUDINAL2024","pmid":"39128300","doi":"10.1016/j.jnha.2024.100330","url":"https://pubmed.ncbi.nlm.nih.gov/39128300/",
+      "population":"Health ABC; 3048 participants; baseline age approximately 74; 14-year survival data","extraction":"original_abstract","age_range":null,"sex_handling":"sex_stratified_joint_models","implemented_absolute_individual_risk":false,"country":"USA","prediction_horizon_years":null,"followup_years":14,
+      "limitations":["Sex-stratified joint longitudinal-survival model, coefficients/baseline not extracted","Effects kept as reported relative changes; not relabelled as verified HR coefficients"],
+      "estimates":[
+        {"marker":"gait_speed_m_s","metric":"reported_relative_reduction","value":0.23,"ci95":[0.20,0.25],"endpoint_class":"mortality","outcome":"all_cause_death","contrast":"per +0.1 m/s","sex":"male"},
+        {"marker":"gait_speed_m_s","metric":"reported_relative_reduction","value":0.25,"ci95":[0.21,0.28],"endpoint_class":"mortality","outcome":"all_cause_death","contrast":"per +0.1 m/s","sex":"female"},
+        {"marker":"gait_speed_slope","metric":"reported_relative_increase","value":0.31,"ci95":[0.13,0.51],"endpoint_class":"mortality","outcome":"all_cause_death","contrast":"annual slowing 0.05 m/s","sex":"male"}
+      ]
+    }
+  ],
+  "mortality_dataset": {
+    "country":"USA","year":2024,"status":"final_registered_deaths","cause":"Parkinson disease and secondary parkinsonism","icd10":["G20","G21"],"underlying_cause":true,"age_scope":"65+ only","source":"https://www.cdc.gov/nchs/products/databriefs/db563.htm","source_publication":"2026-06","doi":"10.15620/cdc/252450",
+    "denominator":"All residents of the stated sex-age stratum, NOT diagnosed patients","scope_warning":"Do not rank 65+ counts against all-age causes; rates are not individual probabilities","license_note":"CDC source states public domain; repository license does not relicense external papers",
+    "rows":[
+      {"age":"65+","sex":"all","deaths":39935,"rate_per_100000":72.0,"rate_type":"age_standardized_2000_US"},
+      {"age":"65+","sex":"male","deaths":24690,"rate_per_100000":105.6,"rate_type":"age_standardized_2000_US"},
+      {"age":"65+","sex":"female","deaths":15245,"rate_per_100000":47.6,"rate_type":"age_standardized_2000_US"},
+      {"age":"65-74","sex":"all","deaths":6562,"rate_per_100000":18.5,"rate_type":"age_specific"},
+      {"age":"65-74","sex":"male","deaths":4308,"rate_per_100000":25.8,"rate_type":"age_specific"},
+      {"age":"65-74","sex":"female","deaths":2254,"rate_per_100000":12.0,"rate_type":"age_specific"},
+      {"age":"75-84","sex":"all","deaths":18764,"rate_per_100000":97.2,"rate_type":"age_specific"},
+      {"age":"75-84","sex":"male","deaths":12095,"rate_per_100000":141.0,"rate_type":"age_specific"},
+      {"age":"75-84","sex":"female","deaths":6669,"rate_per_100000":62.2,"rate_type":"age_specific"},
+      {"age":"85+","sex":"all","deaths":14609,"rate_per_100000":227.0,"rate_type":"age_specific"},
+      {"age":"85+","sex":"male","deaths":8287,"rate_per_100000":343.3,"rate_type":"age_specific"},
+      {"age":"85+","sex":"female","deaths":6322,"rate_per_100000":157.2,"rate_type":"age_specific"}
+    ]
+  },
+  "source_status":[
+    {"source":"WHO GHE","url":"https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death","status":"2021_download_links_located_but_dataset_not_retrieved","comparable_top20_ready":false},
+    {"source":"Rosstat Health in Russia 2025","url":"https://www.rosstat.gov.ru/folder/210/document/13218","status":"publication_located_in_search_index_direct_open_failed_502","national_detail_extracted":false},
+    {"source":"Destatis 2024","url":"https://www.destatis.de/DE/Presse/Pressemitteilungen/2025/10/PD25_377_23211.html","status":"earlier_aggregate_snapshot_only_full_cause_inventory_pending","comparable_top20_ready":false}
+  ]
+}
