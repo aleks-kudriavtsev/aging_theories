@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-09",
+  "command": "GHE_SOURCE_DIR=/path/to/official_sources python -m unittest discover -s tests -v",
+  "environment": "local Python; actual hash-pinned WHO XLSX files",
+  "tests_run": 60,
+  "previous_tests_rerun": 37,
+  "new_tests": 23,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "latest_duration_seconds": 4.338,
+  "source_arithmetic_checks": 13026,
+  "clinical_validation": false,
+  "individually_trained_mortality_model": false,
+  "note": "Detailed unittest log accompanies the iteration archive; absent source inputs must be reported as skipped, not passed."
+}

@@ -1,0 +1,54 @@
+{
+  "purpose": "research-only source retrieval; no clinical prediction",
+  "rights": "External source rights retained; not relicensed under repository license",
+  "files": [
+    {
+      "url": "https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death",
+      "file": "who.html",
+      "bytes": 129904,
+      "sha256": "1028fce488ae3e65dd9d4a1246b685fd87f266ab9a809f04bd125b02321e3d7c",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2021_deaths_bycountry_2021.xlsx?sfvrsn=91763f5c_5",
+      "file": "0_ghe2021_deaths_bycountry_2021.xlsx",
+      "bytes": 10237304,
+      "sha256": "1f593b791db8a9408fdce1973ef2b16b4cd5c9cf8e1838b661e0be9ffa5b7418",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2021_deathrates_bycountry_asdr.xlsx?sfvrsn=d2ead5e5_3",
+      "file": "1_ghe2021_deathrates_bycountry_asdr.xlsx",
+      "bytes": 8616196,
+      "sha256": "3c87314a348384b7de86e4f5c3b5534637bb6f5982897df2812bd106c05cb863",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2021_deathrates_bycountry_cdr.xlsx?sfvrsn=99b82f0f_2",
+      "file": "2_ghe2021_deathrates_bycountry_cdr.xlsx",
+      "bytes": 8633385,
+      "sha256": "dbb22132411aa5b6191d51bcb88697ab6752416e1ecb50c75e62bbda7e090daa",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2021_cod_methods.pdf?sfvrsn=dca346b7_1",
+      "file": "3_ghe2021_cod_methods.pdf",
+      "bytes": 1720719,
+      "sha256": "e6cb157106f6c70ed8972a66383b9459b51b4003f9e9e1a4067832bce4e5d110",
+      "content_type": "application/pdf"
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://rosstat.gov.ru/folder/210/document/13218",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>"
+    }
+  ],
+  "retrieved_utc_date": "2026-09-09",
+  "workflow_commit": "e8edce63612951f00f5a86efb0157d696466ee87",
+  "workflow_run_id": 34393537436,
+  "country_data_type": "WHO model-based harmonized estimates, not direct national registered counts",
+  "commercial_use_review_required": true,
+  "copyright_policy": "https://www.who.int/about/policies/publishing/copyright",
+  "adaptation_disclaimer": "Analysis/translation by project authors, not by WHO; WHO does not endorse this project. Original source edition controls."
+}
