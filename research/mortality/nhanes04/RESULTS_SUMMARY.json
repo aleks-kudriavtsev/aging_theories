@@ -1,0 +1,22 @@
+{
+  "version":"0.4","date":"2026-09-09","endpoint":"all_cause_death_including_infections_and_external_causes","clinical_use":false,"country":"US","baseline_age_range":[40,79],
+  "training":{"cycles":[1999,2001],"n":4552,"female_n":2240,"deaths_1y":38,"deaths_5y":314,"deaths_10y":756,"weight":"WTSSCB4Y"},
+  "temporal_validation":{"cycle":2003,"n":2384,"female_n":1190,"deaths_1y":33,"deaths_5y":188,"deaths_10y":395,"weight":"WTSSCB2Y","weighted_death_probability_10y":0.11506015719576836},
+  "incremental_auc_10y":[
+    {"contrast":"M1-M0","estimate":0.0740984890934431,"p025":0.048539,"p975":0.097859,"interpretation":"clinical_and_laboratory_block_jointly"},
+    {"contrast":"M1-M0c","estimate":0.0268789077294577,"p025":0.013064965690223359,"p975":0.038092348054223846,"interpretation":"routine_laboratory_block","analysis":"post_hoc"},
+    {"contrast":"M2-M1","estimate":0.0019134806170427,"p025":-0.004318,"p975":0.007961},
+    {"contrast":"M3-M2","estimate":0.0052693759401692,"p025":-0.000497,"p975":0.010202},
+    {"contrast":"M4-M3","estimate":0.0021116370718577,"p025":-0.003723,"p975":0.008040},
+    {"contrast":"M4-M1","estimate":0.0092944936290696,"p025":-0.0015882435851475307,"p975":0.019696379664573528}
+  ],
+  "uncertainty":{"replicates":300,"validation_strata":15,"resampling":"paired_PSU_within_strata_m_minus_1_rescaled","type":"conditional_validation_percentile_interval","includes_training_uncertainty":false,"includes_model_selection_uncertainty":false,"some_bounds_rounded_to_six_decimals":true},
+  "M4_10y_subgroups":[
+    {"group":"female","n":1190,"deaths":139,"auc":0.863072,"observed":0.084097,"predicted":0.113314},
+    {"group":"male","n":1194,"deaths":256,"auc":0.871851,"observed":0.149346,"predicted":0.154096},
+    {"group":"age40_59","n":1202,"deaths":74,"auc":0.862943,"observed":0.049544,"predicted":0.065998},
+    {"group":"age60_79","n":1182,"deaths":321,"auc":0.776479,"observed":0.250378,"predicted":0.270366}
+  ],
+  "tests":{"ran":95,"previous":60,"new":35,"failures":0,"errors":0,"skips":0,"source_files_verified":89,"test_log_sha256":"8fc726f03feec67f5f3512835694c7c0667682b39345f1bdaa3e2fd2899d0e2f","independent_numeric_comparison":"statsmodels_weighted_Poisson_GLM_synthetic_data","clinical_validation":false},
+  "remaining":{"strict_noninfectious_model":false,"cause_specific_models":false,"RU_DE_validation":false,"contemporary_US_calibration":false,"independent_reader_line_audit_completed":false,"20year_prediction_allowed":false,"prospective_clinical_utility":false}
+}
