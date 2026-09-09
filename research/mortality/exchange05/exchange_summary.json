@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.5",
+  "status": "migration_not_new_clinical_validation",
+  "source_commit": "fe414dc1957d8c6041dce48e77cf58ee65b30d28",
+  "reviewed_PR115_commit": "3c487a8d03b15a49ce1d067e8eba903dab826b10",
+  "upstream_snapshot_imported": false,
+  "records": 150,
+  "literature_records": 58,
+  "empirical_records": 92,
+  "retained": 150,
+  "records_with_blockers": 8,
+  "context_or_source_gaps": 138,
+  "clinical_ready": 0,
+  "new_model_fit": false,
+  "new_independent_validation": false
+}
