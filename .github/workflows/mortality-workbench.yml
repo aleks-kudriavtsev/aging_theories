@@ -3,8 +3,11 @@ on:
   push:
     branches: ['dev/workbench-07']
   pull_request:
-    paths: ['research/**', 'tests/**', 'tools/**', 'pyproject.toml', 'WORKBENCH_START_RU.md', '.github/workflows/mortality-workbench.yml']
+    paths: ['.gitattributes', 'research/**', 'tests/**', 'tools/**', 'pyproject.toml', 'WORKBENCH_START_RU.md', '.github/workflows/mortality-workbench.yml']
   workflow_dispatch:
+defaults:
+  run:
+    shell: bash
 permissions:
   contents: read
 jobs:
