@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-10",
+  "status": "new_temporal_validation_five_broad_causes",
+  "development_n": 15280,
+  "primary_model_sha256": "40069d1a98a29308bee26e5dac895388f4c9008b983bc834ad8ac0a57fbcd094",
+  "evaluation_n": 5679,
+  "clinical_use_ready": false,
+  "no_CRp": true,
+  "new_fit_on_evaluation": false,
+  "interval_definition": "1000 rescaled PSU percentiles conditional on frozen models, excludes development/tuning uncertainty",
+  "results": [
+    {
+      "cycle": 2011,
+      "horizon": 5,
+      "n": 2666,
+      "deaths": 130,
+      "clinical_six_state_brier": 0.0710373655512733,
+      "routine_six_state_brier": 0.0687078616446043,
+      "delta_six_state_brier": -0.0023295039066690004,
+      "delta_six_state_brier_interval": [
+        -0.0040906155087086,
+        -0.0006878538312825
+      ],
+      "clinical_all_cause_auc": 0.7338142170893286,
+      "routine_all_cause_auc": 0.7691036023586163,
+      "delta_all_cause_auc": 0.03528938526928771,
+      "delta_auc_interval": [
+        0.0080091303608013,
+        0.065824863107033
+      ],
+      "weighted_observed": 0.0370118578702115,
+      "weighted_predicted": 0.0416112722957213,
+      "calibration_slope": 0.8459175778444973
+    },
+    {
+      "cycle": 2013,
+      "horizon": 4,
+      "n": 3013,
+      "deaths": 113,
+      "clinical_six_state_brier": 0.0645366163250804,
+      "routine_six_state_brier": 0.0637706323789793,
+      "delta_six_state_brier": -0.0007659839461010981,
+      "delta_six_state_brier_interval": [
+        -0.0017411550670606,
+        2.829708793223753e-05
+      ],
+      "clinical_all_cause_auc": 0.7631733081874623,
+      "routine_all_cause_auc": 0.81398402144446,
+      "delta_all_cause_auc": 0.05081071325699771,
+      "delta_auc_interval": [
+        0.0203983012202548,
+        0.0823042519704338
+      ],
+      "weighted_observed": 0.0335288919443454,
+      "weighted_predicted": 0.0408658573783503,
+      "calibration_slope": 0.912661318968025
+    }
+  ]
+}
