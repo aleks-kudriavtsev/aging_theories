@@ -4,23 +4,25 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mortality-workbench"
-version = "0.7.0"
+version = "0.16.0"
 description = "Local research-only historical mortality benchmark"
 requires-python = ">=3.10"
-readme = "WORKBENCH_START_RU.md"
+readme = "STUDIO_START_RU.md"
 license = "MIT"
 dependencies = []
 
 [project.scripts]
 mortality-workbench = "research.mortality.workbench.__main__:main"
+mortality-studio = "research.mortality.studio16.__main__:main"
 
 [tool.setuptools]
 include-package-data = false
 
 [tool.setuptools.packages.find]
-include = ["research", "research.mortality", "research.mortality.workbench"]
+include = ["research", "research.mortality", "research.mortality.workbench", "research.mortality.studio16"]
 namespaces = false
 
 [tool.setuptools.package-data]
+"research.mortality.studio16" = ["static/*.html", "static/*.js", "static/*.css"]
 "research.mortality.workbench" = ["static/*.html", "static/*.js", "static/*.css"]
-"research.mortality" = ["evidence.json", "evidence_02.json", "reanalysis06/model_bundle.json", "nhanes04/metrics.csv", "nhanes04/clinical_sensitivity.csv", "nhanes04/clinical_sensitivity_intervals.csv", "nhanes04/validation_intervals.csv"]
+"research.mortality" = ["compact14/model_compact14.json", "transport12/model_bundle12.json", "transport12/model_sensitivity12.json", "evidence.json", "evidence_02.json", "reanalysis06/model_bundle.json", "nhanes04/metrics.csv", "nhanes04/clinical_sensitivity.csv", "nhanes04/clinical_sensitivity_intervals.csv", "nhanes04/validation_intervals.csv"]
