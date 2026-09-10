@@ -1,0 +1,51 @@
+name: Competing09 official inputs
+on:
+  push:
+    branches: [research/competing-risks-09]
+    paths: [.github/workflows/competing09-inputs.yml]
+permissions:
+  contents: read
+jobs:
+  inputs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Retrieve public CDC data and codebooks
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures, hashlib, json, pathlib, urllib.request, urllib.parse
+          root=pathlib.Path('competing09_inputs');root.mkdir()
+          base='https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/'
+          urls={}
+          for c in ['DEMO','BPX','BMX','SMQ','MCQ','BPQ','DIQ','BIOPRO','TCHOL','HDL','GHB','ALB_CR','CBC','CRP']:
+              for ext in ['xpt','htm']:
+                  urls[f'2009_{c}_F.{ext}']=f'{base}{c}_F.{ext}'
+          urls['2009_mortality.dat']='https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2009_2010_MORT_2019_PUBLIC.dat'
+          urls['lmf_description.pdf']='https://www.cdc.gov/nchs/data/datalinkage/public-use-linked-mortality-file-description.pdf'
+          def get(item):
+              name,url=item
+              try:
+                  req=urllib.request.Request(url,headers={'User-Agent':'MortalityCompetingResearch09/1.0'})
+                  with urllib.request.urlopen(req,timeout=35) as r:
+                      if urllib.parse.urlparse(r.url).hostname not in {'wwwn.cdc.gov','ftp.cdc.gov','www.cdc.gov'}:raise ValueError('Unexpected redirect')
+                      data=r.read(30_000_001)
+                  if len(data)>30_000_000:raise ValueError('Size exceeds bound')
+                  if name.endswith('.xpt') and not data.startswith(b'HEADER RECORD'):raise ValueError('Not XPORT')
+                  if name.endswith('.dat') and b'<html' in data[:1000].lower():raise ValueError('Not linkage data')
+                  (root/name).write_bytes(data)
+                  return {'file':name,'url':url,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'retrieved'}
+              except Exception as e:return {'file':name,'url':url,'status':'failed','error':str(e)}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:rows=list(pool.map(get,urls.items()))
+          (root/'manifest.json').write_text(json.dumps({'analysis_lock_commit':'99e8c150afc34d2c8c53077e7263547628638c8b','files':rows},indent=2))
+          print(json.dumps({'retrieved':sum(r['status']=='retrieved' for r in rows),'failures':[r for r in rows if r['status']!='retrieved']},indent=2))
+          if any(r['status']!='retrieved' and r['file'].endswith(('.xpt','.dat')) for r in rows):raise SystemExit('Required data missing')
+          PY
+      - name: Store private-workflow inputs briefly; never commit individual records
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: competing09-cdc-inputs
+          path: competing09_inputs/
+          retention-days: 1
+          if-no-files-found: error
