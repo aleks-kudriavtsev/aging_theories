@@ -1,0 +1,11 @@
+{
+  "schema_version": "0.13_paired_methods",
+  "data_origin": "paired_specimens_declared",
+  "study_id": "REPLACE_WITH_NONIDENTIFYING_STUDY_CODE",
+  "model_sha256": "40069d1a98a29308bee26e5dac895388f4c9008b983bc834ad8ac0a57fbcd094",
+  "reference_method": {"analyte":"","unit":"","matrix":"","method_id":"","lot_id":""},
+  "candidate_method": {"analyte":"","unit":"","matrix":"","method_id":"","lot_id":""},
+  "variance_ratio": null,
+  "variance_ratio_basis": "",
+  "pairs": []
+}
