@@ -1,0 +1,16 @@
+{
+  "reference_script_sha256": "04c514fd6b798ceb7eeed1afea61f42c6cdd270734c1483e1803027ff9066ac3",
+  "reference_url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/R_ReadInProgramAllSurveys.R",
+  "reference_lines": "175-187",
+  "positions_from_R_equal_manual_parser": true,
+  "R_interpreter_executed": false,
+  "checks": [
+    {"file":"1999_mortality.dat","rows":9965,"fields":8,"cell_comparisons":79720,"exact_match":true,"sha256":"562bd367107add0b2b40fed36a062d8b194fca31e11aab897a0efad4bebc8b26"},
+    {"file":"2001_mortality.dat","rows":11039,"fields":8,"cell_comparisons":88312,"exact_match":true,"sha256":"2788c8c8a02995ea5686882b5fe65b4b9cd415016031525f8a3c1a3646c47f1b"},
+    {"file":"2003_mortality.dat","rows":10122,"fields":8,"cell_comparisons":80976,"exact_match":true,"sha256":"639f6b3292a55b112fbfc842954af3d8d32bcce287cd8ae49319e5aca1c033c0"},
+    {"file":"2005_mortality.dat","rows":10348,"fields":8,"cell_comparisons":82784,"exact_match":true,"sha256":"69388ea13a4f395f29d9d21bc51941b9759003490d4b00f6ff12a1bc5f8dba5c"},
+    {"file":"2007_mortality.dat","rows":10149,"fields":8,"cell_comparisons":81192,"exact_match":true,"sha256":"75f89bd545a13ba726a7eb56de4d62f6dfc8f0f76d505dc18ced9752d5e2c77d"}
+  ],
+  "total_cells_compared": 412984,
+  "data_mismatch_count": 0
+}
