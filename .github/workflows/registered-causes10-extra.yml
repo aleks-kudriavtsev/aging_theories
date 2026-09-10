@@ -1,0 +1,31 @@
+name: Registered mortality supplementary source 10
+on:
+  push:
+    branches: [research/registered-causes-10]
+    paths: [.github/workflows/registered-causes10-extra.yml]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Retrieve official supplementary ZIP
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib,urllib.request,urllib.parse,hashlib,json,io,zipfile
+          root=pathlib.Path('additional_source');root.mkdir()
+          url='https://cdn.who.int/media/docs/default-source/world-health-data-platform/mortality-raw-data/morticd10_add.zip?sfvrsn=47111c9f_4'
+          with urllib.request.urlopen(url,timeout=60) as r:
+              if urllib.parse.urlparse(r.url).hostname!='cdn.who.int':raise ValueError('Unexpected redirect')
+              data=r.read(15000001)
+          if len(data)>15000000 or not zipfile.is_zipfile(io.BytesIO(data)):raise ValueError('Invalid source')
+          (root/'morticd10_add.zip').write_bytes(data)
+          (root/'manifest_extra.json').write_text(json.dumps({'file':'morticd10_add.zip','url':url,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()},indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: registered10-supplementary
+          path: additional_source/
+          retention-days: 1
