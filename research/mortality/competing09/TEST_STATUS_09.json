@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-10",
+  "tests_run": 311,
+  "passed": 311,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "previous_tests": 269,
+  "new_tests": 42,
+  "scientific_source_data_used": true,
+  "model_sha256": "e6c0a9b3ca57ef9556c1556a28da03271a6caf692f5649bfc804e9fba8747f31",
+  "source_code_sha256": {
+    "research/mortality/competing_risks09.py": "63934550fac98c09c2ff26573bfaca7b220f3ce602e80164c8f96b3489c0f8e8",
+    "research/mortality/replay_competing09.py": "5c7ec25eae5ae4e80eaef3565fc5400b93aed15e04abf34a5af07016f36049d6",
+    "research/mortality/diagnostics_competing09.py": "af8ed1f470ec244e61b62aa9346ca953fd6f4c2acff69a52e17b4e71ad48b05d",
+    "tests/test_competing_risks09.py": "c04fbd8546c4e64eda35159a414b7465896008b222884ba9cfd586d759639add"
+  },
+  "test_log_sha256": "8e771d4f2abb0414a7a219f4848e014d1c1c6c080fa9c1072273bf40acc9f7d2",
+  "individual_data_published": false,
+  "new_cause_specific_coefficients_fitted": true,
+  "clinical_use_ready": false,
+  "abstract_rendered_pages": 1,
+  "abstract_visually_checked": true
+}

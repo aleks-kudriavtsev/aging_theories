@@ -1,0 +1,10 @@
+{
+  "number_of_probabilities_compared": 76368,
+  "maximum_absolute_difference": 4.440892098500626e-16,
+  "model_sha256": "e6c0a9b3ca57ef9556c1556a28da03271a6caf692f5649bfc804e9fba8747f31",
+  "all_test_rows": 3182,
+  "feature_coefficients_changed": false,
+  "calibration_parameters_applied": false,
+  "quantile_bins": "8; descriptive display choice",
+  "clinical_use_ready": false
+}
