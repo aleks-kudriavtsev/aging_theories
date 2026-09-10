@@ -1,0 +1,1 @@
+{"name":"mortality-studio-web","version":"0.16.1","private":true,"type":"module","scripts":{"build":"node build.mjs"},"dependencies":{"pyodide":"0.28.3"},"engines":{"node":"22.x"}}

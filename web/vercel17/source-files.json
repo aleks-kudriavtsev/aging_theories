@@ -1,0 +1,23 @@
+{
+ "repository":"aleks-kudriavtsev/aging_theories","commit":"5f51320b7556b8afce2c311797ed6b4cbac4d0a6",
+ "files":{
+ "LICENSE":"d14b797697d9bc359f3d48522ada11cf2407b4d560685756f224a2863ff65c53",
+ "research/__init__.py":"83c825f1ceac051d7638bfb1b18d35df00ccf39a0125ca7d8af1811da7e4c648",
+ "research/mortality/__init__.py":"4af956dca1d4405de46da9d807b39d9f9014b103e4b1fbf1f06deed56a8b18cc",
+ "research/mortality/engine.py":"941b338cf067c72ec500c9e81d05d954965023cb3b0d0c47aada719eb86904f3",
+ "research/mortality/workbench/__init__.py":"bb77c3e8533d8c1cc9dc64f6515ad47c103d1132aec2fc1a01ec700ff23994b0",
+ "research/mortality/workbench/runtime.py":"5e1ede5c2a39cf1a2f2cbda65b04869d7df4fce1ecde26479ffe4a3b6a35dbf7",
+ "research/mortality/replay_compact14.py":"847f7b211783c1d4c432af821e6d2e31ae143bc8f7e7ecf6c844ee2abf06bd2b",
+ "research/mortality/replay_transport12.py":"a82913c7c555aa1ccf1d13a5248a5d28b7d9ce079859d6a691d833d93c10dc81",
+ "research/mortality/studio16/__init__.py":"fb5322d0ab55cdd551bb486a45dbf0065dde13060c0892f0c1b1241041a405ec",
+ "research/mortality/studio16/registry.py":"ff579686cec71b6be3ccd1c8f64109a7bb769ef5473ebd66f30beb3068bf1cff",
+ "research/mortality/studio16/engine.py":"a7a807157bc3f385e54501f25963fa5c55ec242a19d543eada32f45b2253279a",
+ "research/mortality/studio16/report.py":"b532ab969b3303cf65251534191c8fe5284293714fd5079aadc2d61d0218b5e4",
+ "research/mortality/compact14/model_compact14.json":"274753ea36728652d10b10fa7d02b6f77b37304084bb2b0b056128b734e394d4",
+ "research/mortality/transport12/model_bundle12.json":"40069d1a98a29308bee26e5dac895388f4c9008b983bc834ad8ac0a57fbcd094",
+ "research/mortality/transport12/model_sensitivity12.json":"7c7dc918f042ff44f141a9ad3b49e6573db7f9732c5eb9d93e29b09b0686fa24",
+ "research/mortality/studio16/static/index.html":"75283e73dff88ede01264d4ebfb783e902008fb7c7793a605247804ef72e7243",
+ "research/mortality/studio16/static/app.js":"24c9ee8fdfcc862ed37deeb863939fecc58b0d846c2d4d53c5e27aef9956507f",
+ "research/mortality/studio16/static/style.css":"b72bdd4f0a2228ea0320246872875c4213336357090c9b15fbb8264ca8ca9036"
+ }
+}
