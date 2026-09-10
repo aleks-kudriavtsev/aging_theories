@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-10",
+  "selected_tests": 226,
+  "passed": 226,
+  "errors": 0,
+  "failures": 0,
+  "skipped": 0,
+  "new_tests": 69,
+  "previous_selected_tests": 157,
+  "standalone_method_tests_subset": 47,
+  "entire_historical_suite_rerun": false,
+  "new_independent_cohort": false,
+  "actual_paired_laboratory_data": false,
+  "simulation_on_real_profiles": true,
+  "aggregate_results_reproduced_identically": true,
+  "tested_sha256": {
+    "research/mortality/assay_sensitivity13.py": "1803a49f220c97a0df40db70b1fb0b1620b507fc6cf3510bfcd790ec71e80bf7",
+    "research/mortality/method_bridge13.py": "ed248fd2e10c05c1dd0a2bad1e2ca208be9db56d7740c9ca0ac426871bc5d573",
+    "tests/test_assay_sensitivity13.py": "bce32d9dcba0dc746f04a8a24acc0f699cdfa257b95f769eff281f46e3a1dd9b",
+    "tests/test_method_bridge13.py": "6ca3411259e6bf701234e8f4e0f706eb414b689503133731b11ad2480ebc0c75",
+    "tests/test_method_bridge_scale13.py": "0d9d3a7780422a0b29af98d9c50c7866536d2ef15b88ade486006affa3566778"
+  }
+}

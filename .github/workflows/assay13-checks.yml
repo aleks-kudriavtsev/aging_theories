@@ -2,9 +2,9 @@ name: Assay13 paired-method checks
 on:
   push:
     branches: [research/assay-robustness-13]
-    paths: ['research/mortality/method_bridge13.py', 'tests/test_method_bridge13.py', '.github/workflows/assay13-checks.yml']
+    paths: ['research/mortality/method_bridge13.py', 'tests/test_method_bridge*13.py', '.github/workflows/assay13-checks.yml']
   pull_request:
-    paths: ['research/mortality/method_bridge13.py', 'tests/test_method_bridge13.py', '.github/workflows/assay13-checks.yml']
+    paths: ['research/mortality/method_bridge13.py', 'tests/test_method_bridge*13.py', '.github/workflows/assay13-checks.yml']
 permissions:
   contents: read
 jobs:
@@ -25,7 +25,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python -S -m unittest discover -s tests -p 'test_method_bridge13.py' -v
+          python -S -m unittest discover -s tests -p 'test_method_bridge*13.py' -v
           python -S -m research.mortality.method_bridge13 --demo --out /tmp/assay13-synthetic.json
           python -S - <<'PY'
           import json

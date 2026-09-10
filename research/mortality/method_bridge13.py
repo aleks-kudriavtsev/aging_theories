@@ -86,7 +86,8 @@ def agreement(reference,candidate):
     x,y=paired(reference,candidate);dif=[b-a for a,b in zip(x,y)]
     mean=statistics.fmean(dif);sd=statistics.stdev(dif)
     mx,my=statistics.fmean(x),statistics.fmean(y)
-    denominator=math.sqrt(math.fsum((v-mx)**2 for v in x)*math.fsum((v-my)**2 for v in y))
+    # Separate square roots prevent overflow of a product of valid variances.
+    denominator=math.sqrt(math.fsum((v-mx)**2 for v in x))*math.sqrt(math.fsum((v-my)**2 for v in y))
     corr=math.fsum((a-mx)*(b-my) for a,b in zip(x,y))/denominator if denominator else None
     return {'n':len(x),'mean_difference':mean,'sd_difference':sd,
         'mean_absolute_difference':statistics.fmean(abs(v) for v in dif),
