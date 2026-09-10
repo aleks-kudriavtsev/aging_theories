@@ -1,0 +1,57 @@
+name: Competing risk research unit checks
+on:
+  push:
+    branches: [research/competing-risks-09]
+    paths:
+      - 'research/mortality/*09.py'
+      - 'research/mortality/competing09/**'
+      - 'tests/test_competing_risks09.py'
+      - '.github/workflows/competing09-checks.yml'
+  pull_request:
+    paths:
+      - 'research/mortality/*09.py'
+      - 'research/mortality/competing09/**'
+      - 'tests/test_competing_risks09.py'
+      - '.github/workflows/competing09-checks.yml'
+permissions:
+  contents: read
+jobs:
+  unit-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Install fixed scientific test dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.3.5 pandas==2.2.3 scipy==1.17.0 scikit-learn==1.8.0 statsmodels==0.14.6
+      - name: Run 39 synthetic and frozen-runtime tests, not the three official-data tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import sys, unittest
+          sys.path.insert(0, 'tests')
+          import test_competing_risks09 as t
+          suite=unittest.TestSuite()
+          for cls in (t.CauseTests,t.IntegrationTests,t.FittingTests,t.ReplayTests):
+              suite.addTests(unittest.defaultTestLoader.loadTestsFromTestCase(cls))
+          assert suite.countTestCases()==39
+          result=unittest.TextTestRunner(verbosity=2).run(suite)
+          raise SystemExit(0 if result.wasSuccessful() and not result.skipped else 1)
+          PY
+      - name: Standard-library-only research replay
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -S -m research.mortality.replay_competing09 --demo --out /tmp/competing09-synthetic.json

@@ -1,0 +1,283 @@
+{
+  "date": "2026-09-10",
+  "development_n": 5287,
+  "test_n": 3182,
+  "deaths_5y": 150,
+  "deaths_8y": 302,
+  "endpoint_partition": [
+    "survival",
+    "heart_diseases",
+    "malignant_neoplasms",
+    "other_or_unknown"
+  ],
+  "primary_horizon_years": 5,
+  "selected_penalties": {
+    "clinical": 10,
+    "routine": 10
+  },
+  "training_test_overlap": 0,
+  "clinical_use_ready": false,
+  "results": [
+    {
+      "horizon_years": 5,
+      "outcome": "four_state",
+      "events": 150,
+      "multiclass_brier": {
+        "clinical": 0.069251306480395,
+        "routine": 0.0667114536305728,
+        "delta": -0.002539852849822194,
+        "interval_conditional": [
+          -0.0040398429533518,
+          -0.0010472521741486
+        ]
+      }
+    },
+    {
+      "horizon_years": 5,
+      "outcome": "heart_diseases",
+      "events": 37,
+      "auc": {
+        "clinical": 0.8357384142676673,
+        "routine": 0.8562102994791922,
+        "delta": 0.020471885211524987,
+        "interval_conditional": [
+          -0.0249001578437746,
+          0.0726901709770387
+        ]
+      },
+      "brier": {
+        "clinical": 0.0083939171498277,
+        "routine": 0.0082677246141111,
+        "delta": -0.00012619253571660022,
+        "interval_conditional": [
+          -0.0003280759123755,
+          8.763858351460843e-05
+        ]
+      },
+      "routine_calibration": {
+        "observed": 0.0088081499718547,
+        "predicted": 0.0092107437348551,
+        "observed_expected": 0.9562908517933344,
+        "calibration_slope": 1.0056890738401596
+      }
+    },
+    {
+      "horizon_years": 5,
+      "outcome": "malignant_neoplasms",
+      "events": 53,
+      "auc": {
+        "clinical": 0.7420937418751653,
+        "routine": 0.7912974017150142,
+        "delta": 0.04920365983984887,
+        "interval_conditional": [
+          0.0090823407387726,
+          0.0781353672457701
+        ]
+      },
+      "brier": {
+        "clinical": 0.0132891569309249,
+        "routine": 0.0130432015106441,
+        "delta": -0.00024595542028079884,
+        "interval_conditional": [
+          -0.0004592433656372,
+          -2.962708535417915e-05
+        ]
+      },
+      "routine_calibration": {
+        "observed": 0.0135626870392546,
+        "predicted": 0.011168847007654,
+        "observed_expected": 1.2143318849260023,
+        "calibration_slope": 0.916285645742355
+      }
+    },
+    {
+      "horizon_years": 5,
+      "outcome": "other_or_unknown",
+      "events": 60,
+      "auc": {
+        "clinical": 0.8108757298815266,
+        "routine": 0.8374023677155871,
+        "delta": 0.026526637834060507,
+        "interval_conditional": [
+          -0.009161021359156,
+          0.0638999674703831
+        ]
+      },
+      "brier": {
+        "clinical": 0.0139739326802418,
+        "routine": 0.0137884426930637,
+        "delta": -0.00018548998717810017,
+        "interval_conditional": [
+          -0.000664097086167,
+          0.0002689253996272
+        ]
+      },
+      "routine_calibration": {
+        "observed": 0.0146115903067471,
+        "predicted": 0.0155073425742984,
+        "observed_expected": 0.9422368943447544,
+        "calibration_slope": 0.9819564851374536
+      }
+    },
+    {
+      "horizon_years": 5,
+      "outcome": "all_cause",
+      "events": 150,
+      "auc": {
+        "clinical": 0.7923368658121985,
+        "routine": 0.832384385551699,
+        "delta": 0.04004751973950049,
+        "interval_conditional": [
+          0.0158334626352213,
+          0.062436534654324
+        ]
+      },
+      "brier": {
+        "clinical": 0.0335942997194004,
+        "routine": 0.0316120848127539,
+        "delta": -0.001982214906646504,
+        "interval_conditional": [
+          -0.00315304649055,
+          -0.0007464244444197
+        ]
+      },
+      "routine_calibration": {
+        "observed": 0.0369824273178566,
+        "predicted": 0.0358869333168076,
+        "observed_expected": 1.0305262640130874,
+        "calibration_slope": 0.989726998135511
+      }
+    },
+    {
+      "horizon_years": 8,
+      "outcome": "four_state",
+      "events": 302,
+      "multiclass_brier": {
+        "clinical": 0.1322615025432908,
+        "routine": 0.127536967768185,
+        "delta": -0.004724534775105815,
+        "interval_conditional": [
+          -0.0067639199300833,
+          -0.0028841395135476
+        ]
+      }
+    },
+    {
+      "horizon_years": 8,
+      "outcome": "heart_diseases",
+      "events": 64,
+      "auc": {
+        "clinical": 0.7965549654750185,
+        "routine": 0.8084203155324143,
+        "delta": 0.011865350057395863,
+        "interval_conditional": [
+          -0.0125335905651938,
+          0.041095779547815
+        ]
+      },
+      "brier": {
+        "clinical": 0.0149663817931869,
+        "routine": 0.0148750425970372,
+        "delta": -9.133919614969996e-05,
+        "interval_conditional": [
+          -0.0003888817706031,
+          0.0002457323116856
+        ]
+      },
+      "routine_calibration": {
+        "observed": 0.0159012348080344,
+        "predicted": 0.0160330426214398,
+        "observed_expected": 0.9917789893959872,
+        "calibration_slope": 0.8747995732163175
+      }
+    },
+    {
+      "horizon_years": 8,
+      "outcome": "malignant_neoplasms",
+      "events": 93,
+      "auc": {
+        "clinical": 0.7681433872555289,
+        "routine": 0.7918204707551741,
+        "delta": 0.023677083499645257,
+        "interval_conditional": [
+          -0.0007095674019069,
+          0.0430498254243635
+        ]
+      },
+      "brier": {
+        "clinical": 0.0231084446609152,
+        "routine": 0.0228047929392301,
+        "delta": -0.0003036517216850991,
+        "interval_conditional": [
+          -0.0006178589566209,
+          2.304756045241649e-05
+        ]
+      },
+      "routine_calibration": {
+        "observed": 0.0241701711597353,
+        "predicted": 0.0230145561092009,
+        "observed_expected": 1.050212354522554,
+        "calibration_slope": 0.928683352075031
+      }
+    },
+    {
+      "horizon_years": 8,
+      "outcome": "other_or_unknown",
+      "events": 145,
+      "auc": {
+        "clinical": 0.7755176059532455,
+        "routine": 0.7928833553241624,
+        "delta": 0.01736574937091695,
+        "interval_conditional": [
+          -0.0225778983335765,
+          0.0651318512669878
+        ]
+      },
+      "brier": {
+        "clinical": 0.0320651311156826,
+        "routine": 0.0313017351113261,
+        "delta": -0.0007633960043565008,
+        "interval_conditional": [
+          -0.0017981138627043,
+          0.0001084077409822
+        ]
+      },
+      "routine_calibration": {
+        "observed": 0.0349260329864614,
+        "predicted": 0.0333829988196844,
+        "observed_expected": 1.0462221556281253,
+        "calibration_slope": 0.920139317770408
+      }
+    },
+    {
+      "horizon_years": 8,
+      "outcome": "all_cause",
+      "events": 302,
+      "auc": {
+        "clinical": 0.7887179805094985,
+        "routine": 0.8137741520170415,
+        "delta": 0.025056171507543024,
+        "interval_conditional": [
+          0.0101042142585252,
+          0.0422858857290265
+        ]
+      },
+      "brier": {
+        "clinical": 0.0621215449735059,
+        "routine": 0.0585553971205914,
+        "delta": -0.0035661478529145016,
+        "interval_conditional": [
+          -0.0050063883727373,
+          -0.0022554619875193
+        ]
+      },
+      "routine_calibration": {
+        "observed": 0.0749974389542312,
+        "predicted": 0.0724305975503253,
+        "observed_expected": 1.0354386335432684,
+        "calibration_slope": 0.9553573259174176
+      }
+    }
+  ],
+  "interval_scope": "1000 paired rescaled PSU bootstrap; conditional on fitted models; excludes training/selection uncertainty"
+}
