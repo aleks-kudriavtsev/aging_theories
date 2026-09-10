@@ -1,0 +1,35 @@
+{
+  "version": "0.8_research_temporal_validation",
+  "parent_model_sha256": "7b287f3f4778b2127f2226f79d2e503e1e39087306a172e5f524a561964b07d0",
+  "factors": {
+    "M0_age_sex": {
+      "female": 0.7710419927168283,
+      "male": 0.9581891102573974
+    },
+    "M0c_clinical_only_posthoc": {
+      "female": 0.7556086738949902,
+      "male": 0.9624002596761578
+    },
+    "M1_routine": {
+      "female": 0.6897273387157447,
+      "male": 0.8878328917536451
+    }
+  },
+  "factor_estimation_cohort": "NHANES2003_2004_cardio_subset",
+  "evaluation_cohorts": [
+    "NHANES2005_2006",
+    "NHANES2007_2008"
+  ],
+  "endpoint": "all_cause_mortality",
+  "age_range": [
+    40,
+    79
+  ],
+  "horizons_years": [
+    1,
+    5,
+    10
+  ],
+  "clinical_use_ready": false,
+  "not_automatically_activated_in_workbench": true
+}

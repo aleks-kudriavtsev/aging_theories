@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-10",
+  "unit_tests_run": 269,
+  "passed": 269,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "previous_tests": 245,
+  "new_tests": 24,
+  "clinical_use_ready": false,
+  "data_validation_samples": {
+    "new_n": 6049,
+    "new_events_10y": 958,
+    "complete_profile_n": 5287,
+    "complete_profile_events_10y": 760
+  },
+  "test_log_sha256": "d04e71b4da39facad067ffec6e2a97c0a33e735bbd419f29c62a00302f63d94a",
+  "tested_files_sha256": {
+    "research/mortality/validate_temporal08.py": "3cc9adef42f6f59c36344ad9ed3762681bff740d47e08db7de17d2702da3636c",
+    "research/mortality/sensitivity_temporal08.py": "943e5e29e6611960d97f795608459e2f4702f7d18c416e6174ad0ddbde7eece1",
+    "research/mortality/replay_temporal08.py": "1b03db28ce7844ca00fdff81f24653fcdf201005807fe49f973422768d8d69e1",
+    "tests/test_temporal08.py": "027b372c95f0ebde0a8381d324c2580ff070dc9bbc9e74342c6b6dd06d4bb4fc",
+    "research/mortality/validation08/recalibration_spec.json": "ed8d8b8d6aa464bc42b5d47b70176677895b5823fe899ee81494e9c6804a353c"
+  },
+  "reader_reference_comparison_cells": 412984,
+  "reader_reference_mismatches": 0,
+  "R_interpreter_executed": false,
+  "new_model_feature_coefficients_fitted": false,
+  "abstract_pages": 1,
+  "abstract_render_visually_checked": true,
+  "conference_submission_sent": false
+}
