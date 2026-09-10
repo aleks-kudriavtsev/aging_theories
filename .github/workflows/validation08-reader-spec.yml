@@ -1,0 +1,34 @@
+name: CDC reader specification audit input
+on:
+  push:
+    branches: [research/scientific-validation-08]
+    paths: [.github/workflows/validation08-reader-spec.yml]
+permissions:
+  contents: read
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Read official small public reference scripts without executing them
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request, pathlib, hashlib, json
+          root=pathlib.Path('reader_specs');root.mkdir()
+          rows=[]
+          for name in ['R_ReadInProgramAllSurveys.R','SAS_ReadInProgramAllSurveys.sas']:
+              url='https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/'+name
+              with urllib.request.urlopen(url,timeout=40) as response:
+                  data=response.read(100001)
+              if len(data)>100000:raise ValueError('unexpected specification size')
+              data.decode('utf-8-sig')
+              (root/name).write_bytes(data)
+              rows.append({'file':name,'url':url,'sha256':hashlib.sha256(data).hexdigest()})
+          (root/'manifest.json').write_text(json.dumps(rows,indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: cdc-reader-specs08
+          path: reader_specs/
+          retention-days: 1
