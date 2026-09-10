@@ -1,0 +1,40 @@
+name: Compact14 development inputs
+on:
+  push:
+    branches: [research/compact-panel-14]
+    paths: [.github/workflows/compact14-development-input.yml]
+permissions:
+  contents: read
+jobs:
+  retrieve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Retrieve previously studied public CDC development cycle only
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib,json,urllib.request,urllib.parse,hashlib,concurrent.futures
+          root=pathlib.Path('development14');root.mkdir()
+          urls={f'2009_{c}_F.xpt':f'https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/{c}_F.xpt' for c in ['DEMO','BPX','BMX','SMQ','MCQ','BPQ','DIQ','BIOPRO','TCHOL','HDL','GHB','ALB_CR','CBC','CRP']}
+          urls['2009_mortality.dat']='https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2009_2010_MORT_2019_PUBLIC.dat'
+          def get(item):
+              name,url=item
+              with urllib.request.urlopen(url,timeout=45) as r:
+                  assert urllib.parse.urlparse(r.url).hostname in {'wwwn.cdc.gov','ftp.cdc.gov'}
+                  data=r.read(20000001)
+              if len(data)>20000000:raise ValueError('Oversize')
+              if name.endswith('.xpt') and not data.startswith(b'HEADER RECORD'):raise ValueError('Not XPORT')
+              if name.endswith('.dat') and b'<html' in data[:1000].lower():raise ValueError('Not mortality data')
+              (root/name).write_bytes(data)
+              return {'file':name,'url':url,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'retrieved'}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: rows=list(pool.map(get,urls.items()))
+          (root/'manifest.json').write_text(json.dumps({'files':rows},indent=2))
+          print('Retrieved',len(rows),'previously examined development files. No2015 outcomes accessed.')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: compact14-development2009
+          path: development14/
+          retention-days: 1
+          if-no-files-found: error
