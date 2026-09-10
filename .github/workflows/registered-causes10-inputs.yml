@@ -1,0 +1,63 @@
+name: Registered mortality source audit 10
+on:
+  push:
+    branches: [research/registered-causes-10]
+    paths: [.github/workflows/registered-causes10-inputs.yml]
+permissions:
+  contents: read
+jobs:
+  inputs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Read official WHO sources without running downloaded code
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures, hashlib, html.parser, io, json, pathlib, urllib.parse, urllib.request, zipfile
+          root=pathlib.Path('registered10_inputs');root.mkdir()
+          allowed={'www.who.int','cdn.who.int'}
+          page='https://www.who.int/data/data-collection-tools/who-mortality-database'
+          def read(url, limit):
+              if urllib.parse.urlparse(url).scheme!='https' or urllib.parse.urlparse(url).hostname not in allowed:
+                  raise ValueError('Unapproved source host')
+              with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'MortalityResearchSourceAudit/1.0'}),timeout=60) as r:
+                  if urllib.parse.urlparse(r.url).hostname not in allowed:raise ValueError('Unapproved redirect')
+                  body=r.read(limit+1)
+              if len(body)>limit:raise ValueError('Bounded input exceeded')
+              return body
+          page_bytes=read(page,3000000);(root/'WHO_download_page.html').write_bytes(page_bytes)
+          class Links(html.parser.HTMLParser):
+              def __init__(self):super().__init__();self.urls=[]
+              def handle_starttag(self,tag,attrs):
+                  if tag=='a':
+                      u=dict(attrs).get('href','')
+                      if '.zip' in u.lower():self.urls.append(urllib.parse.urljoin(page,u))
+          parser=Links();parser.feed(page_bytes.decode('utf-8'))
+          selected={}
+          for u in parser.urls:
+              name=pathlib.PurePosixPath(urllib.parse.urlparse(u).path).name
+              key=name.lower()
+              if any(term in key for term in ('documentation','availability','country_codes','notes','morticd10_part5','morticd10_part6')) or key in {'pop.zip','population.zip','mort_pop.zip'}:
+                  selected[name]=u
+          if len(selected)<6:raise ValueError('Expected official source links not found: '+repr(parser.urls))
+          print(json.dumps(selected,indent=2),flush=True)
+          def fetch(item):
+              name,url=item
+              try:
+                  body=read(url,35000000)
+                  if not zipfile.is_zipfile(io.BytesIO(body)):raise ValueError('Not a ZIP source')
+                  (root/name).write_bytes(body)
+                  return {'file':name,'url':url,'sha256':hashlib.sha256(body).hexdigest(),'bytes':len(body),'status':'retrieved'}
+              except Exception as e:return {'file':name,'url':url,'status':'failed','error':str(e)}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:rows=list(ex.map(fetch,selected.items()))
+          (root/'manifest.json').write_text(json.dumps({'date':'2026-09-10','source_page':page,'purpose':'noncommercial scientific research; not licensed for commercial deployment','files':rows},indent=2),encoding='utf-8')
+          print(json.dumps(rows,indent=2))
+          PY
+      - name: Store source input artifact briefly; no raw data in git
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: registered-mortality10-inputs
+          path: registered10_inputs/
+          retention-days: 1
+          if-no-files-found: error

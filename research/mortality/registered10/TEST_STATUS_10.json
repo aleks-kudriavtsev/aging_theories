@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-10",
+  "new_tests_run": 44,
+  "new_tests_passed": 44,
+  "new_tests_skipped": 0,
+  "workbench_tests_passed": 92,
+  "evidence_contract_tests_passed": 47,
+  "competing09_tests_run": 39,
+  "competing09_tests_skipped": 1,
+  "all_previous_311_scientific_tests_rerun": false,
+  "source_archives_verified": 7,
+  "national_rows_selected": 68850,
+  "common_year": 2019,
+  "leaf_groups": 65,
+  "compatible_leaf_groups": 35,
+  "new_individual_model_fit": false,
+  "new_individual_validation": false,
+  "tested_sha256": {
+    "research/mortality/registered_causes10.py": "74c51176cf1fb308ac72707c1213e63ac51034bf28bbbd518d5b71148e067e51",
+    "tests/test_registered10.py": "e5d90d71ba6d3da328b9d6504bdd347965f7c97e5f0318332b6782e626b22ccd"
+  },
+  "model09_sha256": "e6c0a9b3ca57ef9556c1556a28da03271a6caf692f5649bfc804e9fba8747f31",
+  "test_log_sha256": "96ef5069c8e217eb05f430104dd74d4efb7dd23504eb4f7de5e822edb20c1b12",
+  "remote_ci_status": "not_yet_completed_at_report_creation"
+}
