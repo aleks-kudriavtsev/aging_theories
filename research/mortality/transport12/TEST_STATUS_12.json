@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-10",
+  "tests_run": 203,
+  "passed": 203,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "new_tests": 64,
+  "previous_workbench_tests": 92,
+  "previous_evidence_contract_tests": 47,
+  "all_historical_tests_rerun": false,
+  "autonomous_tests_separately_run": 18,
+  "log_sha256": "040d6041f7a935bef87d930aa3c0fb36a84b655314bc6a7e17fdd971e9333817",
+  "files": {
+    "research/mortality/transport_no_crp12.py": "0aec4153ce5c7e9e533d6620e264ce0f391090c431e4d73d0e09c53a0d441825",
+    "research/mortality/replay_transport12.py": "a82913c7c555aa1ccf1d13a5248a5d28b7d9ce079859d6a691d833d93c10dc81",
+    "research/mortality/sensitivity_assay12.py": "b2d7b347cb5b6a62cfb8d96a26b04d5e287f3abb05dc0d72d1c1b760ef4cb69c",
+    "research/mortality/audit_transport12.py": "f9a9dd322f10718b53938a1fc4e55c0e791595465c380912c03862f2b664052a",
+    "tests/test_transport12.py": "ed5f2fbe6f467d640d98c165ac03cf9b7877465ba3a9aed41d7dc5ac9a533640",
+    "tests/test_transport_quality12.py": "77c00f20bc2d88e05692e6afa6ece0b95538bf92e2da257c71274c13e835bdc2",
+    "tests/test_transport_runtime12.py": "6366c44367950fc5de4532f9531661bef81f779e2a7712ea88ca519d343276c1",
+    "research/mortality/transport12/model_bundle12.json": "40069d1a98a29308bee26e5dac895388f4c9008b983bc834ad8ac0a57fbcd094",
+    "research/mortality/transport12/model_sensitivity12.json": "7c7dc918f042ff44f141a9ad3b49e6573db7f9732c5eb9d93e29b09b0686fa24",
+    "research/mortality/transport12/expected_development_sources.json": "0500060113a4e523555fda9cabdc984155202b6328a3bc4370dae88c9d301dd7"
+  },
+  "clinical_use_ready": false
+}

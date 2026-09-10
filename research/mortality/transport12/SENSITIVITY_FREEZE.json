@@ -1,0 +1,11 @@
+{
+ "amendment_commit":"d52e6b472a6c069b52a1cee23185641fae897afd",
+ "model_sha256":"7c7dc918f042ff44f141a9ad3b49e6573db7f9732c5eb9d93e29b09b0686fa24",
+ "primary_model_sha256":"40069d1a98a29308bee26e5dac895388f4c9008b983bc834ad8ac0a57fbcd094",
+ "development_n":15280,
+ "features_removed_relative_to_primary":["rdw","log_wbc"],
+ "selected_penalty":10.0,
+ "evaluation_individual_records_inspected":false,
+ "analysis_role":"metadata_triggered_secondary_not_replacement_primary",
+ "clinical_use_ready":false
+}
