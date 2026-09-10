@@ -70,12 +70,16 @@ def main(argv=None):
     ba=sub.add_parser('batch',help='Пакет JSONL, одна исследовательская запись на строку');ba.add_argument('input',type=Path);ba.add_argument('--out',type=Path,required=True)
     ex=sub.add_parser('example',help='Вывести пример JSON без записи данных');ex.add_argument('--model',choices=list(MODELS),default='M1_routine')
     se=sub.add_parser('serve',help='Локальный браузерный интерфейс на 127.0.0.1');se.add_argument('--port',type=int,default=8765)
+    st=sub.add_parser('studio',help='Единый интерфейс моделей 0.16');st.add_argument('--port',type=int,default=8766)
     ev=sub.add_parser('evidence',help='Пересобрать реестр 150 прежних оценок (без нового поиска)');ev.add_argument('--out',type=Path,required=True)
     args=p.parse_args(argv)
     try:
         if args.cmd=='doctor':print(json.dumps(doctor(),ensure_ascii=False,indent=2));return 0
         if args.cmd=='schema':print(json.dumps(schema(),ensure_ascii=False,indent=2));return 0
         if args.cmd=='example':print(json.dumps(example(args.model),ensure_ascii=False,indent=2));return 0
+        if args.cmd=='studio':
+            from ..studio16.server import serve
+            serve(args.port);return 0
         if args.cmd=='serve':
             from .server import serve
             serve(args.port);return 0
