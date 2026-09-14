@@ -1,0 +1,48 @@
+name: Transport12 frozen-model evaluation inputs
+on:
+  push:
+    branches: [research/transport-no-crp-12]
+    paths: [.github/workflows/transport12-evaluation-inputs.yml]
+permissions:
+  contents: read
+jobs:
+  retrieve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Retrieve official evaluation files after independent model freeze
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures,hashlib,json,pathlib,urllib.request,urllib.parse
+          root=pathlib.Path('evaluation12');root.mkdir();sources={}
+          for year,suffix in [(2011,'G'),(2013,'H')]:
+              for c in ['DEMO','BPX','BMX','SMQ','MCQ','BPQ','DIQ','BIOPRO','TCHOL','HDL','GHB','ALB_CR','CBC']:
+                  for ext in ['xpt','htm']:
+                      sources[f'{year}_{c}_{suffix}.{ext}']=f'https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/{year}/DataFiles/{c}_{suffix}.{ext}'
+              sources[f'{year}_mortality.dat']=f'https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_{year}_{year+1}_MORT_2019_PUBLIC.dat'
+          def get(item):
+              name,url=item
+              try:
+                  with urllib.request.urlopen(url,timeout=45) as r:
+                      if urllib.parse.urlparse(r.url).hostname not in {'wwwn.cdc.gov','ftp.cdc.gov'}:raise ValueError('Unexpected host')
+                      data=r.read(30000001)
+                  if len(data)>30000000:raise ValueError('Input size limit')
+                  if name.endswith('.xpt') and not data.startswith(b'HEADER RECORD'):raise ValueError('Not XPORT')
+                  if name.endswith('.dat') and b'<html' in data[:1000].lower():raise ValueError('Not linkage')
+                  (root/name).write_bytes(data)
+                  return {'file':name,'url':url,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'retrieved'}
+              except Exception as e:return {'file':name,'url':url,'status':'failed','error':str(e)}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:rows=list(pool.map(get,sources.items()))
+          manifest={'files':rows,'analysis_lock_commit':'55279f23e10b9318ceddfa266d8d404e717006ee','model_freeze_commit':'70e8cf3505b8910d7b0689c56158b00d123c6823','model_sha256_before_retrieval':'40069d1a98a29308bee26e5dac895388f4c9008b983bc834ad8ac0a57fbcd094'}
+          (root/'manifest.json').write_text(json.dumps(manifest,indent=2))
+          print(json.dumps({'retrieved':sum(x['status']=='retrieved' for x in rows),'failures':[x for x in rows if x['status']=='failed']}))
+          if any(x['status']=='failed' and x['file'].endswith(('.xpt','.dat')) for x in rows):raise SystemExit('Required data missing')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: transport12-evaluation1114
+          path: evaluation12/
+          retention-days: 1
+          if-no-files-found: error

@@ -1,0 +1,12 @@
+{
+  "analysis_lock_commit": "55279f23e10b9318ceddfa266d8d404e717006ee",
+  "frozen_at_utc": "2026-09-10T08:39:47.142074+00:00",
+  "model_sha256": "40069d1a98a29308bee26e5dac895388f4c9008b983bc834ad8ac0a57fbcd094",
+  "fit_code_sha256": "0aec4153ce5c7e9e533d6620e264ce0f391090c431e4d73d0e09c53a0d441825",
+  "development_n": 15280,
+  "evaluation_data_seen": false,
+  "groups": ["heart_diseases", "malignant_neoplasms", "chronic_lower_respiratory", "cerebrovascular", "other_or_unknown"],
+  "selected_penalties": {"clinical": 10.0, "routine_no_crp": 10.0},
+  "calibration_on_future_data": false,
+  "clinical_use_ready": false
+}

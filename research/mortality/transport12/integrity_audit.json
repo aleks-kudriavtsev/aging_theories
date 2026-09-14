@@ -1,0 +1,13 @@
+{
+  "files_verified_including_documentation": 54,
+  "scientific_data_files": 28,
+  "evaluation_n": 5679,
+  "probabilities_compared": 136296,
+  "max_absolute_replay_difference": 3.885780586188048e-16,
+  "subgroup_arithmetic_checks": 48,
+  "intervals_with_undefined_draws": 9,
+  "guard_added_after_evaluation": "interval reporting only; no coefficient, point metric or primary interval modification",
+  "clinical_use_ready": false,
+  "raw_participant_records_exported": false,
+  "model_sha256": "40069d1a98a29308bee26e5dac895388f4c9008b983bc834ad8ac0a57fbcd094"
+}

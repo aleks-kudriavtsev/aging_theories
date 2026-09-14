@@ -1,0 +1,48 @@
+name: Transport12 frozen replay checks
+on:
+  push:
+    branches: [research/transport-no-crp-12]
+    paths: ['research/mortality/*12.py', 'research/mortality/transport12/**', 'tests/test_transport*.py', '.github/workflows/transport12-checks.yml']
+  pull_request:
+    paths: ['research/mortality/*12.py', 'research/mortality/transport12/**', 'tests/test_transport*.py', '.github/workflows/transport12-checks.yml']
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        python: ['3.10', '3.13']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '${{ matrix.python }}'
+      - name: Standard-library replay without participant data
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -S -m unittest discover -s tests -p 'test_transport_runtime12.py' -v
+          python -S -m research.mortality.replay_transport12 --demo --out "$RUNNER_TEMP/synthetic12.json"
+      - name: Check both immutable model versions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -S - <<'PY'
+          import hashlib,json,pathlib
+          base=pathlib.Path('research/mortality/transport12')
+          for name,expected in [('model_bundle12.json','40069d1a98a29308bee26e5dac895388f4c9008b983bc834ad8ac0a57fbcd094'),('model_sensitivity12.json','7c7dc918f042ff44f141a9ad3b49e6573db7f9732c5eb9d93e29b09b0686fa24')]:
+              data=(base/name).read_bytes()
+              assert hashlib.sha256(data).hexdigest()==expected
+              doc=json.loads(data)
+              models=doc.get('models',{'secondary':doc.get('model')})
+              for m in models.values():
+                  p=m['preprocessing'];n=len(p['features'])
+                  assert all(len(p[k])==n for k in ['lower','upper','mean','sd'])
+                  assert 'log_crp' not in p['features']
+              assert doc['clinical_use_ready'] is False
+          print('Both model hashes and feature dimensions verified')
+          PY
