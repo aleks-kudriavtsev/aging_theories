@@ -1,0 +1,29 @@
+{
+  "source_archive": "mortality_transport12.zip",
+  "archive_sha256": "3e8df89285ddbf8be57e0e112fe4fab6fed6f1694cf9aa4e75750a0bad6c53ee",
+  "archive_member": "mortality_transport12/source/research/mortality/transport12/sensitivity_metrics.csv",
+  "source_file_sha256": "9462d14b77fd1b635c3ff7b00731a073042a40fc48b48a009102e3b72f370ca9",
+  "baseline_results_are_not_new": true,
+  "rows": [
+    {
+      "cycle": 2011,
+      "model": "routine_no_crp",
+      "six_state_brier": 0.0687078616446043
+    },
+    {
+      "cycle": 2011,
+      "model": "no_cbc_sensitivity",
+      "six_state_brier": 0.0690906139254957
+    },
+    {
+      "cycle": 2013,
+      "model": "routine_no_crp",
+      "six_state_brier": 0.0637706323789793
+    },
+    {
+      "cycle": 2013,
+      "model": "no_cbc_sensitivity",
+      "six_state_brier": 0.063702417807276
+    }
+  ]
+}
