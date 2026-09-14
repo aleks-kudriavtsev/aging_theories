@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-10",
+  "status": "retrospective_endpoint_feasibility_not_model_validation",
+  "cycles": [1999,2001,2003,2005,2007,2009],
+  "age_range": [40,79],
+  "followup_end": "2019-12-31",
+  "new_independent_validation": false,
+  "new_model_fit": false,
+  "clinical_use_ready": false,
+  "raw_participant_records_exported": false,
+  "n_eligible": 17629,
+  "n_complete_profile": 15273,
+  "deaths_5y_eligible": 1216,
+  "deaths_8y_eligible": 2169,
+  "deaths_5y_complete": 862,
+  "deaths_8y_complete": 1627,
+  "data_files_verified": 87,
+  "flow": [
+    {"cycle":1999,"survey_n":9965,"age40_79_n":2763,"linked_n":2550,"eligible_examination_n":2550,"complete_profile_n":2198,"minimum_alive_followup_years":18.833333333333332,"zero_month_deaths":0},
+    {"cycle":2001,"survey_n":11039,"age40_79_n":2944,"linked_n":2779,"eligible_examination_n":2779,"complete_profile_n":2361,"minimum_alive_followup_years":16.75,"zero_month_deaths":0},
+    {"cycle":2003,"survey_n":10122,"age40_79_n":2782,"linked_n":2630,"eligible_examination_n":2630,"complete_profile_n":2245,"minimum_alive_followup_years":14.75,"zero_month_deaths":0},
+    {"cycle":2005,"survey_n":10348,"age40_79_n":2662,"linked_n":2576,"eligible_examination_n":2576,"complete_profile_n":2275,"minimum_alive_followup_years":12.833333333333334,"zero_month_deaths":0},
+    {"cycle":2007,"survey_n":10149,"age40_79_n":3586,"linked_n":3473,"eligible_examination_n":3473,"complete_profile_n":3012,"minimum_alive_followup_years":10.833333333333334,"zero_month_deaths":0},
+    {"cycle":2009,"survey_n":10537,"age40_79_n":3710,"linked_n":3621,"eligible_examination_n":3621,"complete_profile_n":3182,"minimum_alive_followup_years":8.75,"zero_month_deaths":0}
+  ],
+  "arithmetic_checks": 420,
+  "independent_reader_cells_compared": 497280,
+  "public_cause_groups": 10,
+  "unknown_cause_preserved": true,
+  "general_examination_sample_not_protein_subsample": true,
+  "weights_note": "Pooled: WTMEC4YR/3 for1999-2002, WTMEC2YR/6 for2003-2010. Per-cycle: WTMEC2YR. Descriptive analytic-sample fractions, not linkage-adjusted national risk",
+  "future_unseen_cycles_not_retrieved": [2011,2013,2015,2017]
+}

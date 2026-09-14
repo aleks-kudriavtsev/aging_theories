@@ -1,0 +1,43 @@
+name: Endpoint11 observable-outcome contract
+on:
+  push:
+    branches: [research/endpoint-readiness-11]
+    paths:
+      - research/mortality/endpoint_contract11.py
+      - tests/test_endpoint11.py
+      - .github/workflows/endpoint11-checks.yml
+  pull_request:
+    paths:
+      - research/mortality/endpoint_contract11.py
+      - tests/test_endpoint11.py
+      - .github/workflows/endpoint11-checks.yml
+permissions:
+  contents: read
+jobs:
+  offline-contract:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.10','3.13']
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Run45 standard-library synthetic contract tests, not clinical validation
+        shell: bash
+        run: |
+          python -S - <<'PY'
+          import sys, unittest
+          sys.path.insert(0,'tests')
+          import test_endpoint11 as tests
+          classes=(tests.CodingTests,tests.ObservabilityTests,tests.FollowupTests,tests.LineageAndWeightTests)
+          suite=unittest.TestSuite(unittest.defaultTestLoader.loadTestsFromTestCase(c) for c in classes)
+          if suite.countTestCases()!=45:raise SystemExit('Unexpected offline test inventory')
+          result=unittest.TextTestRunner(verbosity=2).run(suite)
+          if not result.wasSuccessful() or result.skipped:raise SystemExit(1)
+          PY

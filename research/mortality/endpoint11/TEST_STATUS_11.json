@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-10",
+  "new_tests": 51,
+  "new_tests_failures": 0,
+  "new_tests_skipped": 0,
+  "previous_runtime_tests": 92,
+  "previous_evidence_tests": 47,
+  "total_executed": 190,
+  "full_historical_suite_rerun": false,
+  "new_independent_validation": false,
+  "new_model_fit": false,
+  "clinical_use_ready": false,
+  "data_files_verified": 87,
+  "independent_reader_cells": 497280,
+  "arithmetic_reconciliations": 420,
+  "logs": {
+    "tests11_final.log": "9dccca2059dd5a595fdcd1655c5a466af0f929af0ac5abccf5841c08853c052b",
+    "old_workbench11.log": "62c4c81686774135e3e2a9ac56d51d29bb77a7f272f0900a5dbf46ccae8e52e6",
+    "old_evidence11.log": "48630fabbe1c960125a7e11a6d6a4c88828c5fa38708618c244de5d3727701ed"
+  },
+  "tested_files_sha256": {
+    "research/mortality/endpoint_contract11.py": "bee76477b80804d8f971c1fce2686a2612db11a849ca564f1c7d6e8da6e25eaa",
+    "research/mortality/audit_endpoint_cohorts11.py": "5950fac88833e81ef11c5de622bef4252b26825d7756d633e063ca3165eb7d68",
+    "tests/test_endpoint11.py": "5a590821ec6e2a1316b625e40c45a40894ed1a75660a4b3d003010bb17e000a3"
+  }
+}
