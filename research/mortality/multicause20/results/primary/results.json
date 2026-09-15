@@ -1,0 +1,82 @@
+{
+  "study": "primary",
+  "training_n": 5905,
+  "test_n": 3490,
+  "test_events15": 932,
+  "estimated_noninfectious_families": 17,
+  "total_estimated_hazards": 20,
+  "outcome_states": 21,
+  "heldout_strata": [
+    14,
+    21,
+    5,
+    24,
+    25,
+    6,
+    32,
+    26,
+    1,
+    27,
+    16
+  ],
+  "training_strata": 23,
+  "test_strata": 11,
+  "raw_participant_data_exported": false,
+  "feature_coefficients_fitted_on_test": false,
+  "model_sha256": "8b2bc4f879c5f4c9a7b7b3b03b605c2f8d0c91fd48e21ef62cdce136342c9397",
+  "bootstrap_replicates": 1000,
+  "bootstrap_censoring_failures": 0,
+  "clinical_use_ready": false,
+  "geographic_external_validation": false,
+  "contemporary_risk": false,
+  "audit": [
+    {
+      "horizon": 10,
+      "panel": "clinical",
+      "AJ_IPCW_difference": 4.440892098500626e-16,
+      "early_censored_n": 10,
+      "G_horizon": 0.9966459172510163
+    },
+    {
+      "horizon": 10,
+      "panel": "laboratory",
+      "AJ_IPCW_difference": 4.440892098500626e-16,
+      "early_censored_n": 10,
+      "G_horizon": 0.9966459172510163
+    },
+    {
+      "horizon": 15,
+      "panel": "clinical",
+      "AJ_IPCW_difference": 2.1094237467877974e-15,
+      "early_censored_n": 112,
+      "G_horizon": 0.9627171162927388
+    },
+    {
+      "panel": "clinical",
+      "horizon": 15,
+      "calibration": {
+        "status": "computed",
+        "intercept": -0.07737959590590018,
+        "slope": 1.0291757271526347,
+        "calibration_in_large": -0.10568962168563156
+      }
+    },
+    {
+      "horizon": 15,
+      "panel": "laboratory",
+      "AJ_IPCW_difference": 2.1094237467877974e-15,
+      "early_censored_n": 112,
+      "G_horizon": 0.9627171162927388
+    },
+    {
+      "panel": "laboratory",
+      "horizon": 15,
+      "calibration": {
+        "status": "computed",
+        "intercept": -0.08888652566341601,
+        "slope": 1.0168041017901246,
+        "calibration_in_large": -0.10576599339643283
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "code_commit": "0b53c236d09e3e49bc16964e651148be5a23901f",
+  "actions_run": "34966223947",
+  "test_counts": {
+    "studio_tests.log": 65,
+    "new_tests.log": 40,
+    "compact_tests.log": 30
+  },
+  "total_selected_tests": 135,
+  "all_selected_tests_passed": true,
+  "not_full_historical_test_suite": true,
+  "new_external_RU_DE_validation": false,
+  "individual_source_data_exported": false,
+  "output_sha256": {
+    "cohort_audit.json": "3a126244c4d37d4fd0ec51263b00137f41a37cc53dd3e9b74cb06e0f8febcd93",
+    "run_summary.json": "8e46bc85c5d611a31ce044b6534718bbc4b553230fca7bb87d352b62430375e0",
+    "SOURCE_MANIFEST.json": "3e2115db72e51392de889c52bfe77628d7219906cf2800210e68000b21cd1334",
+    "MODEL_INDEX.json": "0d299f4f08a94e7446beb8d1701ff52b60958653ed63efa1d461404a7cab2973",
+    "primary/cause_counts.csv": "5e66bcb8da689f5888c8d3412fe2c18514bc9dddc88062a14cdec95c784a3459",
+    "primary/subgroups.csv": "5bf91a2fabeccff2f8dd76d916935f029cec95ab69b7e74a8e503fa5cb21ebc9",
+    "primary/results.json": "1f8949a4f9812ecf4bb5efd06c40a23606ce7f217a4774a57a33ff62fea632f0",
+    "primary/metrics.csv": "78598896183ba94fcbd04501afd10ec5ee12baadb727ee129a5e87959d5143e0",
+    "primary/intervals.csv": "aeb7bd0ddbb157c56240341d23003377334807f7275c9b3379242d9d855dae3d",
+    "primary/model.json": "8b2bc4f879c5f4c9a7b7b3b03b605c2f8d0c91fd48e21ef62cdce136342c9397",
+    "primary/training_cv.csv": "c475255233331703922fdb6ae34f5b58bb6cfc85f377d9da860b97c6ac8852fb",
+    "hepatic/cause_counts.csv": "2af312e153fdacbc41bab79207bedccd4369518396020c07aa039b3fd4f0ad8e",
+    "hepatic/subgroups.csv": "41373d57ec1fba3652888147925df0aa10783d5565e8e58a6e601d2bd465b159",
+    "hepatic/results.json": "460a7b6343d5e296b829839887f5c22ccc59f14f65003c5feb97d159ba2715b6",
+    "hepatic/metrics.csv": "93b8669a00ecf8c7718e7fa68e83ad2030ccc71a3b42c391bd45ac1b9a6b124b",
+    "hepatic/intervals.csv": "1fb1be6478f6246378d5d9dfb50254460f16ae67b6a93c6ebbeafba9c15231d6",
+    "hepatic/model.json": "0c51142ea7adbf8dd6bc9eb6fe127ba73b896589ccbcfa04bead9f0ff114c674",
+    "hepatic/training_cv.csv": "8644b7a67320fd9d4fdf21d2908bf606383c22984d325c7aa77705a6099bd91b"
+  }
+}

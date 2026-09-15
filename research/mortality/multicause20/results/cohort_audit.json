@@ -1,0 +1,51 @@
+{
+  "vital_n": 14407,
+  "source_hashes_verified": 9,
+  "reader_cells_verified": 846655,
+  "certificate_causes_compared": 4497,
+  "certificate_mismatches": 0,
+  "missing_date_n": 1,
+  "day_substitutions": 7,
+  "positive_followup_valid_n": 13829,
+  "primary_eligible_n": 10900,
+  "source_imputation_excluded": {
+    "albumin": 547,
+    "cholesterol": 356,
+    "hemoglobin": 461
+  },
+  "available_by_subsample": {
+    "1": {
+      "albumin": 7144,
+      "cholesterol": 7258,
+      "hemoglobin": 6814,
+      "creatinine": 0,
+      "bun": 0,
+      "ast": 0,
+      "alp": 0,
+      "urate": 0,
+      "smoking_current": 0
+    },
+    "2": {
+      "albumin": 3657,
+      "cholesterol": 3734,
+      "hemoglobin": 3518,
+      "creatinine": 0,
+      "bun": 0,
+      "ast": 3395,
+      "alp": 3391,
+      "urate": 3701,
+      "smoking_current": 3847
+    },
+    "3": {
+      "albumin": 0,
+      "cholesterol": 2978,
+      "hemoglobin": 3041,
+      "creatinine": 2591,
+      "bun": 2935,
+      "ast": 2920,
+      "alp": 2973,
+      "urate": 2950,
+      "smoking_current": 3058
+    }
+  }
+}

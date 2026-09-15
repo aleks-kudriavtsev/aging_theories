@@ -1,0 +1,10 @@
+{
+  "primary": {
+    "path": "results/primary/model.json",
+    "sha256": "8b2bc4f879c5f4c9a7b7b3b03b605c2f8d0c91fd48e21ef62cdce136342c9397"
+  },
+  "hepatic": {
+    "path": "results/hepatic/model.json",
+    "sha256": "0c51142ea7adbf8dd6bc9eb6fe127ba73b896589ccbcfa04bead9f0ff114c674"
+  }
+}

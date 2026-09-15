@@ -1,0 +1,1367 @@
+{
+  "study": "primary",
+  "version": "0.20.0",
+  "model_kind": "sex_stratified_penalized_piecewise_cause_specific_hazards",
+  "data_source": "NHANES I baseline 1971-1975 / NHEFS1992 public followup",
+  "country": "historical_US",
+  "clinical_use_ready": false,
+  "horizons": [
+    10,
+    15
+  ],
+  "models": {
+    "clinical": {
+      "preprocessing": {
+        "features": [
+          "age_scaled",
+          "age_squared",
+          "bmi",
+          "sbp"
+        ],
+        "lower": [
+          -2.5,
+          0.0,
+          16.802281582798056,
+          90.0
+        ],
+        "upper": [
+          2.4,
+          6.25,
+          44.70455632413488,
+          220.0
+        ],
+        "mean": [
+          -0.0023200677392040624,
+          2.4660270956816257,
+          25.64740110278119,
+          135.2890770533446
+        ],
+        "sd": [
+          1.570357192796375,
+          1.8724728516401778,
+          4.857636864603434,
+          24.269051963961353
+        ]
+      },
+      "causes": {
+        "ihd": {
+          "baseline_log_hazards": [
+            [
+              -5.960126831974673,
+              -5.850220593475531,
+              -5.228389853848845
+            ],
+            [
+              -7.179683672474621,
+              -6.806365240919253,
+              -5.971979527991371
+            ]
+          ],
+          "coefficients": [
+            1.616879678313695,
+            -0.10699264338660333,
+            0.10715702697603137,
+            0.2578171790374415
+          ],
+          "raw_events": 550,
+          "penalty": 1.0,
+          "projected_gradient_max": 5.593931743597125e-06,
+          "iterations": 27,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "heart_failure": {
+          "baseline_log_hazards": [
+            [
+              -9.543772372423277,
+              -9.212241425005326,
+              -7.763279782075192
+            ],
+            [
+              -9.332572566321314,
+              -9.451498500885638,
+              -7.968712665484475
+            ]
+          ],
+          "coefficients": [
+            1.5653283704496503,
+            -0.054352683224691625,
+            0.12367727310274275,
+            0.22987889504082637
+          ],
+          "raw_events": 45,
+          "penalty": 1.0,
+          "projected_gradient_max": 3.678844531160297e-07,
+          "iterations": 32,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "stroke": {
+          "baseline_log_hazards": [
+            [
+              -7.941965012568892,
+              -8.17035251735245,
+              -7.011599380003096
+            ],
+            [
+              -8.519018511211831,
+              -7.531387155225123,
+              -7.0760181072343515
+            ]
+          ],
+          "coefficients": [
+            1.713146204565261,
+            0.09700527265657781,
+            -0.14712183563793732,
+            0.37844405498396444
+          ],
+          "raw_events": 175,
+          "penalty": 1.0,
+          "projected_gradient_max": 3.1771953973303013e-06,
+          "iterations": 32,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "hypertension": {
+          "baseline_log_hazards": [
+            [
+              -8.535556957155613,
+              -9.273564516209417,
+              -8.375561697885026
+            ],
+            [
+              -9.664105070472647,
+              -8.820193788975704,
+              -9.005510412818685
+            ]
+          ],
+          "coefficients": [
+            0.8942796246606004,
+            -0.05189458603482046,
+            -0.19456767843694,
+            0.9607974939322245
+          ],
+          "raw_events": 49,
+          "penalty": 1.0,
+          "projected_gradient_max": 1.5204038329302838e-06,
+          "iterations": 31,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "aortic_aneurysm": {
+          "baseline_log_hazards": [
+            [
+              -10.210936750191479,
+              -9.985345345197688,
+              -8.805846921683392
+            ],
+            [
+              -11.721018724943166,
+              -10.962606268280721,
+              -10.061556629603189
+            ]
+          ],
+          "coefficients": [
+            1.571649691151207,
+            0.1475388947505305,
+            -0.22696069011913456,
+            0.49621206940584806
+          ],
+          "raw_events": 16,
+          "penalty": 1.0,
+          "projected_gradient_max": 1.2094106574545016e-07,
+          "iterations": 30,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "chronic_respiratory": {
+          "baseline_log_hazards": [
+            [
+              -9.135683046829802,
+              -7.914568223072909,
+              -7.314796327740234
+            ],
+            [
+              -11.330138880875477,
+              -10.5174147355311,
+              -8.403722463080207
+            ]
+          ],
+          "coefficients": [
+            2.253818468039737,
+            -0.5787401756573142,
+            -0.7136769117937413,
+            -0.06848022088149341
+          ],
+          "raw_events": 81,
+          "penalty": 1.0,
+          "projected_gradient_max": 2.913048423480724e-06,
+          "iterations": 37,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "dementia": {
+          "baseline_log_hazards": [
+            [
+              -9.470650588586636,
+              -11.03479809393245,
+              -9.161491322530651
+            ],
+            [
+              -10.900194093785764,
+              -11.411459343171224,
+              -9.052479415067813
+            ]
+          ],
+          "coefficients": [
+            1.7659431484533628,
+            -0.23224091585610748,
+            -1.0689253062834498,
+            -0.05037284456366362
+          ],
+          "raw_events": 18,
+          "penalty": 1.0,
+          "projected_gradient_max": 7.92654661907477e-08,
+          "iterations": 30,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "diabetes": {
+          "baseline_log_hazards": [
+            [
+              -9.328557886209943,
+              -9.054407899658885,
+              -7.729858290243759
+            ],
+            [
+              -10.53811900120553,
+              -9.309619389156417,
+              -7.911784484665975
+            ]
+          ],
+          "coefficients": [
+            0.7466831025632986,
+            0.21009222342653744,
+            0.3615718266504687,
+            0.6162483115737482
+          ],
+          "raw_events": 39,
+          "penalty": 1.0,
+          "projected_gradient_max": 8.647570141073757e-07,
+          "iterations": 38,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "renal": {
+          "baseline_log_hazards": [
+            [
+              -9.832481055045838,
+              -9.672182693255554,
+              -9.822739069247065
+            ],
+            [
+              -11.604052796056614,
+              -8.772288536896665,
+              -9.375791640944822
+            ]
+          ],
+          "coefficients": [
+            1.3898240393468924,
+            0.05819108659794378,
+            0.2576520211870107,
+            0.3270768161922527
+          ],
+          "raw_events": 26,
+          "penalty": 1.0,
+          "projected_gradient_max": 2.0515475283866547e-07,
+          "iterations": 27,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "chronic_liver": {
+          "baseline_log_hazards": [
+            [
+              -10.12651410497207,
+              -10.08431933159526,
+              -8.023451267210868
+            ],
+            [
+              -10.900483970213285,
+              -9.01706844852987,
+              -9.32450062523034
+            ]
+          ],
+          "coefficients": [
+            0.1727660867811779,
+            -0.6073853390413365,
+            -0.3762995604271108,
+            0.7470776557141467
+          ],
+          "raw_events": 24,
+          "penalty": 1.0,
+          "projected_gradient_max": 4.126167096329958e-07,
+          "iterations": 33,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "lung_cancer": {
+          "baseline_log_hazards": [
+            [
+              -7.608415365298598,
+              -7.673277784585423,
+              -6.652811957811741
+            ],
+            [
+              -9.360813076595276,
+              -8.804808125237676,
+              -7.801539908509629
+            ]
+          ],
+          "coefficients": [
+            1.5008871279960363,
+            -0.3355716725743852,
+            -0.26285340413664093,
+            -0.0236570893875261
+          ],
+          "raw_events": 94,
+          "penalty": 1.0,
+          "projected_gradient_max": 8.447866832322903e-07,
+          "iterations": 26,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "colorectal_cancer": {
+          "baseline_log_hazards": [
+            [
+              -9.279012414248662,
+              -8.583655169458142,
+              -7.786021152545507
+            ],
+            [
+              -9.185976140928167,
+              -8.04810757481354,
+              -7.982292881434849
+            ]
+          ],
+          "coefficients": [
+            1.3087920681428107,
+            -0.232254842407787,
+            0.10033649047677548,
+            -0.028259233849432092
+          ],
+          "raw_events": 53,
+          "penalty": 1.0,
+          "projected_gradient_max": 5.941997013592104e-07,
+          "iterations": 27,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "pancreatic_cancer": {
+          "baseline_log_hazards": [
+            [
+              -8.67584916296761,
+              -9.909688057763912,
+              -8.031384465309582
+            ],
+            [
+              -10.26971255018813,
+              -10.269649231812474,
+              -8.31736515923831
+            ]
+          ],
+          "coefficients": [
+            1.3724992621726253,
+            -0.15593074037952698,
+            -0.29259614123091077,
+            -0.1396060965708631
+          ],
+          "raw_events": 21,
+          "penalty": 1.0,
+          "projected_gradient_max": 1.618901605496964e-07,
+          "iterations": 29,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "breast_cancer": {
+          "baseline_log_hazards": [
+            [
+              -10.270452770780459,
+              -10.149126480911924,
+              -10.192208665093663
+            ],
+            [
+              -7.371092894691503,
+              -7.342802867075577,
+              -7.137399561646826
+            ]
+          ],
+          "coefficients": [
+            0.6912433945413192,
+            0.010108707816826356,
+            0.06559066276126198,
+            0.16054513373627666
+          ],
+          "raw_events": 45,
+          "penalty": 1.0,
+          "projected_gradient_max": 1.7436560416500546e-06,
+          "iterations": 41,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "prostate_cancer": {
+          "baseline_log_hazards": [
+            [
+              -9.232670728758327,
+              -8.582650552317173,
+              -7.8454587736513375
+            ],
+            [
+              -9.649090600511146,
+              -9.03039351160216,
+              -8.384195213442426
+            ]
+          ],
+          "coefficients": [
+            2.277005517633407,
+            -0.3872067537269903,
+            0.4656465746928909,
+            -0.37050284646224074
+          ],
+          "raw_events": 31,
+          "penalty": 1.0,
+          "projected_gradient_max": 2.690570014562965e-07,
+          "iterations": 17,
+          "boundary_parameters": 0,
+          "female_structural_zero": true
+        },
+        "gastric_cancer": {
+          "baseline_log_hazards": [
+            [
+              -9.627114401390216,
+              -8.945864061907823,
+              -9.00650513563401
+            ],
+            [
+              -11.13067669681661,
+              -10.697552900070145,
+              -9.898787282660175
+            ]
+          ],
+          "coefficients": [
+            2.143923827543212,
+            -0.6510640045770761,
+            0.09347943714966024,
+            -0.06306069333412079
+          ],
+          "raw_events": 15,
+          "penalty": 1.0,
+          "projected_gradient_max": 6.563207444187924e-08,
+          "iterations": 30,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "hematologic_cancer": {
+          "baseline_log_hazards": [
+            [
+              -7.443375773339963,
+              -8.356164230119125,
+              -7.621824286771063
+            ],
+            [
+              -8.275276649512184,
+              -8.592678578213164,
+              -8.010014900032825
+            ]
+          ],
+          "coefficients": [
+            1.0828888113549293,
+            -0.3275165474773119,
+            -0.1497559498766634,
+            -0.27646901643379695
+          ],
+          "raw_events": 52,
+          "penalty": 1.0,
+          "projected_gradient_max": 2.4776349370758677e-07,
+          "iterations": 21,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "infection": {
+          "baseline_log_hazards": [
+            [
+              -9.255220686541984,
+              -8.591789797587325,
+              -6.696074205656993
+            ],
+            [
+              -9.495390664218537,
+              -9.74905239701015,
+              -7.545058372323106
+            ]
+          ],
+          "coefficients": [
+            1.4270996150925486,
+            0.3136702308522289,
+            -0.3947856657986971,
+            0.44160501797959023
+          ],
+          "raw_events": 88,
+          "penalty": 1.0,
+          "projected_gradient_max": 2.802939493284917e-07,
+          "iterations": 33,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "external": {
+          "baseline_log_hazards": [
+            [
+              -7.147314706845921,
+              -6.779080126979827,
+              -7.654625891486096
+            ],
+            [
+              -9.2340125166857,
+              -7.87361039819865,
+              -8.144368649555883
+            ]
+          ],
+          "coefficients": [
+            0.1504289972610033,
+            -0.020573869223121478,
+            -0.33144689308135794,
+            0.32388493492887827
+          ],
+          "raw_events": 67,
+          "penalty": 1.0,
+          "projected_gradient_max": 5.095277017252986e-07,
+          "iterations": 25,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "other_or_unresolved": {
+          "baseline_log_hazards": [
+            [
+              -6.184343032811804,
+              -6.00749198404637,
+              -5.195027768487071
+            ],
+            [
+              -6.874463597224868,
+              -6.0741763904884385,
+              -5.604532968222217
+            ]
+          ],
+          "coefficients": [
+            1.3540719382653392,
+            0.018330498866596077,
+            -0.15043904348054551,
+            0.2126841883327281
+          ],
+          "raw_events": 543,
+          "penalty": 1.0,
+          "projected_gradient_max": 2.1861503764514234e-05,
+          "iterations": 23,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        }
+      },
+      "cause_order": [
+        "ihd",
+        "heart_failure",
+        "stroke",
+        "hypertension",
+        "aortic_aneurysm",
+        "chronic_respiratory",
+        "dementia",
+        "diabetes",
+        "renal",
+        "chronic_liver",
+        "lung_cancer",
+        "colorectal_cancer",
+        "pancreatic_cancer",
+        "breast_cancer",
+        "prostate_cancer",
+        "gastric_cancer",
+        "hematologic_cancer",
+        "infection",
+        "external",
+        "other_or_unresolved"
+      ],
+      "interval_ends": [
+        5.0,
+        10.0,
+        20.0
+      ],
+      "allcause_pooling_target": {
+        "baseline_log_hazards": [
+          [
+            -4.7217836007587835,
+            -4.582353259063955,
+            -3.821717587640942
+          ],
+          [
+            -5.627466921424028,
+            -5.008769832515043,
+            -4.362571534355308
+          ]
+        ],
+        "coefficients": [
+          1.3634719621348739,
+          -0.031341136298469324,
+          -0.07806245465287787,
+          0.22861375103006276
+        ],
+        "raw_events": 2032,
+        "penalty": 1.0,
+        "projected_gradient_max": 1.089446060413557e-05,
+        "iterations": 27,
+        "boundary_parameters": 0
+      },
+      "training_n": 5905,
+      "penalty": 1.0,
+      "clinical_use_ready": false,
+      "training_country": "historical_US",
+      "age_range": [
+        25,
+        74
+      ]
+    },
+    "laboratory": {
+      "preprocessing": {
+        "features": [
+          "age_scaled",
+          "age_squared",
+          "bmi",
+          "sbp",
+          "albumin",
+          "cholesterol",
+          "hemoglobin"
+        ],
+        "lower": [
+          -2.5,
+          0.0,
+          16.802281582798056,
+          90.0,
+          34.0,
+          120.52,
+          10.2
+        ],
+        "upper": [
+          2.4,
+          6.25,
+          44.70455632413488,
+          220.0,
+          52.47999999999956,
+          382.9599999999991,
+          18.347999999999956
+        ],
+        "mean": [
+          -0.0023200677392040624,
+          2.4660270956816257,
+          25.64740110278119,
+          135.2890770533446,
+          43.67576629974598,
+          221.70540220152412,
+          14.462597798475867
+        ],
+        "sd": [
+          1.570357192796375,
+          1.8724728516401778,
+          4.857636864603434,
+          24.269051963961353,
+          3.2215282965073997,
+          46.72355306610408,
+          1.4906472444587937
+        ]
+      },
+      "causes": {
+        "ihd": {
+          "baseline_log_hazards": [
+            [
+              -5.845757728912642,
+              -5.7296178883025135,
+              -5.094216755190297
+            ],
+            [
+              -7.143590226676517,
+              -6.758034316247748,
+              -5.911832906063134
+            ]
+          ],
+          "coefficients": [
+            1.2509028873302779,
+            0.010928879122905046,
+            0.05136584247498511,
+            0.3136893454517551,
+            -0.31723868055373,
+            0.27664296095243895,
+            0.07685216645193123
+          ],
+          "raw_events": 550,
+          "penalty": 100.0,
+          "projected_gradient_max": 6.122132035102368e-06,
+          "iterations": 35,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "heart_failure": {
+          "baseline_log_hazards": [
+            [
+              -9.204876540801452,
+              -8.872108665972302,
+              -7.416923656109866
+            ],
+            [
+              -9.134839589081242,
+              -9.258360219667235,
+              -7.781384405664173
+            ]
+          ],
+          "coefficients": [
+            1.1123975489555626,
+            0.055112065086210374,
+            -0.02768090027193024,
+            0.28823127350269057,
+            -0.15911573825276001,
+            0.09717845452041458,
+            -0.13279537211864725
+          ],
+          "raw_events": 45,
+          "penalty": 100.0,
+          "projected_gradient_max": 3.4729236801922525e-06,
+          "iterations": 55,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "stroke": {
+          "baseline_log_hazards": [
+            [
+              -7.579258642062506,
+              -7.826878602452606,
+              -6.706012878626941
+            ],
+            [
+              -8.222375569850865,
+              -7.239965350999946,
+              -6.812604417849409
+            ]
+          ],
+          "coefficients": [
+            1.2256349503401092,
+            0.1645012801192095,
+            -0.10387365125318035,
+            0.3707056159596473,
+            -0.19285437203719913,
+            0.12913382108881125,
+            -0.012851078092709156
+          ],
+          "raw_events": 175,
+          "penalty": 100.0,
+          "projected_gradient_max": 2.480834618623362e-06,
+          "iterations": 46,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "hypertension": {
+          "baseline_log_hazards": [
+            [
+              -8.228317870515006,
+              -8.986385963541867,
+              -8.101305330097905
+            ],
+            [
+              -9.337804602219629,
+              -8.514745604605523,
+              -8.715383541249443
+            ]
+          ],
+          "coefficients": [
+            1.0655597442747164,
+            0.03768896757394739,
+            -0.06327746897974097,
+            0.42195097833149714,
+            -0.21069464858236814,
+            0.12702618314566133,
+            0.0208378297277094
+          ],
+          "raw_events": 49,
+          "penalty": 100.0,
+          "projected_gradient_max": 6.434019180545647e-06,
+          "iterations": 52,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "aortic_aneurysm": {
+          "baseline_log_hazards": [
+            [
+              -9.816509939255884,
+              -9.625752348120292,
+              -8.516247710093408
+            ],
+            [
+              -11.449756441665878,
+              -10.662697897831903,
+              -9.764917054911932
+            ]
+          ],
+          "coefficients": [
+            1.0951961978391822,
+            0.07223827211672838,
+            -0.08073258224324659,
+            0.29606380518170733,
+            -0.19893468399346945,
+            0.13818840945575528,
+            -0.005240644306452141
+          ],
+          "raw_events": 16,
+          "penalty": 100.0,
+          "projected_gradient_max": 8.357663752178723e-07,
+          "iterations": 69,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "chronic_respiratory": {
+          "baseline_log_hazards": [
+            [
+              -8.259413380079499,
+              -7.020920206207344,
+              -6.42350336387701
+            ],
+            [
+              -10.699445741257925,
+              -9.771843202613237,
+              -7.539113911913982
+            ]
+          ],
+          "coefficients": [
+            1.1870839904698005,
+            -0.025946920420458448,
+            -0.2624032715689271,
+            0.1615183483101604,
+            -0.19489267565318816,
+            0.026269815659553886,
+            -0.025693136348184913
+          ],
+          "raw_events": 81,
+          "penalty": 100.0,
+          "projected_gradient_max": 1.5129049217854629e-06,
+          "iterations": 74,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "dementia": {
+          "baseline_log_hazards": [
+            [
+              -8.818754380934463,
+              -10.552266217804005,
+              -8.53597484349816
+            ],
+            [
+              -10.396303536869473,
+              -10.979364130451195,
+              -8.427960203232663
+            ]
+          ],
+          "coefficients": [
+            1.090339365286981,
+            0.034970992831684686,
+            -0.1646568387128562,
+            0.2235938422504911,
+            -0.24397049391774536,
+            0.10893161164047241,
+            -0.039926964517763085
+          ],
+          "raw_events": 18,
+          "penalty": 100.0,
+          "projected_gradient_max": 1.0486188521952045e-06,
+          "iterations": 75,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "diabetes": {
+          "baseline_log_hazards": [
+            [
+              -9.227892376176525,
+              -8.939116225864465,
+              -7.598425766864322
+            ],
+            [
+              -10.442482433203851,
+              -9.214358341100445,
+              -7.830048308159422
+            ]
+          ],
+          "coefficients": [
+            1.0358470072830195,
+            0.06460309656571775,
+            0.05280751227974108,
+            0.3675251920916345,
+            -0.22463568465073686,
+            0.03963289274781834,
+            -0.03519479222349324
+          ],
+          "raw_events": 39,
+          "penalty": 100.0,
+          "projected_gradient_max": 7.101328750369618e-06,
+          "iterations": 62,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "renal": {
+          "baseline_log_hazards": [
+            [
+              -9.595872555331098,
+              -9.441642622516616,
+              -9.614355238899304
+            ],
+            [
+              -11.443353256341497,
+              -8.550728201302121,
+              -9.18434396133605
+            ]
+          ],
+          "coefficients": [
+            1.0831268452224745,
+            0.05799741102595613,
+            -0.03458075529220138,
+            0.29062614651659746,
+            -0.19277829786644562,
+            0.11483815931079278,
+            -0.023024773032848597
+          ],
+          "raw_events": 26,
+          "penalty": 100.0,
+          "projected_gradient_max": 1.3162820854811796e-06,
+          "iterations": 57,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "chronic_liver": {
+          "baseline_log_hazards": [
+            [
+              -9.862693399430745,
+              -9.775409695423184,
+              -7.564539781629541
+            ],
+            [
+              -10.772869720944067,
+              -8.839988949703356,
+              -9.055162237997374
+            ]
+          ],
+          "coefficients": [
+            0.9907725039513334,
+            -0.031022847365744583,
+            -0.09116250688559414,
+            0.30355436538758074,
+            -0.1923992331925839,
+            0.11690345374615357,
+            0.005721229589414366
+          ],
+          "raw_events": 24,
+          "penalty": 100.0,
+          "projected_gradient_max": 1.7756902596088864e-06,
+          "iterations": 74,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "lung_cancer": {
+          "baseline_log_hazards": [
+            [
+              -7.32463523939305,
+              -7.380451599272433,
+              -6.334795629650268
+            ],
+            [
+              -9.186295542071907,
+              -8.611171647525426,
+              -7.579302635373525
+            ]
+          ],
+          "coefficients": [
+            1.0974066198475647,
+            -0.0512933014808366,
+            -0.1465510269064974,
+            0.16556543818385827,
+            -0.16424127070814606,
+            0.10550575658910491,
+            -0.02267513858785614
+          ],
+          "raw_events": 94,
+          "penalty": 100.0,
+          "projected_gradient_max": 2.550062943917908e-06,
+          "iterations": 51,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "colorectal_cancer": {
+          "baseline_log_hazards": [
+            [
+              -9.10020467839977,
+              -8.382649429196158,
+              -7.539469520278254
+            ],
+            [
+              -9.132228312485807,
+              -7.975048356679619,
+              -7.876812503086284
+            ]
+          ],
+          "coefficients": [
+            1.0605930584636118,
+            -0.008915975757421448,
+            -0.04100962331033266,
+            0.20857439786768459,
+            -0.17898029745796565,
+            0.057679678064117064,
+            -0.05938874997123578
+          ],
+          "raw_events": 53,
+          "penalty": 100.0,
+          "projected_gradient_max": 1.1057425202826154e-06,
+          "iterations": 50,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "pancreatic_cancer": {
+          "baseline_log_hazards": [
+            [
+              -8.520577815567124,
+              -9.743053876562424,
+              -7.826510125314631
+            ],
+            [
+              -10.22493665509146,
+              -10.204608415300138,
+              -8.22411972940644
+            ]
+          ],
+          "coefficients": [
+            1.065163443430918,
+            0.022302867595434026,
+            -0.11269330806145275,
+            0.20431387658192732,
+            -0.2138848658300351,
+            0.130050399560861,
+            -0.01968657009950949
+          ],
+          "raw_events": 21,
+          "penalty": 100.0,
+          "projected_gradient_max": 1.343744779391809e-06,
+          "iterations": 65,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "breast_cancer": {
+          "baseline_log_hazards": [
+            [
+              -10.278905739004108,
+              -10.135184257994316,
+              -10.143912236407912
+            ],
+            [
+              -7.603499795993036,
+              -7.55185621955198,
+              -7.302405250922976
+            ]
+          ],
+          "coefficients": [
+            0.9717304348535011,
+            0.012375900973035241,
+            -0.04291155309623212,
+            0.21035624521738894,
+            -0.12489139797813331,
+            0.13819580079897534,
+            -0.03741129464759691
+          ],
+          "raw_events": 45,
+          "penalty": 100.0,
+          "projected_gradient_max": 1.9645955898761613e-06,
+          "iterations": 60,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "prostate_cancer": {
+          "baseline_log_hazards": [
+            [
+              -8.448765223541338,
+              -7.7735295137200415,
+              -7.011979443374597
+            ],
+            [
+              -9.568703180588699,
+              -8.947521312941342,
+              -8.305038662150789
+            ]
+          ],
+          "coefficients": [
+            1.1269020604176085,
+            0.028222738550095546,
+            -0.006208507404622962,
+            0.20647380752574146,
+            -0.25124418584730085,
+            0.07757281834302514,
+            -0.08360201103785424
+          ],
+          "raw_events": 31,
+          "penalty": 100.0,
+          "projected_gradient_max": 6.684450566396549e-07,
+          "iterations": 26,
+          "boundary_parameters": 0,
+          "female_structural_zero": true
+        },
+        "gastric_cancer": {
+          "baseline_log_hazards": [
+            [
+              -8.950307531589234,
+              -8.234215607428332,
+              -8.265937818985725
+            ],
+            [
+              -10.617572152937434,
+              -10.123236651989878,
+              -9.197202113176361
+            ]
+          ],
+          "coefficients": [
+            1.0967900697683388,
+            0.007110533767635052,
+            -0.05975371547603826,
+            0.24026307216297027,
+            -0.17340321182538504,
+            0.10659500599745007,
+            0.04643909826164568
+          ],
+          "raw_events": 15,
+          "penalty": 100.0,
+          "projected_gradient_max": 3.9462975055803984e-07,
+          "iterations": 75,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "hematologic_cancer": {
+          "baseline_log_hazards": [
+            [
+              -7.262006837388969,
+              -8.145061458424827,
+              -7.3421373850133635
+            ],
+            [
+              -8.26117061342111,
+              -8.546985570794458,
+              -7.909085892328323
+            ]
+          ],
+          "coefficients": [
+            1.0063615521042024,
+            -0.05775652133477072,
+            -0.11267915151549315,
+            0.11399810638321403,
+            -0.13050924673885325,
+            0.09751991869496017,
+            -0.0971085810268297
+          ],
+          "raw_events": 52,
+          "penalty": 100.0,
+          "projected_gradient_max": 1.6584848168688104e-06,
+          "iterations": 41,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "infection": {
+          "baseline_log_hazards": [
+            [
+              -8.973045939963626,
+              -8.33326704807312,
+              -6.5076662453672345
+            ],
+            [
+              -9.279610563343807,
+              -9.560432669125134,
+              -7.397941564881882
+            ]
+          ],
+          "coefficients": [
+            1.1657113579942096,
+            0.18300604782891947,
+            -0.15758323908681637,
+            0.3528595026075762,
+            -0.1934261483167495,
+            0.12972727407133405,
+            -0.034016749101317634
+          ],
+          "raw_events": 88,
+          "penalty": 100.0,
+          "projected_gradient_max": 2.6380601027553574e-06,
+          "iterations": 55,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "external": {
+          "baseline_log_hazards": [
+            [
+              -7.2366024675411715,
+              -6.819288550018741,
+              -7.593330517158381
+            ],
+            [
+              -9.338748836611076,
+              -7.962904177128324,
+              -8.156718961224131
+            ]
+          ],
+          "coefficients": [
+            0.8305797535257263,
+            0.041926168220580616,
+            -0.1355377414968669,
+            0.19441460522634368,
+            -0.14007868314985372,
+            0.06965989158117371,
+            0.06296307854625591
+          ],
+          "raw_events": 67,
+          "penalty": 100.0,
+          "projected_gradient_max": 2.964772878755184e-06,
+          "iterations": 53,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        },
+        "other_or_unresolved": {
+          "baseline_log_hazards": [
+            [
+              -6.125146880481256,
+              -5.946518503861951,
+              -5.129713193521653
+            ],
+            [
+              -6.843058722252401,
+              -6.037941197190459,
+              -5.566398761542243
+            ]
+          ],
+          "coefficients": [
+            1.1835367443847717,
+            0.0576835990366389,
+            -0.13324890989204607,
+            0.24910336726019985,
+            -0.1935544270964655,
+            0.0826353688630603,
+            0.03566711519605031
+          ],
+          "raw_events": 543,
+          "penalty": 100.0,
+          "projected_gradient_max": 9.860698430841364e-06,
+          "iterations": 29,
+          "boundary_parameters": 0,
+          "female_structural_zero": false
+        }
+      },
+      "cause_order": [
+        "ihd",
+        "heart_failure",
+        "stroke",
+        "hypertension",
+        "aortic_aneurysm",
+        "chronic_respiratory",
+        "dementia",
+        "diabetes",
+        "renal",
+        "chronic_liver",
+        "lung_cancer",
+        "colorectal_cancer",
+        "pancreatic_cancer",
+        "breast_cancer",
+        "prostate_cancer",
+        "gastric_cancer",
+        "hematologic_cancer",
+        "infection",
+        "external",
+        "other_or_unresolved"
+      ],
+      "interval_ends": [
+        5.0,
+        10.0,
+        20.0
+      ],
+      "allcause_pooling_target": {
+        "baseline_log_hazards": [
+          [
+            -4.559628880178429,
+            -4.421488761142703,
+            -3.663892539144141
+          ],
+          [
+            -5.54707950150158,
+            -4.925897633854224,
+            -4.28341498306367
+          ]
+        ],
+        "coefficients": [
+          1.0689636702469016,
+          0.04789180603889933,
+          -0.07347181082397393,
+          0.26628248887625244,
+          -0.2008596332025861,
+          0.12467960805574384,
+          -0.008548806389889639
+        ],
+        "raw_events": 2032,
+        "penalty": 100.0,
+        "projected_gradient_max": 4.649255632060978e-05,
+        "iterations": 35,
+        "boundary_parameters": 0
+      },
+      "training_n": 5905,
+      "penalty": 100.0,
+      "clinical_use_ready": false,
+      "training_country": "historical_US",
+      "age_range": [
+        25,
+        74
+      ]
+    }
+  },
+  "target_taxonomy_size": 20,
+  "estimated_noninfectious_families": [
+    "ihd",
+    "heart_failure",
+    "stroke",
+    "hypertension",
+    "aortic_aneurysm",
+    "chronic_respiratory",
+    "dementia",
+    "diabetes",
+    "renal",
+    "chronic_liver",
+    "lung_cancer",
+    "colorectal_cancer",
+    "pancreatic_cancer",
+    "breast_cancer",
+    "prostate_cancer",
+    "gastric_cancer",
+    "hematologic_cancer"
+  ],
+  "additional_competitors": [
+    "infection",
+    "external",
+    "other_or_unresolved"
+  ],
+  "validation_design": "heldout_survey_strata_internal",
+  "heldout_strata": [
+    14,
+    21,
+    5,
+    24,
+    25,
+    6,
+    32,
+    26,
+    1,
+    27,
+    16
+  ],
+  "training_n": 5905,
+  "test_n": 3490,
+  "source_plan_commit": "858c7e5a7a13799a093d64eb1295b16af2a65a86",
+  "availability_amendment_commit": "95cc634c8492e26079f43766e71c35648a1e602d"
+}

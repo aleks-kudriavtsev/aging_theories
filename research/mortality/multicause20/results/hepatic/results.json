@@ -1,0 +1,82 @@
+{
+  "study": "secondary_hepatic_smoking",
+  "training_n": 1800,
+  "test_n": 982,
+  "test_events15": 262,
+  "estimated_noninfectious_families": 17,
+  "total_estimated_hazards": 20,
+  "outcome_states": 21,
+  "heldout_strata": [
+    14,
+    21,
+    5,
+    24,
+    25,
+    6,
+    32,
+    26,
+    1,
+    27,
+    16
+  ],
+  "training_strata": 22,
+  "test_strata": 11,
+  "raw_participant_data_exported": false,
+  "feature_coefficients_fitted_on_test": false,
+  "model_sha256": "0c51142ea7adbf8dd6bc9eb6fe127ba73b896589ccbcfa04bead9f0ff114c674",
+  "bootstrap_replicates": 1000,
+  "bootstrap_censoring_failures": 0,
+  "clinical_use_ready": false,
+  "geographic_external_validation": false,
+  "contemporary_risk": false,
+  "audit": [
+    {
+      "horizon": 10,
+      "panel": "clinical",
+      "AJ_IPCW_difference": 1.3322676295501878e-15,
+      "early_censored_n": 4,
+      "G_horizon": 0.9934935476103741
+    },
+    {
+      "horizon": 10,
+      "panel": "laboratory",
+      "AJ_IPCW_difference": 1.3322676295501878e-15,
+      "early_censored_n": 4,
+      "G_horizon": 0.9934935476103741
+    },
+    {
+      "horizon": 15,
+      "panel": "clinical",
+      "AJ_IPCW_difference": 8.881784197001252e-16,
+      "early_censored_n": 20,
+      "G_horizon": 0.9709351443412729
+    },
+    {
+      "panel": "clinical",
+      "horizon": 15,
+      "calibration": {
+        "status": "computed",
+        "intercept": 0.01564728896803791,
+        "slope": 1.0167943608030696,
+        "calibration_in_large": -0.00280571338406682
+      }
+    },
+    {
+      "horizon": 15,
+      "panel": "laboratory",
+      "AJ_IPCW_difference": 8.881784197001252e-16,
+      "early_censored_n": 20,
+      "G_horizon": 0.9709351443412729
+    },
+    {
+      "panel": "laboratory",
+      "horizon": 15,
+      "calibration": {
+        "status": "computed",
+        "intercept": 0.04974819014682793,
+        "slope": 1.049986958867745,
+        "calibration_in_large": -0.003427456971127602
+      }
+    }
+  ]
+}

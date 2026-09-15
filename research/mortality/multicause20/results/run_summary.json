@@ -1,0 +1,182 @@
+{
+  "results": [
+    {
+      "study": "primary",
+      "training_n": 5905,
+      "test_n": 3490,
+      "test_events15": 932,
+      "estimated_noninfectious_families": 17,
+      "total_estimated_hazards": 20,
+      "outcome_states": 21,
+      "heldout_strata": [
+        14,
+        21,
+        5,
+        24,
+        25,
+        6,
+        32,
+        26,
+        1,
+        27,
+        16
+      ],
+      "training_strata": 23,
+      "test_strata": 11,
+      "raw_participant_data_exported": false,
+      "feature_coefficients_fitted_on_test": false,
+      "model_sha256": "8b2bc4f879c5f4c9a7b7b3b03b605c2f8d0c91fd48e21ef62cdce136342c9397",
+      "bootstrap_replicates": 1000,
+      "bootstrap_censoring_failures": 0,
+      "clinical_use_ready": false,
+      "geographic_external_validation": false,
+      "contemporary_risk": false,
+      "audit": [
+        {
+          "horizon": 10,
+          "panel": "clinical",
+          "AJ_IPCW_difference": 4.440892098500626e-16,
+          "early_censored_n": 10,
+          "G_horizon": 0.9966459172510163
+        },
+        {
+          "horizon": 10,
+          "panel": "laboratory",
+          "AJ_IPCW_difference": 4.440892098500626e-16,
+          "early_censored_n": 10,
+          "G_horizon": 0.9966459172510163
+        },
+        {
+          "horizon": 15,
+          "panel": "clinical",
+          "AJ_IPCW_difference": 2.1094237467877974e-15,
+          "early_censored_n": 112,
+          "G_horizon": 0.9627171162927388
+        },
+        {
+          "panel": "clinical",
+          "horizon": 15,
+          "calibration": {
+            "status": "computed",
+            "intercept": -0.07737959590590018,
+            "slope": 1.0291757271526347,
+            "calibration_in_large": -0.10568962168563156
+          }
+        },
+        {
+          "horizon": 15,
+          "panel": "laboratory",
+          "AJ_IPCW_difference": 2.1094237467877974e-15,
+          "early_censored_n": 112,
+          "G_horizon": 0.9627171162927388
+        },
+        {
+          "panel": "laboratory",
+          "horizon": 15,
+          "calibration": {
+            "status": "computed",
+            "intercept": -0.08888652566341601,
+            "slope": 1.0168041017901246,
+            "calibration_in_large": -0.10576599339643283
+          }
+        }
+      ]
+    },
+    {
+      "study": "secondary_hepatic_smoking",
+      "training_n": 1800,
+      "test_n": 982,
+      "test_events15": 262,
+      "estimated_noninfectious_families": 17,
+      "total_estimated_hazards": 20,
+      "outcome_states": 21,
+      "heldout_strata": [
+        14,
+        21,
+        5,
+        24,
+        25,
+        6,
+        32,
+        26,
+        1,
+        27,
+        16
+      ],
+      "training_strata": 22,
+      "test_strata": 11,
+      "raw_participant_data_exported": false,
+      "feature_coefficients_fitted_on_test": false,
+      "model_sha256": "0c51142ea7adbf8dd6bc9eb6fe127ba73b896589ccbcfa04bead9f0ff114c674",
+      "bootstrap_replicates": 1000,
+      "bootstrap_censoring_failures": 0,
+      "clinical_use_ready": false,
+      "geographic_external_validation": false,
+      "contemporary_risk": false,
+      "audit": [
+        {
+          "horizon": 10,
+          "panel": "clinical",
+          "AJ_IPCW_difference": 1.3322676295501878e-15,
+          "early_censored_n": 4,
+          "G_horizon": 0.9934935476103741
+        },
+        {
+          "horizon": 10,
+          "panel": "laboratory",
+          "AJ_IPCW_difference": 1.3322676295501878e-15,
+          "early_censored_n": 4,
+          "G_horizon": 0.9934935476103741
+        },
+        {
+          "horizon": 15,
+          "panel": "clinical",
+          "AJ_IPCW_difference": 8.881784197001252e-16,
+          "early_censored_n": 20,
+          "G_horizon": 0.9709351443412729
+        },
+        {
+          "panel": "clinical",
+          "horizon": 15,
+          "calibration": {
+            "status": "computed",
+            "intercept": 0.01564728896803791,
+            "slope": 1.0167943608030696,
+            "calibration_in_large": -0.00280571338406682
+          }
+        },
+        {
+          "horizon": 15,
+          "panel": "laboratory",
+          "AJ_IPCW_difference": 8.881784197001252e-16,
+          "early_censored_n": 20,
+          "G_horizon": 0.9709351443412729
+        },
+        {
+          "panel": "laboratory",
+          "horizon": 15,
+          "calibration": {
+            "status": "computed",
+            "intercept": 0.04974819014682793,
+            "slope": 1.049986958867745,
+            "calibration_in_large": -0.003427456971127602
+          }
+        }
+      ]
+    }
+  ],
+  "analysis_plan_commit": "858c7e5a7a13799a093d64eb1295b16af2a65a86",
+  "amendment_commit": "95cc634c8492e26079f43766e71c35648a1e602d",
+  "utc_completed": "2026-09-15T12:00:06.296169+00:00",
+  "no_raw_data_exported": true,
+  "new_models": true,
+  "external_RU_DE_validation": false,
+  "code_sha256": {
+    "replay.py": "3472f25011e06746532a65c69d2e25b8e2b52f66677d15e9437183b3ca5046eb",
+    "model.py": "77e5a3765a4e3bbca45f691c5c7fbe0eda5f1b0df31597c5a54d74021c5ea4fa",
+    "scoring.py": "06ed615eb9566be8263a6063d5f8e6862e062481baa9c5c624c891a24f6ac9da",
+    "__init__.py": "2363f273702549a6be30c021dd8208f83a6229d7cb2e4da60054e784dc83c1e4",
+    "cohort.py": "045589dea4f0436ea73beaf3de7a2609083e9ae2db3173463a84eda84e659e3d",
+    "run.py": "131c4d655ea6e513197314ffcdfdf1ca6c9b94859e0ae9453af15670b716cb9b"
+  }
+}
