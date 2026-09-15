@@ -1,0 +1,55 @@
+{
+  "checked_on": "2026-09-15",
+  "source": "https://biobank.ndph.ox.ac.uk/showcase/codown.cgi?id=143",
+  "dictionary_sha256": "33b5a8ecd4c1a92af8174f5418e1c0a0025112e942ee9a122a43db0e2414a7d9",
+  "dictionary_rows": 2923,
+  "field_for_access": 30900,
+  "record_table_id": 1072,
+  "record_table_name": "olink_data",
+  "preferred_instance": 0,
+  "target_rows": [
+    {
+      "marker": "NT_PROBNP",
+      "protein_id": 1912,
+      "source_label": "NTproBNP;N-terminal prohormone of brain natriuretic peptide"
+    },
+    {
+      "marker": "CYSTATIN_C",
+      "protein_id": 710,
+      "source_label": "CST3;Cystatin-C"
+    },
+    {
+      "marker": "GDF15",
+      "protein_id": 1137,
+      "source_label": "GDF15;Growth/differentiation factor 15"
+    },
+    {
+      "marker": "IL6",
+      "protein_id": 1418,
+      "source_label": "IL6;Interleukin-6"
+    },
+    {
+      "marker": "TNF_ALPHA",
+      "protein_id": 2712,
+      "source_label": "TNF;Tumor necrosis factor"
+    },
+    {
+      "marker": "GFAP",
+      "protein_id": 1141,
+      "source_label": "GFAP;Glial fibrillary acidic protein"
+    },
+    {
+      "marker": "NFL",
+      "protein_id": 1840,
+      "source_label": "NEFL;Neurofilament light polypeptide"
+    }
+  ],
+  "identity_note": "NTproBNP1912 is not generic NPPB1890; TNF2712 is not a soluble TNF receptor.",
+  "participant_data_retrieved": false,
+  "same_person_complete_profiles": null,
+  "baseline13_overlap_confirmed": false,
+  "clinical_use_ready": false,
+  "access_status": "new_applications_paused_as_of_2026_09_15; existing_project_access_requires_formal_authorization",
+  "access_status_source": "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/",
+  "metadata_source": "https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=30900"
+}

@@ -1,0 +1,77 @@
+name: NfL22 real-data reproduction and joint assay QC
+on:
+  push:
+    branches: [research/nfl22-reproducibility]
+    paths: ['research/mortality/nfl22/**','tests/test_joint22.py','.github/workflows/nfl22-reproduction.yml']
+  pull_request:
+    paths: ['research/mortality/nfl22/**','tests/test_joint22.py','.github/workflows/nfl22-reproduction.yml']
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    strategy:
+      matrix:
+        python: ['3.10','3.13']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '${{ matrix.python }}'}
+      - run: python -m pip install numpy==2.2.6 pandas==2.2.3 scipy==1.15.3 scikit-learn==1.6.1
+      - name: Retrieve exact public inputs, no protected cohort data
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import pathlib,json,hashlib,urllib.request,concurrent.futures
+          spec=json.loads(pathlib.Path('research/mortality/nfl22/INPUT_FINGERPRINTS.json').read_text())
+          root=pathlib.Path('nfl22_inputs');root.mkdir()
+          def get(item):
+              name,fingerprint=item
+              if pathlib.Path(name).name!=name or not name.startswith('2013_'):raise ValueError('Invalid name')
+              url=('https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2013_2014_MORT_2019_PUBLIC.dat' if name.endswith('.dat') else 'https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/'+name[5:])
+              with urllib.request.urlopen(url,timeout=60) as r:data=r.read(20000001)
+              if len(data)>20000000 or hashlib.sha256(data).hexdigest()!=fingerprint:raise ValueError('Changed public input: '+name)
+              (root/name).write_bytes(data)
+              return {'file':name,'url':url,'bytes':len(data),'sha256':fingerprint,'status':'retrieved'}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:rows=list(pool.map(get,spec.items()))
+          (root/'manifest.json').write_text(json.dumps({'analysis_lock_commit':'0b5b6530367e5f31d1c6f0ccfc9585d535e90faa','files':rows},indent=2))
+          with urllib.request.urlopen('https://ndownloader.figshare.com/files/40553531',timeout=60) as r:data=r.read(3000001)
+          if hashlib.sha256(data).hexdigest()!='602c708713529c5e85f41640a8781b46e35abc44e3e48e7282ee71ffbb855ac6':raise ValueError('Changed Figshare input')
+          pathlib.Path('Dube_raw.zip').write_bytes(data)
+          print('29 CDC files and public CC-BY assay file checked; no participant rows logged.')
+          PY
+      - name: Tests and original scientific calculation
+        shell: bash
+        run: |
+          set -euo pipefail
+          export NFL22_SOURCE="$PWD/nfl22_inputs"
+          export JOINT22_ARCHIVE="$PWD/Dube_raw.zip"
+          python -m unittest discover -s tests -p test_nfl22.py -v
+          python -m unittest discover -s tests -p test_joint22.py -v
+          python -m research.mortality.nfl22.analyze --source nfl22_inputs --out original_results > original_summary.log
+          python -m research.mortality.nfl22.fold_sensitivity --source nfl22_inputs --out fold_results > fold_summary.log
+          python -m research.mortality.nfl22.joint_audit --archive Dube_raw.zip --out joint_results > joint_summary.log
+          python - <<'PY'
+          import json,numpy as np
+          from pathlib import Path
+          r=json.loads(Path('fold_results/FOLD_SENSITIVITY.json').read_text())
+          assert r['n']==1270 and r['deaths4']==37 and r['changed_fold_participants']==1064
+          refs={('unprefixed_PSU_key','calibration_only'):(.7801639487997442,.02307226983127658),('unprefixed_PSU_key','calibration_plus_NfL'):(.7714476358527548,.023396972109410615),('prefixed_PSU_key','calibration_only'):(.7814428657047624,.023089359350945172),('prefixed_PSU_key','calibration_plus_NfL'):(.7886971858351298,.023235783552835485)}
+          for row in r['metrics']:np.testing.assert_allclose([row['auc'],row['brier']],refs[row['allocation'],row['panel']],atol=1e-8,rtol=1e-7)
+          assert all(x['valid_draws']==1000 for x in r['intervals'])
+          j=json.loads(Path('joint_results/JOINT_DATA_AUDIT.json').read_text())
+          assert j['biological_subjects']==10 and j['biological_timepoints']==40 and j['max_joint_four_PASS_above_LOD_timepoints']==1
+          print('Both fold allocations and joint-protein QC reproduced; not a new validation sample.')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfl22-reproduction-${{ matrix.python }}
+          path: |
+            original_results/
+            fold_results/
+            joint_results/
+          retention-days: 7
+          if-no-files-found: error
