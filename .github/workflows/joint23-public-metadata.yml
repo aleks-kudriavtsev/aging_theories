@@ -1,0 +1,57 @@
+name: Joint23 public metadata
+on:
+  push:
+    branches: [research/nfl-robustness-joint-23]
+    paths: [.github/workflows/joint23-public-metadata.yml]
+permissions:
+  contents: read
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Public descriptions and linked codebooks, without credentials
+        run: |
+          python - <<'PY'
+          import pathlib,json,hashlib,urllib.request,urllib.parse
+          from html.parser import HTMLParser
+          class Links(HTMLParser):
+              def __init__(self):super().__init__();self.urls=[]
+              def handle_starttag(self,tag,attrs):
+                  if tag in ('a','frame','iframe'):
+                      d=dict(attrs)
+                      for key in ('href','src'):
+                          if d.get(key):self.urls.append(d[key])
+          root=pathlib.Path('public_metadata');root.mkdir()
+          hosts={'hrsdata.isr.umich.edu','hrs.isr.umich.edu'}
+          initial=['https://hrsdata.isr.umich.edu/node/38281','https://hrsdata.isr.umich.edu/data-products/vbs-2016-neuropathological-and-supplemental-biomarkers','https://hrsdata.isr.umich.edu/node/40138','https://hrs.isr.umich.edu/sites/default/files/meta/vbs/neuropathological/codebook/hcapbiopilot_00.html','https://hrs.isr.umich.edu/sites/default/files/meta/vbs/neuropathological/codebook/hcapbiopilota_ri.htm']
+          queue=list(initial);seen=set();rows=[]
+          while queue and len(seen)<24:
+              url=queue.pop(0)
+              if url in seen:continue
+              seen.add(url);name=hashlib.sha256(url.encode()).hexdigest()[:16]
+              try:
+                  request=urllib.request.Request(url,headers={'User-Agent':'ResearchMetadataAudit/1.0'})
+                  with urllib.request.urlopen(request,timeout=25) as response:
+                      final=response.url;assert urllib.parse.urlparse(final).hostname in hosts
+                      data=response.read(5000001);ctype=response.headers.get('Content-Type','')
+                  if len(data)>5000000:raise ValueError('metadata size bound')
+                  ext='.pdf' if data.startswith(b'%PDF') else '.html'
+                  (root/(name+ext)).write_bytes(data)
+                  rows.append({'url':url,'resolved_url':final,'file':name+ext,'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'status':'retrieved'})
+                  if ext=='.html':
+                      parser=Links();parser.feed(data.decode('utf-8',errors='replace'))
+                      for ref in parser.urls:
+                          dest=urllib.parse.urljoin(final,ref);p=urllib.parse.urlparse(dest)
+                          if p.scheme=='https' and p.hostname in hosts and ('/sites/default/files/meta/' in p.path or '/sites/default/files/documentation/data-descriptions/' in p.path):
+                              if dest not in seen:queue.append(dest)
+              except Exception as e:rows.append({'url':url,'status':'failed','error':str(e)})
+          (root/'manifest.json').write_text(json.dumps({'scope':'public_metadata_only_no_individual_records','files':rows},indent=2))
+          print(json.dumps({'retrieved':sum(r['status']=='retrieved' for r in rows),'failed':sum(r['status']=='failed' for r in rows)},indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: joint23-public-metadata
+          path: public_metadata/
+          retention-days: 1
+          if-no-files-found: error
