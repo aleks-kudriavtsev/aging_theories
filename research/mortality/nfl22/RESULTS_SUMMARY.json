@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-15",
+  "NfL_common_n": 1270,
+  "NfL_deaths4": 37,
+  "NfL_models": [
+    {
+      "model": "frozen",
+      "auc": 0.7950563195485673,
+      "brier": 0.02361297012007712,
+      "observed": 0.0239741307840349,
+      "predicted": 0.036948953960591446,
+      "calibration_slope": 0.8779729557122403
+    },
+    {
+      "model": "calibration_oof",
+      "auc": 0.7801639487997442,
+      "brier": 0.02307226983127658,
+      "observed": 0.0239741307840349,
+      "predicted": 0.02414212776065428,
+      "calibration_slope": 0.831844778087969
+    },
+    {
+      "model": "nfl_oof",
+      "auc": 0.7714476358527548,
+      "brier": 0.023396972109410615,
+      "observed": 0.0239741307840349,
+      "predicted": 0.02378402605579839,
+      "calibration_slope": 0.7354219077065267
+    }
+  ],
+  "NfL_primary_contrast": "nfl_oof_minus_calibration_oof|brier",
+  "contrasts": {
+    "auc": {
+      "difference": -0.00871631294698938,
+      "conditional_interval": [-0.02580586441192853, 0.005353340907377188],
+      "valid_draws": 1000
+    },
+    "brier": {
+      "difference": 0.0003247022781340328,
+      "conditional_interval": [0.00007026712678804055, 0.0005595763569820583],
+      "valid_draws": 1000
+    }
+  },
+  "crossfit": "5 whole-PSU outcome-blind folds, fixed baseline",
+  "interval_scope": "fixed OOF predictions; excludes all fitting uncertainty",
+  "independent_external_validation": false,
+  "joint_raw_obtained": true,
+  "joint_subjects": 10,
+  "joint_repeated_timepoints": 40,
+  "GFAP_below_LOD": 39,
+  "GFAP_total": 40,
+  "max_joint_four_above_LOD_QC_PASS": 1,
+  "joint_full_panel_mortality_data_obtained": false,
+  "HRS_individual_access": false,
+  "HRS_TNF_release_variable": "not_confirmed; overview TNF mention does not establish released assay; sTNFR1 is separate",
+  "UKB_individual_access": false,
+  "clinical_use_ready": false,
+  "conference_abstracts_changed": false
+}
