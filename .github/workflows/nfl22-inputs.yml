@@ -1,0 +1,42 @@
+name: NfL22 official inputs
+on:
+  push:
+    branches: [research/nfl-joint-proteins-22]
+    paths: [.github/workflows/nfl22-inputs.yml]
+permissions:
+  contents: read
+jobs:
+  retrieve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - name: Bounded retrieval of public CDC sources without executing their content
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib,json,urllib.request,urllib.parse,hashlib,concurrent.futures
+          root=pathlib.Path('nfl22_inputs');root.mkdir()
+          urls={f'2013_{c}_H.{ext}':f'https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/{c}_H.{ext}' for c in ['DEMO','BPX','BMX','SMQ','MCQ','BPQ','DIQ','BIOPRO','TCHOL','HDL','GHB','ALB_CR','CBC','SSSNFL'] for ext in ['xpt','htm']}
+          urls['2013_mortality.dat']='https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2013_2014_MORT_2019_PUBLIC.dat'
+          def get(item):
+              name,url=item
+              req=urllib.request.Request(url,headers={'User-Agent':'MortalityNfL22Research/1.0'})
+              with urllib.request.urlopen(req,timeout=50) as r:
+                  final=r.url
+                  if urllib.parse.urlparse(final).hostname not in {'wwwn.cdc.gov','ftp.cdc.gov','www.cdc.gov'}:raise ValueError('Unexpected host')
+                  data=r.read(20000001)
+              if len(data)>20000000:raise ValueError('Oversize input')
+              if name.endswith('.xpt') and not data.startswith(b'HEADER RECORD'):raise ValueError('Not XPORT')
+              if name.endswith('.dat') and b'<html' in data[:1000].lower():raise ValueError('Not mortality text')
+              (root/name).write_bytes(data)
+              return {'file':name,'url':url,'resolved_url':final,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'retrieved'}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:rows=list(pool.map(get,urls.items()))
+          (root/'manifest.json').write_text(json.dumps({'analysis_lock_commit':'0b5b6530367e5f31d1c6f0ccfc9585d535e90faa','files':rows},indent=2))
+          print('Retrieved',len(rows),'official inputs. No individual rows or predictions printed.')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfl22-official-inputs
+          path: nfl22_inputs/
+          retention-days: 1
+          if-no-files-found: error

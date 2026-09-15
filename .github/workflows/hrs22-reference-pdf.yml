@@ -1,0 +1,31 @@
+name: HRS22 public reference PDF
+on:
+  push:
+    branches: [research/nfl-joint-proteins-22]
+    paths: [.github/workflows/hrs22-reference-pdf.yml]
+permissions:
+  contents: read
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Download public protocol, not sensitive data
+        run: |
+          python3 - <<'PY'
+          import pathlib,urllib.request,urllib.parse,hashlib,json
+          root=pathlib.Path('hrs_reference');root.mkdir()
+          url='https://hrsonline.isr.umich.edu/modules/meta/vbs/2016/desc/HRS2016VBSDD.pdf'
+          with urllib.request.urlopen(url,timeout=50) as r:
+              if urllib.parse.urlparse(r.url).hostname not in {'hrsonline.isr.umich.edu','hrs.isr.umich.edu'}:raise ValueError('Unexpected host')
+              data=r.read(20000001)
+          if not data.startswith(b'%PDF-') or len(data)>20000000:raise ValueError('Not bounded PDF')
+          (root/'HRS2016VBSDD.pdf').write_bytes(data)
+          (root/'manifest.json').write_text(json.dumps({'url':url,'sha256':hashlib.sha256(data).hexdigest(),'scope':'public_protocol_only','participant_data_retrieved':False},indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: hrs22-reference-pdf
+          path: hrs_reference/
+          retention-days: 1
+          if-no-files-found: error
