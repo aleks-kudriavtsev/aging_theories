@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-15",
+  "raw_hrs_records_received": false,
+  "variables": [
+    {
+      "analyte": "IL6",
+      "variable": "PIL6",
+      "identity": "direct IL-6",
+      "source": "supplement_codebook",
+      "status": "released_variable_verified",
+      "public_nonmissing_n": 9831,
+      "assay_and_units_ready_for_model": false
+    },
+    {
+      "analyte": "TNF",
+      "variable": null,
+      "identity": "direct TNF-alpha P01375",
+      "source": "supplement_codebook",
+      "status": "not_listed_in_checked_supplement_only",
+      "not_a_substitute": "PTNFR1",
+      "whole_HRS_absence_proven": false
+    },
+    {
+      "analyte": "sTNFR1",
+      "variable": "PTNFR1",
+      "identity": "soluble receptor1, separate analyte",
+      "source": "supplement_codebook",
+      "status": "released_variable_verified_not_requested_TNF",
+      "public_nonmissing_n": 9831
+    },
+    {
+      "analyte": "GDF15",
+      "variable": null,
+      "source": "vbs_neuro",
+      "status": "product_description_confirmed_variable_unresolved"
+    },
+    {
+      "analyte": "GFAP",
+      "variable": null,
+      "source": "vbs_neuro",
+      "status": "targeted_neuro_product_dictionary_required"
+    },
+    {
+      "analyte": "NEFL",
+      "variable": null,
+      "source": "vbs_neuro",
+      "status": "targeted_neuro_product_dictionary_required"
+    },
+    {
+      "analyte": "NT_PROBNP",
+      "variable": null,
+      "source": "vbs_main",
+      "status": "exact_released_variable_and_assay_required"
+    },
+    {
+      "analyte": "CST3",
+      "variable": null,
+      "source": "vbs_main",
+      "status": "exact_released_variable_and_assay_required"
+    }
+  ],
+  "joint_complete_n": null,
+  "baseline_core_unresolved": [
+    "hba1c",
+    "uacr",
+    "ggt"
+  ],
+  "no_imputation_or_proxy_substitution": true
+}
