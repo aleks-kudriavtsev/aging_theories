@@ -1,0 +1,21 @@
+# NfL22 analysis decision log
+
+2026-09-15. Fixed before first successful retrieval/inspection of individual SSSNFL_H NfL data in this project. Public codebook read; 2013-2014 outcomes and ordinary laboratories were used in earlier iterations. Therefore this is an internal incremental assessment, NOT a new independent temporal/geographical validation and NOT clinical preregistration.
+
+## Fixed comparison
+Population: NHANES2013-2014, baseline age40-75 (intersection of original model40-79 and NfL20-75), linkage eligible, valid vital status/examination follow-up, positive WTSSNH2Y, valid NfL and full expanded13 clinical/laboratory profile. Join only SEQN within this cycle. No cross-person matching with 1999-2004 NT-proBNP/cystatin. Published below/above quantification replacements retained with flags, no new imputation. Report subset flow and count both flags. Sensitivity: quantified NfL only, explicitly a separate domain.
+
+Frozen baseline: expanded13 from supplied Integrated20/model_bundle20.json SHA256 ed37a1b0e8be5eaa40556eb0c169166fb0f06a3d52dfd5ae6882d608788562ec, developed only1999-2006. Exact extracted frozen_expanded13.json SHA256 f8f04ccf94083dff4c3ab3addddc4a303212a6a7cf29663e503f54e5d2e85d20. Baseline coefficients, winsorization and transformations unchanged. This archive-derived baseline is explicitly versioned, not falsely attributed to remote main.
+
+Primary horizon4years; secondary1year. Target all-cause death. If any survivor lacks follow-up through4years, stop binary evaluation and record an amendment before comparative metrics. Events at zero recorded months retain prior0.5month convention and are counted.
+
+Because NfL is present in only one independent sample, compare fixed baseline predictions with two small cross-fitted updates: (A) one multiplicative calibration intercept to the existing cumulative hazard, (B) the same intercept plus one continuous log2(NfL) coefficient. The primary contrast is B minus A, NOT B minus unrecalibrated baseline. This prevents crediting NfL for a general population calibration change. No cause-specific NfL effects are estimated; diagnosis or disease-specific AUC is not inferred.
+
+Five outer folds split whole masked PSU clusters. Sort cluster keys (stratum,PSU) by SHA256('nfl22:'+key); assign ranks modulo5, without using NfL values/outcomes. Each heldout prediction is from parameters learned on other clusters. Update likelihood: sum normalized training weights * [D*(a+b*x) - H0(min(T,4))*exp(a+b*x)] minus0.5*b^2; x=log2(NfL), training-only mean-centered, no additional winsorization/cutoff search. Ridge1 on b fixed, no hyperparameter selection. Baseline correction A has b=0. A single whole-sample fit is reported only as an association/development coefficient, never as heldout performance. If event support or convergence fails, report failure; no synthetic events.
+
+Report OOF binary Brier, weighted AUC, mean predictions, observed/expected, calibration diagnostics, full-sample NfL coefficient, sex and age40-59/60-75 descriptive groups with event counts. Primary 1000 paired rescaled-PSU draws in the broader eligible NfL domain then restricted to common full profiles; same weights for all models. Intervals condition on existing cross-fitted predictions and exclude baseline/update fitting and fold-selection uncertainty. Count undefined draws; no 'equivalence' conclusion from crossing zero. Sensitivity and secondary outcomes remain descriptive, not selected for positivity.
+
+## Joint protein data acquisition
+Seek actual same-person baseline GDF15, IL6, TNF (not TNFRs), GFAP together with other panel variables and outcomes. Prefer cohort dictionaries and allowed row-level downloads. Distinguish downloadable rows, metadata-only confirmation, request-required and endpoint-incompatible sources. NPX/RFU, serum/plasma, temporal repeats and source substitutions retain their identities. No bypass of authentication/DUA and no inferred access from GitHub permission. No data request sent on behalf of an institution without approved applicant information.
+
+Individual rows/IDs remain local; publish code, source checksums and aggregates only. No default application or abstracts changed by this assessment.
