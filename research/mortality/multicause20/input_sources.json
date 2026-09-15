@@ -1,0 +1,15 @@
+{
+  "analysis_plan_commit": "858c7e5a7a13799a093d64eb1295b16af2a65a86",
+  "source": "original_CDC_public_NHEFS1992_NHANESI",
+  "files": [
+    {"file":"DU4800.txt","url":"https://wwwn.cdc.gov/nchs/data/nhanes1/DU4800.txt","bytes":14332416,"sha256":"7f05e42960c73c00a8b6f81874e6435454b5365f5f747518779002c4f9def8a8"},
+    {"file":"DU4111.txt","url":"https://wwwn.cdc.gov/nchs/data/nhanes1/DU4111.txt","bytes":14332416,"sha256":"381ae02c98ed2cddbab94cf55d0920f69b20e1fbf424c16d36737e469eb05027"},
+    {"file":"DU4233.txt","url":"https://wwwn.cdc.gov/nchs/data/nhanes1/DU4233.txt","bytes":20284416,"sha256":"dc5dbc01b1703f2d246879f443a4ed0ab7fb38a3b737c68a4aabb445aa8a12c2"},
+    {"file":"DU4091.txt","url":"https://wwwn.cdc.gov/nchs/data/nhanes1/DU4091.txt","bytes":6581176,"sha256":"d4780a5c462258001d86f820be4c25f41dcb5922114887a35b94a258f9e5f831"},
+    {"file":"n92vitl.txt","url":"https://wwwn.cdc.gov/nchs/data/nhefs/n92vitl.txt","bytes":3947518,"sha256":"d5a81411db5123893c27e5abfaa83bd9eb767bc61e242d49d93e047b620c0f61"},
+    {"file":"N92mort.txt","url":"https://wwwn.cdc.gov/nchs/data/nhefs/N92mort.txt","bytes":1987674,"sha256":"2fa2f22b23a7e9fcbddd4c216cae7471708ef3870837e914777140d42fee83fd"},
+    {"file":"DU4091.sas","url":"https://wwwn.cdc.gov/nchs/data/nhanes1/DU4091.sas","bytes":69110,"sha256":"79646cb1dca8854113ff816587ec955e3819a259562c736937f49c5d1190a1b3"},
+    {"file":"DU4091_F.sas","url":"https://wwwn.cdc.gov/nchs/data/nhanes1/DU4091_F.sas","bytes":152157,"sha256":"d3f48dfee2dede1a0c9843c38c40ec0142d71b3caf5a23cc8ea702bf2bdc7d75"},
+    {"file":"4091.pdf","url":"https://wwwn.cdc.gov/nchs/data/nhanes1/4091.pdf","bytes":6946115,"sha256":"70d37fad5453ea9f9eca7a8047664ca27717627a42f2332f6448f910dbdc9dcd"}
+  ]
+}

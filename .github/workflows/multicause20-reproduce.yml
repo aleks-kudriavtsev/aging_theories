@@ -1,0 +1,116 @@
+name: Multicause20 scientific reproduction
+on:
+  push:
+    branches: [research/multicause-20]
+    paths: [research/mortality/multicause20/*.py, research/mortality/multicause20/input_sources.json, tests/test_multicause20.py, .github/workflows/multicause20-reproduce.yml]
+permissions:
+  contents: write
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - run: python -m pip install numpy==2.3.5 pandas==2.2.3 scipy==1.17.0
+      - name: Retrieve exact official public inputs; no source rows logged
+        run: |
+          python - <<'PY'
+          import os,pathlib,json,hashlib,urllib.request,urllib.parse,concurrent.futures
+          source=pathlib.Path(os.environ['RUNNER_TEMP'])/'nhefs20';source.mkdir()
+          manifest_path=pathlib.Path('research/mortality/multicause20/input_sources.json')
+          manifest=json.loads(manifest_path.read_text())
+          def get(row):
+              name=row['file'];url=row['url']
+              assert pathlib.Path(name).name==name
+              assert urllib.parse.urlparse(url).hostname=='wwwn.cdc.gov'
+              with urllib.request.urlopen(url,timeout=90) as response:
+                  assert urllib.parse.urlparse(response.url).hostname in {'wwwn.cdc.gov','www.cdc.gov','ftp.cdc.gov'}
+                  data=response.read(25000001)
+              assert len(data)==row['bytes'] and hashlib.sha256(data).hexdigest()==row['sha256'],name
+              (source/name).write_bytes(data)
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:list(pool.map(get,manifest['files']))
+          (source/'manifest.json').write_bytes(manifest_path.read_bytes())
+          print('Verified',len(manifest['files']),'official public source files')
+          PY
+      - name: Train and evaluate both prespecified studies
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p qa20
+          python -m research.mortality.multicause20.run --source "$RUNNER_TEMP/nhefs20" --out "$RUNNER_TEMP/result20" 2>&1 | tee qa20/scientific_run.log
+      - name: Publish only whitelisted aggregate outputs locally
+        run: |
+          python - <<'PY'
+          import pathlib,os,json,hashlib,shutil
+          src=pathlib.Path(os.environ['RUNNER_TEMP'])/'result20';dst=pathlib.Path('research/mortality/multicause20/results');dst.mkdir(exist_ok=True)
+          rootfiles=['cohort_audit.json','SOURCE_MANIFEST.json','run_summary.json']
+          studyfiles=['model.json','results.json','metrics.csv','intervals.csv','subgroups.csv','training_cv.csv','cause_counts.csv']
+          for name in rootfiles:shutil.copyfile(src/name,dst/name)
+          index={}
+          for study in ['primary','hepatic']:
+              (dst/study).mkdir(exist_ok=True)
+              for name in studyfiles:shutil.copyfile(src/study/name,dst/study/name)
+              index[study]={'path':'results/'+study+'/model.json','sha256':hashlib.sha256((dst/study/'model.json').read_bytes()).hexdigest()}
+              r=json.loads((dst/study/'results.json').read_text());assert r['estimated_noninfectious_families']==17 and r['outcome_states']==21
+          (dst/'MODEL_INDEX.json').write_text(json.dumps(index,indent=2)+'\n')
+          import pandas as pd
+          for study,expected_n in [('primary',3490),('hepatic',982)]:
+              m=pd.read_csv(dst/study/'metrics.csv');assert set(m.n)=={expected_n}
+              t=m[(m.horizon==15)&(m.outcome=='multistate')].set_index('panel')
+              expected=.00053459 if study=='primary' else -.005854
+              assert abs(float(t.loc['laboratory','brier']-t.loc['clinical','brier'])-expected)<.00001
+          print('Aggregate-only export verified; model versions',index)
+          PY
+      - name: Real-input integration and previous runtime checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          export NHEFS20_SOURCE="$RUNNER_TEMP/nhefs20"
+          python -m unittest discover -s tests -p 'test_multicause20.py' -v 2>&1 | tee qa20/new_tests.log
+          python -S -m unittest discover -s tests -p 'test_studio16.py' -v 2>&1 | tee qa20/studio_tests.log
+          python -S -m unittest discover -s tests -p 'test_compact14_runtime.py' -v 2>&1 | tee qa20/compact_tests.log
+          python -S -m research.mortality.multicause20.replay --demo --study hepatic --out "$RUNNER_TEMP/synthetic20.json"
+      - name: Save reproduction status and checksums
+        run: |
+          python - <<'PY'
+          import pathlib,json,hashlib,os,re
+          dst=pathlib.Path('research/mortality/multicause20/results');logs=pathlib.Path('qa20')
+          counts={}
+          for p in logs.glob('*tests.log'):
+              text=p.read_text();match=re.search(r'Ran (\d+) tests',text)
+              assert match and '\nOK\n' in text and 'skipped=' not in text,p.name
+              counts[p.name]=int(match.group(1))
+          status={'code_commit':os.environ['GITHUB_SHA'],'actions_run':os.environ['GITHUB_RUN_ID'],'test_counts':counts,'total_selected_tests':sum(counts.values()),'all_selected_tests_passed':True,'not_full_historical_test_suite':True,'new_external_RU_DE_validation':False,'individual_source_data_exported':False,'output_sha256':{str(p.relative_to(dst)):hashlib.sha256(p.read_bytes()).hexdigest() for p in dst.rglob('*') if p.is_file() and p.name!='REPRODUCIBILITY.json'}}
+          (dst/'REPRODUCIBILITY.json').write_text(json.dumps(status,indent=2)+'\n')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: multicause20-computed-results
+          path: |
+            research/mortality/multicause20/results/
+            qa20/
+          retention-days: 7
+          if-no-files-found: warn
+      - name: Commit computed aggregates to this research branch only
+        shell: bash
+        run: |
+          set -euo pipefail
+          BRANCH=research/multicause-20
+          git fetch origin "$BRANCH"
+          test "$(git rev-parse FETCH_HEAD)" = "$GITHUB_SHA"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- research/mortality/multicause20/results
+          git diff --cached --quiet || git commit -m 'Record reproduced multicause20 models and aggregate results; no individual data'
+          git push origin "HEAD:refs/heads/$BRANCH"

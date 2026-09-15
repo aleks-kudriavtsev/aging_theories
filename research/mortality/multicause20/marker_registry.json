@@ -1,0 +1,28 @@
+{
+  "version":"0.20.0",
+  "principle":"Jointly measured predictors, laboratory-development nominees and literature-only hypotheses are separate statuses; no imported HR becomes a coefficient.",
+  "empirically_fitted":[
+    {"id":"ALB","model_feature":"albumin","label":"Альбумин сыворотки","unit":"g/L","matrix":"serum","panels":["primary","hepatic"]},
+    {"id":"TOTAL_CHOLESTEROL","model_feature":"cholesterol","label":"Общий холестерин","unit":"mg/dL","matrix":"serum","panels":["primary","hepatic"]},
+    {"id":"HB","model_feature":"hemoglobin","label":"Гемоглобин","unit":"g/dL","matrix":"whole_blood","panels":["primary","hepatic"]},
+    {"id":"AST","model_feature":"ast","label":"АСТ / SGOT","unit":"NHANESI_activity","matrix":"serum","panels":["hepatic"]},
+    {"id":"ALP","model_feature":"alp","label":"Щелочная фосфатаза","unit":"NHANESI_activity","matrix":"serum","panels":["hepatic"]},
+    {"id":"URATE","model_feature":"urate","label":"Мочевая кислота","unit":"mg/dL","matrix":"serum","panels":["hepatic"]}
+  ],
+  "measured_but_not_joint_with_albumin":["creatinine","blood_urea_nitrogen"],
+  "incremental_value_attribution":"Six-marker joint block versus clinical-plus-smoking in prespecified secondary subset; no individual AST/ALP/urate increment established.",
+  "upstream_catalog":{"repository":"aleks-kudriavtsev/aging_biomarkers","commit":"51b3670524951af080634c42ed172f935f17d0cb","path":"data/living_evidence/analytes.json","status":"candidate_identity_import_not_new_literature_verification"},
+  "future_nominees":[
+    {"id":"NT_PROBNP","label":"NT-proBNP","identity_warning":"Not BNP or intact proBNP","discovery_pmids":["21536998","29992704","38739396"],"proposed_module":"cardiac","fit_as_predictor":false,"status":"pending_joint_measurement_and_outcome_validation"},
+    {"id":"GDF15","label":"GDF15","identity_warning":"Mature circulating GDF15; assay form required","discovery_pmids":["21536998","29992704","38347190"],"proposed_module":"systemic_stress","fit_as_predictor":false,"status":"pending_joint_measurement_and_outcome_validation"},
+    {"id":"IL6","label":"IL-6","identity_warning":"Not soluble IL6 receptor","discovery_pmids":["11983728","21883115"],"proposed_module":"inflammation","fit_as_predictor":false,"status":"pending_joint_measurement_and_outcome_validation"},
+    {"id":"TNF","label":"TNF-alpha","identity_warning":"Not soluble TNFR1/TNFR2","discovery_pmids":["11983728","21883115"],"proposed_module":"inflammation","fit_as_predictor":false,"status":"pending_joint_measurement_and_outcome_validation","laboratory_route":"first_technology_module_not_mortality_coefficient"},
+    {"id":"GFAP","label":"GFAP","identity_warning":"Protein and fragments require assay definition","discovery_pmids":["38347190"],"proposed_module":"neuro","fit_as_predictor":false,"status":"pending_joint_measurement_and_outcome_validation"},
+    {"id":"NEFL","label":"Neurofilament light chain","identity_warning":"Not other neurofilaments","discovery_pmids":["38347190"],"proposed_module":"neuro","fit_as_predictor":false,"status":"pending_joint_measurement_and_outcome_validation"},
+    {"id":"MMP12","label":"MMP12","identity_warning":"Circulating form and fragments require assay specification","discovery_pmids":["29992704"],"proposed_module":"matrix_remodeling","fit_as_predictor":false,"status":"pending_joint_measurement_and_outcome_validation"},
+    {"id":"CRP","label":"C-reactive protein","identity_warning":"Assay and molecular form required","discovery_pmids":["21536998","21883115"],"proposed_module":"inflammation","fit_as_predictor":false,"status":"not_measured_in_this_historical_joint_panel"}
+  ],
+  "links_are":"research hypotheses and source-catalogue annotations, not proven causal edges",
+  "clinical_use_ready":false,
+  "proprietary_aptamer_sequences_imported":false
+}
