@@ -43,4 +43,12 @@ jobs:
           python -m pip install setuptools==82.0.1 wheel==0.46.3
           python -m pip wheel --no-deps --no-build-isolation --wheel-dir dist .
       - name: Verify installed console and packaged data outside checkout
-        run: python tools/check_installed_workbench.py dist/mortality_workbench-0.7.0-py3-none-any.whl
+        run: |
+          python - <<'PYTHON'
+          from pathlib import Path
+          import subprocess, sys
+          wheels = list(Path('dist').glob('mortality_workbench-*-py3-none-any.whl'))
+          if len(wheels) != 1:
+              raise RuntimeError('Exactly one newly built wheel is required')
+          subprocess.run([sys.executable, 'tools/check_installed_workbench.py', str(wheels[0])], check=True)
+          PYTHON
