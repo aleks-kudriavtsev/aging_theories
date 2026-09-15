@@ -1,0 +1,59 @@
+name: Joint22 public data and metadata
+on:
+  push:
+    branches: [research/nfl-joint-proteins-22]
+    paths: [.github/workflows/joint22-public-sources.yml]
+permissions:
+  contents: read
+jobs:
+  public:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Retrieve public Figshare source and public HRS documentation only
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib,urllib.request,urllib.parse,json,hashlib,html.parser
+          root=pathlib.Path('joint22_public');root.mkdir();manifest=[]
+          allowed={'api.figshare.com','figshare.com','ndownloader.figshare.com','s3-eu-west-1.amazonaws.com','s3.amazonaws.com','hrsdata.isr.umich.edu','hrs.isr.umich.edu','hrsonline.isr.umich.edu'}
+          def get(name,url,limit=30_000_000):
+              req=urllib.request.Request(url,headers={'User-Agent':'Joint22-PublicResearch/1.0'})
+              with urllib.request.urlopen(req,timeout=60) as r:
+                  host=urllib.parse.urlsplit(r.url).hostname
+                  if host not in allowed and not host.endswith('.amazonaws.com'):raise ValueError('Unexpected host')
+                  data=r.read(limit+1)
+              if len(data)>limit:raise ValueError('Size limit')
+              (root/name).write_bytes(data)
+              manifest.append({'file':name,'url':url,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
+              return data
+          api='https://api.figshare.com/v2/articles/22811915'
+          meta=json.loads(get('figshare22811915.json',api))
+          for i,item in enumerate(meta['files']):
+              get('figshare_'+str(i)+'_'+pathlib.Path(item['name']).name,item['download_url'])
+          class Links(html.parser.HTMLParser):
+              def __init__(self):super().__init__();self.links=[]
+              def handle_starttag(self,tag,attrs):
+                  a=dict(attrs)
+                  if tag=='a' and 'href' in a:self.links.append(a['href'])
+          pages={'hrs_neuro':'https://hrsdata.isr.umich.edu/data-products/vbs-2016-neuropathological-and-supplemental-biomarkers','hrs_vbs':'https://hrsdata.isr.umich.edu/node/38281'}
+          hrefs=[]
+          for name,url in pages.items():
+              data=get(name+'.html',url);p=Links();p.feed(data.decode('utf-8'))
+              for href in p.links:
+                  u=urllib.parse.urljoin(url,href)
+                  if urllib.parse.urlsplit(u).hostname in allowed and ('codebook' in u.lower() or 'datadesc' in u.lower() or '.pdf' in u.lower()):hrefs.append(u)
+          for i,url in enumerate(dict.fromkeys(hrefs)):
+              try:get('hrs_doc_'+str(i)+('.pdf' if '.pdf' in url.lower() else '.html'),url)
+              except Exception as e:manifest.append({'url':url,'status':'failed','error':str(e)})
+          (root/'hrs_document_links.json').write_text(json.dumps(hrefs,indent=2))
+          (root/'manifest.json').write_text(json.dumps(manifest,indent=2))
+          print(json.dumps({'figshare_files':len(meta['files']),'public_HRS_links':hrefs,'protected_HRS_records_requested':False},indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: joint22-public-sources
+          path: joint22_public/
+          retention-days: 1
+          if-no-files-found: error
