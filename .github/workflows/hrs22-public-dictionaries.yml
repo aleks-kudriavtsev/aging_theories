@@ -1,0 +1,58 @@
+name: HRS22 public documentation
+on:
+  push:
+    branches: [research/nfl-joint-proteins-22]
+    paths: [.github/workflows/hrs22-public-dictionaries.yml]
+permissions:
+  contents: read
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Public documents only, without login or participant downloads
+        run: |
+          python3 - <<'PY'
+          import pathlib,urllib.request,urllib.parse,hashlib,json
+          from html.parser import HTMLParser
+          root=pathlib.Path('hrs22_metadata');root.mkdir()
+          hosts={'hrsdata.isr.umich.edu','hrs.isr.umich.edu','hrsonline.isr.umich.edu'}
+          urls=['https://hrsdata.isr.umich.edu/data-products/vbs-2016-neuropathological-and-supplemental-biomarkers','https://hrsdata.isr.umich.edu/node/38281','https://hrsdata.isr.umich.edu/data-products/vbs-2016-supplemental-file']
+          class Links(HTMLParser):
+              def __init__(self):super().__init__();self.rows=[];self.href=None;self.label=''
+              def handle_starttag(self,tag,attrs):
+                  if tag=='a':self.href=dict(attrs).get('href');self.label=''
+              def handle_data(self,text):
+                  if self.href:self.label+=text
+              def handle_endtag(self,tag):
+                  if tag=='a' and self.href:self.rows.append((self.label.strip(),self.href));self.href=None
+          rows=[];links=[];docs={}
+          def get(url,name):
+              if urllib.parse.urlparse(url).hostname not in hosts:raise ValueError('Unapproved host')
+              try:
+                  with urllib.request.urlopen(url,timeout=40) as r:
+                      final=r.url
+                      if urllib.parse.urlparse(final).hostname not in hosts:raise ValueError('Unexpected redirect')
+                      data=r.read(20000001)
+                  if len(data)>20000000:raise ValueError('Too large')
+                  (root/name).write_bytes(data)
+                  rows.append({'url':url,'file':name,'resolved_url':final,'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'status':'retrieved'})
+                  return data
+              except Exception as e:rows.append({'url':url,'file':name,'status':'failed','error':str(e)});return b''
+          for i,url in enumerate(urls):
+              data=get(url,f'product_{i}.html');p=Links();p.feed(data.decode('utf-8','replace'))
+              for label,href in p.rows:
+                  absolute=urllib.parse.urljoin(url,href)
+                  if any(x in label.lower() for x in ['description','codebook','order form','appendix']):
+                      links.append({'product':url,'label':label,'url':absolute})
+                      if urllib.parse.urlparse(absolute).hostname in hosts and ('codebook' in label.lower() or 'description' in label.lower() or 'appendix' in label.lower()):docs[absolute]=label
+          for i,(url,label) in enumerate(docs.items()):get(url,f'doc_{i}'+('.pdf' if '.pdf' in url.lower() else '.txt'))
+          (root/'manifest.json').write_text(json.dumps({'scope':'public_documents_only','individual_data_retrieved':False,'files':rows,'links':links},indent=2))
+          print(json.dumps(links,indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: hrs22-public-dictionaries
+          path: hrs22_metadata/
+          retention-days: 7
+          if-no-files-found: error
