@@ -1,0 +1,11 @@
+{
+ "checked_date":"2026-09-15",
+ "sources":[
+  {"id":"NHANES_NFL_2013","status":"individual_data_obtained_and_analyzed","url":"https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/SSSNFL_H.htm","full_joint_four_available":false,"outcome":"all_cause_mortality","raw_records_published":false},
+  {"id":"DUBE_OLINK_22811915","status":"joint_individual_measurements_obtained_but_unfit_for_mortality_training","url":"https://figshare.com/articles/dataset/Raw_Olink_data/22811915","source_file_id":40553531,"sha256":"602c708713529c5e85f41640a8781b46e35abc44e3e48e7282ee71ffbb855ac6","license":"CC BY 4.0","subjects":10,"repeated_timepoints":40,"targets":["GDF15","IL6","TNF","GFAP"],"scale":"NPX","material":"not_confirmed","GFAP_below_LOD":39,"GFAP_total":40,"max_joint_four_QC_PASS_above_LOD":1,"whole_expanded13_available":false,"mortality_followup":false,"exact_NT_proBNP_form_confirmed":false,"individual_data_republished":false},
+  {"id":"HRS_2016_VBS","status":"public_metadata_and_protocol_only;individual_access_required","urls":["https://hrsdata.isr.umich.edu/data-products/vbs-2016-neuropathological-and-supplemental-biomarkers","https://hrsdata.isr.umich.edu/node/40138","https://hrsdata.isr.umich.edu/sites/default/files/documentation/data-descriptions/HRS2016VBSDD.pdf"],"individual_data_obtained":false,"access_approved":false,"request_sent":false,"GDF15":"explicit_in_Dec2025_release","GFAP_NEFL":"neuro_biomarkers_documented;release_dictionary_and_overlap_required","IL6":"specific_assay_in_VBS_protocol","TNF":"mentioned_in_overview_but_specific_assay_and_published_studies_use_sTNFR1;released_TNF_variable_unconfirmed","NTproBNP_CST3":"specific_assays_in_protocol","whole_expanded13_baseline_profile":"not_confirmed;HbA1c_footnote_added2018_2023;UACR_GGT_not_confirmed","joint_complete_n":null,"automatic_TNFR_to_TNF_mapping":false},
+  {"id":"UKB_OLINK_RAP","status":"controlled_access_potential_joint_cohort","url":"https://www.ukbiobank.ac.uk/use-our-data/research-analysis-platform/","provider_notice":"currently_closed;phased_reopening_intended_from_September2026","exact_assay_ids_and_joint_intersection_confirmed":false,"individual_data_obtained":false,"access_approved":false,"request_sent":false,"joint_complete_n":null}
+ ],
+ "protected_individual_data_downloaded":false,
+ "conference_abstracts_changed":false
+}
