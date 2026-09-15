@@ -1,0 +1,41 @@
+name: NfL22 reconciliation inputs
+on:
+  push:
+    branches: [research/nfl22-reproducibility]
+    paths: [.github/workflows/nfl22-reconciliation-inputs.yml]
+permissions:
+  contents: read
+jobs:
+  inputs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: cb19a2a2c7e5e1cc42e008595453ba2a51acf24c
+          persist-credentials: false
+      - name: Preserve pinned code and retrieve public CC-BY data, no protected cohort
+        run: |
+          python3 - <<'PY'
+          import pathlib,shutil,urllib.request,urllib.parse,hashlib,json
+          root=pathlib.Path('reconciliation_inputs');root.mkdir()
+          shutil.copytree('research/mortality/nfl22',root/'concurrent_nfl22')
+          shutil.copyfile('tests/test_nfl22.py',root/'test_concurrent_nfl22.py')
+          url='https://ndownloader.figshare.com/files/40553531'
+          with urllib.request.urlopen(url,timeout=60) as r:
+              final=r.url
+              host=urllib.parse.urlparse(final).hostname
+              if not (host.endswith('figshare.com') or host.endswith('amazonaws.com')):raise ValueError('Unexpected redirect')
+              data=r.read(3000001)
+          expected='602c708713529c5e85f41640a8781b46e35abc44e3e48e7282ee71ffbb855ac6'
+          if len(data)>3000000 or hashlib.sha256(data).hexdigest()!=expected:raise ValueError('Source version differs')
+          (root/'Dube_raw.zip').write_bytes(data)
+          (root/'manifest.json').write_text(json.dumps({'source_commit':'cb19a2a2c7e5e1cc42e008595453ba2a51acf24c','data_url':url,'sha256':expected,'license':'CC BY 4.0','protected_data_downloaded':False},indent=2))
+          print('Pinned concurrent code and public joint assay archive preserved. No participant rows printed.')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfl22-reconciliation-inputs
+          path: reconciliation_inputs/
+          retention-days: 1
+          if-no-files-found: error
