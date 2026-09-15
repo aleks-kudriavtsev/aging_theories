@@ -1,0 +1,36 @@
+name: UKB22 public assay dictionary
+on:
+  push:
+    branches: [research/nfl-joint-proteins-22]
+    paths: [.github/workflows/ukb22-public-coding.yml]
+permissions:
+  contents: read
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Public assay metadata only
+        run: |
+          python3 - <<'PY'
+          import urllib.request,urllib.parse,pathlib,hashlib,json,csv,io
+          url='https://biobank.ndph.ox.ac.uk/showcase/codown.cgi?id=143'
+          with urllib.request.urlopen(url,timeout=50) as r:
+              if urllib.parse.urlparse(r.url).hostname!='biobank.ndph.ox.ac.uk':raise ValueError('Unexpected host')
+              data=r.read(2000001)
+          if len(data)>2000000:raise ValueError('Oversize dictionary')
+          rows=list(csv.DictReader(io.StringIO(data.decode('utf-8-sig')),delimiter='\t'))
+          if not rows or set(rows[0])!={'coding','meaning'}:raise ValueError('Not public Olink coding table')
+          targets={'GDF15','IL6','TNF','GFAP','NEFL','CST3','NPPB','NTproBNP'}
+          selected=[r for r in rows if r['meaning'].split(';')[0] in targets or 'natriuretic' in r['meaning'].lower()]
+          out=pathlib.Path('ukb22_dictionary');out.mkdir()
+          (out/'selected_targets.json').write_text(json.dumps({'source':url,'sha256':hashlib.sha256(data).hexdigest(),'dictionary_rows':len(rows),'target_rows':selected,'participant_data_retrieved':False},indent=2))
+          (out/'coding143.tsv').write_bytes(data)
+          print(json.dumps(selected,indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ukb22-public-coding
+          path: ukb22_dictionary/
+          retention-days: 1
+          if-no-files-found: error
