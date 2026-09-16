@@ -1,0 +1,67 @@
+{
+  "ai_policy": {
+    "url": "https://hrsdata.isr.umich.edu/data-products/ai-llm-use-policy",
+    "page_update_text": "08/04/2026",
+    "verified": "2026-09-15",
+    "key_finding": "Person-level HRS/RAND/Gateway data must not be processed by LLMs; public documentation, code assistance without microdata and analytic summaries without microdata are permitted.",
+    "evidence_mode": "official_public_document_parsed_by_web",
+    "raw_file_checksum": null
+  },
+  "sensitive_dua": {
+    "url": "https://hrs.isr.umich.edu/sites/default/files/HRS-Sensitive-Data-Access-Use-Agreement.pdf",
+    "version": "revised 21 August 2026",
+    "verified": "2026-09-15",
+    "key_finding": "Named individual and institution signatures; requested products only; scientific research, no commercial use; commercial affiliation requires Attachment A; cells and margins >=5 plus complementary suppression.",
+    "evidence_mode": "official_public_document_parsed_by_web",
+    "raw_file_checksum": null
+  },
+  "order_form": {
+    "url": "https://hrsdata.isr.umich.edu/sensitive-health-data-order-form",
+    "verified": "2026-09-15",
+    "key_finding": "Account login, English application and completed agreement signed by individual and authorized institutional representative.",
+    "evidence_mode": "official_public_document_parsed_by_web",
+    "raw_file_checksum": null
+  },
+  "supplement_codebook": {
+    "url": "https://hrs.isr.umich.edu/sites/default/files/meta/vbs/supplemental/codebook/vbs16aaa_r.htm",
+    "version": "codebook VERSION=2 April2025; product landing page says v1.0",
+    "verified": "2026-09-15",
+    "key_finding": "PIL6 is IL6; PTNFR1 is soluble TNF receptor1, not direct TNF. Both public marginal nonmissing counts9831, not a joint full panel count.",
+    "evidence_mode": "official_public_document_parsed_by_web",
+    "raw_file_checksum": null
+  },
+  "vbs_main": {
+    "url": "https://hrsdata.isr.umich.edu/node/38281",
+    "version": "Apr2025 FinalV3.0",
+    "doi": "10.7826/ORTM1684",
+    "verified": "2026-09-15",
+    "public_release_n": 9934,
+    "evidence_mode": "official_public_document_parsed_by_web",
+    "raw_file_checksum": null
+  },
+  "vbs_supplement": {
+    "url": "https://hrsdata.isr.umich.edu/node/40138",
+    "version": "Apr2025 v1.0 on landing page",
+    "doi": "10.7826/OWYP6314",
+    "verified": "2026-09-15",
+    "evidence_mode": "official_public_document_parsed_by_web",
+    "raw_file_checksum": null
+  },
+  "vbs_neuro": {
+    "url": "https://hrsdata.isr.umich.edu/data-products/vbs-2016-neuropathological-and-supplemental-biomarkers",
+    "version": "Dec2025 V1.0",
+    "doi": "10.7826/VVXD9057",
+    "verified": "2026-09-15",
+    "public_release_n_approximate": 4500,
+    "key_finding": "GDF15 and neurodegeneration/ATN product described; exact GFAP/NfL/GDF15 variables not resolved in this pass.",
+    "evidence_mode": "official_public_document_parsed_by_web",
+    "raw_file_checksum": null
+  },
+  "restricted_faq": {
+    "url": "https://hrs.isr.umich.edu/data-products/restricted-data/faqs",
+    "verified": "2026-09-15",
+    "key_finding": "HRS restricted data can be accessed outside US subject to approval, but CMS/NDI linked data cannot be shared, sent or accessed outside US.",
+    "evidence_mode": "official_public_document_parsed_by_web",
+    "raw_file_checksum": null
+  }
+}

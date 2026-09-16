@@ -1,0 +1,29 @@
+{
+  "data_class": "hrs_microdata",
+  "execution_context": "unknown",
+  "user_dua_approved": false,
+  "institutional_signature_confirmed": false,
+  "approval_reference": null,
+  "requested_products": [
+    "VBS2016_FinalV3",
+    "VBS2016_Supplement",
+    "VBS2016_Neuropathological_Supplement",
+    "approved_mortality_followup"
+  ],
+  "approved_products": [],
+  "secure_environment_reviewed": false,
+  "ai_file_access_disabled": false,
+  "third_party_transfer_disabled": false,
+  "research_only_use": false,
+  "no_consulting_or_licensing_obligation": false,
+  "commercial_affiliation": null,
+  "commercial_affiliation_disclosed_and_reviewed": false,
+  "uses_ndi_or_cms": null,
+  "operator_country": null,
+  "execution_country": null,
+  "source_mapping_reviewed": false,
+  "baseline_assignment_reviewed": false,
+  "baseline_token": null,
+  "common_core_fields": [],
+  "mappings": {}
+}
