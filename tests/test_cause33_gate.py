@@ -258,6 +258,10 @@ class StructureAndFoldTests(unittest.TestCase):
         self.assertEqual(run(selected_rules=r)['common']['n'], 609)
         defs = copy.deepcopy(DEFINITIONS);defs['supported_baseline_start_years'] = [2015, 2017]
         with self.assertRaises(ValueError):run(definitions=defs)
+        defs = copy.deepcopy(DEFINITIONS);defs['groups']['001']['id'] = 'all_CVD'
+        with self.assertRaises(ValueError):run(definitions=defs)
+        defs = copy.deepcopy(DEFINITIONS);defs['groups'] = None
+        with self.assertRaises(ValueError):run(definitions=defs)
         r = rules();r['event_rows_min'] = True
         with self.assertRaises(ValueError):run(selected_rules=r)
 

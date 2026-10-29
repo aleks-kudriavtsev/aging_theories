@@ -16,6 +16,8 @@ import pandas as pd
 CORE = ('age_linear', 'age_quadratic', 'male', 'current', 'former', 'sbp',
         'bmi', 'hba1c', 'egfr_low', 'egfr_high', 'log_uacr')
 CODES = tuple(f'{number:03d}' for number in range(1, 11))
+CAUSE_IDS = ('heart', 'malignant', 'clrd', 'accidents', 'cerebrovascular',
+             'alzheimer', 'diabetes', 'influenza_pneumonia', 'renal_broad', 'other')
 THRESHOLDS = ('event_rows_min', 'noncase_rows_min', 'event_psus_min',
               'outer_evaluation_event_rows_min', 'outer_evaluation_noncase_rows_min',
               'outer_training_event_rows_min', 'outer_training_noncase_rows_min',
@@ -68,11 +70,13 @@ def _contracts(rules, definitions):
             or definitions.get('supported_baseline_start_years') != [1999, 2001, 2003]
             or definitions.get('horizon_months') != 96
             or definitions.get('unknown_early_cause_policy') != 'block_all_comparative_fits_not_all_negative'
-            or set(definitions.get('groups', {})) != set(CODES)):
+            or not isinstance(definitions.get('groups'), dict)
+            or set(definitions['groups']) != set(CODES)):
         raise ValueError('Invalid fixed public cause definitions')
-    for code in CODES:
+    for code, expected_id in zip(CODES, CAUSE_IDS):
         group = definitions['groups'][code]
         if (not isinstance(group, dict)
+                or group.get('id') != expected_id
                 or group.get('eligible_for_defined_clinical_ranking') is not (code != '010')):
             raise ValueError('Changed defined-cause ranking contract')
     if (rules.get('schema') != 'cause33-support/1' or rules.get('rank_maximum') != 5
