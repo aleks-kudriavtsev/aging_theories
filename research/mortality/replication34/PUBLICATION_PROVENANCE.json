@@ -1,6 +1,6 @@
 {
   "schema": "replication34-isolated-publication/1",
-  "status": "isolated_pre_CI_review",
+  "status": "isolated_PR_published; CI_and_merge_status_must_be_read_from_PR",
   "base_main_commit": "6ee4bd1752412950b33160707220e3fb8a44623c",
   "publication_branch": "research/replication34-main",
   "original_protocol_commit": "4df636ea18ca8bb29b05788c37800438566426ec",
@@ -75,7 +75,13 @@
     "evidence_contract_tests": 47,
     "doctor": "pass"
   },
-  "publication_CI": null,
+  "publication_CI": {
+    "initial_scientific_push_run": 40943381628,
+    "initial_pull_request_run": 40943429158,
+    "initial_workbench_run": 40943428995,
+    "final_head_checks_required_before_merge": true,
+    "this_commit_does_not_assert_future_CI_or_merge_success": true
+  },
   "local_isolated_repeat": {
     "exit_code": 0,
     "output_directory": "/tmp/rep34_isolated_smoke_results",
@@ -85,14 +91,17 @@
       "scientific_python_sha256"
     ],
     "independent_audit_with_stdout": {
-      "passed": 311,
-      "total": 311
+      "passed": 313,
+      "total": 313
     },
     "analyze_py_sha256": "b0c0b418d3026a7012b037365a375a07a6fc09c23d961ef22e748d3c491f0194",
-    "historical_checkout_used_only_for_actual_hash_verification": true
+    "historical_checkout_used_only_for_actual_hash_verification": true,
+    "independent_auditor_sha256": "d7b9ff53385dacdc1b1cd132a0323558d3ce047e05cca268bdc6d2671134cdcb"
   },
   "publication_scientific_hash_inventory_semantics": "103 actual historical files from pinned27ea checkout plus4 current replication34 modules, not a claim that historical models are present in main.",
   "local_replication34_tests": 56,
   "isolated_diff_files": 40,
-  "existing_main_files_modified": 0
+  "existing_main_files_modified": 0,
+  "publication_PR": "https://github.com/aleks-kudriavtsev/aging_theories/pull/27",
+  "initial_isolated_code_commit": "e14b0b4079c6152600bb8967a88039c7d7482c36"
 }

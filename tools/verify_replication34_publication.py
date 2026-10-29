@@ -32,6 +32,10 @@ ORIGINAL_SHA = {
     'SOURCE_MANIFEST.json': '08658be210a97b52c642f1b5277fb94af9ac4f5e723efe3ffc961668e2f35b50',
 }
 CURRENT_PATHS = {f'replication34/{x}' for x in ('__init__.py', 'analyze.py', 'gate.py', 'precision.py')}
+PACKAGE_INITIALIZER_SHA = {
+    'research/__init__.py': '83c825f1ceac051d7638bfb1b18d35df00ccf39a0125ca7d8af1811da7e4c648',
+    'research/mortality/__init__.py': '4af956dca1d4405de46da9d807b39d9f9014b103e4b1fbf1f06deed56a8b18cc',
+}
 SUMMARY_ALLOWED = {'scientific_python_sha256', 'versions'}
 
 
@@ -289,6 +293,9 @@ def verify(repo: Path, history_root: Path, results_dir: Path, log: Path | None =
             {str(p.relative_to(historical)) for p in historical.rglob('*.py')} == set(old))
     current = {str(p.relative_to(local.parent)): sha(p) for p in sorted(local.rglob('*.py'))}
     a.check('four current runtime code paths only', set(current) == CURRENT_PATHS and not set(current) & set(old))
+    for name, digest in PACKAGE_INITIALIZER_SHA.items():
+        a.check('actual main runtime package initializer ' + name,
+                sha(checked_path(repo, name)) == digest)
     expected_union = {**old, **current}
     original = {}; data = {}
     for name, digest in ORIGINAL_SHA.items():
@@ -349,6 +356,7 @@ def verify(repo: Path, history_root: Path, results_dir: Path, log: Path | None =
             'All103 historical scientific files and12 historical metadata files are read and hashed from a separate actual checkout at27ea. They are not included in or imported by the standalone iteration34 runtime.',
             'Mathematical functions are imported only from the unchanged original independent auditor, never producer code. Scenarios, rational prediction atoms, cluster DEFF, Wilson intervals and MCSE identities are recomputed; Monte Carlo simulation is not rerun by this auditor.',
             'No participant files, outcome models, external source downloads, network calls, CI API access or new cohort validation are performed. Source metadata qualification remains separate from statistical adequacy.',
+            'Dependency version strings are permitted provenance metadata and checked for explicit keys and syntax; this offline auditor does not authenticate installed package versions in a different execution environment.',
             'An optional caller-supplied completed plaintext log verifies all five exported blocks; file verification alone does not claim a CI status or runtime checkout.'
         ]}
 
