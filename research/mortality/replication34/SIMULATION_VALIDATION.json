@@ -1,0 +1,478 @@
+{
+  "schema": "replication34-numerical-validation/1",
+  "input_metadata": {
+    "schema": "replication34-simulation/1",
+    "role": "synthetic_math_validation_only_not_clinical_or_algorithm_replication",
+    "fixed_before_execution": true,
+    "predictions_defined_before_outcomes": true,
+    "validation_rule": "compare moments with declared MonteCarloSE; report coverage and its MC uncertainty without asserting real-world coverage or tuning seeds"
+  },
+  "cases": [
+    {
+      "id": "IID_VALID_PREDICTION_PAIRS",
+      "assumptions": {
+        "id": "IID_VALID_PREDICTION_PAIRS",
+        "atoms": [
+          {
+            "q": 0.5,
+            "r": 0.01,
+            "p_new": 0.02,
+            "p_ref": 0.03
+          },
+          {
+            "q": 0.5,
+            "r": 0.09,
+            "p_new": 0.08,
+            "p_ref": 0.07
+          }
+        ],
+        "n_full_clusters": 1000,
+        "cluster_size": 1,
+        "rho": 0.0,
+        "replicates": 20000,
+        "seed": 20261120,
+        "alpha": 0.05
+      },
+      "result": {
+        "schema": "replication34-toy-simulation/1",
+        "seed": 20261120,
+        "replicates": 20000,
+        "n_full_clusters": 1000,
+        "cluster_size": 1,
+        "n_participants": 1000,
+        "rho": 0.0,
+        "deff": 1.0,
+        "alpha": 0.05,
+        "exact_moments": {
+          "schema": "replication34-prediction-atoms-moments/1",
+          "atoms_n": 2,
+          "input_probability_sum": 1.0,
+          "normalization_roundoff_applied": false,
+          "raw_event_probability": 0.049999999999999996,
+          "mean_d": -0.0002999999999999998,
+          "second_moment_d": 1.8449999999999984e-05,
+          "variance_d": 1.835999999999998e-05,
+          "SD_d": 0.004284857057125707,
+          "mean_conditional_Y_variance": 1.835999999999998e-05,
+          "variance_of_conditional_means": 1.1754943508222875e-38,
+          "variance_decomposition_error": 3.3881317890172014e-21,
+          "predictions_fixed_before_Y": true,
+          "fitted_model_or_clinical_validation": false
+        },
+        "exact_mean_d": -0.0002999999999999998,
+        "exact_variance_mean_d": 1.835999999999998e-08,
+        "exact_normal_half_width": 0.0002655733118141657,
+        "MC_mean_d": -0.0003015562999999999,
+        "MC_variance_mean_d": 1.8595672313925685e-08,
+        "MC_centered_fourth_moment_dbar": 1.062530516230418e-15,
+        "MCSE_mean_d": 9.58123165360278e-07,
+        "estimated_MCSE_mean_d": 9.642528795374605e-07,
+        "approximate_fourth_moment_MCSE_variance": 1.8931007224332757e-10,
+        "known_toy_variance_normal_CI_coverage": {
+          "covered": 18905,
+          "replicates": 20000,
+          "proportion": 0.94525,
+          "binomial_MCSE": 0.0016086086767763,
+          "MC_95pct_Wilson_interval": [
+            0.9420108242867391,
+            0.9483181676052999
+          ]
+        },
+        "estimated_cluster_mean_SE_normal_CI_coverage": {
+          "covered": 18894,
+          "replicates": 20000,
+          "proportion": 0.9447,
+          "binomial_MCSE": 0.0016161978529870657,
+          "MC_95pct_Wilson_interval": [
+            0.9414460651131125,
+            0.9477831380185879
+          ]
+        },
+        "positive_variance_CI_coverage_uses_no_added_tolerance": true,
+        "exact_zero_variance_handling": "assert_constant_losses_within16eps_of_loss_scale_then_cover_degenerate_mean",
+        "exact_expected_event_count": 49.99999999999999,
+        "exact_event_count_variance_in_this_toy": 47.49999999999999,
+        "MC_mean_event_count": 50.0556,
+        "MC_variance_event_count": 47.54958611930597,
+        "MCSE_mean_event_count": 0.04873397172404481,
+        "event_and_loss_DEFF_equal_only_under_this_specified_shared_pair_law": true,
+        "simulation_scope": "stipulated_prediction_atoms_and_cluster_mixture_only",
+        "predictions_fixed_before_Y": true,
+        "refitted_algorithm_precision_validated": false,
+        "external_cohort_or_clinical_validation_performed": false,
+        "participant_simulation_arrays_exported": false
+      },
+      "moment_checks": {
+        "mean_D": {
+          "observed": -0.0003015562999999999,
+          "expected": -0.0002999999999999998,
+          "MCSE": 9.58123165360278e-07,
+          "absolute_discrepancy_in_MCSE": 1.6243214403598012,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        },
+        "variance_Dbar": {
+          "observed": 1.8595672313925685e-08,
+          "expected": 1.835999999999998e-08,
+          "MCSE": 1.8931007224332757e-10,
+          "absolute_discrepancy_in_MCSE": 1.2449010828266196,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        },
+        "mean_event_count": {
+          "observed": 50.0556,
+          "expected": 49.99999999999999,
+          "MCSE": 0.04873397172404481,
+          "absolute_discrepancy_in_MCSE": 1.1408879275188029,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        }
+      },
+      "coverage_95pct_is_reported_not_required_or_tuned": true
+    },
+    {
+      "id": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE",
+      "assumptions": {
+        "id": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE",
+        "atoms": [
+          {
+            "q": 0.5,
+            "r": 0.01,
+            "p_new": 0.02,
+            "p_ref": 0.03
+          },
+          {
+            "q": 0.5,
+            "r": 0.09,
+            "p_new": 0.08,
+            "p_ref": 0.07
+          }
+        ],
+        "n_full_clusters": 200,
+        "cluster_size": 5,
+        "rho": 0.25,
+        "replicates": 20000,
+        "seed": 20261121,
+        "alpha": 0.05
+      },
+      "result": {
+        "schema": "replication34-toy-simulation/1",
+        "seed": 20261121,
+        "replicates": 20000,
+        "n_full_clusters": 200,
+        "cluster_size": 5,
+        "n_participants": 1000,
+        "rho": 0.25,
+        "deff": 2.0,
+        "alpha": 0.05,
+        "exact_moments": {
+          "schema": "replication34-prediction-atoms-moments/1",
+          "atoms_n": 2,
+          "input_probability_sum": 1.0,
+          "normalization_roundoff_applied": false,
+          "raw_event_probability": 0.049999999999999996,
+          "mean_d": -0.0002999999999999998,
+          "second_moment_d": 1.8449999999999984e-05,
+          "variance_d": 1.835999999999998e-05,
+          "SD_d": 0.004284857057125707,
+          "mean_conditional_Y_variance": 1.835999999999998e-05,
+          "variance_of_conditional_means": 1.1754943508222875e-38,
+          "variance_decomposition_error": 3.3881317890172014e-21,
+          "predictions_fixed_before_Y": true,
+          "fitted_model_or_clinical_validation": false
+        },
+        "exact_mean_d": -0.0002999999999999998,
+        "exact_variance_mean_d": 3.671999999999996e-08,
+        "exact_normal_half_width": 0.00037557737937193213,
+        "MC_mean_d": -0.0002997992,
+        "MC_variance_mean_d": 3.6818078583289146e-08,
+        "MC_centered_fourth_moment_dbar": 4.2237174490544315e-15,
+        "MCSE_mean_d": 1.354990774876345e-06,
+        "estimated_MCSE_mean_d": 1.3567991484241348e-06,
+        "approximate_fourth_moment_MCSE_variance": 3.787005480824147e-10,
+        "known_toy_variance_normal_CI_coverage": {
+          "covered": 18993,
+          "replicates": 20000,
+          "proportion": 0.94965,
+          "binomial_MCSE": 0.0015462030510253173,
+          "MC_95pct_Wilson_interval": [
+            0.9465322096387385,
+            0.9525950923360065
+          ]
+        },
+        "estimated_cluster_mean_SE_normal_CI_coverage": {
+          "covered": 18737,
+          "replicates": 20000,
+          "proportion": 0.93685,
+          "binomial_MCSE": 0.001719913914996911,
+          "MC_95pct_Wilson_interval": [
+            0.93339441960208,
+            0.9401377984957013
+          ]
+        },
+        "positive_variance_CI_coverage_uses_no_added_tolerance": true,
+        "exact_zero_variance_handling": "assert_constant_losses_within16eps_of_loss_scale_then_cover_degenerate_mean",
+        "exact_expected_event_count": 49.99999999999999,
+        "exact_event_count_variance_in_this_toy": 94.99999999999999,
+        "MC_mean_event_count": 50.0707,
+        "MC_variance_event_count": 94.3919211060553,
+        "MCSE_mean_event_count": 0.0689202437604511,
+        "event_and_loss_DEFF_equal_only_under_this_specified_shared_pair_law": true,
+        "simulation_scope": "stipulated_prediction_atoms_and_cluster_mixture_only",
+        "predictions_fixed_before_Y": true,
+        "refitted_algorithm_precision_validated": false,
+        "external_cohort_or_clinical_validation_performed": false,
+        "participant_simulation_arrays_exported": false
+      },
+      "moment_checks": {
+        "mean_D": {
+          "observed": -0.0002997992,
+          "expected": -0.0002999999999999998,
+          "MCSE": 1.354990774876345e-06,
+          "absolute_discrepancy_in_MCSE": 0.14819289084688753,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        },
+        "variance_Dbar": {
+          "observed": 3.6818078583289146e-08,
+          "expected": 3.671999999999996e-08,
+          "MCSE": 3.787005480824147e-10,
+          "absolute_discrepancy_in_MCSE": 0.25898717016866035,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        },
+        "mean_event_count": {
+          "observed": 50.0707,
+          "expected": 49.99999999999999,
+          "MCSE": 0.0689202437604511,
+          "absolute_discrepancy_in_MCSE": 1.0258234176556917,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        }
+      },
+      "coverage_95pct_is_reported_not_required_or_tuned": true
+    },
+    {
+      "id": "RARE_EVENT_SKEW_DIAGNOSTIC",
+      "assumptions": {
+        "id": "RARE_EVENT_SKEW_DIAGNOSTIC",
+        "atoms": [
+          {
+            "q": 1.0,
+            "r": 0.005,
+            "p_new": 0.02,
+            "p_ref": 0.03
+          }
+        ],
+        "n_full_clusters": 1000,
+        "cluster_size": 1,
+        "rho": 0.0,
+        "replicates": 20000,
+        "seed": 20261122,
+        "alpha": 0.05
+      },
+      "result": {
+        "schema": "replication34-toy-simulation/1",
+        "seed": 20261122,
+        "replicates": 20000,
+        "n_full_clusters": 1000,
+        "cluster_size": 1,
+        "n_participants": 1000,
+        "rho": 0.0,
+        "deff": 1.0,
+        "alpha": 0.05,
+        "exact_moments": {
+          "schema": "replication34-prediction-atoms-moments/1",
+          "atoms_n": 1,
+          "input_probability_sum": 1.0,
+          "normalization_roundoff_applied": false,
+          "raw_event_probability": 0.005,
+          "mean_d": -0.0003999999999999999,
+          "second_moment_d": 2.149999999999999e-06,
+          "variance_d": 1.9899999999999996e-06,
+          "SD_d": 0.0014106735979665882,
+          "mean_conditional_Y_variance": 1.9899999999999996e-06,
+          "variance_of_conditional_means": 0.0,
+          "variance_decomposition_error": 4.235164736271502e-22,
+          "predictions_fixed_before_Y": true,
+          "fitted_model_or_clinical_validation": false
+        },
+        "exact_mean_d": -0.0003999999999999999,
+        "exact_variance_mean_d": 1.9899999999999995e-09,
+        "exact_normal_half_width": 8.743284882228939e-05,
+        "MC_mean_d": -0.0004004039999999998,
+        "MC_variance_mean_d": 1.9705753127656366e-09,
+        "MC_centered_fourth_moment_dbar": 1.2336359519951025e-17,
+        "MCSE_mean_d": 3.1543620591175005e-07,
+        "estimated_MCSE_mean_d": 3.1389292065652234e-07,
+        "approximate_fourth_moment_MCSE_variance": 2.05591595071306e-11,
+        "known_toy_variance_normal_CI_coverage": {
+          "covered": 19245,
+          "replicates": 20000,
+          "proportion": 0.96225,
+          "binomial_MCSE": 0.0013476820377967488,
+          "MC_95pct_Wilson_interval": [
+            0.9595185853840259,
+            0.9648038772821054
+          ]
+        },
+        "estimated_cluster_mean_SE_normal_CI_coverage": {
+          "covered": 17383,
+          "replicates": 20000,
+          "proportion": 0.86915,
+          "binomial_MCSE": 0.002384620278996218,
+          "MC_95pct_Wilson_interval": [
+            0.8644052511750384,
+            0.8737529686047394
+          ]
+        },
+        "positive_variance_CI_coverage_uses_no_added_tolerance": true,
+        "exact_zero_variance_handling": "assert_constant_losses_within16eps_of_loss_scale_then_cover_degenerate_mean",
+        "exact_expected_event_count": 5.0,
+        "exact_event_count_variance_in_this_toy": 4.975,
+        "MC_mean_event_count": 4.9798,
+        "MC_variance_event_count": 4.926438281914096,
+        "MCSE_mean_event_count": 0.015771810295587503,
+        "event_and_loss_DEFF_equal_only_under_this_specified_shared_pair_law": true,
+        "simulation_scope": "stipulated_prediction_atoms_and_cluster_mixture_only",
+        "predictions_fixed_before_Y": true,
+        "refitted_algorithm_precision_validated": false,
+        "external_cohort_or_clinical_validation_performed": false,
+        "participant_simulation_arrays_exported": false
+      },
+      "moment_checks": {
+        "mean_D": {
+          "observed": -0.0004004039999999998,
+          "expected": -0.0003999999999999999,
+          "MCSE": 3.1543620591175005e-07,
+          "absolute_discrepancy_in_MCSE": 1.2807661023951626,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        },
+        "variance_Dbar": {
+          "observed": 1.9705753127656366e-09,
+          "expected": 1.9899999999999995e-09,
+          "MCSE": 2.05591595071306e-11,
+          "absolute_discrepancy_in_MCSE": 0.9448191317172172,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        },
+        "mean_event_count": {
+          "observed": 4.9798,
+          "expected": 5.0,
+          "MCSE": 0.015771810295587503,
+          "absolute_discrepancy_in_MCSE": 1.2807661023954475,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        }
+      },
+      "coverage_95pct_is_reported_not_required_or_tuned": true
+    },
+    {
+      "id": "IDENTICAL_RULE_DEGENERATE",
+      "assumptions": {
+        "id": "IDENTICAL_RULE_DEGENERATE",
+        "atoms": [
+          {
+            "q": 1.0,
+            "r": 0.03,
+            "p_new": 0.03,
+            "p_ref": 0.03
+          }
+        ],
+        "n_full_clusters": 100,
+        "cluster_size": 1,
+        "rho": 0.0,
+        "replicates": 20000,
+        "seed": 20261123,
+        "alpha": 0.05
+      },
+      "result": {
+        "schema": "replication34-toy-simulation/1",
+        "seed": 20261123,
+        "replicates": 20000,
+        "n_full_clusters": 100,
+        "cluster_size": 1,
+        "n_participants": 100,
+        "rho": 0.0,
+        "deff": 1.0,
+        "alpha": 0.05,
+        "exact_moments": {
+          "schema": "replication34-prediction-atoms-moments/1",
+          "atoms_n": 1,
+          "input_probability_sum": 1.0,
+          "normalization_roundoff_applied": false,
+          "raw_event_probability": 0.03,
+          "mean_d": 0.0,
+          "second_moment_d": 0.0,
+          "variance_d": 0.0,
+          "SD_d": 0.0,
+          "mean_conditional_Y_variance": 0.0,
+          "variance_of_conditional_means": 0.0,
+          "variance_decomposition_error": 0.0,
+          "predictions_fixed_before_Y": true,
+          "fitted_model_or_clinical_validation": false
+        },
+        "exact_mean_d": 0.0,
+        "exact_variance_mean_d": 0.0,
+        "exact_normal_half_width": 0.0,
+        "MC_mean_d": 0.0,
+        "MC_variance_mean_d": 0.0,
+        "MC_centered_fourth_moment_dbar": 0.0,
+        "MCSE_mean_d": 0.0,
+        "estimated_MCSE_mean_d": 0.0,
+        "approximate_fourth_moment_MCSE_variance": 0.0,
+        "known_toy_variance_normal_CI_coverage": {
+          "covered": 20000,
+          "replicates": 20000,
+          "proportion": 1.0,
+          "binomial_MCSE": 0.0,
+          "MC_95pct_Wilson_interval": [
+            0.9998079639438954,
+            0.9999999999999999
+          ]
+        },
+        "estimated_cluster_mean_SE_normal_CI_coverage": {
+          "covered": 20000,
+          "replicates": 20000,
+          "proportion": 1.0,
+          "binomial_MCSE": 0.0,
+          "MC_95pct_Wilson_interval": [
+            0.9998079639438954,
+            0.9999999999999999
+          ]
+        },
+        "positive_variance_CI_coverage_uses_no_added_tolerance": true,
+        "exact_zero_variance_handling": "assert_constant_losses_within16eps_of_loss_scale_then_cover_degenerate_mean",
+        "exact_expected_event_count": 3.0,
+        "exact_event_count_variance_in_this_toy": 2.91,
+        "MC_mean_event_count": 3.0021,
+        "MC_variance_event_count": 2.858238501925096,
+        "MCSE_mean_event_count": 0.01206233808181482,
+        "event_and_loss_DEFF_equal_only_under_this_specified_shared_pair_law": true,
+        "simulation_scope": "stipulated_prediction_atoms_and_cluster_mixture_only",
+        "predictions_fixed_before_Y": true,
+        "refitted_algorithm_precision_validated": false,
+        "external_cohort_or_clinical_validation_performed": false,
+        "participant_simulation_arrays_exported": false
+      },
+      "moment_checks": {
+        "mean_D": {
+          "observed": 0.0,
+          "expected": 0.0,
+          "MCSE": 0.0,
+          "absolute_discrepancy_in_MCSE": null,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        },
+        "variance_Dbar": {
+          "observed": 0.0,
+          "expected": 0.0,
+          "MCSE": 0.0,
+          "absolute_discrepancy_in_MCSE": null,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        },
+        "mean_event_count": {
+          "observed": 3.0021,
+          "expected": 3.0,
+          "MCSE": 0.01206233808181482,
+          "absolute_discrepancy_in_MCSE": 0.17409560118083167,
+          "predeclared_six_MCSE_numerical_check_passed": true
+        }
+      },
+      "coverage_95pct_is_reported_not_required_or_tuned": true
+    }
+  ],
+  "all_predeclared_moment_checks_passed": true,
+  "fitted_algorithm_precision_or_external_validation_performed": false
+}

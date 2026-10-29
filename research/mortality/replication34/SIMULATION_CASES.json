@@ -1,0 +1,89 @@
+{
+  "schema": "replication34-simulation/1",
+  "role": "synthetic_math_validation_only_not_clinical_or_algorithm_replication",
+  "fixed_before_execution": true,
+  "predictions_defined_before_outcomes": true,
+  "validation_rule": "compare moments with declared MonteCarloSE; report coverage and its MC uncertainty without asserting real-world coverage or tuning seeds",
+  "cases": [
+    {
+      "id": "IID_VALID_PREDICTION_PAIRS",
+      "atoms": [
+        {
+          "q": 0.5,
+          "r": 0.01,
+          "p_new": 0.02,
+          "p_ref": 0.03
+        },
+        {
+          "q": 0.5,
+          "r": 0.09,
+          "p_new": 0.08,
+          "p_ref": 0.07
+        }
+      ],
+      "n_full_clusters": 1000,
+      "cluster_size": 1,
+      "rho": 0.0,
+      "replicates": 20000,
+      "seed": 20261120,
+      "alpha": 0.05
+    },
+    {
+      "id": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE",
+      "atoms": [
+        {
+          "q": 0.5,
+          "r": 0.01,
+          "p_new": 0.02,
+          "p_ref": 0.03
+        },
+        {
+          "q": 0.5,
+          "r": 0.09,
+          "p_new": 0.08,
+          "p_ref": 0.07
+        }
+      ],
+      "n_full_clusters": 200,
+      "cluster_size": 5,
+      "rho": 0.25,
+      "replicates": 20000,
+      "seed": 20261121,
+      "alpha": 0.05
+    },
+    {
+      "id": "RARE_EVENT_SKEW_DIAGNOSTIC",
+      "atoms": [
+        {
+          "q": 1.0,
+          "r": 0.005,
+          "p_new": 0.02,
+          "p_ref": 0.03
+        }
+      ],
+      "n_full_clusters": 1000,
+      "cluster_size": 1,
+      "rho": 0.0,
+      "replicates": 20000,
+      "seed": 20261122,
+      "alpha": 0.05
+    },
+    {
+      "id": "IDENTICAL_RULE_DEGENERATE",
+      "atoms": [
+        {
+          "q": 1.0,
+          "r": 0.03,
+          "p_new": 0.03,
+          "p_ref": 0.03
+        }
+      ],
+      "n_full_clusters": 100,
+      "cluster_size": 1,
+      "rho": 0.0,
+      "replicates": 20000,
+      "seed": 20261123,
+      "alpha": 0.05
+    }
+  ]
+}

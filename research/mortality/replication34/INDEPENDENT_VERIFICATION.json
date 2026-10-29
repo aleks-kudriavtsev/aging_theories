@@ -1,0 +1,1974 @@
+{
+  "schema": "independent-replication34-audit/1",
+  "passed": 260,
+  "total": 260,
+  "all_passed": true,
+  "summary": {
+    "protocol_commit": "4df636ea18ca8bb29b05788c37800438566426ec",
+    "science_commit": "b054c89b42d6a73f5ed5caf6d8ccd0e0f0b8430b",
+    "run_id": 40936928789,
+    "job_id": null,
+    "source_execution_origin": "local",
+    "actual_PR_merge_checkout": null,
+    "scenario_CI_executed": false,
+    "local_exit0_reported_by_parent": true,
+    "tests_per_python": 41,
+    "candidates18": 18,
+    "sources32": 32,
+    "source_ready_ids": {
+      "algorithm_replication": [],
+      "locked_source_transport": []
+    },
+    "evidence_state_counts": {
+      "verified_true": 55,
+      "verified_false": 37,
+      "not_verified": 214
+    },
+    "scenario_count": 12,
+    "simulation_count": 4,
+    "all_predeclared_moment_checks_passed": true,
+    "central_technical_plan": {
+      "schema": "replication34-conditional-precision/1",
+      "scenario_id": "CENTRAL_TECHNICAL_NULL",
+      "validation_mode": "algorithm_replication",
+      "mean_d": 0.0,
+      "paired_loss_variance": 0.0004,
+      "paired_loss_SD": 0.02,
+      "variance_source": "specified_individual_paired_loss_SD",
+      "moment_variance_roundoff_clipped": false,
+      "alpha": 0.05,
+      "normal_quantile": 1.9599639845400545,
+      "n_evaluable": 5000,
+      "deff_d": 1.5,
+      "deff_basis": "total_relative_to_iid_unweighted_n",
+      "conditional_mean_variance": 1.2000000000000002e-07,
+      "conditional_SE": 0.00034641016151377546,
+      "conditional_normal_half_width": 0.0006789514404457031,
+      "requested_half_width": 0.0005,
+      "conditional_n_for_half_width": 9220,
+      "mean_effect_used_to_choose_n": false,
+      "degenerate_zero_loss_variance": false,
+      "q_joint": 0.75,
+      "q_known_conditional": 1.0,
+      "joint_evaluable_yield_probability": 0.75,
+      "candidate_recruitment_expectation": 12294,
+      "recruitment_target_reachable_under_assumed_availability": true,
+      "recruitment_is_expectation_not_assurance": true,
+      "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+      "censoring_fraction": 0.0,
+      "IPCW_method_extension_required": false,
+      "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+      "full_CIF_validation_eligible": false,
+      "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+      "algorithm_precision_status": "adequacy_unqualified",
+      "algorithm_training_uncertainty_included": false,
+      "frozen_source_artifact_required_before_external_outcomes": false,
+      "artifact_or_assay_qualification_performed": false,
+      "normal_interval_is_approximation_not_coverage_guarantee": true,
+      "clinical_adequacy_or_power_established": false,
+      "calibration_or_AUC_precision_established": false,
+      "event_count": {
+        "model": "independent_binomial",
+        "raw_evaluable_probability": 0.03,
+        "n_raw_trials": 5000,
+        "expected_raw_events": 150.0,
+        "variance_proxy": 145.5,
+        "deff_event": 1.0,
+        "predictive_range": [
+          127,
+          174
+        ],
+        "predictive_range_exact_distribution_assumption": true,
+        "predictive_range_is_not_incidence_CI": true,
+        "technical_floor": 100,
+        "probability_below_technical_floor": 4.494373225687905e-06,
+        "technical_floor_establishes_power_or_adequacy": false,
+        "n_over_DEFF_used_as_binomial_trials": false
+      }
+    },
+    "scenario_plans": {
+      "CENTRAL_TECHNICAL_NULL": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "CENTRAL_TECHNICAL_NULL",
+        "validation_mode": "algorithm_replication",
+        "mean_d": 0.0,
+        "paired_loss_variance": 0.0004,
+        "paired_loss_SD": 0.02,
+        "variance_source": "specified_individual_paired_loss_SD",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 5000,
+        "deff_d": 1.5,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 1.2000000000000002e-07,
+        "conditional_SE": 0.00034641016151377546,
+        "conditional_normal_half_width": 0.0006789514404457031,
+        "requested_half_width": 0.0005,
+        "conditional_n_for_half_width": 9220,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.75,
+        "q_known_conditional": 1.0,
+        "joint_evaluable_yield_probability": 0.75,
+        "candidate_recruitment_expectation": 12294,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.0,
+        "IPCW_method_extension_required": false,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": false,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "independent_binomial",
+          "raw_evaluable_probability": 0.03,
+          "n_raw_trials": 5000,
+          "expected_raw_events": 150.0,
+          "variance_proxy": 145.5,
+          "deff_event": 1.0,
+          "predictive_range": [
+            127,
+            174
+          ],
+          "predictive_range_exact_distribution_assumption": true,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": 4.494373225687905e-06,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      },
+      "LOW_RAW_EVENT_PROBABILITY": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "LOW_RAW_EVENT_PROBABILITY",
+        "validation_mode": "algorithm_replication",
+        "mean_d": 0.0,
+        "paired_loss_variance": 0.0004,
+        "paired_loss_SD": 0.02,
+        "variance_source": "specified_individual_paired_loss_SD",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 5000,
+        "deff_d": 1.5,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 1.2000000000000002e-07,
+        "conditional_SE": 0.00034641016151377546,
+        "conditional_normal_half_width": 0.0006789514404457031,
+        "requested_half_width": 0.0005,
+        "conditional_n_for_half_width": 9220,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.75,
+        "q_known_conditional": 1.0,
+        "joint_evaluable_yield_probability": 0.75,
+        "candidate_recruitment_expectation": 12294,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.0,
+        "IPCW_method_extension_required": false,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": false,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "independent_binomial",
+          "raw_evaluable_probability": 0.01,
+          "n_raw_trials": 5000,
+          "expected_raw_events": 50.0,
+          "variance_proxy": 49.5,
+          "deff_event": 1.0,
+          "predictive_range": [
+            37,
+            64
+          ],
+          "predictive_range_exact_distribution_assumption": true,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": 0.9999999997515169,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      },
+      "HIGH_RAW_EVENT_PROBABILITY": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "HIGH_RAW_EVENT_PROBABILITY",
+        "validation_mode": "algorithm_replication",
+        "mean_d": 0.0,
+        "paired_loss_variance": 0.0004,
+        "paired_loss_SD": 0.02,
+        "variance_source": "specified_individual_paired_loss_SD",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 5000,
+        "deff_d": 1.5,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 1.2000000000000002e-07,
+        "conditional_SE": 0.00034641016151377546,
+        "conditional_normal_half_width": 0.0006789514404457031,
+        "requested_half_width": 0.0005,
+        "conditional_n_for_half_width": 9220,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.75,
+        "q_known_conditional": 1.0,
+        "joint_evaluable_yield_probability": 0.75,
+        "candidate_recruitment_expectation": 12294,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.0,
+        "IPCW_method_extension_required": false,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": false,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "independent_binomial",
+          "raw_evaluable_probability": 0.05,
+          "n_raw_trials": 5000,
+          "expected_raw_events": 250.0,
+          "variance_proxy": 237.5,
+          "deff_event": 1.0,
+          "predictive_range": [
+            220,
+            281
+          ],
+          "predictive_range_exact_distribution_assumption": true,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": 1.0810011220114709e-28,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      },
+      "HYPOTHETICAL_BENEFIT": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "HYPOTHETICAL_BENEFIT",
+        "validation_mode": "algorithm_replication",
+        "mean_d": -0.0005,
+        "paired_loss_variance": 0.0004,
+        "paired_loss_SD": 0.02,
+        "variance_source": "specified_individual_paired_loss_SD",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 5000,
+        "deff_d": 1.5,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 1.2000000000000002e-07,
+        "conditional_SE": 0.00034641016151377546,
+        "conditional_normal_half_width": 0.0006789514404457031,
+        "requested_half_width": 0.0005,
+        "conditional_n_for_half_width": 9220,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.75,
+        "q_known_conditional": 1.0,
+        "joint_evaluable_yield_probability": 0.75,
+        "candidate_recruitment_expectation": 12294,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.0,
+        "IPCW_method_extension_required": false,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": false,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "independent_binomial",
+          "raw_evaluable_probability": 0.03,
+          "n_raw_trials": 5000,
+          "expected_raw_events": 150.0,
+          "variance_proxy": 145.5,
+          "deff_event": 1.0,
+          "predictive_range": [
+            127,
+            174
+          ],
+          "predictive_range_exact_distribution_assumption": true,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": 4.494373225687905e-06,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      },
+      "HYPOTHETICAL_HARM": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "HYPOTHETICAL_HARM",
+        "validation_mode": "algorithm_replication",
+        "mean_d": 0.0005,
+        "paired_loss_variance": 0.0004,
+        "paired_loss_SD": 0.02,
+        "variance_source": "specified_individual_paired_loss_SD",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 5000,
+        "deff_d": 1.5,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 1.2000000000000002e-07,
+        "conditional_SE": 0.00034641016151377546,
+        "conditional_normal_half_width": 0.0006789514404457031,
+        "requested_half_width": 0.0005,
+        "conditional_n_for_half_width": 9220,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.75,
+        "q_known_conditional": 1.0,
+        "joint_evaluable_yield_probability": 0.75,
+        "candidate_recruitment_expectation": 12294,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.0,
+        "IPCW_method_extension_required": false,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": false,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "independent_binomial",
+          "raw_evaluable_probability": 0.03,
+          "n_raw_trials": 5000,
+          "expected_raw_events": 150.0,
+          "variance_proxy": 145.5,
+          "deff_event": 1.0,
+          "predictive_range": [
+            127,
+            174
+          ],
+          "predictive_range_exact_distribution_assumption": true,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": 4.494373225687905e-06,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      },
+      "LOW_LOSS_SD_DESIGN": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "LOW_LOSS_SD_DESIGN",
+        "validation_mode": "algorithm_replication",
+        "mean_d": 0.0,
+        "paired_loss_variance": 0.0001,
+        "paired_loss_SD": 0.01,
+        "variance_source": "specified_individual_paired_loss_SD",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 5000,
+        "deff_d": 1.0,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 2e-08,
+        "conditional_SE": 0.0001414213562373095,
+        "conditional_normal_half_width": 0.00027718076486993564,
+        "requested_half_width": 0.0005,
+        "conditional_n_for_half_width": 1537,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.75,
+        "q_known_conditional": 1.0,
+        "joint_evaluable_yield_probability": 0.75,
+        "candidate_recruitment_expectation": 2050,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.0,
+        "IPCW_method_extension_required": false,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": false,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "independent_binomial",
+          "raw_evaluable_probability": 0.03,
+          "n_raw_trials": 5000,
+          "expected_raw_events": 150.0,
+          "variance_proxy": 145.5,
+          "deff_event": 1.0,
+          "predictive_range": [
+            127,
+            174
+          ],
+          "predictive_range_exact_distribution_assumption": true,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": 4.494373225687905e-06,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      },
+      "HIGH_LOSS_SD_DESIGN": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "HIGH_LOSS_SD_DESIGN",
+        "validation_mode": "algorithm_replication",
+        "mean_d": 0.0,
+        "paired_loss_variance": 0.0025000000000000005,
+        "paired_loss_SD": 0.05,
+        "variance_source": "specified_individual_paired_loss_SD",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 5000,
+        "deff_d": 3.0,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 1.5000000000000002e-06,
+        "conditional_SE": 0.0012247448713915891,
+        "conditional_normal_half_width": 0.0024004558381776554,
+        "requested_half_width": 0.0005,
+        "conditional_n_for_half_width": 115244,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.75,
+        "q_known_conditional": 1.0,
+        "joint_evaluable_yield_probability": 0.75,
+        "candidate_recruitment_expectation": 153659,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.0,
+        "IPCW_method_extension_required": false,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": false,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "dependent_unspecified",
+          "raw_evaluable_probability": 0.03,
+          "n_raw_trials": 5000,
+          "expected_raw_events": 150.0,
+          "variance_proxy": 291.0,
+          "deff_event": 2.0,
+          "predictive_range": null,
+          "predictive_range_exact_distribution_assumption": false,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": null,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      },
+      "LOW_JOINT_ASSAY_CORE_YIELD": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "LOW_JOINT_ASSAY_CORE_YIELD",
+        "validation_mode": "algorithm_replication",
+        "mean_d": 0.0,
+        "paired_loss_variance": 0.0004,
+        "paired_loss_SD": 0.02,
+        "variance_source": "specified_individual_paired_loss_SD",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 5000,
+        "deff_d": 1.5,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 1.2000000000000002e-07,
+        "conditional_SE": 0.00034641016151377546,
+        "conditional_normal_half_width": 0.0006789514404457031,
+        "requested_half_width": 0.0005,
+        "conditional_n_for_half_width": 9220,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.4,
+        "q_known_conditional": 1.0,
+        "joint_evaluable_yield_probability": 0.4,
+        "candidate_recruitment_expectation": 23050,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.0,
+        "IPCW_method_extension_required": false,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": false,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "independent_binomial",
+          "raw_evaluable_probability": 0.03,
+          "n_raw_trials": 5000,
+          "expected_raw_events": 150.0,
+          "variance_proxy": 145.5,
+          "deff_event": 1.0,
+          "predictive_range": [
+            127,
+            174
+          ],
+          "predictive_range_exact_distribution_assumption": true,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": 4.494373225687905e-06,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      },
+      "LARGER_EVALUABLE_DOMAIN": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "LARGER_EVALUABLE_DOMAIN",
+        "validation_mode": "algorithm_replication",
+        "mean_d": 0.0,
+        "paired_loss_variance": 0.0004,
+        "paired_loss_SD": 0.02,
+        "variance_source": "specified_individual_paired_loss_SD",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 20000,
+        "deff_d": 1.5,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 3.0000000000000004e-08,
+        "conditional_SE": 0.00017320508075688773,
+        "conditional_normal_half_width": 0.00033947572022285157,
+        "requested_half_width": 0.0005,
+        "conditional_n_for_half_width": 9220,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.75,
+        "q_known_conditional": 1.0,
+        "joint_evaluable_yield_probability": 0.75,
+        "candidate_recruitment_expectation": 12294,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.0,
+        "IPCW_method_extension_required": false,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": false,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "independent_binomial",
+          "raw_evaluable_probability": 0.03,
+          "n_raw_trials": 20000,
+          "expected_raw_events": 600.0,
+          "variance_proxy": 582.0,
+          "deff_event": 1.0,
+          "predictive_range": [
+            553,
+            648
+          ],
+          "predictive_range_exact_distribution_assumption": true,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": 6.049721198161575e-145,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      },
+      "WIDER_ILLUSTRATIVE_HALFWIDTH": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "WIDER_ILLUSTRATIVE_HALFWIDTH",
+        "validation_mode": "algorithm_replication",
+        "mean_d": 0.0,
+        "paired_loss_variance": 0.0004,
+        "paired_loss_SD": 0.02,
+        "variance_source": "specified_individual_paired_loss_SD",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 5000,
+        "deff_d": 1.5,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 1.2000000000000002e-07,
+        "conditional_SE": 0.00034641016151377546,
+        "conditional_normal_half_width": 0.0006789514404457031,
+        "requested_half_width": 0.001,
+        "conditional_n_for_half_width": 2305,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.75,
+        "q_known_conditional": 1.0,
+        "joint_evaluable_yield_probability": 0.75,
+        "candidate_recruitment_expectation": 3074,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.0,
+        "IPCW_method_extension_required": false,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": false,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "independent_binomial",
+          "raw_evaluable_probability": 0.03,
+          "n_raw_trials": 5000,
+          "expected_raw_events": 150.0,
+          "variance_proxy": 145.5,
+          "deff_event": 1.0,
+          "predictive_range": [
+            127,
+            174
+          ],
+          "predictive_range_exact_distribution_assumption": true,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": 4.494373225687905e-06,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      },
+      "EARLY_CENSORING_METHOD_BLOCK": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "EARLY_CENSORING_METHOD_BLOCK",
+        "validation_mode": "algorithm_replication",
+        "mean_d": 0.0,
+        "paired_loss_variance": 0.0004,
+        "paired_loss_SD": 0.02,
+        "variance_source": "specified_individual_paired_loss_SD",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 5000,
+        "deff_d": 1.5,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 1.2000000000000002e-07,
+        "conditional_SE": 0.00034641016151377546,
+        "conditional_normal_half_width": 0.0006789514404457031,
+        "requested_half_width": 0.0005,
+        "conditional_n_for_half_width": 9220,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.75,
+        "q_known_conditional": 0.9,
+        "joint_evaluable_yield_probability": 0.675,
+        "candidate_recruitment_expectation": 13660,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.1,
+        "IPCW_method_extension_required": true,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": false,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": false,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "independent_binomial",
+          "raw_evaluable_probability": 0.03,
+          "n_raw_trials": 5000,
+          "expected_raw_events": 150.0,
+          "variance_proxy": 145.5,
+          "deff_event": 1.0,
+          "predictive_range": [
+            127,
+            174
+          ],
+          "predictive_range_exact_distribution_assumption": true,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": 4.494373225687905e-06,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      },
+      "ANCHORED_SE_CONDITIONAL_FIXED_RULE": {
+        "schema": "replication34-conditional-precision/1",
+        "scenario_id": "ANCHORED_SE_CONDITIONAL_FIXED_RULE",
+        "validation_mode": "fixed_scorer",
+        "mean_d": 0.0,
+        "paired_loss_variance": 0.001,
+        "paired_loss_SD": 0.03162277660168379,
+        "variance_source": "anchored_SE_inverted_under_conditional_loss_variance_assumption",
+        "moment_variance_roundoff_clipped": false,
+        "alpha": 0.05,
+        "normal_quantile": 1.9599639845400545,
+        "n_evaluable": 5000,
+        "deff_d": 1.5,
+        "deff_basis": "total_relative_to_iid_unweighted_n",
+        "conditional_mean_variance": 3e-07,
+        "conditional_SE": 0.0005477225575051661,
+        "conditional_normal_half_width": 0.0010735164862302946,
+        "requested_half_width": 0.0005,
+        "conditional_n_for_half_width": 23049,
+        "mean_effect_used_to_choose_n": false,
+        "degenerate_zero_loss_variance": false,
+        "q_joint": 0.75,
+        "q_known_conditional": 1.0,
+        "joint_evaluable_yield_probability": 0.75,
+        "candidate_recruitment_expectation": 30732,
+        "recruitment_target_reachable_under_assumed_availability": true,
+        "recruitment_is_expectation_not_assurance": true,
+        "recruitment_MCAR_accounting_assumption_not_selection_correction": true,
+        "censoring_fraction": 0.0,
+        "IPCW_method_extension_required": false,
+        "bounded_uncensored_loss_formula_applies_to_full_CIF": true,
+        "full_CIF_validation_eligible": false,
+        "conditioning": "conditional_fixed_prediction_loss_proxy_not_full_refitted_algorithm",
+        "algorithm_precision_status": "adequacy_unqualified",
+        "algorithm_training_uncertainty_included": false,
+        "frozen_source_artifact_required_before_external_outcomes": true,
+        "artifact_or_assay_qualification_performed": false,
+        "normal_interval_is_approximation_not_coverage_guarantee": true,
+        "clinical_adequacy_or_power_established": false,
+        "calibration_or_AUC_precision_established": false,
+        "event_count": {
+          "model": "independent_binomial",
+          "raw_evaluable_probability": 0.03,
+          "n_raw_trials": 5000,
+          "expected_raw_events": 150.0,
+          "variance_proxy": 145.5,
+          "deff_event": 1.0,
+          "predictive_range": [
+            127,
+            174
+          ],
+          "predictive_range_exact_distribution_assumption": true,
+          "predictive_range_is_not_incidence_CI": true,
+          "technical_floor": 100,
+          "probability_below_technical_floor": 4.494373225687905e-06,
+          "technical_floor_establishes_power_or_adequacy": false,
+          "n_over_DEFF_used_as_binomial_trials": false
+        }
+      }
+    },
+    "simulation_summaries": [
+      {
+        "id": "IID_VALID_PREDICTION_PAIRS",
+        "exact_mean": -0.0003,
+        "exact_variance_mean": 1.836e-08,
+        "MC_mean": -0.0003015562999999999,
+        "MC_variance_mean": 1.8595672313925685e-08,
+        "known_coverage": {
+          "covered": 18905,
+          "replicates": 20000,
+          "proportion": 0.94525,
+          "binomial_MCSE": 0.0016086086767763,
+          "MC_95pct_Wilson_interval": [
+            0.9420108242867391,
+            0.9483181676052999
+          ]
+        },
+        "estimated_coverage": {
+          "covered": 18894,
+          "replicates": 20000,
+          "proportion": 0.9447,
+          "binomial_MCSE": 0.0016161978529870657,
+          "MC_95pct_Wilson_interval": [
+            0.9414460651131125,
+            0.9477831380185879
+          ]
+        }
+      },
+      {
+        "id": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE",
+        "exact_mean": -0.0003,
+        "exact_variance_mean": 3.672e-08,
+        "MC_mean": -0.0002997992,
+        "MC_variance_mean": 3.6818078583289146e-08,
+        "known_coverage": {
+          "covered": 18993,
+          "replicates": 20000,
+          "proportion": 0.94965,
+          "binomial_MCSE": 0.0015462030510253173,
+          "MC_95pct_Wilson_interval": [
+            0.9465322096387385,
+            0.9525950923360065
+          ]
+        },
+        "estimated_coverage": {
+          "covered": 18737,
+          "replicates": 20000,
+          "proportion": 0.93685,
+          "binomial_MCSE": 0.001719913914996911,
+          "MC_95pct_Wilson_interval": [
+            0.93339441960208,
+            0.9401377984957013
+          ]
+        }
+      },
+      {
+        "id": "RARE_EVENT_SKEW_DIAGNOSTIC",
+        "exact_mean": -0.0004,
+        "exact_variance_mean": 1.99e-09,
+        "MC_mean": -0.0004004039999999998,
+        "MC_variance_mean": 1.9705753127656366e-09,
+        "known_coverage": {
+          "covered": 19245,
+          "replicates": 20000,
+          "proportion": 0.96225,
+          "binomial_MCSE": 0.0013476820377967488,
+          "MC_95pct_Wilson_interval": [
+            0.9595185853840259,
+            0.9648038772821054
+          ]
+        },
+        "estimated_coverage": {
+          "covered": 17383,
+          "replicates": 20000,
+          "proportion": 0.86915,
+          "binomial_MCSE": 0.002384620278996218,
+          "MC_95pct_Wilson_interval": [
+            0.8644052511750384,
+            0.8737529686047394
+          ]
+        }
+      },
+      {
+        "id": "IDENTICAL_RULE_DEGENERATE",
+        "exact_mean": 0.0,
+        "exact_variance_mean": 0.0,
+        "MC_mean": 0.0,
+        "MC_variance_mean": 0.0,
+        "known_coverage": {
+          "covered": 20000,
+          "replicates": 20000,
+          "proportion": 1.0,
+          "binomial_MCSE": 0.0,
+          "MC_95pct_Wilson_interval": [
+            0.9998079639438954,
+            0.9999999999999999
+          ]
+        },
+        "estimated_coverage": {
+          "covered": 20000,
+          "replicates": 20000,
+          "proportion": 1.0,
+          "binomial_MCSE": 0.0,
+          "MC_95pct_Wilson_interval": [
+            0.9998079639438954,
+            0.9999999999999999
+          ]
+        }
+      }
+    ],
+    "source_files_sha256": {
+      "CANDIDATES.json": "c6996840da99902d851faca323d60d1ea2a18bdf11c01be1816ffff103090706",
+      "SOURCE_MANIFEST.json": "08658be210a97b52c642f1b5277fb94af9ac4f5e723efe3ffc961668e2f35b50"
+    },
+    "output_sha256": {
+      "RESULTS_SUMMARY.json": "bbb06d8a22f7075a5e2e8fe303533f9991719510d71c13c4e4b4c93c02bb39ee",
+      "PRECISION_RESULTS.json": "ef3ab7eaf6d8a0c6fd0d7bb6232cd3241076a244a7671319e42a9c60a6e5271f",
+      "SIMULATION_VALIDATION.json": "ec9e6b0024fbb14430ec627e3c3ca55e431cfe7d286b23787652a31e3fcd2235",
+      "READINESS_RESULTS.json": "f781069d25e516ae38a7cd01abb940f6fc59eef6dcf891491bf39bef0945ca97",
+      "SOURCE_MANIFEST.json": "08658be210a97b52c642f1b5277fb94af9ac4f5e723efe3ffc961668e2f35b50"
+    },
+    "scientific_files": 107,
+    "old_scientific_files": 103,
+    "production_stdout_sha256": "ae13abfcb6666c0265c81ea246f682dbc0d726853894ff068bcba91615c9bd8f"
+  },
+  "checks": [
+    {
+      "name": "RESULTS_SUMMARY.json exact saved/production-stdout bytes",
+      "passed": true
+    },
+    {
+      "name": "RESULTS_SUMMARY.json exact repository/localproduction bytes",
+      "passed": true
+    },
+    {
+      "name": "PRECISION_RESULTS.json exact saved/production-stdout bytes",
+      "passed": true
+    },
+    {
+      "name": "PRECISION_RESULTS.json exact repository/localproduction bytes",
+      "passed": true
+    },
+    {
+      "name": "SIMULATION_VALIDATION.json exact saved/production-stdout bytes",
+      "passed": true
+    },
+    {
+      "name": "SIMULATION_VALIDATION.json exact repository/localproduction bytes",
+      "passed": true
+    },
+    {
+      "name": "READINESS_RESULTS.json exact saved/production-stdout bytes",
+      "passed": true
+    },
+    {
+      "name": "READINESS_RESULTS.json exact repository/localproduction bytes",
+      "passed": true
+    },
+    {
+      "name": "SOURCE_MANIFEST.json exact saved/production-stdout bytes",
+      "passed": true
+    },
+    {
+      "name": "SOURCE_MANIFEST.json exact repository/localproduction bytes",
+      "passed": true
+    },
+    {
+      "name": "immutable protocol ancestor of scientific commit",
+      "passed": true
+    },
+    {
+      "name": "summary protocol phase schema",
+      "passed": true
+    },
+    {
+      "name": "metadata pin ACCESS_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin ASSAY_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin GATE_CONTRACT.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin INDEPENDENT_AUDIT_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin INDEPENDENT_METHOD_CHECKS.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin METHOD_DESIGN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin REPLICATION_PROTOCOL.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin SCENARIOS.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin SIMULATION_CASES.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin STUDY_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin freeze30/CANDIDATE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin freeze30/QUALIFICATION_PUBLIC_RU.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin freeze30/QUALIFICATION_COHORTS_RU.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin freeze30/SSCARD_HISTORY_RU.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33/CAUSE_DEFINITIONS.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33/GATE_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33b/ANALYSIS_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33b/CONTRACT.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33b/RESULTS_SUMMARY.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33b/RESULT_PROVENANCE.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33b/LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin freeze30/FROZEN_MODELS.json",
+      "passed": true
+    },
+    {
+      "name": "103 old scientific module hashes unchanged",
+      "passed": true
+    },
+    {
+      "name": "complete107 current scientific module hashes",
+      "passed": true
+    },
+    {
+      "name": "four additions exclusively replication34",
+      "passed": true
+    },
+    {
+      "name": "old33B neutral result exact preserved",
+      "passed": true
+    },
+    {
+      "name": "current metadata source locks exact",
+      "passed": true
+    },
+    {
+      "name": "source metadata file SHA CANDIDATES.json",
+      "passed": true
+    },
+    {
+      "name": "source metadata file SHA SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "completed result output SHA PRECISION_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "completed result output SHA SIMULATION_VALIDATION.json",
+      "passed": true
+    },
+    {
+      "name": "completed result output SHA READINESS_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "completed result output SHA SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "no real outcome model or laboratory change claims",
+      "passed": true
+    },
+    {
+      "name": "18 unique named release routes and32 unique source references",
+      "passed": true
+    },
+    {
+      "name": "source original-byte/data claims remain false",
+      "passed": true
+    },
+    {
+      "name": "source review file SHA ../freeze30/QUALIFICATION_COHORTS_RU.md",
+      "passed": true
+    },
+    {
+      "name": "source review file SHA ../freeze30/QUALIFICATION_PUBLIC_RU.md",
+      "passed": true
+    },
+    {
+      "name": "source review file SHA ACCESS_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source review file SHA ASSAY_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "source review file SHA METHOD_DESIGN.md",
+      "passed": true
+    },
+    {
+      "name": "source review file SHA STUDY_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "source review file SHA PRE_RESULT_SOURCE_ADDENDUM.md",
+      "passed": true
+    },
+    {
+      "name": "retained30 catalogue pin",
+      "passed": true
+    },
+    {
+      "name": "current two-protein algorithm contract no falsebrand/BTP/all10 requirements",
+      "passed": true
+    },
+    {
+      "name": "all306 evidence cells typed cited and preserved",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ordered complete qualification rows",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANESIII_FIRST exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANESIII_FIRST no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANESIII_REPEAT exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANESIII_REPEAT no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANES_SSCARD1999_2004 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANES_SSCARD1999_2004 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANES2005_2014 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANES2005_2014 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANES2015_2018 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANES2015_2018 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V2 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V2 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V4 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V4 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V5 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V5 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V6 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V6 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V7 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V7 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication CHS1992_1993 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication CHS1992_1993 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication MESA_KIDNEY2012_2014 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication MESA_KIDNEY2012_2014 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication FHS_EXAM7 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication FHS_EXAM7 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication UKB2006_2010 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication UKB2006_2010 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication HRS2016_VBS exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication HRS2016_VBS no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication AGES_KIDNEY2010 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication AGES_KIDNEY2010 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication CRIC_BASELINE exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication CRIC_BASELINE no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication UCI_CKD exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication UCI_CKD no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication qualified count IDs preserve failclosed decision",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ordered complete qualification rows",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANESIII_FIRST exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANESIII_FIRST no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANESIII_REPEAT exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANESIII_REPEAT no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANES_SSCARD1999_2004 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANES_SSCARD1999_2004 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANES2005_2014 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANES2005_2014 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANES2015_2018 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANES2015_2018 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V2 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V2 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V4 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V4 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V5 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V5 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V6 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V6 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V7 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V7 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport CHS1992_1993 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport CHS1992_1993 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport MESA_KIDNEY2012_2014 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport MESA_KIDNEY2012_2014 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport FHS_EXAM7 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport FHS_EXAM7 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport UKB2006_2010 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport UKB2006_2010 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport HRS2016_VBS exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport HRS2016_VBS no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport AGES_KIDNEY2010 exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport AGES_KIDNEY2010 no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport CRIC_BASELINE exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport CRIC_BASELINE no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport UCI_CKD exact independentblockers/tri-state",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport UCI_CKD no authorization from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport qualified count IDs preserve failclosed decision",
+      "passed": true
+    },
+    {
+      "name": "summary source counts and blocked activation",
+      "passed": true
+    },
+    {
+      "name": "12 frozen inputs no33B estimate defaults",
+      "passed": true
+    },
+    {
+      "name": "CENTRAL_TECHNICAL_NULL exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "CENTRAL_TECHNICAL_NULL independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "CENTRAL_TECHNICAL_NULL precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "CENTRAL_TECHNICAL_NULL censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "CENTRAL_TECHNICAL_NULL independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "CENTRAL_TECHNICAL_NULL independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "LOW_RAW_EVENT_PROBABILITY exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "LOW_RAW_EVENT_PROBABILITY independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "LOW_RAW_EVENT_PROBABILITY precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "LOW_RAW_EVENT_PROBABILITY censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "LOW_RAW_EVENT_PROBABILITY independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "LOW_RAW_EVENT_PROBABILITY independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "HIGH_RAW_EVENT_PROBABILITY exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "HIGH_RAW_EVENT_PROBABILITY independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "HIGH_RAW_EVENT_PROBABILITY precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "HIGH_RAW_EVENT_PROBABILITY censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "HIGH_RAW_EVENT_PROBABILITY independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "HIGH_RAW_EVENT_PROBABILITY independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_BENEFIT exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_BENEFIT independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_BENEFIT precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_BENEFIT censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_BENEFIT independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_BENEFIT independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_HARM exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_HARM independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_HARM precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_HARM censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_HARM independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_HARM independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "LOW_LOSS_SD_DESIGN exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "LOW_LOSS_SD_DESIGN independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "LOW_LOSS_SD_DESIGN precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "LOW_LOSS_SD_DESIGN censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "LOW_LOSS_SD_DESIGN independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "LOW_LOSS_SD_DESIGN independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "HIGH_LOSS_SD_DESIGN exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "HIGH_LOSS_SD_DESIGN independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "HIGH_LOSS_SD_DESIGN precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "HIGH_LOSS_SD_DESIGN censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "HIGH_LOSS_SD_DESIGN independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "HIGH_LOSS_SD_DESIGN independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "LOW_JOINT_ASSAY_CORE_YIELD exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "LOW_JOINT_ASSAY_CORE_YIELD independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "LOW_JOINT_ASSAY_CORE_YIELD precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "LOW_JOINT_ASSAY_CORE_YIELD censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "LOW_JOINT_ASSAY_CORE_YIELD independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "LOW_JOINT_ASSAY_CORE_YIELD independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "LARGER_EVALUABLE_DOMAIN exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "LARGER_EVALUABLE_DOMAIN independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "LARGER_EVALUABLE_DOMAIN precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "LARGER_EVALUABLE_DOMAIN censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "LARGER_EVALUABLE_DOMAIN independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "LARGER_EVALUABLE_DOMAIN independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "WIDER_ILLUSTRATIVE_HALFWIDTH exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "WIDER_ILLUSTRATIVE_HALFWIDTH independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "WIDER_ILLUSTRATIVE_HALFWIDTH precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "WIDER_ILLUSTRATIVE_HALFWIDTH censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "WIDER_ILLUSTRATIVE_HALFWIDTH independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "WIDER_ILLUSTRATIVE_HALFWIDTH independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "EARLY_CENSORING_METHOD_BLOCK exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "EARLY_CENSORING_METHOD_BLOCK independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EARLY_CENSORING_METHOD_BLOCK precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "EARLY_CENSORING_METHOD_BLOCK censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "EARLY_CENSORING_METHOD_BLOCK independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "EARLY_CENSORING_METHOD_BLOCK independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "ANCHORED_SE_CONDITIONAL_FIXED_RULE exact locked assumptions and ID",
+      "passed": true
+    },
+    {
+      "name": "ANCHORED_SE_CONDITIONAL_FIXED_RULE independent normal/variance/ceiling/yield arithmetic",
+      "passed": true
+    },
+    {
+      "name": "ANCHORED_SE_CONDITIONAL_FIXED_RULE precision honest independentofeffect andavailability",
+      "passed": true
+    },
+    {
+      "name": "ANCHORED_SE_CONDITIONAL_FIXED_RULE censoring stop notdoublecounted endpointyield",
+      "passed": true
+    },
+    {
+      "name": "ANCHORED_SE_CONDITIONAL_FIXED_RULE independent exactbinomial quantiles actualrawN",
+      "passed": true
+    },
+    {
+      "name": "ANCHORED_SE_CONDITIONAL_FIXED_RULE independent eventfloor lower-tail probability",
+      "passed": true
+    },
+    {
+      "name": "hypotheticalbenefit/harm/null samefixedvariance precisionN",
+      "passed": true
+    },
+    {
+      "name": "fourtimesN halvesconditionalSE",
+      "passed": true
+    },
+    {
+      "name": "four frozen simulationcases andreplicate budgets",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS exactfrozen atoms/clusters/seed/20kreplicates",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS independent rationalatom moments+variance decomposition",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS independent clusterICC DEFF/loss+event theory",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS MCvariance/fourthmoment/SE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS known_toy_variance_normal_CI_coverage independentWilson/MCSEcounts",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS estimated_cluster_mean_SE_normal_CI_coverage independentWilson/MCSEcounts",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS mean_D predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS variance_Dbar predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS mean_event_count predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS noalgorithmclinicalclaim orpositivevariance tolerance",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE exactfrozen atoms/clusters/seed/20kreplicates",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE independent rationalatom moments+variance decomposition",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE independent clusterICC DEFF/loss+event theory",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE MCvariance/fourthmoment/SE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE known_toy_variance_normal_CI_coverage independentWilson/MCSEcounts",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE estimated_cluster_mean_SE_normal_CI_coverage independentWilson/MCSEcounts",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE mean_D predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE variance_Dbar predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE mean_event_count predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE noalgorithmclinicalclaim orpositivevariance tolerance",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC exactfrozen atoms/clusters/seed/20kreplicates",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC independent rationalatom moments+variance decomposition",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC independent clusterICC DEFF/loss+event theory",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC MCvariance/fourthmoment/SE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC known_toy_variance_normal_CI_coverage independentWilson/MCSEcounts",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC estimated_cluster_mean_SE_normal_CI_coverage independentWilson/MCSEcounts",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC mean_D predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC variance_Dbar predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC mean_event_count predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC noalgorithmclinicalclaim orpositivevariance tolerance",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE exactfrozen atoms/clusters/seed/20kreplicates",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE independent rationalatom moments+variance decomposition",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE independent clusterICC DEFF/loss+event theory",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE MCvariance/fourthmoment/SE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE known_toy_variance_normal_CI_coverage independentWilson/MCSEcounts",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE estimated_cluster_mean_SE_normal_CI_coverage independentWilson/MCSEcounts",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE mean_D predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE variance_Dbar predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE mean_event_count predeclaredsixMCSEnumericcheck",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE noalgorithmclinicalclaim orpositivevariance tolerance",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE deterministiczero-loss case not95coveragevalidation",
+      "passed": true
+    },
+    {
+      "name": "summary all12numeric moment flags reported withoutcoveragecriterion",
+      "passed": true
+    },
+    {
+      "name": "completed scientificCI unitjobs success",
+      "passed": true
+    },
+    {
+      "name": "localproduction no false scenarioCI success",
+      "passed": true
+    },
+    {
+      "name": "unit (3.11) scientifichead incheckout",
+      "passed": true
+    },
+    {
+      "name": "unit (3.11) syntheticunitcount",
+      "passed": true
+    },
+    {
+      "name": "unit (3.13) scientifichead incheckout",
+      "passed": true
+    },
+    {
+      "name": "unit (3.13) syntheticunitcount",
+      "passed": true
+    },
+    {
+      "name": "onlymetadata/scenarios/aggregate simulations exported",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "No new cohort records, outcomes, empirical model fits, old33B retuning or external predictions were read or performed. Qualification is metadata-only; all current routes remain source-blocked or unverified.",
+    "Conditional paired-loss precision is not adequacy for a refitted algorithm. All scenario effects/SD/SE/incidences/halfwidths are predeclared technical assumptions, not estimates from33B, clinical thresholds, guaranteedN or posthocpower.",
+    "Exact binomial predictive counts use actualraw evaluable n only under independentBernoulli assumption. Weighted national incidence and lossDEFF do not define raw sample-event distributions or AUC/calibration precision.",
+    "Availability is jointpanel/core and endpointknown conditionalyield; recruitment is expectation-only. Anybefore96censoring requires a separateIPCW method extension and does not become valid by recruiting more or dropping censored people.",
+    "Synthetic finitepredictionatoms/cluster-mixture validate only mathematical implementation under thatspecifiedDGP. Reported normalCI coverage, includingrare/degenerate cases, is not forcedto95 and is not clinical/algorithm validation.",
+    "The auditor independently recomputes scenarios, relative-PMFbinomial quantiles, exact rationalatom moments, clusterDEFF,theoreticalmoments,Wilsoncoverage/MCSE and allqualificationdecisions. It doesnot rerun the80,000 MonteCarlo datasets or reconstruct their original random draws.",
+    "Sourceclassifications useprovidedprimary-source reviews and citedmetadata; externaloriginalsource bytes were not independentlydownloaded/rehashed. Savedreview/ledger hashes and exactproduction plaintext exports are checked; noZIP/raw retrieval.",
+    "Source-ready wouldmean readiness for a laternamedrelease protocol, not authorizeddownload/comparison, sufficientpower, clinicalreadiness or a frozen-source artifact. Oldmodels, neutral33B, labreportv3/presentation anddeferredFG/jointscope are preserved.",
+    "Actual5JSON production was executed locally byroot at the scientific commit and audited from its savedstdout/files; exit0 is reported byroot. PushCI independently confirms unit41 tests perversion only; its PR-only scenarios job wasSKIPPED. No scenarioCI pass,PRmerge checkout or independent rerun is claimed. DraftPR creation was rejected byautomaticapprovalreview; no retry/workaround was used."
+  ]
+}

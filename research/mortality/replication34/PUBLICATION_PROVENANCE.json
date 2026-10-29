@@ -1,0 +1,107 @@
+{
+  "schema": "replication34-isolated-publication/1",
+  "status": "isolated_PR_published; CI_and_merge_status_must_be_read_from_PR",
+  "base_main_commit": "6ee4bd1752412950b33160707220e3fb8a44623c",
+  "publication_branch": "research/replication34-main",
+  "original_protocol_commit": "4df636ea18ca8bb29b05788c37800438566426ec",
+  "original_scientific_code_commit": "b054c89b42d6a73f5ed5caf6d8ccd0e0f0b8430b",
+  "original_local_results_commit": "661bcaf94e59a8c6a18bda0cc9771c7515b83989",
+  "historical_hash_checkout_commit": "27ea33fc6cfd594c309b63ae59e695129511a9c8",
+  "historical_checkout_models_imported_or_merged": false,
+  "original_research_chain_diff_files_to_main": 437,
+  "original_package_file_sha256_at_local_results_commit": {
+    ".github/workflows/replication34-checks.yml": "26e60d3cbbbc9d7e199b58786786eb79a030d78c0b71d1843edeb8b8f3622f7e",
+    "research/mortality/replication34/ACCESS_REVIEW.md": "8b80da1502e23dd3db902b9ec0e198f721254d35c2b96ff719fce5a8b6708b31",
+    "research/mortality/replication34/ASSAY_REVIEW.md": "8f83a1ae852e900a028c7c22abbf561cd8950d261c4b3307c7a5c43f1b6e0dea",
+    "research/mortality/replication34/CANDIDATES.json": "c6996840da99902d851faca323d60d1ea2a18bdf11c01be1816ffff103090706",
+    "research/mortality/replication34/GATE_CONTRACT.json": "affa8b79e61948a5d8da4cd981026aa9f731f1c603f284381f035370d445b541",
+    "research/mortality/replication34/INDEPENDENT_AUDIT_PLAN.md": "3ca8214f49d8a35be541a708ea608ba433163d6bda06ef2491f889b4f7356078",
+    "research/mortality/replication34/INDEPENDENT_METHOD_CHECKS.md": "8a93cd483a468443321a0204e1f186aa845d790b687068e72e95a4f48162888f",
+    "research/mortality/replication34/INDEPENDENT_SOURCE_REVIEW.md": "daf427e688a09df14b1b3bf9a236f06dcedacfec30c456e428fdb18bc62d3f26",
+    "research/mortality/replication34/INDEPENDENT_VERIFICATION.json": "39e7e18a5b222587c052d8aadc764cd18b2372625e33bc5f338de4184f5c3d67",
+    "research/mortality/replication34/INDEPENDENT_VERIFICATION.md": "57a433c6fe9685a2d5e21157d5ef7791b69b608b839680bfca207af1e9b9df8e",
+    "research/mortality/replication34/LOCK.json": "580114c2369a5277eec08dd02941c5defe2c63bb25436b2e6285389640640c23",
+    "research/mortality/replication34/METHOD_DESIGN.md": "51fe203ad6b4fd23847ae34c408a27527ffdf1c0e6c9e2c73d335b687e10968d",
+    "research/mortality/replication34/PRECISION_RESULTS.json": "ef3ab7eaf6d8a0c6fd0d7bb6232cd3241076a244a7671319e42a9c60a6e5271f",
+    "research/mortality/replication34/PRE_RESULT_CODE_REVIEW.md": "12275689a237b3c127e4ccc6b93d73082e7b2b24ac27a0465765dcec461792e9",
+    "research/mortality/replication34/PRE_RESULT_IMPLEMENTATION_REVIEW.md": "549f5876134c08044265581688e7386b679421e7a8d641e674a7857bc01a43fe",
+    "research/mortality/replication34/PRE_RESULT_SOURCE_ADDENDUM.md": "c9bf1b7334799e5f5e99c98ca9b39967b531a678754e8db05ce7b2c31140ae30",
+    "research/mortality/replication34/READINESS_RESULTS.json": "f781069d25e516ae38a7cd01abb940f6fc59eef6dcf891491bf39bef0945ca97",
+    "research/mortality/replication34/README_RU.md": "6ee4004d343b954f296452d67f194434326fe84151e19786092a8b3c7c6bf06b",
+    "research/mortality/replication34/REPLICATION_PROTOCOL.md": "d7046af83dc429c4fa658bfce4c619ede17b4184beacd9ca3613f741530dab87",
+    "research/mortality/replication34/RESULTS_SUMMARY.json": "bbb06d8a22f7075a5e2e8fe303533f9991719510d71c13c4e4b4c93c02bb39ee",
+    "research/mortality/replication34/RESULT_PROVENANCE.json": "3dd7596f78a80699a716294f013fd78332d5d068b46ff0984fa5ed7cfe4fa827",
+    "research/mortality/replication34/SCENARIOS.json": "833bcae0ac86f6df52666bcc7f60170f6253dbefc05359b90d4027f42559eb06",
+    "research/mortality/replication34/SIMULATION_CASES.json": "ea3685ab972b10fb187244238a900006ed315c69da0c82df6a430811171ccb10",
+    "research/mortality/replication34/SIMULATION_VALIDATION.json": "ec9e6b0024fbb14430ec627e3c3ca55e431cfe7d286b23787652a31e3fcd2235",
+    "research/mortality/replication34/SOURCE_LOCK.json": "d5359ff17b306e94937749915f553a7999a17244bd44314cc383efd31f4ad676",
+    "research/mortality/replication34/SOURCE_MANIFEST.json": "08658be210a97b52c642f1b5277fb94af9ac4f5e723efe3ffc961668e2f35b50",
+    "research/mortality/replication34/SOURCE_MATRIX_REVIEW.md": "d0b1287bc7ec4796569e556d6f4d8565cedd09549af8035ea87317dfa6630afd",
+    "research/mortality/replication34/STUDY_PLAN.md": "6222ddd31aa2264a124e912815c11914dcf2ae9e52fb42290a722ba7a47dbbd2",
+    "research/mortality/replication34/__init__.py": "591ff918f678855bcc710fc6ef43a0e848ab882c75eee346ef1f0f2a0c80d04f",
+    "research/mortality/replication34/analyze.py": "3dd2e087555770c5bba729f4ee04e2b4bbc47aad40d3d98466ea40458b0f8d38",
+    "research/mortality/replication34/gate.py": "7ac8f6f5544254c8b828387805470128f5bb03e7500f4f8023b2756bc5c8a9b7",
+    "research/mortality/replication34/precision.py": "a40d8a79ff4428c674795f32bb4aa63998d8912546aaa473fc6e537a99486bcc",
+    "tests/test_replication34_gate.py": "2516acc0235f0ba71aed8bd1df8d0fe183d53f7034ce3366a86933e93d2cca31",
+    "tests/test_replication34_precision.py": "eb1cc52ea7b16312ca47a808fbe34eec988f0cd9e1347602df659491f7122008",
+    "tests/test_replication34_runner.py": "5e78b1cd76c064abf8716ebedfa556fb50b4c7c4d3a1810ae56ea8ccaef77364",
+    "tools/verify_replication34_aggregates.py": "673d66c59bd35391d14135176bdd11ba26da0af518b1df4807db6e5459c9bf3d"
+  },
+  "original_local_result_and_audit_files_preserved_byte_exact": true,
+  "allowed_repeat_summary_differences": [
+    "scientific_python_sha256",
+    "versions"
+  ],
+  "repeat_math_source_payloads_required_byte_exact": [
+    "PRECISION_RESULTS.json",
+    "SIMULATION_VALIDATION.json",
+    "READINESS_RESULTS.json",
+    "SOURCE_MANIFEST.json"
+  ],
+  "new_empirical_results_or_replication_claimed": false,
+  "previous_denial_preserved_in_original_provenance": true,
+  "subsequent_explicit_authorization_scope": "Publish iteration34 package in aging_theories PR and merge to main after checks; no other PR/repository or review approval.",
+  "aging_biomarkers_published_or_changed": false,
+  "Fine_Gray_and_joint_integration": "deferred",
+  "lab_report_v3_and_presentation_changed": false,
+  "local_original_audit": {
+    "passed": 260,
+    "total": 260,
+    "source_execution_origin": "local",
+    "scenario_CI_at_that_time": "skipped"
+  },
+  "local_unchanged_main_application_checks": {
+    "workbench_tests": 92,
+    "evidence_contract_tests": 47,
+    "doctor": "pass"
+  },
+  "publication_CI": {
+    "initial_scientific_push_run": 40943381628,
+    "initial_pull_request_run": 40943429158,
+    "initial_workbench_run": 40943428995,
+    "final_head_checks_required_before_merge": true,
+    "this_commit_does_not_assert_future_CI_or_merge_success": true
+  },
+  "local_isolated_repeat": {
+    "exit_code": 0,
+    "output_directory": "/tmp/rep34_isolated_smoke_results",
+    "completed_stdout_sha256": "2cbeb3b960e1a207fbcfc8ccc12f410488ef7f0b8b87df814daa295730489e9c",
+    "four_payloads_byte_identical": true,
+    "summary_changed_keys": [
+      "scientific_python_sha256"
+    ],
+    "independent_audit_with_stdout": {
+      "passed": 313,
+      "total": 313
+    },
+    "analyze_py_sha256": "b0c0b418d3026a7012b037365a375a07a6fc09c23d961ef22e748d3c491f0194",
+    "historical_checkout_used_only_for_actual_hash_verification": true,
+    "independent_auditor_sha256": "d7b9ff53385dacdc1b1cd132a0323558d3ce047e05cca268bdc6d2671134cdcb"
+  },
+  "publication_scientific_hash_inventory_semantics": "103 actual historical files from pinned27ea checkout plus4 current replication34 modules, not a claim that historical models are present in main.",
+  "local_replication34_tests": 56,
+  "isolated_diff_files": 40,
+  "existing_main_files_modified": 0,
+  "publication_PR": "https://github.com/aleks-kudriavtsev/aging_theories/pull/27",
+  "initial_isolated_code_commit": "e14b0b4079c6152600bb8967a88039c7d7482c36"
+}

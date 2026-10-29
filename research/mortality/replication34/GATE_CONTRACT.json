@@ -1,0 +1,40 @@
+{
+  "schema": "replication34-gate-contract/1",
+  "evidence_states": [
+    "verified_true",
+    "verified_false",
+    "not_verified"
+  ],
+  "primary_mode": "algorithm_replication",
+  "modes": [
+    "algorithm_replication",
+    "locked_source_transport"
+  ],
+  "requirements": [
+    "anonymous_person_level_release",
+    "processing_without_new_terms_permitted",
+    "independent_programme_source",
+    "overlap_history_assessment",
+    "population_age_domain_declared",
+    "same_visit_routine11",
+    "cys_absolute_interpretable",
+    "b2m_absolute_interpretable",
+    "baseline_origin_aligned",
+    "underlying_heart_mapping",
+    "underlying_cancer_mapping",
+    "known_other_competing_and_vital_status",
+    "full96_outcome_contract",
+    "sampling_design_contract",
+    "joint_domain_auditable"
+  ],
+  "transport_additional_requirements": [
+    "frozen_source_scorer_artifact",
+    "transport_assay_unit_mapping"
+  ],
+  "BTP_required": false,
+  "same_manufacturer_required_for_algorithm_refit": false,
+  "all_ten_NCHS_cause_codes_required": false,
+  "numerical_precision_approval_exists": false,
+  "protocol_activation_status": "blocked_until_named_qualified_release_and_preoutcome_mappings_precision_plan",
+  "no_download_or_fit_actions": true
+}
