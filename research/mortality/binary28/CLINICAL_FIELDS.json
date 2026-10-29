@@ -1,0 +1,156 @@
+{
+  "checked_date": "2026-10-29",
+  "metadata_only": true,
+  "participant_records_accessed": false,
+  "selected_source": "adult.dat",
+  "sas_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.sas",
+  "codebook_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/ADULT-acc.pdf",
+  "positions_1_based_inclusive": {
+    "SEQN": [
+      1,
+      5
+    ],
+    "HSSEX": [
+      15,
+      15
+    ],
+    "HSAGEIR": [
+      18,
+      19
+    ],
+    "HSAGEU": [
+      20,
+      20
+    ],
+    "SDPPSU6": [
+      43,
+      43
+    ],
+    "SDPSTRA6": [
+      44,
+      45
+    ],
+    "HAR1": [
+      2281,
+      2281
+    ],
+    "HAR3": [
+      2285,
+      2285
+    ],
+    "HAZMNK1R": [
+      3337,
+      3339
+    ],
+    "HAZNOK1R": [
+      3340,
+      3341
+    ]
+  },
+  "minimum_required_selected_width": 3341,
+  "age": {
+    "variable": "HSAGEIR",
+    "unit_variable": "HSAGEU",
+    "required_unit_code": 2,
+    "meaning": "interview_screener_age_years",
+    "codes_allowed_for_planned_population": [
+      40,
+      75
+    ]
+  },
+  "sex": {
+    "variable": "HSSEX",
+    "male": 1,
+    "female": 2
+  },
+  "smoking": {
+    "ever_100_cigarettes_variable": "HAR1",
+    "current_cigarettes_variable": "HAR3",
+    "yes": 1,
+    "no": 2,
+    "missing_codes": [
+      8
+    ],
+    "structural_skip": "HAR1=2 skips HAR3; classify never",
+    "never_rule": "HAR1==2",
+    "current_rule": "HAR1==1 and HAR3==1",
+    "former_rule": "HAR1==1 and HAR3==2",
+    "all_other_combinations": "missing"
+  },
+  "sbp": {
+    "variable": "HAZMNK1R",
+    "unit": "mmHg",
+    "definition": "released arithmetic mean of at most3 original-household and at most3 original-MEC K1 readings",
+    "baseline_visit": "original_interview_and_MEC",
+    "not_repeat_release37a": true,
+    "released_frequency_range": [
+      69,
+      246
+    ],
+    "frequency_range_is_clinical_validity_limit": false,
+    "missing_codes": [
+      888
+    ],
+    "count_variable": "HAZNOK1R",
+    "known_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "count_missing_codes": [
+      88
+    ],
+    "blank_is_missing": true,
+    "no_even_number_rounding": true
+  },
+  "sampling": {
+    "stratum_variable": "SDPSTRA6",
+    "known_strata_range": [
+      1,
+      49
+    ],
+    "psu_variable": "SDPPSU6",
+    "known_psu_codes": [
+      1,
+      2
+    ],
+    "protein_subsample_weight_remains": "WTCYPEX6"
+  },
+  "excluded_core_candidates": [
+    "diabetes_history",
+    "BMI",
+    "creatinine_eGFR",
+    "CHD_angina_history"
+  ],
+  "diabetes_metadata_only": {
+    "HAD1": [
+      1561,
+      1561
+    ],
+    "HAD3": [
+      1563,
+      1563
+    ],
+    "HAD4": [
+      1564,
+      1564
+    ],
+    "not_used_in_selected_core": true,
+    "note": "HAD1 yes includes pregnancy-associated diabetes; nonpregnant definition needs pregnancy branching"
+  },
+  "BMI_metadata_only": {
+    "source": "exam.dat",
+    "sas_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam.sas",
+    "variable": "BMPBMI",
+    "positions_1_based_inclusive": [
+      1524,
+      1527
+    ],
+    "sas_format": "Z6.1",
+    "not_used_in_selected_core": true,
+    "actual_file_bytes_not_verified": true
+  }
+}
