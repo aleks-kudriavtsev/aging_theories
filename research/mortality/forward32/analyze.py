@@ -68,8 +68,8 @@ def _validate_schema(eligible, common, audit, manifest):
     common = np.asarray(common)
     if common.shape != (len(eligible),) or common.dtype != bool:
         raise ValueError('Aligned primary common-domain boolean mask required')
-    if set(eligible.partition.unique()) != {'train', 'late'}:
-        raise ValueError('Both fixed temporal partitions required')
+    if not set(eligible.partition.unique()) <= {'train', 'late'}:
+        raise ValueError('Unknown temporal partition label')
     early = eligible.partition.eq('train')
     if (not eligible.loc[early, 'cycle'].isin([1999, 2001]).all()
             or not eligible.loc[~early, 'cycle'].eq(2003).all()):
@@ -101,10 +101,10 @@ def _prepare_period(eligible, common, part):
     d = base.loc[mask].copy()
     if not len(d) or set(d.cluster) != set(base.cluster):
         raise ValueError('Common domain must preserve the eligible PSU inventory')
-    core, proteins = model.numerical._features(d[list(CORE)].to_numpy(float),
-        np.log2(d[list(PROTEINS)].to_numpy(float)))
-    if (d[list(PROTEINS)].to_numpy(float) <= 0).any():
+    raw_proteins = d[list(PROTEINS)].to_numpy(float)
+    if not np.isfinite(raw_proteins).all() or (raw_proteins <= 0).any():
         raise ValueError('Positive primary reported proteins required')
+    core, proteins = model.numerical._features(d[list(CORE)].to_numpy(float), np.log2(raw_proteins))
     y = (d.dead.eq(1) & d.t_exam.le(96)).to_numpy(int)
     w = d.weight.to_numpy(float)
     if np.unique(y[w > 0]).size != 2:
@@ -291,6 +291,8 @@ def run(source, out):
         return result
     if audit['gate']['blockers']:
         raise ValueError('Allowed temporal gate contains unresolved blockers')
+    if set(eligible.partition.unique()) != {'train', 'late'}:
+        raise ValueError('Allowed temporal gate requires both fixed partitions')
     train, late = _prepare_period(eligible, common, 'train'), _prepare_period(eligible, common, 'late')
     folds = _check_inner_mapping(train, late, audit)
     # All structural/domain checks precede the arm-local numerical failure loop.

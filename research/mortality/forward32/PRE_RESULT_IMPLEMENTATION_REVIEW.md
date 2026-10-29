@@ -185,3 +185,36 @@ not imply that these trained models or complete early labels were available when
 the late participants were examined. Do not describe this as a historically
 prospective2003 deployment validation. No horizon, algorithm or contrast change
 is needed: retain the declared exploratory retrospective baseline-calendar target.
+
+## Final pre-result hardening addendum
+
+Reviewed the complete working diff against first science commit
+`bf2f62a60492f46f1ac183df7b8871e0dca7faf5`, still without reading iteration32
+source records, temporal event counts, comparative metrics or CI job logs.
+The updated `analyze.py` SHA256 is
+`b92b8e55e2450d49d8de0d1961b00c820add41e817e737b8ce2d6459f98d8d48`.
+It supersedes the earlier `f956eb36...` analyzer fingerprint above. All other
+reviewed scientific modules are unchanged by this diff.
+
+The diff is scientifically safe and does not change a qualifying passing-case
+algorithm, target, weights, transforms, split, fits, contrasts, RNG streams,
+bootstrap attempts or uncertainty interpretation:
+
+1. Schema validation still rejects any unknown temporal partition. It now allows
+   an absent early/late eligible part to reach an already-false feasibility gate,
+   so source/support blockers can be exported with0fits rather than being hidden
+   by a premature schema exception. The successful-gate branch separately requires
+   BOTH exact partitions before preparing model arrays or making any fit call.
+2. Positive, finite raw protein values are explicitly checked BEFORE log2. Every
+   primary passing value already satisfied that condition; its numeric transform
+   is unchanged. Invalid0/negative/nonfinite input now raises a clear error without
+   creating nonfinite logarithms first.
+3. The added synthetic regression test supplies an empty late eligible partition
+   with an explicit false gate and asserts blocked-feasibility plus no `_fit_arms`
+   call. It uses no empirical data.
+
+No new critical blocker was found. Writer-reported54tests passed are not an
+independent execution claim by this reviewer. Parent will commit the final science
+head and use ONLY its new scientific CI; initial run40917121566 on the superseded
+science head must not be cited as validation of these final bytes. I did not
+rerun source intake or fits, and did not read either run's empirical outputs.

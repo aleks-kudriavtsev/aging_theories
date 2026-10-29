@@ -283,5 +283,15 @@ class ExportTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'source schema'):
                 self.run_fixture(Path(directory) / 'invalid', (frame.drop(columns='SSCYST'), common, audit, manifest))
 
+    def test_empty_eligible_late_part_is_feasibility_diagnostic_without_fits(self):
+        frame, common, audit, manifest = fixture()
+        keep = frame.partition.eq('train').to_numpy()
+        audit['gate'] = dict(temporal_evaluation_allowed=False, blockers=['late:empty_primary_domain'])
+        supplied = frame.loc[keep].copy(), common[keep], audit, manifest
+        with tempfile.TemporaryDirectory() as directory, patch.object(a, '_fit_arms') as fitting:
+            result, _ = self.run_fixture(Path(directory) / 'blocked-empty', supplied)
+            self.assertEqual(result['status'], 'blocked_feasibility_no_model_fits')
+            fitting.assert_not_called()
+
 
 if __name__ == '__main__': unittest.main()
