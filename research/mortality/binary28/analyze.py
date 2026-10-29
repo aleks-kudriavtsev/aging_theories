@@ -75,12 +75,15 @@ def run(source,out):
             row=dict(replicate=rep,status='undefined',error=type(exc).__name__+': '+str(exc))
         draws.append(row)
         if (rep+1)%50==0:print('BINARY28_NESTED_REFITS',rep+1,flush=True)
+    primary_csv=pd.DataFrame(draws).reindex(columns=['replicate','status','delta_brier','delta_auc']).to_csv(index=False)
+    primary_csv_sha=hashlib.sha256(primary_csv.encode()).hexdigest()
     result=dict(analysis='new_reported_value_binary_logistic_internal_nested_PSU_CV',cohort='NHANESIII1988_1994_first_exam',
         plan_commit='d81972a',horizon_years=8,n=len(d),events8=int(y.sum()),weight='WTCYPEX6',
         effective_n=float(w.sum()**2/(w@w)),strata_n=int(d.stratum.nunique()),psu_n=len(set(clusters)),
         point=point,primary_contrast='all3_minus_core',primary=primary,intervals=intervals(draws,REPLICATES),
         bootstrap_replicates=REPLICATES,bootstrap_seed=SEED,bootstrap_failures=sum(r['status']=='undefined' for r in draws),
         bootstrap_penalty_selection_counts=selection_counts,source_audit=audit,
+        primary_bootstrap_csv_sha256=primary_csv_sha,
         clinical_core=list(CORE),protein_features=list(PROTEINS),
         exploratory_arms=list(ARMS[2:]),exploratory_intervals_computed=False,
         model_family='eight_year_survey_weighted_ridge_logistic_not_cause_specific_engine',
@@ -92,10 +95,12 @@ def run(source,out):
         versions=dict(python=platform.python_version(),numpy=np.__version__,pandas=pd.__version__,scipy=scipy.__version__))
     out.mkdir(parents=True)
     dump(out/'RESULTS.json',result);dump(out/'SOURCE_MANIFEST.json',manifest);dump(out/'fold_parameters.json',parameters)
+    (out/'primary_bootstrap.csv').write_text(primary_csv)
     pd.DataFrame(draws).to_csv(out/'bootstrap_aggregates.csv',index=False);pd.DataFrame(bins).to_csv(out/'calibration_bins.csv',index=False)
     print('BINARY28_RESULTS_BEGIN');print(json.dumps(result,indent=2,allow_nan=False));print('BINARY28_RESULTS_END')
     print('BINARY28_MANIFEST_BEGIN');print(json.dumps(manifest,indent=2,allow_nan=False));print('BINARY28_MANIFEST_END')
     print('BINARY28_PARAMETERS_BEGIN');print(json.dumps(parameters,indent=2,allow_nan=False));print('BINARY28_PARAMETERS_END')
+    print('BINARY28_PRIMARY_BOOTSTRAP_CSV_BEGIN');print(primary_csv,end='');print('BINARY28_PRIMARY_BOOTSTRAP_CSV_END')
     print('BINARY28_CALIBRATION_BINS_BEGIN');print(json.dumps(bins,indent=2,allow_nan=False));print('BINARY28_CALIBRATION_BINS_END')
     return result
 
