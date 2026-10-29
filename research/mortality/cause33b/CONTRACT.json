@@ -1,0 +1,54 @@
+{
+  "schema": "cause33b-analysis/1",
+  "causes": [
+    "002",
+    "001"
+  ],
+  "arms": [
+    "routine",
+    "routine_b2m",
+    "routine_cys",
+    "routine_cys_b2m"
+  ],
+  "contrasts": {
+    "primary": [
+      "routine",
+      "routine_b2m"
+    ],
+    "secondary": [
+      "routine_cys",
+      "routine_cys_b2m"
+    ]
+  },
+  "horizon_months": 96,
+  "common_n": 6044,
+  "eligible_n": 6546,
+  "allcause_events8": 586,
+  "cause_events8": {
+    "002": 176,
+    "001": 148
+  },
+  "controls8": {
+    "002": 5868,
+    "001": 5896
+  },
+  "bootstrap_replicates": 500,
+  "bootstrap_seed": 20261105,
+  "bootstrap_shared_across_causes_and_arms": true,
+  "bootstrap_refit_all_preprocessing_tuning_and_fits": true,
+  "bootstrap_redraw": false,
+  "interval_quantiles": [
+    0.025,
+    0.975
+  ],
+  "interval_method": "linear_percentile_defined_draws_only",
+  "multiplicity": "all_marginal_exploratory_no_simultaneous_familywise_confirmation",
+  "auc_controls": "all_known_noncases_including_early_competing_deaths_late_deaths_survivors_observed_through96",
+  "source_projection_float_rtol": 1e-12,
+  "source_projection_float_atol": 1e-09,
+  "primary_measure": "weighted_binary_Brier_at96months",
+  "no_between_cause_effect_contrast": true,
+  "independent_probability_summing": false,
+  "joint_integration_and_Fine_Gray": "deferred",
+  "old_models_and_lab_report_v3_presentation": "unchanged"
+}
