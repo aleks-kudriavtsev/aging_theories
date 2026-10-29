@@ -1,0 +1,1289 @@
+{
+  "schema": "replication34-publication-audit/1",
+  "all_passed": true,
+  "passed": 311,
+  "total": 311,
+  "original_archive_commit": "661bcaf94e59a8c6a18bda0cc9771c7515b83989",
+  "historical_checkout": "27ea33fc6cfd594c309b63ae59e695129511a9c8",
+  "results_execution_origin": "caller_supplied_files; completed_plaintext_log_checked",
+  "original_aggregate_sha256": {
+    "RESULTS_SUMMARY.json": "bbb06d8a22f7075a5e2e8fe303533f9991719510d71c13c4e4b4c93c02bb39ee",
+    "PRECISION_RESULTS.json": "ef3ab7eaf6d8a0c6fd0d7bb6232cd3241076a244a7671319e42a9c60a6e5271f",
+    "SIMULATION_VALIDATION.json": "ec9e6b0024fbb14430ec627e3c3ca55e431cfe7d286b23787652a31e3fcd2235",
+    "READINESS_RESULTS.json": "f781069d25e516ae38a7cd01abb940f6fc59eef6dcf891491bf39bef0945ca97",
+    "SOURCE_MANIFEST.json": "08658be210a97b52c642f1b5277fb94af9ac4f5e723efe3ffc961668e2f35b50"
+  },
+  "reproduced_aggregate_sha256": {
+    "RESULTS_SUMMARY.json": "169192ac87d0b6fe83395dc83127712aae01c24735c714c197317636ef831369",
+    "PRECISION_RESULTS.json": "ef3ab7eaf6d8a0c6fd0d7bb6232cd3241076a244a7671319e42a9c60a6e5271f",
+    "SIMULATION_VALIDATION.json": "ec9e6b0024fbb14430ec627e3c3ca55e431cfe7d286b23787652a31e3fcd2235",
+    "READINESS_RESULTS.json": "f781069d25e516ae38a7cd01abb940f6fc59eef6dcf891491bf39bef0945ca97",
+    "SOURCE_MANIFEST.json": "08658be210a97b52c642f1b5277fb94af9ac4f5e723efe3ffc961668e2f35b50"
+  },
+  "scientific_inventory": {
+    "actual_historical_files": 103,
+    "actual_current_replication34_files": 4,
+    "historical_models_imported_or_executed": false
+  },
+  "allowed_summary_changes": [
+    "scientific_python_sha256",
+    "versions"
+  ],
+  "independent_math_auditor_sha256": "673d66c59bd35391d14135176bdd11ba26da0af518b1df4807db6e5459c9bf3d",
+  "completed_stdout_sha256": "2cbeb3b960e1a207fbcfc8ccc12f410488ef7f0b8b87df814daa295730489e9c",
+  "checks": [
+    {
+      "name": "actual historical checkout HEAD is immutable27ea",
+      "passed": true
+    },
+    {
+      "name": "original immutable metadata lock",
+      "passed": true
+    },
+    {
+      "name": "original immutable source lock",
+      "passed": true
+    },
+    {
+      "name": "historical lock base and inventory103 plus22",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes __init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes assay_sensitivity13.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes audit_endpoint_cohorts11.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes audit_reader_reference08.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes audit_transport12.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes b2m31/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes b2m31/analyze.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes b2m31/cohort.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes b2m31/features.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes b2m31/model.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes b2m31/retrieve.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes binary28/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes binary28/analyze.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes binary28/cohort.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes binary28/metrics.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes binary28/model.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes build_evidence_exchange.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cause33/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cause33/gate.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cause33/qualify.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cause33/retrieve.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cause33b/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cause33b/analyze.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cause33b/cohort.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cause33b/retrieve.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes clinical_sensitivity.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cohort27/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cohort27/gate.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cohort27/importer.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cohort27/qualify.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cohort27/retrieve.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes cohort_tools.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes compact_panel14.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes competing_risks09.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes diagnostics_competing09.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes endpoint_contract11.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes engine.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes evaluate_compact14.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes evidence_contract.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes external18/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes external18/demo.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes external18/precision.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes external18/runner.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes forward32/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes forward32/analyze.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes forward32/cohort.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes forward32/model.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes forward32/retrieve.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes freeze30/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes freeze30/adapter.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes freeze30/freeze.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes freeze30/qualification.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes ghe2021.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes hrs24/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes hrs24/access.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes hrs24/feasibility.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes ipcw14.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes joint23/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes joint23/joint_readiness.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes joint23/robustness.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes method_bridge13.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes nfl22/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes nfl22/analyze.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes nfl22/joint_audit.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes nhanes_benchmark.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes nhanes_cohort06.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes panel25/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes panel25/analyze.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes panel25/retrieve.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes pr115_regression_probes.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes reanalyse06.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes registered_causes10.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes replay_compact14.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes replay_competing09.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes replay_temporal08.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes replay_transport12.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes routine29/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes routine29/analyze.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes routine29/cohort.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes routine29/features.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes routine29/model.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes routine29/reader.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes routine29/retrieve.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes sensitivity_assay12.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes sensitivity_temporal08.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes studio16/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes studio16/__main__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes studio16/engine.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes studio16/registry.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes studio16/report.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes studio16/server.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes temporal26/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes temporal26/analyze.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes temporal26/retrieve.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes transport_no_crp12.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes validate_temporal08.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes verify_workbench06.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes workbench/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes workbench/__main__.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes workbench/report.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes workbench/runtime.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes workbench/server.py",
+      "passed": true
+    },
+    {
+      "name": "actual historical scientific bytes xpt_checked.py",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes ACCESS_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes ASSAY_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes GATE_CONTRACT.json",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes INDEPENDENT_AUDIT_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes INDEPENDENT_METHOD_CHECKS.md",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes METHOD_DESIGN.md",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes REPLICATION_PROTOCOL.md",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes SCENARIOS.json",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes SIMULATION_CASES.json",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes STUDY_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes freeze30/CANDIDATE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes freeze30/QUALIFICATION_PUBLIC_RU.md",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes freeze30/QUALIFICATION_COHORTS_RU.md",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes freeze30/SSCARD_HISTORY_RU.md",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes cause33/CAUSE_DEFINITIONS.json",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes cause33/GATE_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes cause33b/ANALYSIS_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes cause33b/CONTRACT.json",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes cause33b/RESULTS_SUMMARY.json",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes cause33b/RESULT_PROVENANCE.json",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes cause33b/LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "actual locked metadata bytes freeze30/FROZEN_MODELS.json",
+      "passed": true
+    },
+    {
+      "name": "historical source tree complete scientific inventory103",
+      "passed": true
+    },
+    {
+      "name": "four current runtime code paths only",
+      "passed": true
+    },
+    {
+      "name": "immutable original saved payload RESULTS_SUMMARY.json",
+      "passed": true
+    },
+    {
+      "name": "immutable original saved payload PRECISION_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "byte-identical reproduced scientific payload PRECISION_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "immutable original saved payload SIMULATION_VALIDATION.json",
+      "passed": true
+    },
+    {
+      "name": "byte-identical reproduced scientific payload SIMULATION_VALIDATION.json",
+      "passed": true
+    },
+    {
+      "name": "immutable original saved payload READINESS_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "byte-identical reproduced scientific payload READINESS_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "immutable original saved payload SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "byte-identical reproduced scientific payload SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "new summary permits ONLY scientific code hashes and versions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "all107 actual historical/current code hashes in publication summary",
+      "passed": true
+    },
+    {
+      "name": "original summary retains immutable103historical plus4original hashes",
+      "passed": true
+    },
+    {
+      "name": "versions metadata has only explicit dependency version strings",
+      "passed": true
+    },
+    {
+      "name": "reviewed local source pin CANDIDATES.json",
+      "passed": true
+    },
+    {
+      "name": "reviewed local source pin SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "actual local/historical source-review bytes ../freeze30/QUALIFICATION_COHORTS_RU.md",
+      "passed": true
+    },
+    {
+      "name": "actual local/historical source-review bytes ../freeze30/QUALIFICATION_PUBLIC_RU.md",
+      "passed": true
+    },
+    {
+      "name": "actual local/historical source-review bytes ACCESS_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "actual local/historical source-review bytes ASSAY_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "actual local/historical source-review bytes METHOD_DESIGN.md",
+      "passed": true
+    },
+    {
+      "name": "actual local/historical source-review bytes STUDY_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "actual local/historical source-review bytes PRE_RESULT_SOURCE_ADDENDUM.md",
+      "passed": true
+    },
+    {
+      "name": "actual pinned prior catalog bytes",
+      "passed": true
+    },
+    {
+      "name": "old33B neutral result actual byte hash, no copied model publication",
+      "passed": true
+    },
+    {
+      "name": "new summary output checksum PRECISION_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "new summary output checksum SIMULATION_VALIDATION.json",
+      "passed": true
+    },
+    {
+      "name": "new summary output checksum READINESS_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "new summary output checksum SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "exact single complete stdout block RESULTS_SUMMARY.json",
+      "passed": true
+    },
+    {
+      "name": "exact single complete stdout block PRECISION_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "exact single complete stdout block SIMULATION_VALIDATION.json",
+      "passed": true
+    },
+    {
+      "name": "exact single complete stdout block READINESS_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "exact single complete stdout block SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "12 immutable stipulated scenarios, never empirical effect defaults",
+      "passed": true
+    },
+    {
+      "name": "CENTRAL_TECHNICAL_NULL exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "CENTRAL_TECHNICAL_NULL independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "CENTRAL_TECHNICAL_NULL raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "CENTRAL_TECHNICAL_NULL exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "CENTRAL_TECHNICAL_NULL no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "LOW_RAW_EVENT_PROBABILITY exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "LOW_RAW_EVENT_PROBABILITY independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "LOW_RAW_EVENT_PROBABILITY raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "LOW_RAW_EVENT_PROBABILITY exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "LOW_RAW_EVENT_PROBABILITY no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "HIGH_RAW_EVENT_PROBABILITY exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "HIGH_RAW_EVENT_PROBABILITY independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "HIGH_RAW_EVENT_PROBABILITY raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "HIGH_RAW_EVENT_PROBABILITY exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "HIGH_RAW_EVENT_PROBABILITY no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_BENEFIT exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_BENEFIT independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_BENEFIT raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_BENEFIT exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_BENEFIT no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_HARM exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_HARM independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_HARM raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_HARM exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "HYPOTHETICAL_HARM no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "LOW_LOSS_SD_DESIGN exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "LOW_LOSS_SD_DESIGN independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "LOW_LOSS_SD_DESIGN raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "LOW_LOSS_SD_DESIGN exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "LOW_LOSS_SD_DESIGN no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "HIGH_LOSS_SD_DESIGN exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "HIGH_LOSS_SD_DESIGN independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "HIGH_LOSS_SD_DESIGN raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "HIGH_LOSS_SD_DESIGN exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "HIGH_LOSS_SD_DESIGN no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "LOW_JOINT_ASSAY_CORE_YIELD exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "LOW_JOINT_ASSAY_CORE_YIELD independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "LOW_JOINT_ASSAY_CORE_YIELD raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "LOW_JOINT_ASSAY_CORE_YIELD exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "LOW_JOINT_ASSAY_CORE_YIELD no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "LARGER_EVALUABLE_DOMAIN exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "LARGER_EVALUABLE_DOMAIN independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "LARGER_EVALUABLE_DOMAIN raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "LARGER_EVALUABLE_DOMAIN exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "LARGER_EVALUABLE_DOMAIN no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "WIDER_ILLUSTRATIVE_HALFWIDTH exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "WIDER_ILLUSTRATIVE_HALFWIDTH independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "WIDER_ILLUSTRATIVE_HALFWIDTH raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "WIDER_ILLUSTRATIVE_HALFWIDTH exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "WIDER_ILLUSTRATIVE_HALFWIDTH no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "EARLY_CENSORING_METHOD_BLOCK exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "EARLY_CENSORING_METHOD_BLOCK independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "EARLY_CENSORING_METHOD_BLOCK raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "EARLY_CENSORING_METHOD_BLOCK exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "EARLY_CENSORING_METHOD_BLOCK no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "ANCHORED_SE_CONDITIONAL_FIXED_RULE exact frozen input",
+      "passed": true
+    },
+    {
+      "name": "ANCHORED_SE_CONDITIONAL_FIXED_RULE independent variance, normal SE, ceiling and joint yield",
+      "passed": true
+    },
+    {
+      "name": "ANCHORED_SE_CONDITIONAL_FIXED_RULE raw-n binomial recurrence and event variance",
+      "passed": true
+    },
+    {
+      "name": "ANCHORED_SE_CONDITIONAL_FIXED_RULE exact-binomial technical-floor probability",
+      "passed": true
+    },
+    {
+      "name": "ANCHORED_SE_CONDITIONAL_FIXED_RULE no power, fitted-algorithm, censoring or recruitment overclaim",
+      "passed": true
+    },
+    {
+      "name": "benefit/null/harm never select precision N",
+      "passed": true
+    },
+    {
+      "name": "fourfold evaluable n halves conditional SE",
+      "passed": true
+    },
+    {
+      "name": "four immutable toy laws, no production Monte Carlo rerun",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS exact atoms, clusters, fixed seed and 20k budget",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS exact rational atom moments and total variance identity",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS independent cluster mixture ICC, DEFF and event moments",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS reported fourth-moment variance MCSE",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS known_toy_variance_normal_CI_coverage Wilson and binomial MCSE",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS estimated_cluster_mean_SE_normal_CI_coverage Wilson and binomial MCSE",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS mean_D predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS variance_Dbar predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS mean_event_count predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "IID_VALID_PREDICTION_PAIRS coverage reported, never forced to 95 percent",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE exact atoms, clusters, fixed seed and 20k budget",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE exact rational atom moments and total variance identity",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE independent cluster mixture ICC, DEFF and event moments",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE reported fourth-moment variance MCSE",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE known_toy_variance_normal_CI_coverage Wilson and binomial MCSE",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE estimated_cluster_mean_SE_normal_CI_coverage Wilson and binomial MCSE",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE mean_D predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE variance_Dbar predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE mean_event_count predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_POSITIVE_CLUSTER_MIXTURE coverage reported, never forced to 95 percent",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC exact atoms, clusters, fixed seed and 20k budget",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC exact rational atom moments and total variance identity",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC independent cluster mixture ICC, DEFF and event moments",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC reported fourth-moment variance MCSE",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC known_toy_variance_normal_CI_coverage Wilson and binomial MCSE",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC estimated_cluster_mean_SE_normal_CI_coverage Wilson and binomial MCSE",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC mean_D predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC variance_Dbar predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC mean_event_count predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "RARE_EVENT_SKEW_DIAGNOSTIC coverage reported, never forced to 95 percent",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE exact atoms, clusters, fixed seed and 20k budget",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE exact rational atom moments and total variance identity",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE independent cluster mixture ICC, DEFF and event moments",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE reported fourth-moment variance MCSE",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE known_toy_variance_normal_CI_coverage Wilson and binomial MCSE",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE estimated_cluster_mean_SE_normal_CI_coverage Wilson and binomial MCSE",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE mean_D predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE variance_Dbar predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE mean_event_count predeclared six-MCSE arithmetic",
+      "passed": true
+    },
+    {
+      "name": "IDENTICAL_RULE_DEGENERATE coverage reported, never forced to 95 percent",
+      "passed": true
+    },
+    {
+      "name": "all 12 moment diagnostics match unchanged summary",
+      "passed": true
+    },
+    {
+      "name": "18 candidates and 32 unique source references",
+      "passed": true
+    },
+    {
+      "name": "306 tri-state source cells cited, no numeric laboratory/data availability inference",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication complete ordered route inventory",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANESIII_FIRST independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANESIII_REPEAT independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANES_SSCARD1999_2004 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANES2005_2014 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication NHANES2015_2018 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V2 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V4 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V5 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V6 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication ARIC_V7 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication CHS1992_1993 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication MESA_KIDNEY2012_2014 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication FHS_EXAM7 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication UKB2006_2010 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication HRS2016_VBS independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication AGES_KIDNEY2010 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication CRIC_BASELINE independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication UCI_CKD independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "algorithm_replication zero qualified routes and no activation from metadata",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport complete ordered route inventory",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANESIII_FIRST independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANESIII_REPEAT independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANES_SSCARD1999_2004 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANES2005_2014 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport NHANES2015_2018 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V2 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V4 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V5 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V6 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport ARIC_V7 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport CHS1992_1993 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport MESA_KIDNEY2012_2014 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport FHS_EXAM7 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport UKB2006_2010 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport HRS2016_VBS independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport AGES_KIDNEY2010 independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport CRIC_BASELINE independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport UCI_CKD independent fail-closed blockers",
+      "passed": true
+    },
+    {
+      "name": "locked_source_transport zero qualified routes and no activation from metadata",
+      "passed": true
+    }
+  ],
+  "failed": [],
+  "limits": [
+    "Only the four immutable scientific payloads are required byte-identical; the new summary may change only current code hashes and dependency versions.",
+    "All103 historical scientific files and12 historical metadata files are read and hashed from a separate actual checkout at27ea. They are not included in or imported by the standalone iteration34 runtime.",
+    "Mathematical functions are imported only from the unchanged original independent auditor, never producer code. Scenarios, rational prediction atoms, cluster DEFF, Wilson intervals and MCSE identities are recomputed; Monte Carlo simulation is not rerun by this auditor.",
+    "No participant files, outcome models, external source downloads, network calls, CI API access or new cohort validation are performed. Source metadata qualification remains separate from statistical adequacy.",
+    "An optional caller-supplied completed plaintext log verifies all five exported blocks; file verification alone does not claim a CI status or runtime checkout."
+  ]
+}

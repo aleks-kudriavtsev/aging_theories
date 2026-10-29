@@ -1,0 +1,72 @@
+name: Replication34 readiness and conditional precision checks
+on:
+  push:
+    branches: [research/replication34-main, main]
+    paths: ['research/mortality/replication34/**', 'tests/test_replication34*.py', 'tools/verify_replication34*.py', '.github/workflows/replication34-checks.yml']
+  pull_request:
+    paths: ['research/mortality/replication34/**', 'tests/test_replication34*.py', 'tools/verify_replication34*.py', '.github/workflows/replication34-checks.yml']
+permissions:
+  contents: read
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Read pinned historical source for hash verification only
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 27ea33fc6cfd594c309b63ae59e695129511a9c8
+          path: .replication34-history
+          persist-credentials: false
+      - run: python -m pip install numpy==2.3.5 scipy==1.17.0
+      - env:
+          OPENBLAS_NUM_THREADS: '1'
+          REP34_HISTORY_ROOT: ${{ github.workspace }}/.replication34-history
+        run: python -m unittest discover -s tests -p 'test_replication34*.py' -v
+  scenarios:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Read pinned historical source for hash verification only
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 27ea33fc6cfd594c309b63ae59e695129511a9c8
+          path: .replication34-history
+          persist-credentials: false
+      - run: python -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Frozen metadata qualification and stipulated precision simulation only
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: >-
+          python -m research.mortality.replication34.analyze
+          --history-root "$GITHUB_WORKSPACE/.replication34-history"
+          --out "$RUNNER_TEMP/replication34_results"
+      - name: Independently verify unchanged scientific payloads and historical locks
+        run: >-
+          python tools/verify_replication34_publication.py
+          --history-root "$GITHUB_WORKSPACE/.replication34-history"
+          --results-dir "$RUNNER_TEMP/replication34_results"
+          --out "$RUNNER_TEMP/replication34_publication_audit.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: replication34-aggregate-planning
+          path: |
+            ${{ runner.temp }}/replication34_results/
+            ${{ runner.temp }}/replication34_publication_audit.json
+          retention-days: 14
+          if-no-files-found: error

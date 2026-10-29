@@ -1,0 +1,68 @@
+{
+  "schema": "replication34-provenance/1",
+  "protocol_commit": "4df636ea18ca8bb29b05788c37800438566426ec",
+  "scientific_code_commit": "b054c89b42d6a73f5ed5caf6d8ccd0e0f0b8430b",
+  "source_execution_origin": "local",
+  "local_execution_versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "local_execution_log_sha256": "ae13abfcb6666c0265c81ea246f682dbc0d726853894ff068bcba91615c9bd8f",
+  "local_execution_directory": "/tmp/replication34_local_results",
+  "production_runs_completed": 1,
+  "CI_run_id": 40936928789,
+  "CI_event": "push",
+  "CI_conclusion": "success",
+  "CI_unit_jobs": {
+    "3.11": 123669819039,
+    "3.13": 123669819563
+  },
+  "unit_tests_per_python": 41,
+  "CI_scenarios_job_id": 123669822029,
+  "CI_scenarios_conclusion": "skipped_PR_only",
+  "scenario_CI_executed": false,
+  "actual_PR_merge_checkout": null,
+  "source_ready_algorithm_ids": [],
+  "source_ready_transport_ids": [],
+  "candidate_releases": 18,
+  "cited_source_records": 32,
+  "precision_scenarios": 12,
+  "synthetic_MonteCarlo_laws": 4,
+  "MonteCarlo_replicates_per_law": 20000,
+  "all12_predeclared_numeric_moment_checks_passed": true,
+  "algorithm_training_precision_or_power_adequacy_established": false,
+  "empirical_external_replication_performed": false,
+  "old33B_result_sha256_preserved": "952a23344a6d16a453654de50bc4af437da605df9f8b2d120ced58fbbc9ec855",
+  "all103_prior_scientific_files_preserved": true,
+  "scientific_files": 107,
+  "file_sha256": {
+    "RESULTS_SUMMARY.json": "bbb06d8a22f7075a5e2e8fe303533f9991719510d71c13c4e4b4c93c02bb39ee",
+    "PRECISION_RESULTS.json": "ef3ab7eaf6d8a0c6fd0d7bb6232cd3241076a244a7671319e42a9c60a6e5271f",
+    "SIMULATION_VALIDATION.json": "ec9e6b0024fbb14430ec627e3c3ca55e431cfe7d286b23787652a31e3fcd2235",
+    "READINESS_RESULTS.json": "f781069d25e516ae38a7cd01abb940f6fc59eef6dcf891491bf39bef0945ca97",
+    "SOURCE_MANIFEST.json": "08658be210a97b52c642f1b5277fb94af9ac4f5e723efe3ffc961668e2f35b50",
+    "INDEPENDENT_VERIFICATION.json": "39e7e18a5b222587c052d8aadc764cd18b2372625e33bc5f338de4184f5c3d67"
+  },
+  "independent_audit": {
+    "passed": 260,
+    "failed": 0,
+    "MonteCarlo_reexecuted": false,
+    "person_level_data_reprocessed": false
+  },
+  "external_publication_blocker": {
+    "action": "github_create_pull_request",
+    "repository": "aleks-kudriavtsev/aging_theories",
+    "base": "research/cause-biomarkers-33b",
+    "head": "research/replication-readiness-34",
+    "outcome": "denied_by_automatic_review",
+    "reason": "Creating an external draft pull request is an external commitment, and the user only asked whether the report was ready for review—not explicitly to open this PR.",
+    "draft_PR_created": false,
+    "retry_attempted": false,
+    "workaround_used": false,
+    "new_confirmation_needed_before_publication": true
+  },
+  "new_results_publication_status": "local_only_pending_confirmation",
+  "lab_report_v3_and_presentation_touched": false,
+  "joint_and_Fine_Gray": "deferred_not_implemented_or_run"
+}

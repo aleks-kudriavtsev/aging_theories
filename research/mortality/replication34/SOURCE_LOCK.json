@@ -1,0 +1,9 @@
+{
+  "schema": "replication34-source-lock/1",
+  "files_sha256": {
+    "CANDIDATES.json": "c6996840da99902d851faca323d60d1ea2a18bdf11c01be1816ffff103090706",
+    "SOURCE_MANIFEST.json": "08658be210a97b52c642f1b5277fb94af9ac4f5e723efe3ffc961668e2f35b50"
+  },
+  "new_person_level_data_retrieved": false,
+  "new_outcomes_inspected": false
+}
