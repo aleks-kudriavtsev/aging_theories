@@ -70,10 +70,17 @@ def static_urls():
             urls[f'{yr}_{component}.htm'] = row['documentation_url']
         urls[f'{yr}_mortality.dat'] = cycle['mortality_url']
     urls.update({'1999_SSCARD_A.htm': spec['sscard']['metadata_url'],
-        'weighting.htm': spec['weighting_url'], 'variance.htm': spec['variance_url'],
-        'mortality_dictionary.pdf': spec['mortality_dictionary_url'],
-        'mortality_description.pdf': spec['mortality_description_url']})
+        'weighting.htm': spec['weighting_url'], 'variance.htm': spec['variance_url']})
     return urls
+
+
+def unavailable_documentation():
+    """Record two already-denied background-PDF requests; never retry them."""
+    return [dict(file=name,url=url,status='denied_not_retried',original_http_status=403,
+                 original_run_id=40907895237,original_job_id=123567576780)
+            for name,url in (
+                ('mortality_dictionary.pdf','https://www.cdc.gov/nchs/data/datalinkage/public-use-linked-mortality-files-data-dictionary.pdf'),
+                ('mortality_description.pdf','https://www.cdc.gov/nchs/data/datalinkage/public-use-linked-mortality-file-description.pdf'))]
 
 
 def get_one(out, name, url):
@@ -116,7 +123,8 @@ def retrieve(out):
     except Exception as error:
         rows.append(dict(file='source_resolution', status='failed', error=str(error)))
     doc = dict(schema='b2m31-retrieval/1', plan_commit=PLAN_COMMIT, lock_sha256=sha(ROOT/'LOCK.json'),
-               retrieved_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(), files=rows)
+               retrieved_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(), files=rows,
+               documentation_not_retrieved=unavailable_documentation())
     (out/'manifest.json').write_text(json.dumps(doc, indent=2, allow_nan=False)+'\n')
     print(json.dumps(dict(retrieved=sum(r['status']=='retrieved' for r in rows),
                          failures=[r for r in rows if r['status']!='retrieved'])))

@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 from ..xpt_checked import read_xpt_checked
 from ..validate_temporal08 import independent_mortality_reader, audit_mortality_reader
-from .retrieve import ROOT, PLAN_COMMIT, check_study, allowed_url, sha, static_urls, resolve_sscard
+from .retrieve import ROOT, PLAN_COMMIT, check_study, allowed_url, sha, static_urls, resolve_sscard, unavailable_documentation
 from .features import engineer, CORE
 
 PROTEINS = ('SSCYST', 'SSB2M')
@@ -18,7 +18,8 @@ def verify_sources(source):
     check_study(); source=Path(source)
     manifest=json.loads((source/'manifest.json').read_text())
     if (manifest.get('schema')!='b2m31-retrieval/1' or manifest.get('plan_commit')!=PLAN_COMMIT
-            or manifest.get('lock_sha256')!=sha(ROOT/'LOCK.json')):
+            or manifest.get('lock_sha256')!=sha(ROOT/'LOCK.json')
+            or manifest.get('documentation_not_retrieved',[])!=unavailable_documentation()):
         raise ValueError('Source intake not bound to fixed protocol')
     spec=json.loads((ROOT/'SOURCE_SPEC.json').read_text()); rows={}
     for row in manifest['files']:
@@ -40,6 +41,7 @@ def verify_sources(source):
     if any(name not in historical or rows[name]['sha256']!=historical[name] for name in data):
         raise ValueError('Historical public data release fingerprint changed')
     return manifest,dict(files_verified=len(rows),historical_data_hashes_verified=len(data),
+        documentation_not_retrieved=unavailable_documentation(),
         source_manifest_sha256=sha(source/'manifest.json'),
         source_fingerprints={name:row['sha256'] for name,row in rows.items()},
         source_content_sha256=hashlib.sha256(json.dumps({name:row['sha256'] for name,row in rows.items()},sort_keys=True,separators=(',',':')).encode()).hexdigest())
@@ -94,6 +96,13 @@ def domain_masks(d):
     return routine&proteins&quantified,routine&proteins&reported
 
 
+def checked_mortality_audit(path):
+    try:
+        return audit_mortality_reader(path)
+    except (AssertionError, ValueError, ArithmeticError):
+        raise ValueError('Independent mortality readers disagree; row diagnostics suppressed') from None
+
+
 def load(source):
     source=Path(source);manifest,audit=verify_sources(source);spec=json.loads((ROOT/'SOURCE_SPEC.json').read_text())
     zero_audits=[];reader_audits=[]
@@ -123,7 +132,7 @@ def load(source):
             d=d.merge(raw,on='SEQN',how='left',validate='1:1')
         mort=independent_mortality_reader(source/f'{yr}_mortality.dat')
         if set(mort.SEQN)!=ids:raise ValueError('Mortality/demographic key mismatch')
-        reader_audits.append(dict(cycle=yr,**audit_mortality_reader(source/f'{yr}_mortality.dat')))
+        reader_audits.append(dict(cycle=yr,**checked_mortality_audit(source/f'{yr}_mortality.dat')))
         d=d.merge(mort,on='SEQN',how='left',validate='1:1').merge(sscard,on='SEQN',how='left',validate='1:1')
         d['cycle']=yr;d['raw_creatinine']=d[c['creatinine_variable']];d['weight']=six_year_weights(d);d['weight6y']=d.weight
         age=d.RIDAGEYR.between(40,75);exam=age&d.RIDSTATR.eq(2)

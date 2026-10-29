@@ -59,6 +59,13 @@ class ReleaseLinkTests(unittest.TestCase):
                     out=Path(tmp)/'must_not_exist'
                     with self.assertRaisesRegex(ValueError,'locked metadata'):retrieve.retrieve(out)
                     self.assertFalse(out.exists())
+    def test_only_two_identified_denied_pdfs_are_excluded_from_requests(self):
+        rows=retrieve.unavailable_documentation()
+        self.assertEqual(len(rows),2)
+        self.assertTrue(all(r['status']=='denied_not_retried' and r['original_http_status']==403 for r in rows))
+        self.assertFalse(set(r['url'] for r in rows)&set(retrieve.static_urls().values()))
+        self.assertIn('1999_LAB18.xpt',retrieve.static_urls())
+        self.assertIn('2003_mortality.dat',retrieve.static_urls())
 
 
 class HistoricalPinTests(unittest.TestCase):
@@ -77,7 +84,8 @@ class HistoricalPinTests(unittest.TestCase):
             rows.append(dict(file=name,url=urls[name],resolved_url=urls[name],status='retrieved',
                              bytes=len(value),sha256=hashlib.sha256(value).hexdigest()))
         doc=dict(schema='b2m31-retrieval/1',plan_commit=cohort.PLAN_COMMIT,
-                 lock_sha256=retrieve.sha(study/'LOCK.json'),files=rows)
+                 lock_sha256=retrieve.sha(study/'LOCK.json'),files=rows,
+                 documentation_not_retrieved=cohort.unavailable_documentation())
         (source/'manifest.json').write_text(json.dumps(doc))
         (history/'SOURCE_DATA_SHA256.txt').write_text('\n'.join(f'{r["sha256"]} {r["file"]}' for r in rows if r['file'].endswith('.xpt'))+'\n')
         return study,source,doc,history
@@ -122,6 +130,18 @@ class HistoricalPinTests(unittest.TestCase):
                 a,b,c=self.mocked(study)
                 with a,b,c,patch.object(cohort,'read_xpt_checked',side_effect=AssertionError('table parsed')):
                     with self.assertRaises(ValueError):cohort.load(source)
+    def test_arbitrary_missing_source_cannot_be_excused_as_known_documentation_denial(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            study,source,doc,_=self.fixture(Path(tmp))
+            doc['documentation_not_retrieved'].append(dict(file='2001_DEMO_B.xpt',status='denied_not_retried'))
+            (source/'manifest.json').write_text(json.dumps(doc));a,b,c=self.mocked(study)
+            with a,b,c:
+                with self.assertRaisesRegex(ValueError,'fixed protocol'):cohort.verify_sources(source)
+    def test_reader_disagreement_remains_blocking_without_row_value_diagnostics(self):
+        with patch.object(cohort,'audit_mortality_reader',side_effect=AssertionError('synthetic participant 12345 value')):
+            with self.assertRaisesRegex(ValueError,'row diagnostics suppressed') as error:
+                cohort.checked_mortality_audit('not_opened.dat')
+        self.assertNotIn('12345',str(error.exception))
 
 
 class SixYearWeightTests(unittest.TestCase):
