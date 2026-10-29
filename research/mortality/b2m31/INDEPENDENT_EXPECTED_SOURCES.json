@@ -1,0 +1,885 @@
+{
+  "schema": "independent_b2m31_expected_source_aggregate_ledger/1",
+  "prepared_utc": "2026-10-29T16:14:22.731137+00:00",
+  "scope": "read_only_fixed_code_and_metadata_only_no_raw_no_fits_no_live_job_logs",
+  "repository_head_when_prepared": "f27c7b47157db7fbaf31dc998bbb5c55c1c4f7e8",
+  "plan_commit": "6774fbe",
+  "source_intake_amendment_commit": "f27c7b47157db7fbaf31dc998bbb5c55c1c4f7e8",
+  "required_retrieved_file_count": 50,
+  "required_historical_data_file_count": 25,
+  "required_component_xpt_count": 21,
+  "required_shared_assay_xpt_count": 1,
+  "required_mortality_dat_count": 3,
+  "required_retrieved_html_count": 25,
+  "required_component_codebooks_count": 21,
+  "required_codebooks_including_sscard_count": 22,
+  "required_file_inventory": [
+    {
+      "file": "1999_DEMO.xpt",
+      "role": "historical_component_data",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.xpt",
+      "required_fields": [
+        "SEQN",
+        "SDDSRVYR",
+        "RIDSTATR",
+        "RIDAGEYR",
+        "RIAGENDR",
+        "SDMVSTRA",
+        "SDMVPSU"
+      ],
+      "required_historical_sha256": "a17bd1ebfd6007b8dc93f16259cb090678eb6c467a39363b7e932bba15febf89"
+    },
+    {
+      "file": "1999_DEMO.htm",
+      "role": "component_codebook",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.htm"
+    },
+    {
+      "file": "1999_BPX.xpt",
+      "role": "historical_component_data",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPX.xpt",
+      "required_fields": [
+        "SEQN",
+        "BPXSY1",
+        "BPXSY2",
+        "BPXSY3"
+      ],
+      "required_historical_sha256": "ab99dc870f4d5fbec80642ad4b72bde73cb50d0ae630f01c9e74de5a309759f4"
+    },
+    {
+      "file": "1999_BPX.htm",
+      "role": "component_codebook",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPX.htm"
+    },
+    {
+      "file": "1999_BMX.xpt",
+      "role": "historical_component_data",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BMX.xpt",
+      "required_fields": [
+        "SEQN",
+        "BMXBMI"
+      ],
+      "required_historical_sha256": "6b9bc4d998c0004fc42b213cc7f5bf347df937707f46d6d25fab926723a60500"
+    },
+    {
+      "file": "1999_BMX.htm",
+      "role": "component_codebook",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BMX.htm"
+    },
+    {
+      "file": "1999_SMQ.xpt",
+      "role": "historical_component_data",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SMQ.xpt",
+      "required_fields": [
+        "SEQN",
+        "SMQ020",
+        "SMQ040"
+      ],
+      "required_historical_sha256": "fb1505ea08e310a5cb703ccae0e220aede3da812674e9e53f832fe76e31c2ce3"
+    },
+    {
+      "file": "1999_SMQ.htm",
+      "role": "component_codebook",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SMQ.htm"
+    },
+    {
+      "file": "1999_LAB18.xpt",
+      "role": "historical_component_data",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB18.xpt",
+      "required_fields": [
+        "SEQN",
+        "LBXSCR"
+      ],
+      "required_historical_sha256": "36dc6f02045ceb61e146885bb04400fd580c9c35cc3bfc4269e314f0e06fe9c0"
+    },
+    {
+      "file": "1999_LAB18.htm",
+      "role": "component_codebook",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB18.htm"
+    },
+    {
+      "file": "1999_LAB10.xpt",
+      "role": "historical_component_data",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB10.xpt",
+      "required_fields": [
+        "SEQN",
+        "LBXGH"
+      ],
+      "required_historical_sha256": "af0f1ef9c342f085e9b699115f92745f70e9cee1a0142fbc968d806d7656a553"
+    },
+    {
+      "file": "1999_LAB10.htm",
+      "role": "component_codebook",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB10.htm"
+    },
+    {
+      "file": "1999_LAB16.xpt",
+      "role": "historical_component_data",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB16.xpt",
+      "required_fields": [
+        "SEQN",
+        "URXUMA",
+        "URXUCR"
+      ],
+      "required_historical_sha256": "93e47660c2c647d368549b1ff940eee4aa12015906395cfa432721fc4c00feea"
+    },
+    {
+      "file": "1999_LAB16.htm",
+      "role": "component_codebook",
+      "cycle": 1999,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB16.htm"
+    },
+    {
+      "file": "1999_mortality.dat",
+      "role": "historical_mortality_data",
+      "cycle": 1999,
+      "url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_1999_2000_MORT_2019_PUBLIC.dat",
+      "required_historical_sha256": "562bd367107add0b2b40fed36a062d8b194fca31e11aab897a0efad4bebc8b26"
+    },
+    {
+      "file": "2001_DEMO_B.xpt",
+      "role": "historical_component_data",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.xpt",
+      "required_fields": [
+        "SEQN",
+        "SDDSRVYR",
+        "RIDSTATR",
+        "RIDAGEYR",
+        "RIAGENDR",
+        "SDMVSTRA",
+        "SDMVPSU"
+      ],
+      "required_historical_sha256": "6458dc2307cee244ab6ba26f70ec78c7b842ffc68e668bc43f0ab6b9737937d9"
+    },
+    {
+      "file": "2001_DEMO_B.htm",
+      "role": "component_codebook",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.htm"
+    },
+    {
+      "file": "2001_BPX_B.xpt",
+      "role": "historical_component_data",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPX_B.xpt",
+      "required_fields": [
+        "SEQN",
+        "BPXSY1",
+        "BPXSY2",
+        "BPXSY3"
+      ],
+      "required_historical_sha256": "d4214e708ccd12816a00e681f310e1e0eca14ac933c3b1cab21b1e000b871ad8"
+    },
+    {
+      "file": "2001_BPX_B.htm",
+      "role": "component_codebook",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPX_B.htm"
+    },
+    {
+      "file": "2001_BMX_B.xpt",
+      "role": "historical_component_data",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BMX_B.xpt",
+      "required_fields": [
+        "SEQN",
+        "BMXBMI"
+      ],
+      "required_historical_sha256": "55715d4387960f88e48a2adf44da0b270a83290b1edf7c8e4ecc0eb2c29c59cf"
+    },
+    {
+      "file": "2001_BMX_B.htm",
+      "role": "component_codebook",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BMX_B.htm"
+    },
+    {
+      "file": "2001_SMQ_B.xpt",
+      "role": "historical_component_data",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/SMQ_B.xpt",
+      "required_fields": [
+        "SEQN",
+        "SMQ020",
+        "SMQ040"
+      ],
+      "required_historical_sha256": "179d7ad46de9478824d475de0e6425f474b34dd4798066a552acd31b89f07fde"
+    },
+    {
+      "file": "2001_SMQ_B.htm",
+      "role": "component_codebook",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/SMQ_B.htm"
+    },
+    {
+      "file": "2001_L40_B.xpt",
+      "role": "historical_component_data",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L40_B.xpt",
+      "required_fields": [
+        "SEQN",
+        "LBDSCR"
+      ],
+      "required_historical_sha256": "16f907f3a945cc24d053a9492a3f90edd3e0335f70ba047bbd9952ba6a00e182"
+    },
+    {
+      "file": "2001_L40_B.htm",
+      "role": "component_codebook",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L40_B.htm"
+    },
+    {
+      "file": "2001_L10_B.xpt",
+      "role": "historical_component_data",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L10_B.xpt",
+      "required_fields": [
+        "SEQN",
+        "LBXGH"
+      ],
+      "required_historical_sha256": "39ce5bbda8caed4246c89687b7e0f2853c8311274e301821593d631308108fd3"
+    },
+    {
+      "file": "2001_L10_B.htm",
+      "role": "component_codebook",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L10_B.htm"
+    },
+    {
+      "file": "2001_L16_B.xpt",
+      "role": "historical_component_data",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L16_B.xpt",
+      "required_fields": [
+        "SEQN",
+        "URXUMA",
+        "URXUCR"
+      ],
+      "required_historical_sha256": "730e2cf809f940ef7240187006bc11542996692305ce1ae27cc6471f1369167e"
+    },
+    {
+      "file": "2001_L16_B.htm",
+      "role": "component_codebook",
+      "cycle": 2001,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L16_B.htm"
+    },
+    {
+      "file": "2001_mortality.dat",
+      "role": "historical_mortality_data",
+      "cycle": 2001,
+      "url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2001_2002_MORT_2019_PUBLIC.dat",
+      "required_historical_sha256": "2788c8c8a02995ea5686882b5fe65b4b9cd415016031525f8a3c1a3646c47f1b"
+    },
+    {
+      "file": "2003_DEMO_C.xpt",
+      "role": "historical_component_data",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.xpt",
+      "required_fields": [
+        "SEQN",
+        "SDDSRVYR",
+        "RIDSTATR",
+        "RIDAGEYR",
+        "RIAGENDR",
+        "SDMVSTRA",
+        "SDMVPSU"
+      ],
+      "required_historical_sha256": "2a2fdb88263337bfa06f0516bfb419631595f0a0ee88fb96069bed13d1857c6f"
+    },
+    {
+      "file": "2003_DEMO_C.htm",
+      "role": "component_codebook",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.htm"
+    },
+    {
+      "file": "2003_BPX_C.xpt",
+      "role": "historical_component_data",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPX_C.xpt",
+      "required_fields": [
+        "SEQN",
+        "BPXSY1",
+        "BPXSY2",
+        "BPXSY3"
+      ],
+      "required_historical_sha256": "4df5a7dbd9e3b882b34ad516e80d09abbd0688a46d011711e7f9cdecf53ece36"
+    },
+    {
+      "file": "2003_BPX_C.htm",
+      "role": "component_codebook",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPX_C.htm"
+    },
+    {
+      "file": "2003_BMX_C.xpt",
+      "role": "historical_component_data",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BMX_C.xpt",
+      "required_fields": [
+        "SEQN",
+        "BMXBMI"
+      ],
+      "required_historical_sha256": "b3d3e431b5964ea8b5807035044322fcf32f3878d814d4a844204e51c793f090"
+    },
+    {
+      "file": "2003_BMX_C.htm",
+      "role": "component_codebook",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BMX_C.htm"
+    },
+    {
+      "file": "2003_SMQ_C.xpt",
+      "role": "historical_component_data",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/SMQ_C.xpt",
+      "required_fields": [
+        "SEQN",
+        "SMQ020",
+        "SMQ040"
+      ],
+      "required_historical_sha256": "fbfe1e4b286ab43fdc3fd84c3830bb241b8b5ca84b3ab5902b8808e4136efc2c"
+    },
+    {
+      "file": "2003_SMQ_C.htm",
+      "role": "component_codebook",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/SMQ_C.htm"
+    },
+    {
+      "file": "2003_L40_C.xpt",
+      "role": "historical_component_data",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L40_C.xpt",
+      "required_fields": [
+        "SEQN",
+        "LBXSCR"
+      ],
+      "required_historical_sha256": "a5642b8aa6e90ee0961562572f7152d47df67a318dd41cb164e3a2fe4aaaae4d"
+    },
+    {
+      "file": "2003_L40_C.htm",
+      "role": "component_codebook",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L40_C.htm"
+    },
+    {
+      "file": "2003_L10_C.xpt",
+      "role": "historical_component_data",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L10_C.xpt",
+      "required_fields": [
+        "SEQN",
+        "LBXGH"
+      ],
+      "required_historical_sha256": "423d73cdd3d37e07b6bbd506bd3d2f39ce5700eebd495fc59e57337a07e122b3"
+    },
+    {
+      "file": "2003_L10_C.htm",
+      "role": "component_codebook",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L10_C.htm"
+    },
+    {
+      "file": "2003_L16_C.xpt",
+      "role": "historical_component_data",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L16_C.xpt",
+      "required_fields": [
+        "SEQN",
+        "URXUMA",
+        "URXUCR"
+      ],
+      "required_historical_sha256": "577f7ca1af1b146c9eba640b8a5a2b33de731d97cb40de91d07b49df9b1545b4"
+    },
+    {
+      "file": "2003_L16_C.htm",
+      "role": "component_codebook",
+      "cycle": 2003,
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L16_C.htm"
+    },
+    {
+      "file": "2003_mortality.dat",
+      "role": "historical_mortality_data",
+      "cycle": 2003,
+      "url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2003_2004_MORT_2019_PUBLIC.dat",
+      "required_historical_sha256": "639f6b3292a55b112fbfc842954af3d8d32bcce287cd8ae49319e5aca1c033c0"
+    },
+    {
+      "file": "1999_SSCARD_A.htm",
+      "role": "corrected_shared_assay_codebook",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SSCARD_A.htm"
+    },
+    {
+      "file": "weighting.htm",
+      "role": "survey_weighting_metadata",
+      "url": "https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx"
+    },
+    {
+      "file": "variance.htm",
+      "role": "survey_variance_metadata",
+      "url": "https://wwwn.cdc.gov/nchs/nhanes/tutorials/varianceestimation.aspx"
+    },
+    {
+      "file": "index.htm",
+      "role": "official_sscard_href_resolution",
+      "url": "https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Laboratory"
+    },
+    {
+      "file": "1999_SSCARD_A.xpt",
+      "role": "historical_corrected_shared_assay_data",
+      "url": null,
+      "url_policy": "extract unique official .xpt href named SSCARD_A.xpt from retrieved catalogue HTML; no extension-guess fallback",
+      "required_fields": [
+        "SEQN",
+        "WTSSCB2Y",
+        "WTSSCB4Y",
+        "SSB2M",
+        "SSB2ML",
+        "SSCYST",
+        "SSCYSTL",
+        "SSPRIS"
+      ],
+      "required_historical_sha256": "63c8342280dee3bd67c1322141ef42bc6a350e479cbaeb69fc4474a67b14796d"
+    }
+  ],
+  "required_historical_data_sha256": {
+    "1999_DEMO.xpt": "a17bd1ebfd6007b8dc93f16259cb090678eb6c467a39363b7e932bba15febf89",
+    "1999_BPX.xpt": "ab99dc870f4d5fbec80642ad4b72bde73cb50d0ae630f01c9e74de5a309759f4",
+    "1999_BMX.xpt": "6b9bc4d998c0004fc42b213cc7f5bf347df937707f46d6d25fab926723a60500",
+    "1999_SMQ.xpt": "fb1505ea08e310a5cb703ccae0e220aede3da812674e9e53f832fe76e31c2ce3",
+    "1999_LAB18.xpt": "36dc6f02045ceb61e146885bb04400fd580c9c35cc3bfc4269e314f0e06fe9c0",
+    "1999_LAB10.xpt": "af0f1ef9c342f085e9b699115f92745f70e9cee1a0142fbc968d806d7656a553",
+    "1999_LAB16.xpt": "93e47660c2c647d368549b1ff940eee4aa12015906395cfa432721fc4c00feea",
+    "1999_mortality.dat": "562bd367107add0b2b40fed36a062d8b194fca31e11aab897a0efad4bebc8b26",
+    "2001_DEMO_B.xpt": "6458dc2307cee244ab6ba26f70ec78c7b842ffc68e668bc43f0ab6b9737937d9",
+    "2001_BPX_B.xpt": "d4214e708ccd12816a00e681f310e1e0eca14ac933c3b1cab21b1e000b871ad8",
+    "2001_BMX_B.xpt": "55715d4387960f88e48a2adf44da0b270a83290b1edf7c8e4ecc0eb2c29c59cf",
+    "2001_SMQ_B.xpt": "179d7ad46de9478824d475de0e6425f474b34dd4798066a552acd31b89f07fde",
+    "2001_L40_B.xpt": "16f907f3a945cc24d053a9492a3f90edd3e0335f70ba047bbd9952ba6a00e182",
+    "2001_L10_B.xpt": "39ce5bbda8caed4246c89687b7e0f2853c8311274e301821593d631308108fd3",
+    "2001_L16_B.xpt": "730e2cf809f940ef7240187006bc11542996692305ce1ae27cc6471f1369167e",
+    "2001_mortality.dat": "2788c8c8a02995ea5686882b5fe65b4b9cd415016031525f8a3c1a3646c47f1b",
+    "2003_DEMO_C.xpt": "2a2fdb88263337bfa06f0516bfb419631595f0a0ee88fb96069bed13d1857c6f",
+    "2003_BPX_C.xpt": "4df5a7dbd9e3b882b34ad516e80d09abbd0688a46d011711e7f9cdecf53ece36",
+    "2003_BMX_C.xpt": "b3d3e431b5964ea8b5807035044322fcf32f3878d814d4a844204e51c793f090",
+    "2003_SMQ_C.xpt": "fbfe1e4b286ab43fdc3fd84c3830bb241b8b5ca84b3ab5902b8808e4136efc2c",
+    "2003_L40_C.xpt": "a5642b8aa6e90ee0961562572f7152d47df67a318dd41cb164e3a2fe4aaaae4d",
+    "2003_L10_C.xpt": "423d73cdd3d37e07b6bbd506bd3d2f39ce5700eebd495fc59e57337a07e122b3",
+    "2003_L16_C.xpt": "577f7ca1af1b146c9eba640b8a5a2b33de731d97cb40de91d07b49df9b1545b4",
+    "2003_mortality.dat": "639f6b3292a55b112fbfc842954af3d8d32bcce287cd8ae49319e5aca1c033c0",
+    "1999_SSCARD_A.xpt": "63c8342280dee3bd67c1322141ef42bc6a350e479cbaeb69fc4474a67b14796d"
+  },
+  "manifest_contract": {
+    "schema": "b2m31-retrieval/1",
+    "plan_commit": "6774fbe",
+    "lock_sha256": "76c962bc93b67d81381295bb2314df60fe54deda190cb90a6187692e19672e4b",
+    "required_top_fields": [
+      "schema",
+      "plan_commit",
+      "lock_sha256",
+      "retrieved_utc",
+      "files",
+      "documentation_not_retrieved"
+    ],
+    "required_file_row_fields": [
+      "file",
+      "url",
+      "resolved_url",
+      "status",
+      "bytes",
+      "sha256"
+    ],
+    "all_50_status": "retrieved",
+    "all_50_have_positive_bytes_and_sha256": true,
+    "files_unique_exact_name_and_URL_set": true,
+    "allowed_hosts": [
+      "wwwn.cdc.gov",
+      "www.cdc.gov",
+      "ftp.cdc.gov"
+    ],
+    "allowed_protocol": "https",
+    "denied_documentation_outside_files": [
+      {
+        "file": "mortality_dictionary.pdf",
+        "url": "https://www.cdc.gov/nchs/data/datalinkage/public-use-linked-mortality-files-data-dictionary.pdf",
+        "status": "denied_not_retried",
+        "original_http_status": 403,
+        "original_run_id": 40907895237,
+        "original_job_id": 123567576780
+      },
+      {
+        "file": "mortality_description.pdf",
+        "url": "https://www.cdc.gov/nchs/data/datalinkage/public-use-linked-mortality-file-description.pdf",
+        "status": "denied_not_retried",
+        "original_http_status": 403,
+        "original_run_id": 40907895237,
+        "original_job_id": 123567576780
+      }
+    ],
+    "forbidden_for_denied_documentation": [
+      "status=retrieved",
+      "synthetic_hash",
+      "error_page_content_hash",
+      "zero_byte_placeholder",
+      "alternate_url_retry"
+    ],
+    "stable_source_digest": "sha256(json.dumps({file:sha256},sort_keys=True,separators=(comma,colon)).encode())"
+  },
+  "full_SSCARD_release_checks": {
+    "expected_rows_full_release": 21890,
+    "required_fields": [
+      "SEQN",
+      "WTSSCB2Y",
+      "WTSSCB4Y",
+      "SSB2M",
+      "SSB2ML",
+      "SSCYST",
+      "SSCYSTL",
+      "SSPRIS"
+    ],
+    "primary_key": [
+      "SEQN"
+    ],
+    "unit": {
+      "SSB2M": "mg/L",
+      "SSCYST": "mg/L"
+    },
+    "matrix": "serum",
+    "platform": "Siemens Dimension Vista 1500",
+    "metadata_marginal_flag_counts": {
+      "SSB2ML": {
+        "0": 21824,
+        "1": 15,
+        "2": 24,
+        "missing": 27
+      },
+      "SSCYSTL": {
+        "0": 21824,
+        "1": 22,
+        "2": 2,
+        "missing": 42
+      }
+    },
+    "metadata_marginal_pristine_counts": {
+      "SSPRIS": {
+        "0": 1674,
+        "1": 20216,
+        "missing": 0
+      }
+    },
+    "metadata_weight_counts": {
+      "WTSSCB2Y": {
+        "positive": 21890,
+        "zero": 0,
+        "missing": 0
+      },
+      "WTSSCB4Y": {
+        "positive": 14656,
+        "zero": 0,
+        "missing": 7234
+      }
+    },
+    "detection_limits_mg_l": {
+      "SSB2M": [
+        0.72,
+        23.0
+      ],
+      "SSCYST": [
+        0.23,
+        8.0
+      ]
+    },
+    "limit_type_in_source": "LOD; do not relabel LOQ",
+    "flag_codes": {
+      "0": "within detection limits",
+      "1": "below LLOD; released LLOD/sqrt(2)",
+      "2": "above ULOD; exact fill rule not separately described"
+    },
+    "last_revised": "2022-07"
+  },
+  "SSCARD_aggregate_interpretation": {
+    "marginals_apply_to": "entire_corrected_21890_source_release_not_age_restricted_or_complete_domain",
+    "joint_Cys_B2M_n": "unknown_before_current_data_checks_do_not_infer_from_equal_marginal_flag0_counts",
+    "result_flag_missingness_must_match_per_protein": true,
+    "all_nonmissing_protein_values_positive_finite": true,
+    "SSCARD_keys_subset_of_union_full_DEMO_keys": true,
+    "SSPRIS_1_meaning": "pristine",
+    "SSPRIS_0_meaning": "non_pristine",
+    "pristine_status_not_primary_exclusion": true,
+    "BTP_present": false,
+    "primary_flags_both": [
+      0
+    ],
+    "sensitivity_flags_both": [
+      0,
+      1
+    ],
+    "above_ULOD_or_missing_unknown_flags_excluded_in_both_domains": true
+  },
+  "cycles": [
+    {
+      "year": 1999,
+      "SDDSRVYR": 1,
+      "full_DEMO_rows": 9965,
+      "SDMVSTRA_inclusive_range": [
+        1,
+        13
+      ],
+      "allowed_SDMVPSU": [
+        1,
+        2,
+        3
+      ],
+      "stratum_integer_required": true,
+      "SEQN_disjoint_between_cycles": true,
+      "mortality_SEQN_set_must_equal_full_DEMO": true,
+      "covariate_SEQN_subset_of_same_DEMO": true,
+      "serum_creatinine_field": "LBXSCR",
+      "serum_creatinine_mg_dl_calibration": "1.013*raw+0.147"
+    },
+    {
+      "year": 2001,
+      "SDDSRVYR": 2,
+      "full_DEMO_rows": 11039,
+      "SDMVSTRA_inclusive_range": [
+        14,
+        28
+      ],
+      "allowed_SDMVPSU": [
+        1,
+        2
+      ],
+      "stratum_integer_required": true,
+      "SEQN_disjoint_between_cycles": true,
+      "mortality_SEQN_set_must_equal_full_DEMO": true,
+      "covariate_SEQN_subset_of_same_DEMO": true,
+      "serum_creatinine_field": "LBDSCR",
+      "serum_creatinine_mg_dl_calibration": "identity_no_additional_adjustment"
+    },
+    {
+      "year": 2003,
+      "SDDSRVYR": 3,
+      "full_DEMO_rows": 10122,
+      "SDMVSTRA_inclusive_range": [
+        29,
+        43
+      ],
+      "allowed_SDMVPSU": [
+        1,
+        2
+      ],
+      "stratum_integer_required": true,
+      "SEQN_disjoint_between_cycles": true,
+      "mortality_SEQN_set_must_equal_full_DEMO": true,
+      "covariate_SEQN_subset_of_same_DEMO": true,
+      "serum_creatinine_field": "LBXSCR",
+      "serum_creatinine_mg_dl_calibration": "identity_no_additional_adjustment"
+    }
+  ],
+  "full_DEMO_total_rows": 31126,
+  "masked_design_contract": {
+    "full_inventory_source": "all_three_pinned_full_DEMO_tables_before_age_MEC_linkage_weight_filtering",
+    "eligible_inventory_must_equal_full_DEMO_inventory": true,
+    "pair_identity": [
+      "SDMVSTRA",
+      "SDMVPSU"
+    ],
+    "full_DEMO_masked_design_must_equal_eligible_masked_design": true,
+    "minimum_distinct_PSU_per_eligible_stratum": 2,
+    "do_not_assume_exactly_two_PSU_per_stratum": true,
+    "actual_full_masked_PSU_count_not_predetermined_by_ranges": true,
+    "actual_pair_inventory_not_available_from_precomparison_metadata_only": true,
+    "actual_inventory_audit_rule": "derive dictionary of actual full-DEMO pairs at runtime; exact equality to eligible pairs and counts must hold; validate each pair against cycle range/allowed PSU; reconcile distribution and dictionary cardinality",
+    "maximum_allowed_cartesian_pair_count_not_actual_inventory": 99,
+    "common_profile_inventory_is_not_the_eligible_inventory_gate": true
+  },
+  "weight_rule": {
+    "cycles_1999_2001": "(2/3)*WTSSCB4Y",
+    "cycle_2003": "(1/3)*WTSSCB2Y",
+    "selected_weight_positive_finite_required": true,
+    "missing_WTSSCB4Y_in_2003_not_an_exclusion": true,
+    "no_ordinary_MEC_or_WTCYPEX6_substitution": true
+  },
+  "mortality_reader_contract": {
+    "retained_reference_script_sha256": "04c514fd6b798ceb7eeed1afea61f42c6cdd270734c1483e1803027ff9066ac3",
+    "retained_reference_url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/R_ReadInProgramAllSurveys.R",
+    "retained_reference_json_sha256": "d3ba484633bc423b4ec55f692db69abff6241713f3780ccedda982d58647fb66",
+    "eight_fields_exact": true,
+    "historical_3_cycle_rows": 31126,
+    "historical_3_cycle_cells": 249008,
+    "per_cycle_historical_reader_evidence": [
+      {
+        "file": "1999_mortality.dat",
+        "rows": 9965,
+        "fields": 8,
+        "cell_comparisons": 79720,
+        "exact_match": true,
+        "sha256": "562bd367107add0b2b40fed36a062d8b194fca31e11aab897a0efad4bebc8b26"
+      },
+      {
+        "file": "2001_mortality.dat",
+        "rows": 11039,
+        "fields": 8,
+        "cell_comparisons": 88312,
+        "exact_match": true,
+        "sha256": "2788c8c8a02995ea5686882b5fe65b4b9cd415016031525f8a3c1a3646c47f1b"
+      },
+      {
+        "file": "2003_mortality.dat",
+        "rows": 10122,
+        "fields": 8,
+        "cell_comparisons": 80976,
+        "exact_match": true,
+        "sha256": "639f6b3292a55b112fbfc842954af3d8d32bcce287cd8ae49319e5aca1c033c0"
+      }
+    ],
+    "runtime_reader_agreement_still_required": true,
+    "endpoint": "death_by_96_months_from_MEC_PERMTH_EXM",
+    "eligibility": "ELIGSTAT1_MORTSTAT0or1_finite_nonnegative_PERMTH_EXM",
+    "zero_month_deaths_retained": true,
+    "any_eligible_alive_followup_lt96": "stop_before_comparison"
+  },
+  "locked_metadata_local_check": {
+    "ANALYSIS_PLAN.md": {
+      "expected_sha256": "17f7415a8325047c5e6321d4761fe6331a5a3c362a61121a74404cd6111bf9b3",
+      "local_sha256": "17f7415a8325047c5e6321d4761fe6331a5a3c362a61121a74404cd6111bf9b3",
+      "matches": true
+    },
+    "SOURCE_SPEC.json": {
+      "expected_sha256": "7151bb7610f9fe077ba34cdd8339c46f4590e0c7de10867b94314568a88d1be4",
+      "local_sha256": "7151bb7610f9fe077ba34cdd8339c46f4590e0c7de10867b94314568a88d1be4",
+      "matches": true
+    },
+    "SOURCE_WEIGHTS_REVIEW.md": {
+      "expected_sha256": "e645e9a47ebc3cd08642fc627bf019f088d6deaccc42414582f283d5402c870d",
+      "local_sha256": "e645e9a47ebc3cd08642fc627bf019f088d6deaccc42414582f283d5402c870d",
+      "matches": true
+    },
+    "MEASUREMENT_REVIEW.md": {
+      "expected_sha256": "4ccb939bd9a5b4c2e91bfccc462cf65c737f3bd69e00759ab2a7ce270f65a874",
+      "local_sha256": "4ccb939bd9a5b4c2e91bfccc462cf65c737f3bd69e00759ab2a7ce270f65a874",
+      "matches": true
+    },
+    "CREATININE_REVIEW.md": {
+      "expected_sha256": "d4b94a22d144a423b1cd5a4056174d8e7792c47ca4150f2e93fc7a28551a6e1d",
+      "local_sha256": "d4b94a22d144a423b1cd5a4056174d8e7792c47ca4150f2e93fc7a28551a6e1d",
+      "matches": true
+    },
+    "nhanes04/SOURCE_DATA_SHA256.txt": {
+      "expected_sha256": "8a57892a1278c8ed1549d84122884f5bd47e42f32e1e3a41793fc21a7d6c5bac",
+      "local_sha256": "8a57892a1278c8ed1549d84122884f5bd47e42f32e1e3a41793fc21a7d6c5bac",
+      "matches": true
+    },
+    "freeze30/FROZEN_MODELS.json": {
+      "expected_sha256": "70d29bf6e60d0967a11534634ebd1769a8b513b97ecb1fe8c66c6a5392534d43",
+      "local_sha256": "70d29bf6e60d0967a11534634ebd1769a8b513b97ecb1fe8c66c6a5392534d43",
+      "matches": true
+    },
+    "freeze30/FREEZE_MANIFEST.json": {
+      "expected_sha256": "f33df537280ead416406139412c4155f05ba8215e37408873f8442df7c4ab488",
+      "local_sha256": "f33df537280ead416406139412c4155f05ba8215e37408873f8442df7c4ab488",
+      "matches": true
+    },
+    "freeze30/SSCARD_SOURCE_METADATA.json": {
+      "expected_sha256": "7349ed7a3d3fa42c1e381c4e829e93819d08a1bf0d7e369f8bf4c79f565b19d3",
+      "local_sha256": "7349ed7a3d3fa42c1e381c4e829e93819d08a1bf0d7e369f8bf4c79f565b19d3",
+      "matches": true
+    },
+    "SOURCE_INTAKE_AMENDMENT.md": {
+      "expected_sha256": "4cc41db251cd885ca28031975f11ba524b79aaa667c85aee7712681042bd3cad",
+      "local_sha256": "4cc41db251cd885ca28031975f11ba524b79aaa667c85aee7712681042bd3cad",
+      "matches": true
+    },
+    "validation08/reader_reference_audit.json": {
+      "expected_sha256": "d3ba484633bc423b4ec55f692db69abff6241713f3780ccedda982d58647fb66",
+      "local_sha256": "d3ba484633bc423b4ec55f692db69abff6241713f3780ccedda982d58647fb66",
+      "matches": true
+    },
+    "cohort27/INDEPENDENT_SOURCE_REVIEW.md": {
+      "expected_sha256": "001f4c796184d83a6d5114dd6934bb11ea5f6460173c05c19b3ac53b259311f5",
+      "local_sha256": "001f4c796184d83a6d5114dd6934bb11ea5f6460173c05c19b3ac53b259311f5",
+      "matches": true
+    }
+  },
+  "source_spec_sha256": "7151bb7610f9fe077ba34cdd8339c46f4590e0c7de10867b94314568a88d1be4",
+  "lock_sha256": "76c962bc93b67d81381295bb2314df60fe54deda190cb90a6187692e19672e4b",
+  "scientific_code": {
+    "historical_locked_python_count": 84,
+    "current_python_count": 90,
+    "new_b2m31_python_count": 6,
+    "new_python_sha256": {
+      "b2m31/analyze.py": "65d90ff37283b91c8c025db0de72f3b44c06a4e9c5627053483063ba6122b856",
+      "b2m31/__init__.py": "22108c6da2857fe5fa9c33f7485de71bf2ef15791a14065dd846355a9f30ded8",
+      "b2m31/features.py": "83b19ae8235f47caac39a0a5184647f12276b78f240b1774f0c6eb7206439eaa",
+      "b2m31/cohort.py": "af641d1cf97a23ae148be6453133d2506ed35222c1d88aee5b0354abf0d6c018",
+      "b2m31/model.py": "d416d0d004b2f7bd7278b0f8e6d704e02b28baa2a0fb752ecab3d96a7988d19e",
+      "b2m31/retrieve.py": "773ad07206a939f7a5291471bf9ca6d0e9cf12658098e702f943b2f32dede587"
+    },
+    "all_historical_hashes_preserved": true,
+    "historical_missing": [],
+    "test_file_count": 3,
+    "test_files": [
+      "tests/test_b2m31_features.py",
+      "tests/test_b2m31_model.py",
+      "tests/test_b2m31_sources.py"
+    ]
+  },
+  "original_intake_failure": {
+    "schema": "b2m31-intake-failure/1",
+    "commit": "db366080c1ad551f25bb8de4b0bbf699b2dca7e0",
+    "run_id": 40907895237,
+    "job_id": 123567576780,
+    "stage": "public_source_intake_before_participant_parsing",
+    "retrieved_files": 50,
+    "denied_documentation": [
+      {
+        "url": "https://www.cdc.gov/nchs/data/datalinkage/public-use-linked-mortality-files-data-dictionary.pdf",
+        "http_status": 403,
+        "outcome": "denied",
+        "retried": false
+      },
+      {
+        "url": "https://www.cdc.gov/nchs/data/datalinkage/public-use-linked-mortality-file-description.pdf",
+        "http_status": 403,
+        "outcome": "denied",
+        "retried": false
+      }
+    ],
+    "comparison_step": "skipped",
+    "model_fits_completed": 0,
+    "new_comparative_metrics": false,
+    "data_hashes_verified_by_stopped_analysis": false,
+    "retained_official_reader_reference_sha256": "04c514fd6b798ceb7eeed1afea61f42c6cdd270734c1483e1803027ff9066ac3",
+    "precomparison_amendment_commit": "f27c7b47157db7fbaf31dc998bbb5c55c1c4f7e8",
+    "failure_log_sha256": "d5129b586152a1a54a431fabf111a6e96962fd00092baa770c90807d51d7c742"
+  },
+  "not_verified_yet": [
+    "current_runtime_50_source_bytes_and_fingerprints",
+    "current_reader_equality",
+    "current_dynamic_SSCARD_XPT_href",
+    "runtime_full_DEMO_actual_pair_inventory",
+    "eligible_or_common_n_events_or_assay_joint_counts",
+    "model_results_or_CI"
+  ],
+  "limits": [
+    "Historical hash pins are expectations, not a claim that the current empirical run verified them.",
+    "Published SSCARD counts are whole-release marginals, not joint adult comparison n.",
+    "Documentation denial is carried-forward evidence from the original failed run; this ledger does not repeat any request or inspect any job logs.",
+    "No raw participant records or model fits were accessed by this preparation."
+  ]
+}

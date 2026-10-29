@@ -1,0 +1,29 @@
+{
+  "schema": "b2m31-intake-failure/1",
+  "commit": "db366080c1ad551f25bb8de4b0bbf699b2dca7e0",
+  "run_id": 40907895237,
+  "job_id": 123567576780,
+  "stage": "public_source_intake_before_participant_parsing",
+  "retrieved_files": 50,
+  "denied_documentation": [
+    {
+      "url": "https://www.cdc.gov/nchs/data/datalinkage/public-use-linked-mortality-files-data-dictionary.pdf",
+      "http_status": 403,
+      "outcome": "denied",
+      "retried": false
+    },
+    {
+      "url": "https://www.cdc.gov/nchs/data/datalinkage/public-use-linked-mortality-file-description.pdf",
+      "http_status": 403,
+      "outcome": "denied",
+      "retried": false
+    }
+  ],
+  "comparison_step": "skipped",
+  "model_fits_completed": 0,
+  "new_comparative_metrics": false,
+  "data_hashes_verified_by_stopped_analysis": false,
+  "retained_official_reader_reference_sha256": "04c514fd6b798ceb7eeed1afea61f42c6cdd270734c1483e1803027ff9066ac3",
+  "precomparison_amendment_commit": "f27c7b47157db7fbaf31dc998bbb5c55c1c4f7e8",
+  "failure_log_sha256": "d5129b586152a1a54a431fabf111a6e96962fd00092baa770c90807d51d7c742"
+}
