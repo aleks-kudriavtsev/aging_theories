@@ -57,8 +57,10 @@ class AdultParserTests(unittest.TestCase):
             self.read(adult_row(), sas_dictionary(SEQN='2-6'))
 
     def test_single_column_cannot_accept_a_wider_dictionary_span(self):
-        with self.assertRaisesRegex(ValueError, 'dictionary position'):
-            self.read(adult_row(), sas_dictionary(HSSEX='15-16'))
+        for span in ('15-16', '15 - 16'):
+            with self.subTest(span=span):
+                with self.assertRaisesRegex(ValueError, 'dictionary position'):
+                    self.read(adult_row(), sas_dictionary(HSSEX=span))
 
     def test_wrong_record_width_fails_before_interpretation(self):
         for row in (adult_row()[:-1], adult_row()+' '):

@@ -42,8 +42,9 @@ def preflight(source):
 def read_adult_checked(data_path,sas_path):
     sas=Path(sas_path).read_text(encoding='ascii')
     for name,(start,end) in FIELDS.items():
-        span=str(start)+(r'\s*-\s*'+str(end) if end!=start else '')
-        if not re.search(r'(?im)^\s*'+name+r'\s+'+span+r'(?:\s|$)',sas):raise ValueError('SAS dictionary position unresolved: '+name)
+        spans=re.findall(r'(?im)^[ \t]*'+name+r'[ \t]+(\d+)(?:[ \t]*-[ \t]*(\d+))?[ \t]*$',sas)
+        normalized=[(int(a),int(b or a)) for a,b in spans]
+        if normalized!=[(start,end)]:raise ValueError('SAS dictionary position unresolved: '+name)
     records=[]
     for line in Path(data_path).read_text(encoding='ascii').splitlines():
         if len(line)!=3346:raise ValueError('Unexpected adult record width')
