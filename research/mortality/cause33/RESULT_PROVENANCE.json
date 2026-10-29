@@ -1,0 +1,75 @@
+{
+  "schema": "cause33A-provenance/1",
+  "stage": "source_endpoint_burden_support_only_no_comparative_models",
+  "plan_commit": "82eacda12eced3c0105019fee09236b647821f45",
+  "scientific_code_commit": "4ff18aa4115fa0b0d93a0addf9f5c1e0c86a8a83",
+  "actual_PR_merge_checkout_sha": "53002102a1af5a5c23d7df127dd137dbb0f1856b",
+  "scientific_run_id": 40924184727,
+  "empirical_job_id": 123625177367,
+  "synthetic_jobs": {
+    "3.11": 123625177601,
+    "3.13": 123625176684
+  },
+  "tests_per_Python_version": 28,
+  "workbench_run_id": 40924184882,
+  "scientific_CI_conclusion": "success",
+  "historical_scientific_files_preserved": 95,
+  "scientific_python_files": 99,
+  "aggregate_transfer": "2 exact completed-job plaintext JSON blocks, matched independent retrieval; no ZIP",
+  "artifact": {
+    "id": 12918997894,
+    "bytes": 67517,
+    "api_zip_sha256": "de5e4c12bb8724b87c0647c6df009106fa9164b05b3b8436f5196618cea7fa70",
+    "expires": "2026-11-12T17:44:47Z",
+    "zip_downloaded": false
+  },
+  "file_sha256": {
+    "GATE_RESULTS.json": "13c8d9b42f510ffee6e7b04476e545b02f9496ec08f53b585263950badf180b5",
+    "SOURCE_MANIFEST.json": "a52c16a4bf7bf48b581301aa638b0978849d1122454b0ca2bff3fdbb1abf88e1",
+    "INDEPENDENT_VERIFICATION.json": "258bc9a00d1ff7419261f7072e3e3e050a1c446b9670525b30918e0b6ac2e0c1"
+  },
+  "independent_audit": {
+    "passed": 373,
+    "failed": 0,
+    "raw_records_reprocessed": false
+  },
+  "ranked_defined_codes": [
+    "002",
+    "001",
+    "003",
+    "004",
+    "005",
+    "007",
+    "008",
+    "009",
+    "006"
+  ],
+  "priority_top5": [
+    "002",
+    "001",
+    "003",
+    "004",
+    "005"
+  ],
+  "supported_priority_codes": [
+    "002",
+    "001"
+  ],
+  "unsupported_priority_codes": [
+    "003",
+    "004",
+    "005"
+  ],
+  "unsupported_status": "scientific_support_blocked_for_current_fixed_design_not_access_denial",
+  "joint_integration_and_Fine_Gray": "deferred_not_implemented_or_run",
+  "documentation_only_head_CI": "skip; scientific CI refers to4ff18aa and identical99code hashes",
+  "previous_result32_preserved": {
+    "source": "fe4d20672dc761c8a6533b3dcaf5a6a0340251d8",
+    "evidence": "1551893298feff1bd7ce41e97d06c1faf6af60a1",
+    "PRs": [
+      24,
+      125
+    ],
+    "evidence_checks": "browser-regressions and validate success"
+  }
+}

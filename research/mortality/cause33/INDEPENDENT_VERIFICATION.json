@@ -1,0 +1,1632 @@
+{
+  "schema": "independent-cause33A-aggregate-audit/1",
+  "passed": 373,
+  "total": 373,
+  "all_passed": true,
+  "summary": {
+    "science_commit": "4ff18aa4115fa0b0d93a0addf9f5c1e0c86a8a83",
+    "plan_commit": "82eacda12eced3c0105019fee09236b647821f45",
+    "run_id": 40924184727,
+    "job_id": 123625177367,
+    "actual_PR_merge_checkout": "53002102a1af5a5c23d7df127dd137dbb0f1856b",
+    "n": 6044,
+    "allcause_events8": 586,
+    "unknown_early": 0,
+    "ranked_codes": [
+      "002",
+      "001",
+      "003",
+      "004",
+      "005",
+      "007",
+      "008",
+      "009",
+      "006"
+    ],
+    "priority_top5": [
+      "002",
+      "001",
+      "003",
+      "004",
+      "005"
+    ],
+    "proceed_codes": [
+      "002",
+      "001"
+    ],
+    "causes": {
+      "001": {
+        "events8": 148,
+        "event_PSU_n": 67,
+        "weighted_events8": 1882199.214743333,
+        "weighted_incidence8": 0.01882175528435504,
+        "support_passed": true,
+        "failed_checks": 0
+      },
+      "002": {
+        "events8": 176,
+        "event_PSU_n": 75,
+        "weighted_events8": 2383527.1199493334,
+        "weighted_incidence8": 0.0238349712474126,
+        "support_passed": true,
+        "failed_checks": 0
+      },
+      "003": {
+        "events8": 33,
+        "event_PSU_n": 25,
+        "weighted_events8": 429776.74088566663,
+        "weighted_incidence8": 0.00429771332412375,
+        "support_passed": false,
+        "failed_checks": 2
+      },
+      "004": {
+        "events8": 25,
+        "event_PSU_n": 21,
+        "weighted_events8": 422773.708266,
+        "weighted_incidence8": 0.004227683879215234,
+        "support_passed": false,
+        "failed_checks": 7
+      },
+      "005": {
+        "events8": 25,
+        "event_PSU_n": 20,
+        "weighted_events8": 255918.780177,
+        "weighted_incidence8": 0.002559155595981373,
+        "support_passed": false,
+        "failed_checks": 7
+      },
+      "006": {
+        "events8": 4,
+        "event_PSU_n": 4,
+        "weighted_events8": 66604.68824333334,
+        "weighted_incidence8": 0.0006660385006470897,
+        "support_passed": false,
+        "failed_checks": 42
+      },
+      "007": {
+        "events8": 23,
+        "event_PSU_n": 19,
+        "weighted_events8": 203250.32574133333,
+        "weighted_incidence8": 0.0020324776796225015,
+        "support_passed": false,
+        "failed_checks": 9
+      },
+      "008": {
+        "events8": 13,
+        "event_PSU_n": 13,
+        "weighted_events8": 126712.78814899999,
+        "weighted_incidence8": 0.0012671119354727958,
+        "support_passed": false,
+        "failed_checks": 30
+      },
+      "009": {
+        "events8": 10,
+        "event_PSU_n": 8,
+        "weighted_events8": 100497.45151733332,
+        "weighted_incidence8": 0.0010049618681933854,
+        "support_passed": false,
+        "failed_checks": 33
+      },
+      "010": {
+        "events8": 129,
+        "event_PSU_n": 60,
+        "weighted_events8": 1578766.9361446665,
+        "weighted_incidence8": 0.015787470683435608,
+        "support_passed": true,
+        "failed_checks": 0
+      }
+    },
+    "files_sha256": {
+      "GATE_RESULTS.json": "13c8d9b42f510ffee6e7b04476e545b02f9496ec08f53b585263950badf180b5",
+      "SOURCE_MANIFEST.json": "a52c16a4bf7bf48b581301aa638b0978849d1122454b0ca2bff3fdbb1abf88e1"
+    },
+    "scientific_files": 99,
+    "historical_files": 95,
+    "source_files": 50,
+    "historical_data_files": 25,
+    "tests_per_python": 28,
+    "job_log_sha256": "d86d7ca83a025334c9bf2e415065f272ba9f1181b8add1abb631590a43b5647c"
+  },
+  "checks": [
+    {
+      "name": "GATE_RESULTS.json exact completed-job marked bytes",
+      "passed": true
+    },
+    {
+      "name": "SOURCE_MANIFEST.json exact completed-job marked bytes",
+      "passed": true
+    },
+    {
+      "name": "completed count-only gate marker",
+      "passed": true
+    },
+    {
+      "name": "protocol precedes final scientific commit",
+      "passed": true
+    },
+    {
+      "name": "qualified schema and plan-lock binding",
+      "passed": true
+    },
+    {
+      "name": "metadata pin CAUSE_DEFINITIONS.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin DESIGN_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin ENDPOINT_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin GATE_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin SUPPORT_RULES.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin endpoint_contract11.py",
+      "passed": true
+    },
+    {
+      "name": "metadata pin validation08/reader_reference_audit.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/ANALYSIS_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/SOURCE_SPEC.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/MEASUREMENT_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/CREATININE_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/SOURCE_WEIGHTS_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/SOURCE_INTAKE_AMENDMENT.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin nhanes04/SOURCE_DATA_SHA256.txt",
+      "passed": true
+    },
+    {
+      "name": "metadata pin freeze30/FROZEN_MODELS.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin forward32/RESULTS_SUMMARY.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin forward32/RESULT_PROVENANCE.json",
+      "passed": true
+    },
+    {
+      "name": "95 historical scientific files unchanged",
+      "passed": true
+    },
+    {
+      "name": "all current scientific hashes match gate runner",
+      "passed": true
+    },
+    {
+      "name": "four new modules exclusively cause33",
+      "passed": true
+    },
+    {
+      "name": "all exact precommitted support thresholds",
+      "passed": true
+    },
+    {
+      "name": "fixed underlying-cause definition and no coarsened cycles",
+      "passed": true
+    },
+    {
+      "name": "stageA does not fit or claim marker effects",
+      "passed": true
+    },
+    {
+      "name": "endpoint separates competing and unknown causes",
+      "passed": true
+    },
+    {
+      "name": "source wrapper binds exact base/protocol/lock",
+      "passed": true
+    },
+    {
+      "name": "all50 official input entries and fingerprints",
+      "passed": true
+    },
+    {
+      "name": "50 retrieved nonempty official sources",
+      "passed": true
+    },
+    {
+      "name": "25 old public data fingerprints preserved",
+      "passed": true
+    },
+    {
+      "name": "two priorPDF403 denials separate without retry or fictitious hashes",
+      "passed": true
+    },
+    {
+      "name": "retained endpoint contract/review honest source-byte status",
+      "passed": true
+    },
+    {
+      "name": "current mortality readers agree3cycles249008cells",
+      "passed": true
+    },
+    {
+      "name": "exact inherited pooled domain6044 and586events",
+      "passed": true
+    },
+    {
+      "name": "pooled sixyear weight convention not temporal32",
+      "passed": true
+    },
+    {
+      "name": "exact ten causes and separate unranked unknown",
+      "passed": true
+    },
+    {
+      "name": "common all-time death and source-cause accounting",
+      "passed": true
+    },
+    {
+      "name": "eligible all-time death and source-cause accounting",
+      "passed": true
+    },
+    {
+      "name": "exact three baseline cycles",
+      "passed": true
+    },
+    {
+      "name": "1999 common all-time death and source-cause accounting",
+      "passed": true
+    },
+    {
+      "name": "1999 eligible all-time death and source-cause accounting",
+      "passed": true
+    },
+    {
+      "name": "2001 common all-time death and source-cause accounting",
+      "passed": true
+    },
+    {
+      "name": "2001 eligible all-time death and source-cause accounting",
+      "passed": true
+    },
+    {
+      "name": "2003 common all-time death and source-cause accounting",
+      "passed": true
+    },
+    {
+      "name": "2003 eligible all-time death and source-cause accounting",
+      "passed": true
+    },
+    {
+      "name": "common percycle population sums",
+      "passed": true
+    },
+    {
+      "name": "eligible percycle population sums",
+      "passed": true
+    },
+    {
+      "name": "unknown overall event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "unknown overall event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "unknown overall survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "unknown overall event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "unknown early count equals common endpoint unknown",
+      "passed": true
+    },
+    {
+      "name": "unknown 1999 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "unknown 1999 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "unknown 1999 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "unknown 1999 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "unknown 2001 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "unknown 2001 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "unknown 2001 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "unknown 2001 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "unknown 2003 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "unknown 2003 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "unknown 2003 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "unknown 2003 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "001 exact id/ranking class",
+      "passed": true
+    },
+    {
+      "name": "001 overall event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "001 overall event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "001 overall survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "001 overall event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "001 1999 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "001 1999 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "001 1999 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "001 1999 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "001 2001 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "001 2001 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "001 2001 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "001 2001 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "001 2003 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "001 2003 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "001 2003 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "001 2003 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "0018year cause counts no greater than alltime causes",
+      "passed": true
+    },
+    {
+      "name": "001 percycle event-weight moments add up",
+      "passed": true
+    },
+    {
+      "name": "002 exact id/ranking class",
+      "passed": true
+    },
+    {
+      "name": "002 overall event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "002 overall event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "002 overall survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "002 overall event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "002 1999 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "002 1999 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "002 1999 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "002 1999 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "002 2001 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "002 2001 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "002 2001 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "002 2001 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "002 2003 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "002 2003 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "002 2003 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "002 2003 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "0028year cause counts no greater than alltime causes",
+      "passed": true
+    },
+    {
+      "name": "002 percycle event-weight moments add up",
+      "passed": true
+    },
+    {
+      "name": "003 exact id/ranking class",
+      "passed": true
+    },
+    {
+      "name": "003 overall event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "003 overall event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "003 overall survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "003 overall event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "003 1999 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "003 1999 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "003 1999 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "003 1999 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "003 2001 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "003 2001 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "003 2001 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "003 2001 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "003 2003 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "003 2003 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "003 2003 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "003 2003 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "0038year cause counts no greater than alltime causes",
+      "passed": true
+    },
+    {
+      "name": "003 percycle event-weight moments add up",
+      "passed": true
+    },
+    {
+      "name": "004 exact id/ranking class",
+      "passed": true
+    },
+    {
+      "name": "004 overall event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "004 overall event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "004 overall survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "004 overall event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "004 1999 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "004 1999 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "004 1999 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "004 1999 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "004 2001 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "004 2001 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "004 2001 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "004 2001 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "004 2003 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "004 2003 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "004 2003 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "004 2003 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "0048year cause counts no greater than alltime causes",
+      "passed": true
+    },
+    {
+      "name": "004 percycle event-weight moments add up",
+      "passed": true
+    },
+    {
+      "name": "005 exact id/ranking class",
+      "passed": true
+    },
+    {
+      "name": "005 overall event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "005 overall event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "005 overall survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "005 overall event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "005 1999 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "005 1999 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "005 1999 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "005 1999 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "005 2001 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "005 2001 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "005 2001 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "005 2001 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "005 2003 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "005 2003 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "005 2003 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "005 2003 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "0058year cause counts no greater than alltime causes",
+      "passed": true
+    },
+    {
+      "name": "005 percycle event-weight moments add up",
+      "passed": true
+    },
+    {
+      "name": "006 exact id/ranking class",
+      "passed": true
+    },
+    {
+      "name": "006 overall event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "006 overall event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "006 overall survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "006 overall event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "006 1999 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "006 1999 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "006 1999 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "006 1999 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "006 2001 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "006 2001 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "006 2001 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "006 2001 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "006 2003 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "006 2003 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "006 2003 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "006 2003 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "0068year cause counts no greater than alltime causes",
+      "passed": true
+    },
+    {
+      "name": "006 percycle event-weight moments add up",
+      "passed": true
+    },
+    {
+      "name": "007 exact id/ranking class",
+      "passed": true
+    },
+    {
+      "name": "007 overall event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "007 overall event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "007 overall survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "007 overall event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "007 1999 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "007 1999 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "007 1999 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "007 1999 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "007 2001 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "007 2001 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "007 2001 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "007 2001 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "007 2003 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "007 2003 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "007 2003 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "007 2003 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "0078year cause counts no greater than alltime causes",
+      "passed": true
+    },
+    {
+      "name": "007 percycle event-weight moments add up",
+      "passed": true
+    },
+    {
+      "name": "008 exact id/ranking class",
+      "passed": true
+    },
+    {
+      "name": "008 overall event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "008 overall event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "008 overall survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "008 overall event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "008 1999 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "008 1999 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "008 1999 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "008 1999 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "008 2001 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "008 2001 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "008 2001 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "008 2001 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "008 2003 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "008 2003 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "008 2003 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "008 2003 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "0088year cause counts no greater than alltime causes",
+      "passed": true
+    },
+    {
+      "name": "008 percycle event-weight moments add up",
+      "passed": true
+    },
+    {
+      "name": "009 exact id/ranking class",
+      "passed": true
+    },
+    {
+      "name": "009 overall event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "009 overall event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "009 overall survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "009 overall event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "009 1999 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "009 1999 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "009 1999 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "009 1999 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "009 2001 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "009 2001 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "009 2001 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "009 2001 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "009 2003 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "009 2003 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "009 2003 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "009 2003 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "0098year cause counts no greater than alltime causes",
+      "passed": true
+    },
+    {
+      "name": "009 percycle event-weight moments add up",
+      "passed": true
+    },
+    {
+      "name": "010 exact id/ranking class",
+      "passed": true
+    },
+    {
+      "name": "010 overall event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "010 overall event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "010 overall survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "010 overall event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "010 1999 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "010 1999 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "010 1999 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "010 1999 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "010 2001 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "010 2001 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "010 2001 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "010 2001 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "010 2003 event counts and label accounting",
+      "passed": true
+    },
+    {
+      "name": "010 2003 event weights Kish concentration",
+      "passed": true
+    },
+    {
+      "name": "010 2003 survey burden arithmetic",
+      "passed": true
+    },
+    {
+      "name": "010 2003 event-bearing design bounds",
+      "passed": true
+    },
+    {
+      "name": "0108year cause counts no greater than alltime causes",
+      "passed": true
+    },
+    {
+      "name": "010 percycle event-weight moments add up",
+      "passed": true
+    },
+    {
+      "name": "ten+unknown exact global event accounting",
+      "passed": true
+    },
+    {
+      "name": "1999 ten+unknown count-weight accounting",
+      "passed": true
+    },
+    {
+      "name": "2001 ten+unknown count-weight accounting",
+      "passed": true
+    },
+    {
+      "name": "2003 ten+unknown count-weight accounting",
+      "passed": true
+    },
+    {
+      "name": "full eligible common87PSU design preserved",
+      "passed": true
+    },
+    {
+      "name": "independent outer mapping SHA and counts",
+      "passed": true
+    },
+    {
+      "name": "outer0 independent inner mapping SHA and design",
+      "passed": true
+    },
+    {
+      "name": "outer1 independent inner mapping SHA and design",
+      "passed": true
+    },
+    {
+      "name": "outer2 independent inner mapping SHA and design",
+      "passed": true
+    },
+    {
+      "name": "outer3 independent inner mapping SHA and design",
+      "passed": true
+    },
+    {
+      "name": "outer4 independent inner mapping SHA and design",
+      "passed": true
+    },
+    {
+      "name": "001 exact40fold cells",
+      "passed": true
+    },
+    {
+      "name": "001 every cell distinguishes early unknown and known noncases",
+      "passed": true
+    },
+    {
+      "name": "001 five outer evaluations reconstruct global support/moments",
+      "passed": true
+    },
+    {
+      "name": "001 outer0 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "001 outer1 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "001 outer2 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "001 outer3 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "001 outer4 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "001 all83 support comparisons and exact failed cells",
+      "passed": true
+    },
+    {
+      "name": "002 exact40fold cells",
+      "passed": true
+    },
+    {
+      "name": "002 every cell distinguishes early unknown and known noncases",
+      "passed": true
+    },
+    {
+      "name": "002 five outer evaluations reconstruct global support/moments",
+      "passed": true
+    },
+    {
+      "name": "002 outer0 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "002 outer1 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "002 outer2 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "002 outer3 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "002 outer4 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "002 all83 support comparisons and exact failed cells",
+      "passed": true
+    },
+    {
+      "name": "003 exact40fold cells",
+      "passed": true
+    },
+    {
+      "name": "003 every cell distinguishes early unknown and known noncases",
+      "passed": true
+    },
+    {
+      "name": "003 five outer evaluations reconstruct global support/moments",
+      "passed": true
+    },
+    {
+      "name": "003 outer0 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "003 outer1 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "003 outer2 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "003 outer3 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "003 outer4 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "003 all83 support comparisons and exact failed cells",
+      "passed": true
+    },
+    {
+      "name": "004 exact40fold cells",
+      "passed": true
+    },
+    {
+      "name": "004 every cell distinguishes early unknown and known noncases",
+      "passed": true
+    },
+    {
+      "name": "004 five outer evaluations reconstruct global support/moments",
+      "passed": true
+    },
+    {
+      "name": "004 outer0 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "004 outer1 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "004 outer2 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "004 outer3 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "004 outer4 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "004 all83 support comparisons and exact failed cells",
+      "passed": true
+    },
+    {
+      "name": "005 exact40fold cells",
+      "passed": true
+    },
+    {
+      "name": "005 every cell distinguishes early unknown and known noncases",
+      "passed": true
+    },
+    {
+      "name": "005 five outer evaluations reconstruct global support/moments",
+      "passed": true
+    },
+    {
+      "name": "005 outer0 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "005 outer1 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "005 outer2 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "005 outer3 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "005 outer4 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "005 all83 support comparisons and exact failed cells",
+      "passed": true
+    },
+    {
+      "name": "006 exact40fold cells",
+      "passed": true
+    },
+    {
+      "name": "006 every cell distinguishes early unknown and known noncases",
+      "passed": true
+    },
+    {
+      "name": "006 five outer evaluations reconstruct global support/moments",
+      "passed": true
+    },
+    {
+      "name": "006 outer0 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "006 outer1 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "006 outer2 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "006 outer3 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "006 outer4 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "006 all83 support comparisons and exact failed cells",
+      "passed": true
+    },
+    {
+      "name": "007 exact40fold cells",
+      "passed": true
+    },
+    {
+      "name": "007 every cell distinguishes early unknown and known noncases",
+      "passed": true
+    },
+    {
+      "name": "007 five outer evaluations reconstruct global support/moments",
+      "passed": true
+    },
+    {
+      "name": "007 outer0 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "007 outer1 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "007 outer2 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "007 outer3 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "007 outer4 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "007 all83 support comparisons and exact failed cells",
+      "passed": true
+    },
+    {
+      "name": "008 exact40fold cells",
+      "passed": true
+    },
+    {
+      "name": "008 every cell distinguishes early unknown and known noncases",
+      "passed": true
+    },
+    {
+      "name": "008 five outer evaluations reconstruct global support/moments",
+      "passed": true
+    },
+    {
+      "name": "008 outer0 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "008 outer1 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "008 outer2 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "008 outer3 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "008 outer4 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "008 all83 support comparisons and exact failed cells",
+      "passed": true
+    },
+    {
+      "name": "009 exact40fold cells",
+      "passed": true
+    },
+    {
+      "name": "009 every cell distinguishes early unknown and known noncases",
+      "passed": true
+    },
+    {
+      "name": "009 five outer evaluations reconstruct global support/moments",
+      "passed": true
+    },
+    {
+      "name": "009 outer0 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "009 outer1 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "009 outer2 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "009 outer3 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "009 outer4 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "009 all83 support comparisons and exact failed cells",
+      "passed": true
+    },
+    {
+      "name": "010 exact40fold cells",
+      "passed": true
+    },
+    {
+      "name": "010 every cell distinguishes early unknown and known noncases",
+      "passed": true
+    },
+    {
+      "name": "010 five outer evaluations reconstruct global support/moments",
+      "passed": true
+    },
+    {
+      "name": "010 outer0 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "010 outer1 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "010 outer2 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "010 outer3 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "010 outer4 disjoint train/eval and inner partitions",
+      "passed": true
+    },
+    {
+      "name": "010 all83 support comparisons and exact failed cells",
+      "passed": true
+    },
+    {
+      "name": "independent9cause weighted ranking with exact tie rules",
+      "passed": true
+    },
+    {
+      "name": "fixed top5 selected before support and no010",
+      "passed": true
+    },
+    {
+      "name": "top5 support filtering without backfill",
+      "passed": true
+    },
+    {
+      "name": "global known-cause gate separate from individual support",
+      "passed": true
+    },
+    {
+      "name": "later comparison availability matches at least one supportedpriority cause",
+      "passed": true
+    },
+    {
+      "name": "support blocker distinct from incomplete endpoint cause labels",
+      "passed": true
+    },
+    {
+      "name": "final CI three jobs complete successfully",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.13) correct scientific checkout",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.13) testcount",
+      "passed": true
+    },
+    {
+      "name": "empirical correct scientific checkout",
+      "passed": true
+    },
+    {
+      "name": "two stdout blocks agree with independent completed empirical log",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.11) correct scientific checkout",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.11) testcount",
+      "passed": true
+    },
+    {
+      "name": "aggregate-only exports without participant or prediction keys",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "This is a source/count/ranking/support gate only. No models, comparative prediction metrics, model bootstrap, Fine–Gray or joint integration are fitted or inferred.",
+    "Source hashes, parsed outputs, accounting, ratios, fold maps, ranks and all support failures are independently reconciled from aggregates. No raw records or source byte downloads were read, and no second person-level cause reanalysis was performed.",
+    "Top5 by weighted burden is fixed before support; failed priorities are not replaced. Count-based selection is explicit and does not justify confirmatory inference or exclusive marker-cause assignments.",
+    "Unknown early causes block future comparisons and are never negative labels. Known competing deaths are noncases only for the fixed-horizon cumulative-incidence binary target, not censored or alive.",
+    "Complete-case/LOD/linkage selection, reported-value assay/storage/calibration uncertainty and prior cohort use remain. Weights and pragmatic support thresholds do not certify power, EPV, clinical validity or national/global transport.",
+    "Both historical mortality PDF denials remain denied_not_retried without new hashes or retries. Completed GitHub CI logs may be independently read; no raw/PDF/ZIP GET is used by this audit."
+  ]
+}
