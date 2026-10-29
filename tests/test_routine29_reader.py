@@ -142,7 +142,7 @@ class VerifiedFWFTests(unittest.TestCase):
     def test_independent_reader_mismatch_is_not_silenced(self):
         with patch('research.mortality.routine29.reader.pd.read_fwf',
                    return_value=pd.DataFrame({'SEQN':[1.],'CREAT':[9.],'BMI':[27.3],'FLAG':[0.]})):
-            with self.assertRaises(AssertionError):self.read(row())
+            with self.assertRaisesRegex(ValueError,'Independent source readers disagree'):self.read(row())
 
     def test_bad_field_contracts_and_counts_fail(self):
         for kwargs in ({'fields':{}},{'fields':{'SEQN':[1,3],'BAD':[3,4]}},
