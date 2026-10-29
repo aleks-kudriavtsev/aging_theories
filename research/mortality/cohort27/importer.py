@@ -42,8 +42,10 @@ def preflight(source):
 
 def read_adult_checked(data_path,sas_path):
     sas=Path(sas_path).read_text(encoding='ascii')
+    blocks=re.findall(r'(?ims)^[ \t]*INPUT\b(.*?);',sas)
+    if len(blocks)!=1:raise ValueError('SAS INPUT dictionary block unresolved')
     for name,(start,end) in FIELDS.items():
-        spans=re.findall(r'(?im)^[ \t]*'+name+r'[ \t]+(\d+)(?:[ \t]*-[ \t]*(\d+))?[ \t]*$',sas)
+        spans=re.findall(r'(?im)^[ \t]*'+name+r'[ \t]+(\d+)(?:[ \t]*-[ \t]*(\d+))?[ \t]*$',blocks[0])
         normalized=[(int(a),int(b or a)) for a,b in spans]
         if normalized!=[(start,end)]:raise ValueError('SAS dictionary position unresolved: '+name)
     records=[]

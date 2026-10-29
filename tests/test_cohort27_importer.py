@@ -52,6 +52,14 @@ class AdultParserTests(unittest.TestCase):
         np.testing.assert_array_equal(d.HSAGEIR, [45., 73.])
         self.assertEqual(audit, dict(rows=2, fields=6, cell_comparisons=12, exact_match=True))
 
+    def test_length_declarations_cannot_override_input_positions(self):
+        dictionary='LENGTH\n  SEQN 7\n  HSSEX 3\n;\n'+sas_dictionary()+"LABEL SEQN='Sequence number';\n"
+        for newline in ('\n','\r\n'):
+            d,_=self.read(adult_row(),dictionary.replace('\n',newline))
+            self.assertEqual(d.SEQN.iloc[0],1.)
+        with self.assertRaisesRegex(ValueError,'dictionary position'):
+            self.read(adult_row(),dictionary.replace('SEQN 1-5','SEQN 1-6'))
+
     def test_declared_dictionary_must_match_identifier_span(self):
         with self.assertRaisesRegex(ValueError, 'dictionary position'):
             self.read(adult_row(), sas_dictionary(SEQN='2-6'))
