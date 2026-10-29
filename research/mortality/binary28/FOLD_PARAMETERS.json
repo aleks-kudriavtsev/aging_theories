@@ -1,0 +1,3097 @@
+[
+  {
+    "outer_fold": 0,
+    "model": "core",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.07092591095773941,
+      "10.0": 0.07082502800401577,
+      "100.0": 0.07219613609616517
+    },
+    "training_n": 2993,
+    "scoring_n": 864,
+    "training_positive_weight_n": 2993,
+    "training_events": 476,
+    "scoring_events": 136,
+    "training_positive_weight_events": 476,
+    "training_weight_sum": 66302176.576043196,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp"
+    ],
+    "training_mean": [
+      -0.5533434652595418,
+      1.3979992167115816,
+      0.47763858152032623,
+      0.2655400710168032,
+      0.34962030849490583,
+      -0.10912120095052594
+    ],
+    "training_scale": [
+      1.044897232346867,
+      1.242420182075639,
+      0.4994997166801767,
+      0.44162035924671106,
+      0.4768500271393849,
+      0.8944941755951539
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [],
+    "core_coefficients_standardized": [
+      0.9564984131501715,
+      0.09941910983856389,
+      0.08761091806020634,
+      0.42270802521617684,
+      0.20337625921603666,
+      0.2073320475164734
+    ],
+    "protein_coefficients_standardized": [],
+    "intercept": -2.807520155547281,
+    "gradient_max": 1.936338245300817e-08,
+    "iterations": 5,
+    "objective": 751.1150070217784,
+    "normalized_weight_sum": 2993.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 1,
+    "model": "core",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.07126792315105084,
+      "10.0": 0.07120830305692999,
+      "100.0": 0.07258915289520379
+    },
+    "training_n": 3119,
+    "scoring_n": 738,
+    "training_positive_weight_n": 3119,
+    "training_events": 506,
+    "scoring_events": 106,
+    "training_positive_weight_events": 506,
+    "training_weight_sum": 63577813.30413568,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp"
+    ],
+    "training_mean": [
+      -0.48368669632270284,
+      1.366116824825352,
+      0.4554911999805276,
+      0.23362782256907696,
+      0.36429650718371787,
+      -0.1138055036560213
+    ],
+    "training_scale": [
+      1.06403195658109,
+      1.2533211449779074,
+      0.4980150266014343,
+      0.42313811349334746,
+      0.4812323368576359,
+      0.9090613152597453
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [],
+    "core_coefficients_standardized": [
+      1.0172549490507004,
+      0.056154620389900045,
+      0.14924550333926687,
+      0.43362386726914676,
+      0.20537814188846734,
+      0.2687638728110585
+    ],
+    "protein_coefficients_standardized": [],
+    "intercept": -2.8815214793003148,
+    "gradient_max": 8.304999667974045e-07,
+    "iterations": 5,
+    "objective": 775.4066486332293,
+    "normalized_weight_sum": 3119.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 2,
+    "model": "core",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06798461191794333,
+      "10.0": 0.0680105909397664,
+      "100.0": 0.06936688545149089
+    },
+    "training_n": 3156,
+    "scoring_n": 701,
+    "training_positive_weight_n": 3156,
+    "training_events": 501,
+    "scoring_events": 111,
+    "training_positive_weight_events": 501,
+    "training_weight_sum": 70363640.68134277,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp"
+    ],
+    "training_mean": [
+      -0.5137074646104092,
+      1.3917023201391494,
+      0.45832237695104333,
+      0.21839162272462248,
+      0.37642937345790023,
+      -0.12070061181329603
+    ],
+    "training_scale": [
+      1.0619825615059293,
+      1.2443455794252631,
+      0.49825994795587364,
+      0.4131545979997421,
+      0.4844897318375205,
+      0.9087022034227487
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [],
+    "core_coefficients_standardized": [
+      1.1038147515689383,
+      -0.028365832973644853,
+      0.15414210707836842,
+      0.3622745264478102,
+      0.17296099800005016,
+      0.23790364750712917
+    ],
+    "protein_coefficients_standardized": [],
+    "intercept": -3.032531390611351,
+    "gradient_max": 4.4855924530295965e-12,
+    "iterations": 6,
+    "objective": 749.6510175442085,
+    "normalized_weight_sum": 3155.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 3,
+    "model": "core",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06594442331188181,
+      "10.0": 0.06603246564513571,
+      "100.0": 0.06793594202075774
+    },
+    "training_n": 3109,
+    "scoring_n": 748,
+    "training_positive_weight_n": 3109,
+    "training_events": 487,
+    "scoring_events": 125,
+    "training_positive_weight_events": 487,
+    "training_weight_sum": 68481973.7185615,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp"
+    ],
+    "training_mean": [
+      -0.5672364849478103,
+      1.4503295459050431,
+      0.49364718969244775,
+      0.2554875841292069,
+      0.3508052308919772,
+      -0.13330684167381554
+    ],
+    "training_scale": [
+      1.062342842988598,
+      1.2777237767619933,
+      0.49995964017228023,
+      0.436134931512059,
+      0.4772220875764289,
+      0.9048532081629821
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [],
+    "core_coefficients_standardized": [
+      1.0968511082211947,
+      0.15357294162495388,
+      0.1389340416908692,
+      0.49626856134917174,
+      0.25070232035571166,
+      0.18828224811710248
+    ],
+    "protein_coefficients_standardized": [],
+    "intercept": -2.978389104136248,
+    "gradient_max": 3.7641132827337387e-07,
+    "iterations": 5,
+    "objective": 730.0739378802118,
+    "normalized_weight_sum": 3108.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 4,
+    "model": "core",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06719026935192426,
+      "10.0": 0.06716443224186844,
+      "100.0": 0.06872360750537623
+    },
+    "training_n": 3051,
+    "scoring_n": 806,
+    "training_positive_weight_n": 3051,
+    "training_events": 478,
+    "scoring_events": 134,
+    "training_positive_weight_events": 478,
+    "training_weight_sum": 67548955.59027687,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp"
+    ],
+    "training_mean": [
+      -0.5330221282005679,
+      1.38158280476276,
+      0.4723555053547881,
+      0.23204546896568903,
+      0.35534657017195564,
+      -0.10506356284121258
+    ],
+    "training_scale": [
+      1.0476021265782618,
+      1.2460678138691166,
+      0.4992351969921698,
+      0.4221378557985327,
+      0.4786182040405298,
+      0.9003678430463096
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [],
+    "core_coefficients_standardized": [
+      1.0648763262683956,
+      0.17321428094152871,
+      0.11099261566478992,
+      0.4162601606550819,
+      0.05678892419168339,
+      0.21988501310852424
+    ],
+    "protein_coefficients_standardized": [],
+    "intercept": -2.920363461558706,
+    "gradient_max": 1.0087476542963714e-07,
+    "iterations": 5,
+    "objective": 725.1850701925356,
+    "normalized_weight_sum": 3051.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 0,
+    "model": "all3",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.067002855805467,
+      "10.0": 0.06687833858265048,
+      "100.0": 0.06796241194643977
+    },
+    "training_n": 2993,
+    "scoring_n": 864,
+    "training_positive_weight_n": 2993,
+    "training_events": 476,
+    "scoring_events": 136,
+    "training_positive_weight_events": 476,
+    "training_weight_sum": 66302176.576043196,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5533434652595418,
+      1.3979992167115816,
+      0.47763858152032623,
+      0.2655400710168032,
+      0.34962030849490583,
+      -0.10912120095052594,
+      -0.13079110555006437,
+      0.9625834335546607,
+      -0.802026133990707
+    ],
+    "training_scale": [
+      1.044897232346867,
+      1.242420182075639,
+      0.4994997166801767,
+      0.44162035924671106,
+      0.4768500271393849,
+      0.8944941755951539,
+      0.3273701507224553,
+      0.39945943642726434,
+      0.42531611383311047
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "identity_log2"
+      },
+      {
+        "column": 1,
+        "kind": "identity_log2"
+      },
+      {
+        "column": 2,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7031865234073151,
+      0.0631489202660513,
+      0.10696519572667715,
+      0.44371075582278574,
+      0.18569535999361825,
+      0.17140604235517085
+    ],
+    "protein_coefficients_standardized": [
+      -0.12329305153990668,
+      0.615322728955221,
+      0.1256538528438309
+    ],
+    "intercept": -2.930020017360608,
+    "gradient_max": 4.662201968930191e-07,
+    "iterations": 5,
+    "objective": 706.4749315707081,
+    "normalized_weight_sum": 2993.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 1,
+    "model": "all3",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06649196182892578,
+      "10.0": 0.06649583054581792,
+      "100.0": 0.06751092979258076
+    },
+    "training_n": 3119,
+    "scoring_n": 738,
+    "training_positive_weight_n": 3119,
+    "training_events": 506,
+    "scoring_events": 106,
+    "training_positive_weight_events": 506,
+    "training_weight_sum": 63577813.30413568,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.48368669632270284,
+      1.366116824825352,
+      0.4554911999805276,
+      0.23362782256907696,
+      0.36429650718371787,
+      -0.1138055036560213,
+      -0.12989993737592526,
+      0.9604002826787283,
+      -0.8181647396823524
+    ],
+    "training_scale": [
+      1.06403195658109,
+      1.2533211449779074,
+      0.4980150266014343,
+      0.42313811349334746,
+      0.4812323368576359,
+      0.9090613152597453,
+      0.31966553456925473,
+      0.4091247703423579,
+      0.43544831687517077
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "identity_log2"
+      },
+      {
+        "column": 1,
+        "kind": "identity_log2"
+      },
+      {
+        "column": 2,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7910125378315017,
+      0.0350435598887665,
+      0.18583686149950365,
+      0.5040556964169468,
+      0.2237593953695302,
+      0.2298686960111239
+    ],
+    "protein_coefficients_standardized": [
+      -0.11673943892466353,
+      0.6965060604573069,
+      0.10411467965827143
+    ],
+    "intercept": -3.0838901141193644,
+    "gradient_max": 4.044233004041331e-11,
+    "iterations": 6,
+    "objective": 715.5102045950179,
+    "normalized_weight_sum": 3119.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 2,
+    "model": "all3",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06368081090822325,
+      "10.0": 0.06366116857646577,
+      "100.0": 0.06461761140255229
+    },
+    "training_n": 3156,
+    "scoring_n": 701,
+    "training_positive_weight_n": 3156,
+    "training_events": 501,
+    "scoring_events": 111,
+    "training_positive_weight_events": 501,
+    "training_weight_sum": 70363640.68134277,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5137074646104092,
+      1.3917023201391494,
+      0.45832237695104333,
+      0.21839162272462248,
+      0.37642937345790023,
+      -0.12070061181329603,
+      -0.13468289053959903,
+      0.9601070795289125,
+      -0.7993225629105422
+    ],
+    "training_scale": [
+      1.0619825615059293,
+      1.2443455794252631,
+      0.49825994795587364,
+      0.4131545979997421,
+      0.4844897318375205,
+      0.9087022034227487,
+      0.3278334186161925,
+      0.4023520699623419,
+      0.42308226808276167
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "identity_log2"
+      },
+      {
+        "column": 1,
+        "kind": "identity_log2"
+      },
+      {
+        "column": 2,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7778595313767911,
+      -0.06994243352957567,
+      0.1817788926037102,
+      0.3467910349802142,
+      0.1544686456287756,
+      0.20549069476969378
+    ],
+    "protein_coefficients_standardized": [
+      -0.11397721265027116,
+      0.668091721881342,
+      0.08139565904758522
+    ],
+    "intercept": -3.1198939697612036,
+    "gradient_max": 1.7413182007430805e-11,
+    "iterations": 6,
+    "objective": 704.3472943940747,
+    "normalized_weight_sum": 3155.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 3,
+    "model": "all3",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.0620464536818718,
+      "10.0": 0.06178075985371928,
+      "100.0": 0.06291595885067192
+    },
+    "training_n": 3109,
+    "scoring_n": 748,
+    "training_positive_weight_n": 3109,
+    "training_events": 487,
+    "scoring_events": 125,
+    "training_positive_weight_events": 487,
+    "training_weight_sum": 68481973.7185615,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5672364849478103,
+      1.4503295459050431,
+      0.49364718969244775,
+      0.2554875841292069,
+      0.3508052308919772,
+      -0.13330684167381554,
+      -0.1359680801483282,
+      0.946659201693035,
+      -0.8135057008712685
+    ],
+    "training_scale": [
+      1.062342842988598,
+      1.2777237767619933,
+      0.49995964017228023,
+      0.436134931512059,
+      0.4772220875764289,
+      0.9048532081629821,
+      0.32515197762692194,
+      0.39794837386962356,
+      0.4268894039281189
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "identity_log2"
+      },
+      {
+        "column": 1,
+        "kind": "identity_log2"
+      },
+      {
+        "column": 2,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7201103138048263,
+      0.09536228671126248,
+      0.16498125238086833,
+      0.46444580825692067,
+      0.21269527963778515,
+      0.14617589804786263
+    ],
+    "protein_coefficients_standardized": [
+      -0.14576376383085277,
+      0.7702637613677065,
+      0.04548935087366245
+    ],
+    "intercept": -3.080656983362902,
+    "gradient_max": 1.5318649126960793e-13,
+    "iterations": 6,
+    "objective": 681.6772984418349,
+    "normalized_weight_sum": 3108.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 4,
+    "model": "all3",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.061864485200305346,
+      "10.0": 0.06193006814464845,
+      "100.0": 0.06358546521934512
+    },
+    "training_n": 3051,
+    "scoring_n": 806,
+    "training_positive_weight_n": 3051,
+    "training_events": 478,
+    "scoring_events": 134,
+    "training_positive_weight_events": 478,
+    "training_weight_sum": 67548955.59027687,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5330221282005679,
+      1.38158280476276,
+      0.4723555053547881,
+      0.23204546896568903,
+      0.35534657017195564,
+      -0.10506356284121258,
+      -0.12027620949092847,
+      0.9689595364450062,
+      -0.8048431846538453
+    ],
+    "training_scale": [
+      1.0476021265782618,
+      1.2460678138691166,
+      0.4992351969921698,
+      0.4221378557985327,
+      0.4786182040405298,
+      0.9003678430463096,
+      0.3315484546944203,
+      0.41220341848468356,
+      0.4286181964898727
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "identity_log2"
+      },
+      {
+        "column": 1,
+        "kind": "identity_log2"
+      },
+      {
+        "column": 2,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.867216285083565,
+      0.16510413690644074,
+      0.14768010879165802,
+      0.4894440403033673,
+      0.060625009250869215,
+      0.17383865327574421
+    ],
+    "protein_coefficients_standardized": [
+      -0.18112881976796003,
+      0.7792571560083918,
+      0.04317566455171604
+    ],
+    "intercept": -3.1281021427462132,
+    "gradient_max": 2.8890223546795823e-12,
+    "iterations": 6,
+    "objective": 667.2697114386178,
+    "normalized_weight_sum": 3051.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 0,
+    "model": "cys",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06893035676114509,
+      "10.0": 0.06876886768104638,
+      "100.0": 0.06963025191751655
+    },
+    "training_n": 2993,
+    "scoring_n": 864,
+    "training_positive_weight_n": 2993,
+    "training_events": 476,
+    "scoring_events": 136,
+    "training_positive_weight_events": 476,
+    "training_weight_sum": 66302176.576043196,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c"
+    ],
+    "training_mean": [
+      -0.5533434652595418,
+      1.3979992167115816,
+      0.47763858152032623,
+      0.2655400710168032,
+      0.34962030849490583,
+      -0.10912120095052594,
+      -0.13079110555006437
+    ],
+    "training_scale": [
+      1.044897232346867,
+      1.242420182075639,
+      0.4994997166801767,
+      0.44162035924671106,
+      0.4768500271393849,
+      0.8944941755951539,
+      0.3273701507224553
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7806785059621872,
+      0.07726595012575498,
+      0.06513960817191687,
+      0.3786660144647981,
+      0.1823193785346062,
+      0.14838049824435576
+    ],
+    "protein_coefficients_standardized": [
+      0.4551911514269305
+    ],
+    "intercept": -2.88162230042362,
+    "gradient_max": 1.0884349321838016e-07,
+    "iterations": 5,
+    "objective": 726.1864818479876,
+    "normalized_weight_sum": 2993.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 1,
+    "model": "cys",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06833344283816713,
+      "10.0": 0.06823191737236024,
+      "100.0": 0.06919040622402438
+    },
+    "training_n": 3119,
+    "scoring_n": 738,
+    "training_positive_weight_n": 3119,
+    "training_events": 506,
+    "scoring_events": 106,
+    "training_positive_weight_events": 506,
+    "training_weight_sum": 63577813.30413568,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c"
+    ],
+    "training_mean": [
+      -0.48368669632270284,
+      1.366116824825352,
+      0.4554911999805276,
+      0.23362782256907696,
+      0.36429650718371787,
+      -0.1138055036560213,
+      -0.12989993737592526
+    ],
+    "training_scale": [
+      1.06403195658109,
+      1.2533211449779074,
+      0.4980150266014343,
+      0.42313811349334746,
+      0.4812323368576359,
+      0.9090613152597453,
+      0.31966553456925473
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.8194839865579121,
+      0.045865209012059774,
+      0.13645568715875075,
+      0.39790299791737255,
+      0.19711235495910825,
+      0.20495095026644822
+    ],
+    "protein_coefficients_standardized": [
+      0.5148093916068546
+    ],
+    "intercept": -2.985041396439299,
+    "gradient_max": 5.755396159656812e-13,
+    "iterations": 6,
+    "objective": 739.6673837098907,
+    "normalized_weight_sum": 3119.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 2,
+    "model": "cys",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06510929035883882,
+      "10.0": 0.0651251013300636,
+      "100.0": 0.06627051227599101
+    },
+    "training_n": 3156,
+    "scoring_n": 701,
+    "training_positive_weight_n": 3156,
+    "training_events": 501,
+    "scoring_events": 111,
+    "training_positive_weight_events": 501,
+    "training_weight_sum": 70363640.68134277,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c"
+    ],
+    "training_mean": [
+      -0.5137074646104092,
+      1.3917023201391494,
+      0.45832237695104333,
+      0.21839162272462248,
+      0.37642937345790023,
+      -0.12070061181329603,
+      -0.13468289053959903
+    ],
+    "training_scale": [
+      1.0619825615059293,
+      1.2443455794252631,
+      0.49825994795587364,
+      0.4131545979997421,
+      0.4844897318375205,
+      0.9087022034227487,
+      0.3278334186161925
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.9029893590286587,
+      -0.050309376233346886,
+      0.141417561730124,
+      0.3223595156557994,
+      0.1559455728691766,
+      0.1756742663333694
+    ],
+    "protein_coefficients_standardized": [
+      0.49736782241061794
+    ],
+    "intercept": -3.119084876518589,
+    "gradient_max": 4.149089405380835e-11,
+    "iterations": 6,
+    "objective": 719.5176029313888,
+    "normalized_weight_sum": 3155.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 3,
+    "model": "cys",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.0629934505992667,
+      "10.0": 0.06303157943212834,
+      "100.0": 0.06453394374012389
+    },
+    "training_n": 3109,
+    "scoring_n": 748,
+    "training_positive_weight_n": 3109,
+    "training_events": 487,
+    "scoring_events": 125,
+    "training_positive_weight_events": 487,
+    "training_weight_sum": 68481973.7185615,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c"
+    ],
+    "training_mean": [
+      -0.5672364849478103,
+      1.4503295459050431,
+      0.49364718969244775,
+      0.2554875841292069,
+      0.3508052308919772,
+      -0.13330684167381554,
+      -0.1359680801483282
+    ],
+    "training_scale": [
+      1.062342842988598,
+      1.2777237767619933,
+      0.49995964017228023,
+      0.436134931512059,
+      0.4772220875764289,
+      0.9048532081629821,
+      0.32515197762692194
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.8572533373230327,
+      0.12394678522092198,
+      0.11155130980717716,
+      0.4435455475167351,
+      0.24428009375518353,
+      0.1336929856556587
+    ],
+    "protein_coefficients_standardized": [
+      0.5229048937224452
+    ],
+    "intercept": -3.0663514872745017,
+    "gradient_max": 9.749145934989656e-14,
+    "iterations": 6,
+    "objective": 699.5215681277195,
+    "normalized_weight_sum": 3108.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 4,
+    "model": "cys",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06404520717983897,
+      "10.0": 0.06402483329306513,
+      "100.0": 0.06540077852986963
+    },
+    "training_n": 3051,
+    "scoring_n": 806,
+    "training_positive_weight_n": 3051,
+    "training_events": 478,
+    "scoring_events": 134,
+    "training_positive_weight_events": 478,
+    "training_weight_sum": 67548955.59027687,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c"
+    ],
+    "training_mean": [
+      -0.5330221282005679,
+      1.38158280476276,
+      0.4723555053547881,
+      0.23204546896568903,
+      0.35534657017195564,
+      -0.10506356284121258,
+      -0.12027620949092847
+    ],
+    "training_scale": [
+      1.0476021265782618,
+      1.2460678138691166,
+      0.4992351969921698,
+      0.4221378557985327,
+      0.4786182040405298,
+      0.9003678430463096,
+      0.3315484546944203
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.8747441321676975,
+      0.160861883493674,
+      0.08874540101121885,
+      0.37962490150820133,
+      0.044608418773342214,
+      0.15972394380258556
+    ],
+    "protein_coefficients_standardized": [
+      0.5059167831583529
+    ],
+    "intercept": -3.0179895335217197,
+    "gradient_max": 7.85543084802498e-07,
+    "iterations": 5,
+    "objective": 693.7367811856111,
+    "normalized_weight_sum": 3051.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 0,
+    "model": "b2m",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06708360851229742,
+      "10.0": 0.06696818953491203,
+      "100.0": 0.06814933068134103
+    },
+    "training_n": 2993,
+    "scoring_n": 864,
+    "training_positive_weight_n": 2993,
+    "training_events": 476,
+    "scoring_events": 136,
+    "training_positive_weight_events": 476,
+    "training_weight_sum": 66302176.576043196,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_beta2_microglobulin"
+    ],
+    "training_mean": [
+      -0.5533434652595418,
+      1.3979992167115816,
+      0.47763858152032623,
+      0.2655400710168032,
+      0.34962030849490583,
+      -0.10912120095052594,
+      0.9625834335546607
+    ],
+    "training_scale": [
+      1.044897232346867,
+      1.242420182075639,
+      0.4994997166801767,
+      0.44162035924671106,
+      0.4768500271393849,
+      0.8944941755951539,
+      0.39945943642726434
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 1,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7151693221938986,
+      0.067021127241239,
+      0.10686067006127807,
+      0.4326128273482962,
+      0.18404255363179303,
+      0.16157493506114665
+    ],
+    "protein_coefficients_standardized": [
+      0.5944230998040465
+    ],
+    "intercept": -2.931362023121325,
+    "gradient_max": 5.142425015813856e-07,
+    "iterations": 5,
+    "objective": 707.7823906769081,
+    "normalized_weight_sum": 2993.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 1,
+    "model": "b2m",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06578789835327732,
+      "10.0": 0.06577759231847018,
+      "100.0": 0.06740450805593753
+    },
+    "training_n": 3119,
+    "scoring_n": 738,
+    "training_positive_weight_n": 3119,
+    "training_events": 506,
+    "scoring_events": 106,
+    "training_positive_weight_events": 506,
+    "training_weight_sum": 63577813.30413568,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_beta2_microglobulin"
+    ],
+    "training_mean": [
+      -0.48368669632270284,
+      1.366116824825352,
+      0.4554911999805276,
+      0.23362782256907696,
+      0.36429650718371787,
+      -0.1138055036560213,
+      0.9604002826787283
+    ],
+    "training_scale": [
+      1.06403195658109,
+      1.2533211449779074,
+      0.4980150266014343,
+      0.42313811349334746,
+      0.4812323368576359,
+      0.9090613152597453,
+      0.4091247703423579
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 1,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7548231568169478,
+      0.032992624232874655,
+      0.18548416585453997,
+      0.4500982245235013,
+      0.19575136601097307,
+      0.22598827976841482
+    ],
+    "protein_coefficients_standardized": [
+      0.6459161891984578
+    ],
+    "intercept": -3.0318168519188657,
+    "gradient_max": 2.6147972675971687e-12,
+    "iterations": 6,
+    "objective": 722.5647772471942,
+    "normalized_weight_sum": 3119.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 2,
+    "model": "b2m",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06344929272697118,
+      "10.0": 0.06347597135338962,
+      "100.0": 0.06477973357016321
+    },
+    "training_n": 3156,
+    "scoring_n": 701,
+    "training_positive_weight_n": 3156,
+    "training_events": 501,
+    "scoring_events": 111,
+    "training_positive_weight_events": 501,
+    "training_weight_sum": 70363640.68134277,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_beta2_microglobulin"
+    ],
+    "training_mean": [
+      -0.5137074646104092,
+      1.3917023201391494,
+      0.45832237695104333,
+      0.21839162272462248,
+      0.37642937345790023,
+      -0.12070061181329603,
+      0.9601070795289125
+    ],
+    "training_scale": [
+      1.0619825615059293,
+      1.2443455794252631,
+      0.49825994795587364,
+      0.4131545979997421,
+      0.4844897318375205,
+      0.9087022034227487,
+      0.4023520699623419
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 1,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.8355403528430212,
+      -0.0705061757342658,
+      0.19098192012241974,
+      0.3689333848387752,
+      0.16559783391900823,
+      0.19493740887463204
+    ],
+    "protein_coefficients_standardized": [
+      0.6384697053805575
+    ],
+    "intercept": -3.1801588664471403,
+    "gradient_max": 4.015972693283132e-10,
+    "iterations": 6,
+    "objective": 699.3640698535764,
+    "normalized_weight_sum": 3155.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 3,
+    "model": "b2m",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06121813752502925,
+      "10.0": 0.06129362035792362,
+      "100.0": 0.0629390742339339
+    },
+    "training_n": 3109,
+    "scoring_n": 748,
+    "training_positive_weight_n": 3109,
+    "training_events": 487,
+    "scoring_events": 125,
+    "training_positive_weight_events": 487,
+    "training_weight_sum": 68481973.7185615,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_beta2_microglobulin"
+    ],
+    "training_mean": [
+      -0.5672364849478103,
+      1.4503295459050431,
+      0.49364718969244775,
+      0.2554875841292069,
+      0.3508052308919772,
+      -0.13330684167381554,
+      0.946659201693035
+    ],
+    "training_scale": [
+      1.062342842988598,
+      1.2777237767619933,
+      0.49995964017228023,
+      0.436134931512059,
+      0.4772220875764289,
+      0.9048532081629821,
+      0.39794837386962356
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 1,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.765007748996351,
+      0.11653663079904242,
+      0.1629599220285014,
+      0.4981025533554465,
+      0.24017287818261,
+      0.13292696269205032
+    ],
+    "protein_coefficients_standardized": [
+      0.695658315050128
+    ],
+    "intercept": -3.128793884473669,
+    "gradient_max": 1.4016149352258367e-12,
+    "iterations": 6,
+    "objective": 676.3962321604356,
+    "normalized_weight_sum": 3108.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 4,
+    "model": "b2m",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06187431712799643,
+      "10.0": 0.06189962694661122,
+      "100.0": 0.06371747294116552
+    },
+    "training_n": 3051,
+    "scoring_n": 806,
+    "training_positive_weight_n": 3051,
+    "training_events": 478,
+    "scoring_events": 134,
+    "training_positive_weight_events": 478,
+    "training_weight_sum": 67548955.59027687,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_beta2_microglobulin"
+    ],
+    "training_mean": [
+      -0.5330221282005679,
+      1.38158280476276,
+      0.4723555053547881,
+      0.23204546896568903,
+      0.35534657017195564,
+      -0.10506356284121258,
+      0.9689595364450062
+    ],
+    "training_scale": [
+      1.0476021265782618,
+      1.2460678138691166,
+      0.4992351969921698,
+      0.4221378557985327,
+      0.4786182040405298,
+      0.9003678430463096,
+      0.41220341848468356
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 1,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.8637583823454015,
+      0.1675565245308651,
+      0.13797232232924425,
+      0.47021913640104135,
+      0.056271971364514874,
+      0.1639234313502832
+    ],
+    "protein_coefficients_standardized": [
+      0.653800404842712
+    ],
+    "intercept": -3.1220176047838315,
+    "gradient_max": 2.734895643285995e-12,
+    "iterations": 6,
+    "objective": 668.3813357900668,
+    "normalized_weight_sum": 3051.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 0,
+    "model": "btp",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06883192349574979,
+      "10.0": 0.06868711955014963,
+      "100.0": 0.06968974624394715
+    },
+    "training_n": 2993,
+    "scoring_n": 864,
+    "training_positive_weight_n": 2993,
+    "training_events": 476,
+    "scoring_events": 136,
+    "training_positive_weight_events": 476,
+    "training_weight_sum": 66302176.576043196,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5533434652595418,
+      1.3979992167115816,
+      0.47763858152032623,
+      0.2655400710168032,
+      0.34962030849490583,
+      -0.10912120095052594,
+      -0.802026133990707
+    ],
+    "training_scale": [
+      1.044897232346867,
+      1.242420182075639,
+      0.4994997166801767,
+      0.44162035924671106,
+      0.4768500271393849,
+      0.8944941755951539,
+      0.42531611383311047
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 2,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7825973970306197,
+      0.06084409486951244,
+      0.056971494109873566,
+      0.4186862336621828,
+      0.19247108280348643,
+      0.1895422158985406
+    ],
+    "protein_coefficients_standardized": [
+      0.44651703057918596
+    ],
+    "intercept": -2.8734590062807706,
+    "gradient_max": 8.095883219372269e-08,
+    "iterations": 5,
+    "objective": 726.8155538523606,
+    "normalized_weight_sum": 2993.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 1,
+    "model": "btp",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.0690687843308663,
+      "10.0": 0.06895215750092197,
+      "100.0": 0.06992285191665591
+    },
+    "training_n": 3119,
+    "scoring_n": 738,
+    "training_positive_weight_n": 3119,
+    "training_events": 506,
+    "scoring_events": 106,
+    "training_positive_weight_events": 506,
+    "training_weight_sum": 63577813.30413568,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.48368669632270284,
+      1.366116824825352,
+      0.4554911999805276,
+      0.23362782256907696,
+      0.36429650718371787,
+      -0.1138055036560213,
+      -0.8181647396823524
+    ],
+    "training_scale": [
+      1.06403195658109,
+      1.2533211449779074,
+      0.4980150266014343,
+      0.42313811349334746,
+      0.4812323368576359,
+      0.9090613152597453,
+      0.43544831687517077
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 2,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.8316581605508493,
+      0.007884712570691052,
+      0.09359889058243186,
+      0.4421884610861771,
+      0.2139254435353269,
+      0.23507827989594146
+    ],
+    "protein_coefficients_standardized": [
+      0.4882846727604616
+    ],
+    "intercept": -2.964084868825262,
+    "gradient_max": 1.705857677336553e-13,
+    "iterations": 6,
+    "objective": 746.1701564947729,
+    "normalized_weight_sum": 3119.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 2,
+    "model": "btp",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06565203014903825,
+      "10.0": 0.06566334846417755,
+      "100.0": 0.06681940238226133
+    },
+    "training_n": 3156,
+    "scoring_n": 701,
+    "training_positive_weight_n": 3156,
+    "training_events": 501,
+    "scoring_events": 111,
+    "training_positive_weight_events": 501,
+    "training_weight_sum": 70363640.68134277,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5137074646104092,
+      1.3917023201391494,
+      0.45832237695104333,
+      0.21839162272462248,
+      0.37642937345790023,
+      -0.12070061181329603,
+      -0.7993225629105422
+    ],
+    "training_scale": [
+      1.0619825615059293,
+      1.2443455794252631,
+      0.49825994795587364,
+      0.4131545979997421,
+      0.4844897318375205,
+      0.9087022034227487,
+      0.42308226808276167
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 2,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.9211837904476619,
+      -0.07978008250898279,
+      0.10294855709770213,
+      0.3630024401596919,
+      0.18017712060274496,
+      0.2148326246054834
+    ],
+    "protein_coefficients_standardized": [
+      0.44994314275459735
+    ],
+    "intercept": -3.095681230509006,
+    "gradient_max": 2.2378363051522854e-11,
+    "iterations": 6,
+    "objective": 725.4214501258551,
+    "normalized_weight_sum": 3155.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 3,
+    "model": "btp",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06360679105476881,
+      "10.0": 0.06369891378101988,
+      "100.0": 0.06541685820030406
+    },
+    "training_n": 3109,
+    "scoring_n": 748,
+    "training_positive_weight_n": 3109,
+    "training_events": 487,
+    "scoring_events": 125,
+    "training_positive_weight_events": 487,
+    "training_weight_sum": 68481973.7185615,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5672364849478103,
+      1.4503295459050431,
+      0.49364718969244775,
+      0.2554875841292069,
+      0.3508052308919772,
+      -0.13330684167381554,
+      -0.8135057008712685
+    ],
+    "training_scale": [
+      1.062342842988598,
+      1.2777237767619933,
+      0.49995964017228023,
+      0.436134931512059,
+      0.4772220875764289,
+      0.9048532081629821,
+      0.4268894039281189
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 2,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.8980085689481065,
+      0.10672997673766509,
+      0.09023451899972078,
+      0.4904979333962364,
+      0.2509320968334339,
+      0.1709876045324363
+    ],
+    "protein_coefficients_standardized": [
+      0.44215140205537395
+    ],
+    "intercept": -3.0365730679235896,
+    "gradient_max": 3.256422909103662e-14,
+    "iterations": 6,
+    "objective": 709.1286090578927,
+    "normalized_weight_sum": 3108.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 4,
+    "model": "btp",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06481414853739857,
+      "10.0": 0.0647624709282438,
+      "100.0": 0.06611998399019134
+    },
+    "training_n": 3051,
+    "scoring_n": 806,
+    "training_positive_weight_n": 3051,
+    "training_events": 478,
+    "scoring_events": 134,
+    "training_positive_weight_events": 478,
+    "training_weight_sum": 67548955.59027687,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5330221282005679,
+      1.38158280476276,
+      0.4723555053547881,
+      0.23204546896568903,
+      0.35534657017195564,
+      -0.10506356284121258,
+      -0.8048431846538453
+    ],
+    "training_scale": [
+      1.0476021265782618,
+      1.2460678138691166,
+      0.4992351969921698,
+      0.4221378557985327,
+      0.4786182040405298,
+      0.9003678430463096,
+      0.4286181964898727
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 2,
+        "kind": "identity_log2"
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.9024367038185066,
+      0.14849565751603558,
+      0.06934296149250091,
+      0.42041903006947634,
+      0.05658369022800036,
+      0.19200636651276157
+    ],
+    "protein_coefficients_standardized": [
+      0.4444586184093198
+    ],
+    "intercept": -2.992411194633138,
+    "gradient_max": 3.675805377856278e-07,
+    "iterations": 5,
+    "objective": 701.3385869841885,
+    "normalized_weight_sum": 3051.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "reported_log2"
+  },
+  {
+    "outer_fold": 0,
+    "model": "rank_all3",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06871477118995278,
+      "10.0": 0.06867736336156659,
+      "100.0": 0.06969424108794572
+    },
+    "training_n": 2993,
+    "scoring_n": 864,
+    "training_positive_weight_n": 2993,
+    "training_events": 476,
+    "scoring_events": 136,
+    "training_positive_weight_events": 476,
+    "training_weight_sum": 66302176.576043196,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5533434652595418,
+      1.3979992167115816,
+      0.47763858152032623,
+      0.2655400710168032,
+      0.34962030849490583,
+      -0.10912120095052594,
+      0.5091346681114994,
+      0.5038755955732177,
+      0.5015774584776075
+    ],
+    "training_scale": [
+      1.044897232346867,
+      1.242420182075639,
+      0.4994997166801767,
+      0.44162035924671106,
+      0.4768500271393849,
+      0.8944941755951539,
+      0.2869019010164213,
+      0.28774926954562235,
+      0.2884418046177826
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 183
+      },
+      {
+        "column": 1,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 382
+      },
+      {
+        "column": 2,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 744
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.6998178187300088,
+      0.07787794222416865,
+      0.09328805727063533,
+      0.4220505614560432,
+      0.17908720559967822,
+      0.18109527028840522
+    ],
+    "protein_coefficients_standardized": [
+      -0.08831788445729946,
+      0.5402798092885142,
+      0.2033837348523193
+    ],
+    "intercept": -2.93470805501716,
+    "gradient_max": 2.090656252076717e-07,
+    "iterations": 5,
+    "objective": 723.3797739715739,
+    "normalized_weight_sum": 2993.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "right_continuous_weighted_ecdf"
+  },
+  {
+    "outer_fold": 1,
+    "model": "rank_all3",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06930384736917694,
+      "10.0": 0.06907855642593379,
+      "100.0": 0.06955069735833787
+    },
+    "training_n": 3119,
+    "scoring_n": 738,
+    "training_positive_weight_n": 3119,
+    "training_events": 506,
+    "scoring_events": 106,
+    "training_positive_weight_events": 506,
+    "training_weight_sum": 63577813.30413568,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.48368669632270284,
+      1.366116824825352,
+      0.4554911999805276,
+      0.23362782256907696,
+      0.36429650718371787,
+      -0.1138055036560213,
+      0.5091423520653809,
+      0.5038301733098645,
+      0.501562832934641
+    ],
+    "training_scale": [
+      1.06403195658109,
+      1.2533211449779074,
+      0.4980150266014343,
+      0.42313811349334746,
+      0.4812323368576359,
+      0.9090613152597453,
+      0.2867495429321507,
+      0.2876628175173166,
+      0.2884270944715789
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 200
+      },
+      {
+        "column": 1,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 388
+      },
+      {
+        "column": 2,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 758
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7196385385314732,
+      0.03990129895906347,
+      0.12055362998926912,
+      0.41284516062841464,
+      0.18324669150910627,
+      0.23401724733632182
+    ],
+    "protein_coefficients_standardized": [
+      0.1346996186990119,
+      0.36522699934233854,
+      0.26731247200887037
+    ],
+    "intercept": -3.0403600437110327,
+    "gradient_max": 6.279976538792198e-13,
+    "iterations": 6,
+    "objective": 742.0985282461825,
+    "normalized_weight_sum": 3119.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "right_continuous_weighted_ecdf"
+  },
+  {
+    "outer_fold": 2,
+    "model": "rank_all3",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06587345307094089,
+      "10.0": 0.06585827999481197,
+      "100.0": 0.06679862969601258
+    },
+    "training_n": 3156,
+    "scoring_n": 701,
+    "training_positive_weight_n": 3156,
+    "training_events": 501,
+    "scoring_events": 111,
+    "training_positive_weight_events": 501,
+    "training_weight_sum": 70363640.68134277,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5137074646104092,
+      1.3917023201391494,
+      0.45832237695104333,
+      0.21839162272462248,
+      0.37642937345790023,
+      -0.12070061181329603,
+      0.50923706040659,
+      0.5039847522012435,
+      0.5016283288372879
+    ],
+    "training_scale": [
+      1.0619825615059293,
+      1.2443455794252631,
+      0.49825994795587364,
+      0.4131545979997421,
+      0.4844897318375205,
+      0.9087022034227487,
+      0.2868034190982805,
+      0.287502017318115,
+      0.28840146426748375
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 198
+      },
+      {
+        "column": 1,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 387
+      },
+      {
+        "column": 2,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 760
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7639817999552755,
+      -0.05210006285994737,
+      0.14970767549712374,
+      0.3152794720344839,
+      0.1405265983654238,
+      0.21958669710172476
+    ],
+    "protein_coefficients_standardized": [
+      -0.059681365458776066,
+      0.5920013763330195,
+      0.162718298405524
+    ],
+    "intercept": -3.1254547591054638,
+    "gradient_max": 3.2724933873851114e-12,
+    "iterations": 6,
+    "objective": 725.3576889311508,
+    "normalized_weight_sum": 3155.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "right_continuous_weighted_ecdf"
+  },
+  {
+    "outer_fold": 3,
+    "model": "rank_all3",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06388509314178674,
+      "10.0": 0.06388125182183702,
+      "100.0": 0.06528837967946204
+    },
+    "training_n": 3109,
+    "scoring_n": 748,
+    "training_positive_weight_n": 3109,
+    "training_events": 487,
+    "scoring_events": 125,
+    "training_positive_weight_events": 487,
+    "training_weight_sum": 68481973.7185615,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5672364849478103,
+      1.4503295459050431,
+      0.49364718969244775,
+      0.2554875841292069,
+      0.3508052308919772,
+      -0.13330684167381554,
+      0.5093726331359048,
+      0.5040952748041667,
+      0.5015540015261334
+    ],
+    "training_scale": [
+      1.062342842988598,
+      1.2777237767619933,
+      0.49995964017228023,
+      0.436134931512059,
+      0.4772220875764289,
+      0.9048532081629821,
+      0.2869101592147096,
+      0.2874649990063347,
+      0.2884424250925288
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 199
+      },
+      {
+        "column": 1,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 391
+      },
+      {
+        "column": 2,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 762
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7278168190059633,
+      0.12634812687283198,
+      0.1431372513912707,
+      0.4507592836642581,
+      0.21242329890423697,
+      0.16557356829042683
+    ],
+    "protein_coefficients_standardized": [
+      -0.11358201358549806,
+      0.7193264270395184,
+      0.11658837032679949
+    ],
+    "intercept": -3.0944968236731785,
+    "gradient_max": 5.094535904248687e-14,
+    "iterations": 6,
+    "objective": 703.7927293999719,
+    "normalized_weight_sum": 3108.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "right_continuous_weighted_ecdf"
+  },
+  {
+    "outer_fold": 4,
+    "model": "rank_all3",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06485897062677054,
+      "10.0": 0.06489138015316503,
+      "100.0": 0.06614648283582587
+    },
+    "training_n": 3051,
+    "scoring_n": 806,
+    "training_positive_weight_n": 3051,
+    "training_events": 478,
+    "scoring_events": 134,
+    "training_positive_weight_events": 478,
+    "training_weight_sum": 67548955.59027687,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5330221282005679,
+      1.38158280476276,
+      0.4723555053547881,
+      0.23204546896568903,
+      0.35534657017195564,
+      -0.10506356284121258,
+      0.5091549624809679,
+      0.503760898629895,
+      0.5015899109700699
+    ],
+    "training_scale": [
+      1.0476021265782618,
+      1.2460678138691166,
+      0.4992351969921698,
+      0.4221378557985327,
+      0.4786182040405298,
+      0.9003678430463096,
+      0.2868030097922279,
+      0.2876347742542306,
+      0.28845236094857735
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 200
+      },
+      {
+        "column": 1,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 392
+      },
+      {
+        "column": 2,
+        "kind": "right_continuous_weighted_ecdf",
+        "training_support_count": 751
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.8653235455566697,
+      0.1870942989511512,
+      0.11688158096320009,
+      0.44813761366540494,
+      0.04500609136882824,
+      0.18386180363709367
+    ],
+    "protein_coefficients_standardized": [
+      -0.06655554437584428,
+      0.5865610231887101,
+      0.1630362141155058
+    ],
+    "intercept": -3.1105464127756233,
+    "gradient_max": 2.708944180085382e-13,
+    "iterations": 6,
+    "objective": 692.5854630569504,
+    "normalized_weight_sum": 3051.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "right_continuous_weighted_ecdf"
+  },
+  {
+    "outer_fold": 0,
+    "model": "clip_all3",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06690056730476396,
+      "10.0": 0.06685405941248243,
+      "100.0": 0.06780625473708349
+    },
+    "training_n": 2993,
+    "scoring_n": 864,
+    "training_positive_weight_n": 2993,
+    "training_events": 476,
+    "scoring_events": 136,
+    "training_positive_weight_events": 476,
+    "training_weight_sum": 66302176.576043196,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5533434652595418,
+      1.3979992167115816,
+      0.47763858152032623,
+      0.2655400710168032,
+      0.34962030849490583,
+      -0.10912120095052594,
+      -0.1314951523478107,
+      0.958730860977237,
+      -0.8053345507556771
+    ],
+    "training_scale": [
+      1.044897232346867,
+      1.242420182075639,
+      0.4994997166801767,
+      0.44162035924671106,
+      0.4768500271393849,
+      0.8944941755951539,
+      0.29888028479318723,
+      0.3686860628571,
+      0.39179535918851055
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": -0.7659348699512387,
+        "upper": 0.942846089554891
+      },
+      {
+        "column": 1,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": 0.25534821737805874,
+        "upper": 2.2076634003258637
+      },
+      {
+        "column": 2,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": -1.908078661382732,
+        "upper": 0.3588029620818601
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.6633536940475254,
+      0.05673466432571698,
+      0.10453614275847664,
+      0.43384571863541904,
+      0.1719365323889595,
+      0.17386358534014687
+    ],
+    "protein_coefficients_standardized": [
+      -0.13824120259812653,
+      0.6271455165719626,
+      0.19287862910289041
+    ],
+    "intercept": -2.9513457853898646,
+    "gradient_max": 4.2994749471780835e-07,
+    "iterations": 5,
+    "objective": 705.4568107923354,
+    "normalized_weight_sum": 2993.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "weighted_midpoint_tail_clip_1_99"
+  },
+  {
+    "outer_fold": 1,
+    "model": "clip_all3",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.0664484909066239,
+      "10.0": 0.06640743256552907,
+      "100.0": 0.06716814571527363
+    },
+    "training_n": 3119,
+    "scoring_n": 738,
+    "training_positive_weight_n": 3119,
+    "training_events": 506,
+    "scoring_events": 106,
+    "training_positive_weight_events": 506,
+    "training_weight_sum": 63577813.30413568,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.48368669632270284,
+      1.366116824825352,
+      0.4554911999805276,
+      0.23362782256907696,
+      0.36429650718371787,
+      -0.1138055036560213,
+      -0.13264349428014574,
+      0.9553336308783162,
+      -0.8215244214528661
+    ],
+    "training_scale": [
+      1.06403195658109,
+      1.2533211449779074,
+      0.4980150266014343,
+      0.42313811349334746,
+      0.4812323368576359,
+      0.9090613152597453,
+      0.30070636815376295,
+      0.37601710534901744,
+      0.4049601477511771
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": -0.7574060371606409,
+        "upper": 0.9550511404913584
+      },
+      {
+        "column": 1,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": 0.23578799061742392,
+        "upper": 2.2248476212875454
+      },
+      {
+        "column": 2,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": -1.9724171660339176,
+        "upper": 0.4271399716588653
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.6882209172433248,
+      0.01852994823839691,
+      0.15882088343894138,
+      0.43440172083624784,
+      0.18293918699233738,
+      0.22360850924114803
+    ],
+    "protein_coefficients_standardized": [
+      0.017341867599230332,
+      0.5735402968990998,
+      0.17449098743152772
+    ],
+    "intercept": -3.0535751491836165,
+    "gradient_max": 2.670863530340739e-12,
+    "iterations": 6,
+    "objective": 720.1733943411447,
+    "normalized_weight_sum": 3119.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "weighted_midpoint_tail_clip_1_99"
+  },
+  {
+    "outer_fold": 2,
+    "model": "clip_all3",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06396655920295953,
+      "10.0": 0.06383471898681035,
+      "100.0": 0.0645488871190097
+    },
+    "training_n": 3156,
+    "scoring_n": 701,
+    "training_positive_weight_n": 3156,
+    "training_events": 501,
+    "scoring_events": 111,
+    "training_positive_weight_events": 501,
+    "training_weight_sum": 70363640.68134277,
+    "training_psu_n": 78,
+    "scoring_psu_n": 20,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5137074646104092,
+      1.3917023201391494,
+      0.45832237695104333,
+      0.21839162272462248,
+      0.37642937345790023,
+      -0.12070061181329603,
+      -0.13578428447440136,
+      0.9556817140948406,
+      -0.8031799882577894
+    ],
+    "training_scale": [
+      1.0619825615059293,
+      1.2443455794252631,
+      0.49825994795587364,
+      0.4131545979997421,
+      0.4844897318375205,
+      0.9087022034227487,
+      0.29822896771117546,
+      0.3717673518367682,
+      0.3904864095570059
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": -0.7439188636757732,
+        "upper": 0.9581335796001434
+      },
+      {
+        "column": 1,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": 0.23644873671609373,
+        "upper": 2.256677512063644
+      },
+      {
+        "column": 2,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": -1.9821920964876307,
+        "upper": 0.3091673623763242
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.7360234396803177,
+      -0.07612620249781113,
+      0.1689904054561663,
+      0.3310683328013364,
+      0.13993775937466707,
+      0.20743375980432066
+    ],
+    "protein_coefficients_standardized": [
+      -0.0828823310337473,
+      0.6529606789514415,
+      0.12875194785165012
+    ],
+    "intercept": -3.137148119054949,
+    "gradient_max": 1.3503198559305929e-11,
+    "iterations": 6,
+    "objective": 704.9627047748157,
+    "normalized_weight_sum": 3155.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "weighted_midpoint_tail_clip_1_99"
+  },
+  {
+    "outer_fold": 3,
+    "model": "clip_all3",
+    "selected_penalty": 10.0,
+    "lambda": 10.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06209884578020896,
+      "10.0": 0.06198622292367615,
+      "100.0": 0.06296436295941796
+    },
+    "training_n": 3109,
+    "scoring_n": 748,
+    "training_positive_weight_n": 3109,
+    "training_events": 487,
+    "scoring_events": 125,
+    "training_positive_weight_events": 487,
+    "training_weight_sum": 68481973.7185615,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5672364849478103,
+      1.4503295459050431,
+      0.49364718969244775,
+      0.2554875841292069,
+      0.3508052308919772,
+      -0.13330684167381554,
+      -0.13703362461532897,
+      0.9426783542991453,
+      -0.8167188331125539
+    ],
+    "training_scale": [
+      1.062342842988598,
+      1.2777237767619933,
+      0.49995964017228023,
+      0.436134931512059,
+      0.4772220875764289,
+      0.9048532081629821,
+      0.29733887074723936,
+      0.3702095585355777,
+      0.39879126303752194
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": -0.7621702528820864,
+        "upper": 0.9323600818621876
+      },
+      {
+        "column": 1,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": 0.23852093507217595,
+        "upper": 2.2285677316944654
+      },
+      {
+        "column": 2,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": -1.9346410368314617,
+        "upper": 0.2983172893126704
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.6869095871952215,
+      0.09433316267043793,
+      0.15930701107260437,
+      0.4560579872285815,
+      0.20548400151689433,
+      0.14980512827654516
+    ],
+    "protein_coefficients_standardized": [
+      -0.1301247962926218,
+      0.7634816586842749,
+      0.0883332678815404
+    ],
+    "intercept": -3.102006225391306,
+    "gradient_max": 9.50350909079134e-14,
+    "iterations": 6,
+    "objective": 682.0568585941537,
+    "normalized_weight_sum": 3108.9999999999995,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "weighted_midpoint_tail_clip_1_99"
+  },
+  {
+    "outer_fold": 4,
+    "model": "clip_all3",
+    "selected_penalty": 1.0,
+    "lambda": 1.0,
+    "inner_brier_by_penalty": {
+      "1.0": 0.06211354448343101,
+      "10.0": 0.06221299884981919,
+      "100.0": 0.06360077614783116
+    },
+    "training_n": 3051,
+    "scoring_n": 806,
+    "training_positive_weight_n": 3051,
+    "training_events": 478,
+    "scoring_events": 134,
+    "training_positive_weight_events": 478,
+    "training_weight_sum": 67548955.59027687,
+    "training_psu_n": 79,
+    "scoring_psu_n": 19,
+    "PSU_overlap_n": 0,
+    "feature_names": [
+      "age_centered",
+      "age_centered_squared",
+      "male",
+      "smoking_current",
+      "smoking_former",
+      "systolic_bp",
+      "log2_cystatin_c",
+      "log2_beta2_microglobulin",
+      "log2_beta_trace_protein"
+    ],
+    "training_mean": [
+      -0.5330221282005679,
+      1.38158280476276,
+      0.4723555053547881,
+      0.23204546896568903,
+      0.35534657017195564,
+      -0.10506356284121258,
+      -0.12152298399726358,
+      0.9640036252409109,
+      -0.807902409805128
+    ],
+    "training_scale": [
+      1.0476021265782618,
+      1.2460678138691166,
+      0.4992351969921698,
+      0.4221378557985327,
+      0.4786182040405298,
+      0.9003678430463096,
+      0.30289392592047054,
+      0.3814203844133226,
+      0.39923618526072807
+    ],
+    "constant_features": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "protein_transform_parameters": [
+      {
+        "column": 0,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": -0.7559056040689215,
+        "upper": 0.9824535128509881
+      },
+      {
+        "column": 1,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": 0.2464835327578994,
+        "upper": 2.2968246048285863
+      },
+      {
+        "column": 2,
+        "kind": "weighted_midpoint_tail_clip",
+        "lower": -1.9440465268940876,
+        "upper": 0.4331430761385016
+      }
+    ],
+    "core_coefficients_standardized": [
+      0.8246559463216521,
+      0.16095731225008691,
+      0.13550247895664283,
+      0.47423301217577346,
+      0.045395142823122805,
+      0.1779730851694996
+    ],
+    "protein_coefficients_standardized": [
+      -0.15356758676094906,
+      0.7616199601861078,
+      0.09165172022296902
+    ],
+    "intercept": -3.141231273602336,
+    "gradient_max": 1.7256474027504964e-12,
+    "iterations": 6,
+    "objective": 668.8084543879673,
+    "normalized_weight_sum": 3051.0,
+    "convergence_status": "gradient_1e-6",
+    "protein_transformation": "weighted_midpoint_tail_clip_1_99"
+  }
+]

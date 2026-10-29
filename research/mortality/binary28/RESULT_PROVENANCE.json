@@ -1,0 +1,46 @@
+{
+  "scientific_code_commit": "f3c7a8477eef4caa05d0f52d91aec5353ddd98d9",
+  "first_completed_code_commit": "e2171f949585aefcf63c47aab5d97e1bd7793a2f",
+  "first_completed_run_id": 40891987126,
+  "final_scientific_run_id": 40892565768,
+  "final_empirical_job_id": 123512993128,
+  "final_workbench_run_id": 40892565787,
+  "plan_commit": "d81972a",
+  "final_scientific_CI": "success",
+  "first_run_primary": {
+    "delta_brier": -0.004938101329100858,
+    "delta_auc": 0.029468917395639727,
+    "delta_brier_interval": {
+      "lower": -0.006857713534841271,
+      "upper": -0.0025674531137848456,
+      "valid": 500,
+      "undefined": 0,
+      "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+      "defined_draws_only": false
+    },
+    "delta_auc_interval": {
+      "lower": 0.010058998662223576,
+      "upper": 0.04512770584739252,
+      "valid": 500,
+      "undefined": 0,
+      "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+      "defined_draws_only": false
+    }
+  },
+  "export_change": "Only paired aggregate CSV/log export added after first successful calculation; no statistical algorithm or hypothesis changed.",
+  "artifact": {
+    "id": 12906330565,
+    "url": "https://github.com/aleks-kudriavtsev/aging_theories/actions/runs/40892565768/artifacts/12906330565",
+    "bytes": 119628,
+    "api_zip_sha256": "e32851f22a603353773ccb9ba91f33d14f0536689499084bc12d2214b6feda20",
+    "expires": "2026-11-12",
+    "zip_downloaded": false
+  },
+  "aggregate_transfer": "Marked authorized GitHub job stdout; no participant records and no artifact ZIP used.",
+  "documentation_head_CI": "Documentation-only followup commits skip CI; CI statement refers to the scientific code commit.",
+  "previous_biomarkers_PR120_checks": {
+    "ui_run_id": 40888979538,
+    "model_run_id": 40888979624,
+    "both_conclusions": "success"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "plan_commit": "a15532f",
+  "lock_sha256": "e894e411ac4949f0ac168137497cb09022da28e35492b091fd02fa305496f592",
+  "retrieved_utc": "2026-10-29T14:33:34.075182+00:00",
+  "files": [
+    {
+      "file": "index.htm",
+      "url": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx",
+      "status": "retrieved",
+      "bytes": 434423,
+      "sha256": "36ff654e1b4c5a3d8640a1f7b005388a6b0a27d4362da533183b84ad852ec74e"
+    },
+    {
+      "file": "adult.sas",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.sas",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.sas",
+      "status": "retrieved",
+      "bytes": 130935,
+      "sha256": "b8d61f5bc56590d95220d88058bb054995f3beb7aeb400af88868c2679f73d4c"
+    },
+    {
+      "file": "cystatin.pdf",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/SSCYSTAT.pdf",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/SSCYSTAT.pdf",
+      "status": "retrieved",
+      "bytes": 387605,
+      "sha256": "7e3a605bb55a6cb5dd0bc47d03ff7c8e3b761b6fb9952b91f0ea67713e572459"
+    },
+    {
+      "file": "btp.htm",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.htm",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.htm",
+      "status": "retrieved",
+      "bytes": 22175,
+      "sha256": "82ddb6aa1ac059847edb59f374291f79c3b18ecb32b281f06b2199d1e5aa4c7e"
+    },
+    {
+      "file": "mortality.dat",
+      "url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_III_MORT_2019_PUBLIC.dat",
+      "resolved_url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_III_MORT_2019_PUBLIC.dat",
+      "status": "retrieved",
+      "bytes": 1663910,
+      "sha256": "224293447dbb8ec9412acf05441ab7d271124a17419dba6cf236ae36d5dd5b98"
+    },
+    {
+      "file": "adult.dat",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.dat",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.dat",
+      "status": "retrieved",
+      "bytes": 67107314,
+      "sha256": "32a93a474cbd3bd0dd2ddc82153c47cf0b9f81eda025e255dd251bb5620a3adf"
+    },
+    {
+      "file": "cystatin.xpt",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/sscystat.xpt",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/sscystat.xpt",
+      "status": "retrieved",
+      "bytes": 372240,
+      "sha256": "87904d7f0a4a8eedf0faa4c117ea62505ed85265be5e92820ac4640ba12fa613"
+    },
+    {
+      "file": "btp.xpt",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.xpt",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.xpt",
+      "status": "retrieved",
+      "bytes": 438960,
+      "sha256": "92f8ec6e4b5535cf87fa79b8c4c5f8a04ee8ea51fa75f2ecbc4f2e9ad702ebbf"
+    }
+  ]
+}
