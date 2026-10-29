@@ -48,11 +48,15 @@ def read_adult_checked(data_path,sas_path):
         spans=re.findall(r'(?im)^[ \t]*'+name+r'[ \t]+(\d+)(?:[ \t]*-[ \t]*(\d+))?[ \t]*$',blocks[0])
         normalized=[(int(a),int(b or a)) for a,b in spans]
         if normalized!=[(start,end)]:raise ValueError('SAS dictionary position unresolved: '+name)
+    infile_blocks=re.findall(r'(?ims)^[ \t]*INFILE\b([^;]*);',sas)
+    missover=any(re.search(r'\bMISSOVER\b',block,re.I) for block in infile_blocks)
+    selected_width=max(e for _,e in FIELDS.values())
     records=[]
     lines=Path(data_path).read_text(encoding='ascii').splitlines()
     widths=dict(Counter(map(len,lines)))
     for line in lines:
-        if len(line)!=3346:raise ValueError('Unexpected adult record width; aggregate_width_counts='+json.dumps(widths,sort_keys=True))
+        valid_width=(selected_width<=len(line)<=3346) if missover else len(line)==3346
+        if not valid_width:raise ValueError('Unexpected adult record width; aggregate_width_counts='+json.dumps(widths,sort_keys=True))
         row={}
         for name,(start,end) in FIELDS.items():
             token=line[start-1:end].strip()
@@ -64,7 +68,9 @@ def read_adult_checked(data_path,sas_path):
     independent=pd.read_fwf(data_path,colspecs=[(s-1,e) for s,e in FIELDS.values()],names=list(FIELDS),header=None,na_values=['.'],dtype=float)
     pd.testing.assert_frame_equal(manual,independent,check_exact=True,check_dtype=False)
     if manual.SEQN.isna().any() or manual.SEQN.duplicated().any():raise ValueError('Invalid adult identifiers')
-    return manual,dict(rows=len(manual),fields=len(FIELDS),cell_comparisons=int(manual.size),exact_match=True)
+    return manual,dict(rows=len(manual),fields=len(FIELDS),cell_comparisons=int(manual.size),exact_match=True,
+                       source_record_width_counts=widths,SAS_MISSOVER=missover,selected_fields_end=selected_width,
+                       rows_with_absent_trailing_unselected_characters=sum(n for width,n in widths.items() if width<3346))
 
 
 def join_one_to_one(left,right):
@@ -76,6 +82,7 @@ def join_one_to_one(left,right):
 def load(source):
     source=Path(source);gate,manifest,stable=preflight(source)
     adult,adult_audit=read_adult_checked(source/'adult.dat',source/'adult.sas')
+    if len(adult)!=20050:raise ValueError('Adult release row count differs from official20050')
     cys=base.read_xpt_checked(source/'cystatin.xpt');btp=base.read_xpt_checked(source/'btp.xpt')
     mort=base.independent_mortality_reader(source/'mortality.dat')
     if not set(adult.SEQN)<=set(mort.SEQN) or not set(cys.SEQN)<=set(mort.SEQN) or not set(btp.SEQN)<=set(mort.SEQN):raise ValueError('Survey/mortality identifier universe mismatch')

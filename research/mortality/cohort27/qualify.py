@@ -35,6 +35,7 @@ def run(source,out):
         weighted_joint_numeric_coverage=float(np.average(common,weights=d.WTCYPEX6)),
         eight_year_AUC=None,eight_year_Brier=None,
         clinical_use_ready=False,participant_records_exported=False,
+        public_person_records_processed=True,protected_records_processed=False,no_model_predictions_computed=True,
         model_evaluation_status='blocked_before_predictions_clinical_semantics_and_assay_transport_unresolved',
         plan_sha256=sha(ROOT/'ANALYSIS_PLAN.md'),lock_sha256=sha(ROOT/'LOCK.json'),
         scientific_python_sha256={str(p.relative_to(ROOT.parent)):sha(p) for p in sorted(ROOT.parent.rglob('*.py'))},

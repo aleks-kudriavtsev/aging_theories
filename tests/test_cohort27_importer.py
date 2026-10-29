@@ -50,7 +50,11 @@ class AdultParserTests(unittest.TestCase):
         d, audit = self.read(adult_row()+'\n'+adult_row(SEQN=9, HSSEX=1, HSAGEIR=73, SDPPSU6=2)+'\n')
         np.testing.assert_array_equal(d.SEQN, [1., 9.])
         np.testing.assert_array_equal(d.HSAGEIR, [45., 73.])
-        self.assertEqual(audit, dict(rows=2, fields=6, cell_comparisons=12, exact_match=True))
+        for key, expected in dict(rows=2, fields=6, cell_comparisons=12, exact_match=True).items():
+            self.assertEqual(audit[key], expected)
+        self.assertEqual({int(k): v for k, v in audit['source_record_width_counts'].items()}, {3346: 2})
+        self.assertFalse(audit['SAS_MISSOVER'])
+        self.assertEqual(audit['selected_fields_end'], 45)
 
     def test_length_declarations_cannot_override_input_positions(self):
         dictionary='LENGTH\n  SEQN 7\n  HSSEX 3\n;\n'+sas_dictionary()+"LABEL SEQN='Sequence number';\n"
@@ -75,6 +79,43 @@ class AdultParserTests(unittest.TestCase):
             with self.subTest(width=len(row)):
                 with self.assertRaisesRegex(ValueError, 'record width'):
                     self.read(row)
+
+    def test_official_missover_preserves_short_rows_and_exact_selected_fields(self):
+        dictionary = 'INFILE ADULT MISSOVER LRECL=3346;\n' + sas_dictionary()
+        text = '\n'.join([adult_row(SEQN=1), adult_row(SEQN=2)[:3345], adult_row(SEQN=3)[:45]]) + '\n'
+        d, audit = self.read(text, dictionary)
+        np.testing.assert_array_equal(d.SEQN, [1., 2., 3.])
+        np.testing.assert_array_equal(d.HSAGEIR, [45., 45., 45.])
+        self.assertEqual(audit['rows'], 3)
+        self.assertEqual(audit['cell_comparisons'], 18)
+        self.assertTrue(audit['exact_match'])
+        self.assertTrue(audit['SAS_MISSOVER'])
+        self.assertEqual(audit['selected_fields_end'], 45)
+        self.assertEqual(audit['rows_with_absent_trailing_unselected_characters'], 2)
+        self.assertEqual({int(k): v for k, v in audit['source_record_width_counts'].items()}, {3346: 1, 3345: 1, 45: 1})
+
+    def test_missover_does_not_authorize_missing_selected_column_or_oversize_row(self):
+        dictionary = 'INFILE ADULT MISSOVER LRECL=3346;\n' + sas_dictionary()
+        for text in (adult_row()[:44], adult_row()+' '):
+            with self.subTest(width=len(text)):
+                with self.assertRaisesRegex(ValueError, 'record width'):
+                    self.read(text, dictionary)
+
+    def test_short_record_needs_missover_in_infile_statement(self):
+        dictionaries = [sas_dictionary(),
+                        'INFILE ADULT LRECL=3346;\n' + sas_dictionary(),
+                        'INFILE ADULT LRECL=3346;\n' + sas_dictionary() + 'LABEL HSSEX="MISSOVER";\n']
+        for dictionary in dictionaries:
+            for width in (3345, 45):
+                with self.subTest(width=width, dictionary=dictionary[:30]):
+                    with self.assertRaisesRegex(ValueError, 'record width'):
+                        self.read(adult_row()[:width], dictionary)
+
+    def test_missover_infile_case_and_multiline_format_keep_same_semantics(self):
+        dictionary = 'infile adult\n  missover lrecl=3346;\n' + sas_dictionary()
+        d, audit = self.read(adult_row()[:45], dictionary)
+        self.assertEqual(d.SEQN.iloc[0], 1.)
+        self.assertTrue(audit['SAS_MISSOVER'])
 
     def test_non_numeric_values_are_rejected(self):
         with self.assertRaisesRegex(ValueError, 'Non-numeric adult field'):
