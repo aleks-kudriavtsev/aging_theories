@@ -1,0 +1,280 @@
+{
+  "schema": "replication34-sources/1",
+  "checked_at_UTC": "2026-10-29",
+  "sources": [
+    {
+      "id": "nhanes3",
+      "url": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx",
+      "kind": "official_study_metadata",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "prior_and_current_metadata",
+      "original_source_sha256": null
+    },
+    {
+      "id": "nhanes3_pair",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.htm",
+      "kind": "official_codebook",
+      "review_file": "../freeze30/QUALIFICATION_PUBLIC_RU.md",
+      "observation_status": "retained30_metadata",
+      "original_source_sha256": null
+    },
+    {
+      "id": "nhanes3_repeat",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/37a/SSNH3CYS.htm",
+      "kind": "official_codebook",
+      "review_file": "../freeze30/QUALIFICATION_PUBLIC_RU.md",
+      "observation_status": "retained30_metadata",
+      "original_source_sha256": null
+    },
+    {
+      "id": "sscard",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SSCARD_A.htm",
+      "kind": "official_codebook",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "current_metadata_review",
+      "original_source_sha256": null
+    },
+    {
+      "id": "nhanes_lab",
+      "url": "https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Laboratory",
+      "kind": "official_study_metadata",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "current_metadata_review",
+      "original_source_sha256": null
+    },
+    {
+      "id": "lmf",
+      "url": "https://www.cdc.gov/nchs/linked-data/mortality-files/",
+      "kind": "official_study_metadata",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "current_metadata_review_no_PDF_retry",
+      "original_source_sha256": null
+    },
+    {
+      "id": "programme_history",
+      "url": "https://github.com/aleks-kudriavtsev/aging_theories/blob/27ea33fc6cfd594c309b63ae59e695129511a9c8/research/mortality/freeze30/CANDIDATE_MANIFEST.json",
+      "kind": "programme_history",
+      "review_file": "STUDY_PLAN.md",
+      "observation_status": "retained_programme_catalog_and33B_history",
+      "original_source_sha256": null
+    },
+    {
+      "id": "biolincc_faq",
+      "url": "https://biolincc.nhlbi.nih.gov/faq/",
+      "kind": "official_access_terms",
+      "review_file": "ACCESS_REVIEW.md",
+      "observation_status": "current_metadata_review",
+      "original_source_sha256": null
+    },
+    {
+      "id": "aric",
+      "url": "https://biolincc.nhlbi.nih.gov/studies/aric/",
+      "kind": "official_study_metadata",
+      "review_file": "ACCESS_REVIEW.md",
+      "observation_status": "current_metadata_review_2026a",
+      "original_source_sha256": null
+    },
+    {
+      "id": "aric_longlab",
+      "url": "https://www5.cscc.unc.edu/aric9/sites/default/files/public/visitdocuments/v11/ARIC%20V1_V11_LongLab_261210_2_np%20Derived%20Variable%20Dictionary.pdf",
+      "kind": "official_codebook",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "current_metadata_review_pages37_38_45_46",
+      "original_source_sha256": null
+    },
+    {
+      "id": "aric_ucod",
+      "url": "https://aric.cscc.unc.edu/aric9/sites/default/files/public/surveillancedata/Data%20Dictionary%20INCBY24%20Cohort%20Surv%20Incident%20Derived.pdf",
+      "kind": "official_codebook",
+      "review_file": "ACCESS_REVIEW.md",
+      "observation_status": "current_metadata_review_study_level_not_exact_package",
+      "original_source_sha256": null
+    },
+    {
+      "id": "aric_v7",
+      "url": "https://www5.cscc.unc.edu/aric9/sites/default/files/public/visitdocuments/v7/ARIC%20MOP17%20190206.pdf",
+      "kind": "official_codebook",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "current_metadata_review_visit_dates",
+      "original_source_sha256": null
+    },
+    {
+      "id": "chs",
+      "url": "https://biolincc.nhlbi.nih.gov/studies/chs/",
+      "kind": "official_study_metadata",
+      "review_file": "ACCESS_REVIEW.md",
+      "observation_status": "current_metadata_review_2026_release",
+      "original_source_sha256": null
+    },
+    {
+      "id": "chs_policy",
+      "url": "https://chs-nhlbi.org/CHS_DistribPolicy",
+      "kind": "official_access_terms",
+      "review_file": "ACCESS_REVIEW.md",
+      "observation_status": "current_metadata_review",
+      "original_source_sha256": null
+    },
+    {
+      "id": "chs_labels",
+      "url": "https://biolincc.nhlbi.nih.gov/media/studies/chs/hidden/labels/valuelbl.pdf",
+      "kind": "official_codebook",
+      "review_file": "ACCESS_REVIEW.md",
+      "observation_status": "current_linked_legacy2003_metadata_not_current_package_proof",
+      "original_source_sha256": null
+    },
+    {
+      "id": "mesa",
+      "url": "https://biolincc.nhlbi.nih.gov/studies/mesa/",
+      "kind": "official_study_metadata",
+      "review_file": "ACCESS_REVIEW.md",
+      "observation_status": "current_metadata_review_events2020",
+      "original_source_sha256": null
+    },
+    {
+      "id": "kidney_methods",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5572311/",
+      "kind": "primary_publication",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "primary_methods_not_person_level_release",
+      "original_source_sha256": null
+    },
+    {
+      "id": "fhs",
+      "url": "https://biolincc.nhlbi.nih.gov/studies/framoffspring/",
+      "kind": "official_study_metadata",
+      "review_file": "PRE_RESULT_SOURCE_ADDENDUM.md",
+      "observation_status": "current_metadata_review_events2021",
+      "original_source_sha256": null,
+      "detail": "Offspringexam7 measured-protein lead only;Omnivisitnumber not qualified; no actual participant release/QC import."
+    },
+    {
+      "id": "fhs_measured",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6366976/",
+      "kind": "primary_publication",
+      "review_file": "PRE_RESULT_SOURCE_ADDENDUM.md",
+      "observation_status": "primary_measured_assay_lead_not_release_QC_proof",
+      "original_source_sha256": null,
+      "detail": "Offspringexam7 measured-protein lead only;Omnivisitnumber not qualified; no actual participant release/QC import."
+    },
+    {
+      "id": "ukb_access",
+      "url": "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/",
+      "kind": "official_access_terms",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "current_controlled_access_page_and_retained30_pause_observation",
+      "original_source_sha256": null
+    },
+    {
+      "id": "ukb_cys",
+      "url": "https://biobank.ndph.ox.ac.uk/ukb/field.cgi?id=30720",
+      "kind": "official_codebook",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "current_absolute_Cys_mgL_metadata",
+      "original_source_sha256": null
+    },
+    {
+      "id": "ukb_npx",
+      "url": "https://biobank.ndph.ox.ac.uk/ukb/label.cgi?id=1839",
+      "kind": "official_codebook",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "current_relative_NPX_metadata",
+      "original_source_sha256": null
+    },
+    {
+      "id": "ukb_coding",
+      "url": "https://biobank.ndph.ox.ac.uk/ukb/coding.cgi?id=143&nl=1",
+      "kind": "official_codebook",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "current_B2M225_CST3710_target_metadata",
+      "original_source_sha256": null
+    },
+    {
+      "id": "ukb_cause",
+      "url": "https://biobank.ndph.ox.ac.uk/ukb/field.cgi?id=40001",
+      "kind": "official_codebook",
+      "review_file": "ASSAY_REVIEW.md",
+      "observation_status": "current_underlying_not_contributory_ICD10_metadata",
+      "original_source_sha256": null
+    },
+    {
+      "id": "hrs_policy",
+      "url": "https://hrsdata.isr.umich.edu/data-products/ai-llm-use-policy",
+      "kind": "official_access_terms",
+      "review_file": "../freeze30/QUALIFICATION_COHORTS_RU.md",
+      "observation_status": "retained30_provider_AI_prohibition_not_retried",
+      "original_source_sha256": null
+    },
+    {
+      "id": "hrs_vbs",
+      "url": "https://hrsdata.isr.umich.edu/data-products/2016-venous-blood-study-vbs",
+      "kind": "official_study_metadata",
+      "review_file": "../freeze30/QUALIFICATION_COHORTS_RU.md",
+      "observation_status": "retained30_metadata",
+      "original_source_sha256": null
+    },
+    {
+      "id": "ages_access",
+      "url": "https://www.nature.com/articles/s41467-026-72957-w",
+      "kind": "primary_publication",
+      "review_file": "../freeze30/QUALIFICATION_COHORTS_RU.md",
+      "observation_status": "retained30_controlled_IHA_collaboration_DUA_statement",
+      "original_source_sha256": null
+    },
+    {
+      "id": "cric",
+      "url": "https://repository.niddk.nih.gov/studies/cric/",
+      "kind": "official_study_metadata",
+      "review_file": "../freeze30/QUALIFICATION_COHORTS_RU.md",
+      "observation_status": "prior30_metadata403_not_retried_terms_not_verified",
+      "original_source_sha256": null
+    },
+    {
+      "id": "cric_paper",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26948990/",
+      "kind": "primary_publication",
+      "review_file": "../freeze30/QUALIFICATION_COHORTS_RU.md",
+      "observation_status": "retained30_primary_study_with_erratum_unresolved",
+      "original_source_sha256": null
+    },
+    {
+      "id": "uci",
+      "url": "https://archive.ics.uci.edu/dataset/336/chronic%2Bkidney%2Bdisease",
+      "kind": "official_study_metadata",
+      "review_file": "../freeze30/QUALIFICATION_COHORTS_RU.md",
+      "observation_status": "retained30_open_classification_schema_not_mortality",
+      "original_source_sha256": null
+    },
+    {
+      "id": "precision_method",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34031906/",
+      "kind": "methodology_reference",
+      "review_file": "METHOD_DESIGN.md",
+      "observation_status": "primary_external_validation_precision_framework_not_paired_formula_source",
+      "original_source_sha256": null
+    },
+    {
+      "id": "binom_docs",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html",
+      "kind": "methodology_reference",
+      "review_file": "METHOD_DESIGN.md",
+      "observation_status": "official_independent_binomial_distribution_documentation",
+      "original_source_sha256": null
+    }
+  ],
+  "prior_catalog": {
+    "path": "../freeze30/CANDIDATE_MANIFEST.json",
+    "sha256": "170957b392a4c5e6e6c267a110a842e164ab6d7c53260a8af9fb64d31b363fdb"
+  },
+  "review_sha256": {
+    "../freeze30/QUALIFICATION_COHORTS_RU.md": "b22e27de3d23ad49d06527208433d8499e0c1b90b574cc185b2da54733a5d2ad",
+    "../freeze30/QUALIFICATION_PUBLIC_RU.md": "bddd6a905c0ad9dc53029814a8dd840ca426d7162c7727e411b353f2d12eeae2",
+    "ACCESS_REVIEW.md": "8b80da1502e23dd3db902b9ec0e198f721254d35c2b96ff719fce5a8b6708b31",
+    "ASSAY_REVIEW.md": "8f83a1ae852e900a028c7c22abbf561cd8950d261c4b3307c7a5c43f1b6e0dea",
+    "METHOD_DESIGN.md": "51fe203ad6b4fd23847ae34c408a27527ffdf1c0e6c9e2c73d335b687e10968d",
+    "STUDY_PLAN.md": "6222ddd31aa2264a124e912815c11914dcf2ae9e52fb42290a722ba7a47dbbd2",
+    "PRE_RESULT_SOURCE_ADDENDUM.md": "c9bf1b7334799e5f5e99c98ca9b39967b531a678754e8db05ce7b2c31140ae30"
+  },
+  "original_source_bytes_saved": false,
+  "new_outcomes_read": false,
+  "person_level_downloads_performed": false
+}
