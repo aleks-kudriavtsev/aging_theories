@@ -1,6 +1,7 @@
 """Gate and verify every source before parsing public first-exam participant files."""
 from __future__ import annotations
 import hashlib,json,re
+from collections import Counter
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -46,8 +47,10 @@ def read_adult_checked(data_path,sas_path):
         normalized=[(int(a),int(b or a)) for a,b in spans]
         if normalized!=[(start,end)]:raise ValueError('SAS dictionary position unresolved: '+name)
     records=[]
-    for line in Path(data_path).read_text(encoding='ascii').splitlines():
-        if len(line)!=3346:raise ValueError('Unexpected adult record width')
+    lines=Path(data_path).read_text(encoding='ascii').splitlines()
+    widths=dict(Counter(map(len,lines)))
+    for line in lines:
+        if len(line)!=3346:raise ValueError('Unexpected adult record width; aggregate_width_counts='+json.dumps(widths,sort_keys=True))
         row={}
         for name,(start,end) in FIELDS.items():
             token=line[start-1:end].strip()
