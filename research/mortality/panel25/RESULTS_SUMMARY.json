@@ -1,0 +1,109 @@
+{
+  "analysis": "exploratory_urate_MEC_not_external_validation",
+  "n": 2867,
+  "events4": 96,
+  "eligible_n": 3218,
+  "complete_baseline_n": 2868,
+  "missing_baseline_n": 350,
+  "urate_excluded_after_baseline_n": 1,
+  "weight": "WTMEC2YR",
+  "horizon_years": 4,
+  "outcome_states": 2,
+  "baseline_cause_components": 10,
+  "point": {
+    "metrics": {
+      "calibration": {
+        "n": 2867,
+        "events": 96,
+        "auc": 0.8204585083304433,
+        "brier": 0.027760709386228908,
+        "observed": 0.029849871716045678,
+        "predicted": 0.029387617340167642,
+        "observed_expected": 1.0157295629151335,
+        "bias_pp": -0.04622543758780358
+      },
+      "urate": {
+        "n": 2867,
+        "events": 96,
+        "auc": 0.8171019314227418,
+        "brier": 0.027765213908365227,
+        "observed": 0.029849871716045678,
+        "predicted": 0.029396937210768036,
+        "observed_expected": 1.0154075406573897,
+        "bias_pp": -0.04529345052776412
+      },
+      "frozen": {
+        "n": 2867,
+        "events": 96,
+        "auc": 0.8239433968885876,
+        "brier": 0.027951908918099858,
+        "observed": 0.029849871716045678,
+        "predicted": 0.03676946788558287,
+        "observed_expected": 0.811811359602233,
+        "bias_pp": 0.6919596169537193
+      }
+    },
+    "delta_brier": 0.000004504522136319217,
+    "delta_auc": -0.003356576907701525
+  },
+  "bootstrap": {
+    "delta_brier": {
+      "lower": -0.0001333116156335812,
+      "upper": 0.00024963976868704654,
+      "valid": 1000,
+      "undefined": 0,
+      "scope": "fixed_baseline_partition_update_refitted",
+      "defined_draws_only": false
+    },
+    "delta_auc": {
+      "lower": -0.02123158960678123,
+      "upper": 0.007020104311704028,
+      "valid": 1000,
+      "undefined": 0,
+      "scope": "fixed_baseline_partition_update_refitted",
+      "defined_draws_only": false
+    }
+  },
+  "bootstrap_refit_failures": 0,
+  "seed": 20261029,
+  "replicates": 1000,
+  "prior_baseline_reproduction": {
+    "n": 1270,
+    "events4": 37,
+    "delta_brier": 0.0003247022781340328,
+    "delta_auc": -0.00871631294698938,
+    "calibration_brier": 0.02307226983127658,
+    "nfl_brier": 0.023396972109410615,
+    "calibration_auc": 0.7801639487997442,
+    "nfl_auc": 0.7714476358527548
+  },
+  "source_audit": {
+    "files_verified": 29,
+    "scientific_files": 15,
+    "source_manifest_sha256": "0de17151efc7cf0baa3292d8bddb3ef47f5d456d15a549efd8b9c0d84655b0a9",
+    "survey_n": 10175,
+    "age40_75_n": 3308,
+    "eligible_mec_n": 3218,
+    "reader_audit": {
+      "file": "2013_mortality.dat",
+      "rows": 10175,
+      "fields": 8,
+      "cell_comparisons": 81400,
+      "exact_match": true,
+      "sha256": "588acea1d4cdf47a14cc9a35bd56e372739b8788d63ca0af98bf954c70c29905"
+    }
+  },
+  "baseline_sha256": "87a8623b9fd5cb793ce2da5311a17a56b7d94251da5df335de3d406e437a55da",
+  "plan_commit": "90663b1",
+  "plan_sha256": "1cd59357168dde9113bff46d311dde535201373303568f651f42006776524158",
+  "code_sha256": "c0188b3eb4255bc01a1c24c0dd60d9a7a13c6dfc1d116a174584a7b089c4bd98",
+  "versions": {
+    "python": "3.12.15",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0"
+  },
+  "clinical_use_ready": false,
+  "participant_records_exported": false
+}
