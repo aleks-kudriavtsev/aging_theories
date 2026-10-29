@@ -1,0 +1,68 @@
+{
+  "audit": "independent_temporal26_aggregate_and_provenance",
+  "run_id": 40883299190,
+  "job_id": 123480253896,
+  "checks": {
+    "result_structurally_equal_successful_job_stdout": true,
+    "manifest_structurally_equal_successful_job_stdout": true,
+    "result_bytes_equal_reconstructed_stdout_json": true,
+    "manifest_bytes_equal_reconstructed_stdout_json": true,
+    "manifest_sha_matches_run_audit": true,
+    "lock_sha_matches_result": true,
+    "lock_sha_matches_manifest": true,
+    "plan_sha_matches_result_and_lock": true,
+    "model_hashes_match_lock_and_run": true,
+    "all_scientific_python_files_recorded": true,
+    "all_scientific_python_hashes_match": true,
+    "manifest_files_unique": true,
+    "all_sources_retrieved": true,
+    "source_fingerprints_match_run": true,
+    "stable_source_content_hash_matches": true,
+    "mortality_file_matches_independent_reader_hash": true,
+    "reader_cell_count_correct": true,
+    "reader_rows_match_survey_n": true,
+    "reader_exact_match": true,
+    "flow_common_plus_excluded_equals_eligible": true,
+    "flow_monotone": true,
+    "coverage_consistent": true,
+    "primary_delta_brier_arithmetic": true,
+    "primary_delta_auc_arithmetic": true,
+    "same_scoring_domain_and_events": true,
+    "same_observed_incidence_and_censoring": true,
+    "bias_and_OE_arithmetic": true,
+    "ipcw_AJ_check_within_tolerance": true,
+    "all_bootstrap_intervals_account_for_all_1000_draws": true,
+    "primary_intervals_include_zero": true,
+    "no_clinical_or_individual_release_claims": true
+  },
+  "passed": 31,
+  "total": 31,
+  "failed": [],
+  "scientific_python_files_checked": 63,
+  "scientific_python_mismatches": {},
+  "hashes": {
+    "RESULTS_SUMMARY.json": "662856da549011d1cad096c934005f8f906d7e21581ceffa8e7ac406b8d3aa31",
+    "SOURCE_MANIFEST.json": "f6710d1135dfbe32aba5197f55fe975b7f50db97ea8c7c5dd0d5692942ff3164",
+    "source_manifest_expected": "f6710d1135dfbe32aba5197f55fe975b7f50db97ea8c7c5dd0d5692942ff3164",
+    "stable_source_content_sha256": "3722319e9aa77f9521d543541016d23b05277ca7477122abadf01981969a4912",
+    "LOCK.json": "a95d5e2a9215ad12978bc59dd3d6898233aaf71fff8e11f888faa33a28c739be",
+    "ANALYSIS_PLAN.md": "337a45bce657023f3a561376c9c9248e174a66de48a274bb6ee7c5be829e67fc"
+  },
+  "cohort": {
+    "n": 2701,
+    "events": 25,
+    "eligible": 3095,
+    "excluded": 394,
+    "compact_additional_complete": 6
+  },
+  "primary": {
+    "delta_brier": -0.0001698910052668418,
+    "delta_auc": 0.04522506266050119
+  },
+  "limitations": [
+    "No participant data, predictions, restricted sources or ZIP downloaded. This audit verifies available aggregates/provenance and arithmetic, not re-estimation from participant records.",
+    "Bootstrap aggregate rows are not present locally; percentile endpoints were compared with successful run stdout but not recomputed from 1000 rows.",
+    "Source fingerprints match manifest and successful job stdout; source file bytes were not downloaded locally and are therefore not independently fingerprinted in this audit.",
+    "Only 25 deaths and effective survey n approximately999. Both primary contrast intervals cross zero. Model packages have different development histories; this is not isolated additional-marker attribution."
+  ]
+}
