@@ -1,0 +1,29 @@
+{
+  "schema": "cause33-support/1",
+  "rank_maximum": 5,
+  "rank_before_support_not_replace_failed_top5": true,
+  "rank_order": [
+    "weighted_events8_descending",
+    "raw_events8_descending",
+    "code_ascending"
+  ],
+  "event_rows_min": 50,
+  "noncase_rows_min": 50,
+  "event_psus_min": 20,
+  "outer_evaluation_event_rows_min": 5,
+  "outer_evaluation_noncase_rows_min": 5,
+  "outer_training_event_rows_min": 20,
+  "outer_training_noncase_rows_min": 20,
+  "inner_evaluation_event_rows_min": 3,
+  "inner_evaluation_noncase_rows_min": 3,
+  "inner_training_event_rows_min": 10,
+  "inner_training_noncase_rows_min": 10,
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "outer_salt": "b2m31:outer",
+  "inner_salt_pattern": "b2m31:inner:{outer}",
+  "threshold_scope": "pragmatic_computational_reporting_not_power_EPV_calibration_clinical_certificate",
+  "comparison_fitting_in_this_stage": false,
+  "known_prior_common_n": 6044,
+  "known_prior_common_events8": 586
+}
