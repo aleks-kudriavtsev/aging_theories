@@ -1,0 +1,24 @@
+{
+  "plan_commit": "7800458",
+  "scientific_code_commit": "b8d05a0b2f6a534a98fa397a9f6862829d256df0",
+  "scientific_run_id": 40897873302,
+  "empirical_job_id": 123531809031,
+  "workbench_run_id": 40897873199,
+  "all_scientific_conclusions": "success",
+  "prior_biomarkers_PR121": {
+    "ui_run_id": 40894133261,
+    "model_run_id": 40894133044,
+    "both_conclusions": "success"
+  },
+  "aggregate_transfer": "authorized marked job stdout; exact JSON and500primaryCSV preserved; no ZIP/raw records",
+  "artifact": {
+    "id": 12908156978,
+    "url": "https://github.com/aleks-kudriavtsev/aging_theories/actions/runs/40897873302/artifacts/12908156978",
+    "bytes": 148769,
+    "api_zip_sha256": "09736a25ecbbd318b9d6c61b442077186ff561d908e03484bed265811ea357eb",
+    "expires": "2026-11-12",
+    "zip_downloaded": false
+  },
+  "documentation_only_head_CI": "skip; scientific CI refers to code commit above",
+  "independent_audit_script": "tools/verify_routine29_aggregates.py"
+}
