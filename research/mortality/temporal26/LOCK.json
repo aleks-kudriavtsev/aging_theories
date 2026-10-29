@@ -1,0 +1,13 @@
+{
+  "schema": "temporal26_lock/1",
+  "base_commit": "2980746f46e884ca124ccb66cc6be8f136328fb2",
+  "cycle": 2017,
+  "horizon_years": 1,
+  "bootstrap_replicates": 1000,
+  "seed": 20261030,
+  "models": {
+    "nfl22/frozen_expanded13.json": "87a8623b9fd5cb793ce2da5311a17a56b7d94251da5df335de3d406e437a55da",
+    "compact14/model_compact14.json": "274753ea36728652d10b10fa7d02b6f77b37304084bb2b0b056128b734e394d4"
+  },
+  "plan_sha256": "337a45bce657023f3a561376c9c9248e174a66de48a274bb6ee7c5be829e67fc"
+}
