@@ -1,0 +1,107 @@
+{
+  "schema": "forward32-pre-results-source-weights/1",
+  "review_date": "2026-10-29",
+  "review_scope": "static code, pinned official metadata, previously published31 aggregates only",
+  "new_comparative_metrics_computed": false,
+  "new_temporal_events_computed": false,
+  "participant_records_read": false,
+  "network_data_requests": false,
+  "repository_edited": false,
+  "source": {
+    "release": "SSCARD_A July2022",
+    "metadata_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SSCARD_A.htm",
+    "weighting_url": "https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx",
+    "variance_url": "https://wwwn.cdc.gov/nchs/nhanes/tutorials/varianceestimation.aspx",
+    "biological_baseline": "1999-2004 exam serum",
+    "assayed": "2018-2020",
+    "assay_year_is_split_variable": false,
+    "units": {"SSCYST": "mg/L", "SSB2M": "mg/L"},
+    "matrix": "serum",
+    "platform": "Siemens Dimension Vista 1500",
+    "individual_assay_batch_identifiers_released": false,
+    "individual_assay_date_released": false,
+    "individual_storage_duration_released": false,
+    "SSPRIS_is_batch_identifier": false
+  },
+  "forward_partitions": [
+    {
+      "id": "train_1999_2002",
+      "cycles": [1999, 2001],
+      "SDDSRVYR": [1, 2],
+      "source_weight": "WTSSCB4Y",
+      "analysis_weight_source_multiplier": 1,
+      "population_period_label": "1999-2002 four-year subsample",
+      "strata_inclusive": [1, 28],
+      "masked_PSU_n_previously_verified31": 57,
+      "m3_strata_previously_verified31": {"1": [1, 2, 3]},
+      "primary_common_n_previously_published31": 4020,
+      "primary_common_n_by_cycle_previously_published31": {"1999": 1889, "2001": 2131},
+      "new_temporal_events": null
+    },
+    {
+      "id": "test_2003_2004",
+      "cycles": [2003],
+      "SDDSRVYR": [3],
+      "source_weight": "WTSSCB2Y",
+      "analysis_weight_source_multiplier": 1,
+      "population_period_label": "2003-2004 two-year subsample",
+      "strata_inclusive": [29, 43],
+      "masked_PSU_n_previously_verified31": 30,
+      "m3_strata_previously_verified31": {},
+      "primary_common_n_previously_published31": 2024,
+      "new_temporal_events": null,
+      "WTSSCB4Y_missing_is_expected": true
+    }
+  ],
+  "raw_weight_fields_preserved_by_static_review": {
+    "required_fields_present_in_SOURCE_SPEC": ["WTSSCB4Y", "WTSSCB2Y"],
+    "load_merges_and_retains_source_fields": true,
+    "engineer_copies_and_appends_without_dropping_source_fields": true,
+    "b2m31_returned_weight_current_meaning": "six-year pooled weight",
+    "b2m31_returned_weight6y_current_meaning": "same six-year pooled weight",
+    "explicit_temporal_reassignment_required": true,
+    "do_not_require_both_raw_weights_nonmissing_in_every_partition": true,
+    "raw_weight_sums_by_cycle_not_exported31": true,
+    "new_adapter_per_row_application_not_yet_empirically_verified": true
+  },
+  "domain": {
+    "reuse_exact31_primary_common_mask": true,
+    "screening_age_inclusive": [40, 75],
+    "routine_terms": 11,
+    "positive_finite_proteins_required_in_every_arm": ["SSCYST", "SSB2M"],
+    "required_flags": {"SSCYSTL": [0], "SSB2ML": [0]},
+    "horizon_months": 96,
+    "endpoint": "all-cause death from exam using2019public LMF",
+    "do_not_derive_temporal_events_before_plan": true
+  },
+  "design_gates_after_protocol": {
+    "cluster_key": ["SDMVSTRA", "SDMVPSU"],
+    "full_eligible_common_inventory_by_partition_required": true,
+    "exact_pair_sets_not_counts_only": true,
+    "train_test_cluster_intersection_empty": true,
+    "train_test_union_equals_known_full_inventory": true,
+    "m3_train_stratum1_preserved": true,
+    "singleton_or_missing_expected_pair_stops": true,
+    "force_exactly_two_PSU_everywhere": false,
+    "training_only_preprocessing_tuning": true,
+    "test_must_not_select_penalty_split_form_or_update_calibration": true
+  },
+  "weight_semantics": {
+    "W6_population_label_for_split_scores": false,
+    "do_not_use_WTSSCB2Y_divided_by_two_for_pooled_1999_2002": true,
+    "do_not_use_DEMO_or_BNP_substitute_weights": true,
+    "training_loss_weight_normalization_must_be_declared": true,
+    "constant_weight_scaling_preserves_normalized_averages_but_not_unnormalized_penalty_strength": true,
+    "export_source_and_analysis_weight_sums_by_cycle_and_partition_after_protocol": true
+  },
+  "interpretation": {
+    "exploratory_temporal_assessment_on_reused_data": true,
+    "untouched_holdout": false,
+    "independent_external_validation": false,
+    "clinical_readiness": false,
+    "validates_frozen30_three_protein_panel": false,
+    "batch_adjusted_validation_supported_by_release": false,
+    "B2M_selected_after_prior_results": true,
+    "exact_intersection_with_old_fitted_M4_domain_not_reconstructed": true
+  }
+}
