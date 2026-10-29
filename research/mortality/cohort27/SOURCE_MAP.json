@@ -1,0 +1,37 @@
+{
+  "checked_date": "2026-10-29",
+  "cohort": "NHANES_III_1988_1994",
+  "no_individual_records_retrieved": true,
+  "landing_page": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx",
+  "sources": {
+    "adult_sas": {"url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.sas", "kind": "metadata", "url_verified_by_open": true},
+    "adult_dat": {"expected_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.dat", "kind": "microdata", "href_verified": false, "resolve_before_fetch": "Read landing-page href for Household Adult File DAT; do not guess URL case"},
+    "cystatin_doc": {"url": "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/SSCYSTAT.pdf", "kind": "metadata", "url_verified_by_open": true},
+    "cystatin_xpt": {"expected_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/SSCYSTAT.xpt", "kind": "microdata", "href_verified": false, "resolve_before_fetch": "Read landing-page href with /27a/ and .xpt; official PDF specifies SSCYSTAT.XPT"},
+    "btp_b2m_doc": {"url": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.htm", "kind": "metadata", "url_verified_by_open": true},
+    "btp_b2m_xpt": {"expected_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.xpt", "kind": "microdata", "href_verified": false, "resolve_before_fetch": "Read landing-page href with /36a/ and .xpt; official HTML specifies SSNH3BTP.xpt"},
+    "mortality": {"url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_III_MORT_2019_PUBLIC.dat", "kind": "microdata", "url_verified_by_directory_metadata": true, "published_bytes": 1663910},
+    "mortality_readspec": {"url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/R_ReadInProgramAllSurveys.R", "kind": "metadata", "directory_verified": true, "web_content_not_parsed": "unsupported octet-stream"}
+  },
+  "adult_fixed_width_1_based_inclusive": {
+    "SEQN": [1,5], "DMPSTAT": [11,11], "HSSEX": [15,15],
+    "HSAGEIR": [18,19], "HSAGEU": [20,20], "HSAITMOR": [21,24],
+    "SDPPHASE": [42,42], "SDPPSU6": [43,43], "SDPSTRA6": [44,45],
+    "WTPFEX6": [61,69], "WTPFHX6": [70,78], "MXPAXTMR": [1237,1240]
+  },
+  "adult_notes": {"record_content_width": 3346, "record_width_including_CRLF": 3348,
+    "baseline_age": "MXPAXTMR is MEC exam age in months; HSAGEIR is screener/interview age quantity and HSAGEU unit. Do not silently conflate.",
+    "MEC_weight": "WTPFEX6", "subsample_weight_for_first_exam_proteins": "WTCYPEX6 from protein XPT, not WTPFEX6"},
+  "protein_fields": {
+    "SSCYSTAT": {"analyte":"cystatin_C", "unit":"mg/L", "visit":"first_exam", "MEC_weight":"WTCYPEX6", "MEC_home_weight":"WTCYPHX6", "calibration":"original2006assay; do not label ERM-DA471 standardized without prespecified published equation"},
+    "SSB2M": {"analyte":"beta2_microglobulin", "unit":"mg/L", "visit":"first_exam", "MEC_weight":"WTCYPEX6", "assay":"Siemens N Latex beta2 microglobulin; assayed2009storedbaseline"},
+    "SSBTP": {"analyte":"beta_trace_protein", "unit":"mg/L", "visit":"first_exam", "MEC_weight":"WTCYPEX6", "assay":"Siemens N Latex beta-trace protein; assayed2009storedbaseline"}
+  },
+  "critical_gates": [
+    "37a SSNH3CYS is SECOND_EXAM convenience876 sample with NO sample weights. Reject as first-exam baseline; never collapse repeats.",
+    "First-exam Cys/B2M/BTP positive numeric and official subsample weights identify reported-quantified records only. No per-sample QC/LOD flags were found; do not invent PASS or infer LOQ from numeric presence.",
+    "SSNH3BTP analytic prose assay range uses mg/dL whereas exact variable/codebook is mg/L. Preserve exact released field unit and flag documentation inconsistency; no x10 conversion.",
+    "WTCYPEX6 repeated across two XPTs must agree for same SEQN; subset n are marginal, joint sample unknown until permitted qualification run.",
+    "Original frozen cvd_history includes doctorCHD and doctorangina. Only CHF HAC1C,stroke HAC1D,doctorMI HAF10 directly confirmed. Rose chest-pain items cannot substitute for missing doctorCHD/angina; no full frozen-negative assignment."
+  ]
+}
