@@ -1,0 +1,17 @@
+{
+  "schema": "routine29_lock/1",
+  "base_commit": "1e9166e03922d0666f012488ee4211b9ed0ca18c",
+  "horizon_years": 8,
+  "bootstrap_replicates": 500,
+  "seed": 20261101,
+  "partition_sensitivity_count": 5,
+  "study_metadata_sha256": {
+    "ANALYSIS_PLAN.md": "efdbe3ca1380d60d831e864fd7e840e5c67fccab6568fd55a39bfe3c5c5b53f9",
+    "RENAL_ASSAY_REVIEW.md": "6f734c93e60f9add10c944ad967d1abd903337a128e7416314dc1cfa66806a8f",
+    "BMI_REVIEW.md": "5800da597c47bc2f6739fcc50db85aaf265310cd46c4d29791ee53cfaeddf968",
+    "LAB_FIELDS.json": "77fb3ff80264b041060f03bd772ac8b80a3a3340cc39f6395f39fb45bc700ecc",
+    "EXAM_FIELDS.json": "6e200be428c63bd2190512adb22d587a51de2c69c68692140ad5356c1b668054",
+    "EGFR_RATIONALE.md": "02b49cb53cfa7389cba3d0e51204b19912b79e59612023950a864582d100c0d1"
+  },
+  "prior28_source_manifest_sha256": "d4db23943a23223610e6d4889e4f05c8798d241d042d5d6267f57d393a5ac561"
+}

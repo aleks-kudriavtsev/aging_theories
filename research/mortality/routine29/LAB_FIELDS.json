@@ -1,0 +1,152 @@
+{
+  "schema": "nhanesIII_lab29_metadata/1",
+  "checked_date": "2026-10-29",
+  "metadata_only": true,
+  "participant_records_accessed": false,
+  "data_source": "lab.dat",
+  "sas_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/lab.sas",
+  "codebook_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/lab-acc.pdf",
+  "official_source_rows": 29314,
+  "nominal_content_width": 1977,
+  "LRECL_including_CRLF": 1979,
+  "INFILE_MISSOVER": true,
+  "minimum_required_selected_width": 1970,
+  "input_numeric_policy": "ordinary_numeric_literals_with_actual_decimal_points_not_implied_decimal_FORMAT",
+  "positions_1_based_inclusive": {
+    "SEQN": [
+      1,
+      5
+    ],
+    "CEP": [
+      1784,
+      1787
+    ],
+    "GHP": [
+      1861,
+      1864
+    ],
+    "GHPMETH": [
+      1865,
+      1865
+    ],
+    "URP": [
+      1956,
+      1960
+    ],
+    "UBP": [
+      1965,
+      1970
+    ]
+  },
+  "variables": {
+    "CEP": {
+      "analyte": "serum_creatinine",
+      "unit": "mg/dL",
+      "SAS_display_FORMAT": "6.1",
+      "missing_raw_numeric_codes": [
+        8888
+      ],
+      "blank_is_missing": true,
+      "reported_frequency_range": [
+        0.3,
+        13.9
+      ],
+      "frequency_range_is_clinical_validity_limit": false,
+      "below_detection_marker_documented": false,
+      "calibration": {
+        "output_name": "CDC_equation_calibrated_serum_creatinine_mg_dL",
+        "equation": "0.960 * original_CEP - 0.184",
+        "slope": 0.96,
+        "intercept": -0.184,
+        "unit": "mg/dL",
+        "direction": "original_NHANESIII_Jaffe_to_IDMS_traceable_Roche_enzymatic",
+        "calibration_specimens_n": 190,
+        "source": "official_CDC_CEP_note_pdf_pages110_111",
+        "apply_to_serum_only": true,
+        "double_application_forbidden": true,
+        "nonpositive_corrected_policy": "missing_not_floor",
+        "eGFR_computed_by_this_metadata": false
+      }
+    },
+    "GHP": {
+      "analyte": "glycated_hemoglobin_HbA1c",
+      "unit": "percent",
+      "SAS_display_FORMAT": "6.1",
+      "missing_raw_numeric_codes": [
+        8888
+      ],
+      "blank_is_missing": true,
+      "reported_frequency_range": [
+        2.8,
+        16.2
+      ],
+      "frequency_range_is_clinical_validity_limit": false,
+      "scale": "DCCT_reference_standardized",
+      "modern_NGSP_certification_claimed": false,
+      "method_variable": "GHPMETH",
+      "IFCC_conversion_needed": false
+    },
+    "GHPMETH": {
+      "meaning": "HbA1c_test_method",
+      "allowed_codes": {
+        "1": "Diamat_instrument1",
+        "2": "Diamat_instrument2",
+        "3": "Diamat_instrument3",
+        "4": "affinity_DCCT_standardized"
+      },
+      "missing_raw_numeric_codes": [
+        8
+      ],
+      "blank_is_missing": true
+    },
+    "URP": {
+      "analyte": "urinary_creatinine",
+      "unit": "mg/dL",
+      "SAS_display_FORMAT": "7.1",
+      "missing_raw_numeric_codes": [
+        88888
+      ],
+      "blank_is_missing": true,
+      "below_detection_released_value": 7.9,
+      "below_detection_source_count": 83,
+      "analytic_method_LOD_mg_dL": 1.0,
+      "CDC_statistically_suspect_below_mg_dL": 10.0,
+      "ordinary_reported_frequency_range": [
+        11.3,
+        682.1
+      ],
+      "released_7_9_is_not_ordinary_measured_value": true
+    },
+    "UBP": {
+      "analyte": "urinary_albumin",
+      "unit": "ug/mL",
+      "SAS_display_FORMAT": "8.1",
+      "missing_raw_numeric_codes": [
+        888888
+      ],
+      "blank_is_missing": true,
+      "below_detection_released_value": 0.4,
+      "below_detection_source_count": 386,
+      "LOD_ug_mL": 0.5,
+      "ordinary_reported_frequency_range": [
+        0.5,
+        15700.0
+      ],
+      "released_fill_policy": "do_not_reimpute_or_apply_sqrt2_again"
+    }
+  },
+  "UACR": {
+    "formula_mg_g": "100 * UBP_ug_mL / URP_mg_dL",
+    "output_unit": "mg/g",
+    "uses_urine_creatinine_not_serum": true,
+    "requires_positive_finite_operands": true,
+    "statistically_suspect_URP_policy": "must_be_prespecified_before_comparison",
+    "UBP_fill_policy": "must_be_explicitly_labelled_reported_replacement_not_QC_pass"
+  },
+  "limitations": [
+    "Calibration study does not establish each specimen assay validity; historical within-survey drift/freeze-thaw uncertainty remains.",
+    "No eGFR is calculated or certified by this metadata.",
+    "Reported UBP0.4 is a nondetect fill; URP7.9 is statistically suspect.",
+    "GHP_DCCT_alignment_is_not_a_new_NGSP_certification_claim."
+  ]
+}

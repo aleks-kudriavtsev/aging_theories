@@ -1,0 +1,126 @@
+{
+  "plan_commit": "7800458",
+  "lock_sha256": "a157aa8c819be597bfd0ce663aa105aa9cc60a46887eb4a6d52c2ca86cf93f28",
+  "base_manifest_sha256": "d75004c50e3805f8dceb7546d409bc71fb41dfacef4d05f96397060331505833",
+  "retrieved_utc": "2026-10-29T15:05:18.093701+00:00",
+  "files": [
+    {
+      "file": "index.htm",
+      "url": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx",
+      "status": "retrieved",
+      "bytes": 434423,
+      "sha256": "c191666300e1812a82de9a2affe974472c83154354483ed99ddf09e63b40e6a6"
+    },
+    {
+      "file": "adult.sas",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.sas",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.sas",
+      "status": "retrieved",
+      "bytes": 130935,
+      "sha256": "b8d61f5bc56590d95220d88058bb054995f3beb7aeb400af88868c2679f73d4c"
+    },
+    {
+      "file": "cystatin.pdf",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/SSCYSTAT.pdf",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/SSCYSTAT.pdf",
+      "status": "retrieved",
+      "bytes": 387605,
+      "sha256": "7e3a605bb55a6cb5dd0bc47d03ff7c8e3b761b6fb9952b91f0ea67713e572459"
+    },
+    {
+      "file": "btp.htm",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.htm",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.htm",
+      "status": "retrieved",
+      "bytes": 22175,
+      "sha256": "82ddb6aa1ac059847edb59f374291f79c3b18ecb32b281f06b2199d1e5aa4c7e"
+    },
+    {
+      "file": "mortality.dat",
+      "url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_III_MORT_2019_PUBLIC.dat",
+      "resolved_url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_III_MORT_2019_PUBLIC.dat",
+      "status": "retrieved",
+      "bytes": 1663910,
+      "sha256": "224293447dbb8ec9412acf05441ab7d271124a17419dba6cf236ae36d5dd5b98"
+    },
+    {
+      "file": "adult.dat",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.dat",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.dat",
+      "status": "retrieved",
+      "bytes": 67107314,
+      "sha256": "32a93a474cbd3bd0dd2ddc82153c47cf0b9f81eda025e255dd251bb5620a3adf"
+    },
+    {
+      "file": "cystatin.xpt",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/sscystat.xpt",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/sscystat.xpt",
+      "status": "retrieved",
+      "bytes": 372240,
+      "sha256": "87904d7f0a4a8eedf0faa4c117ea62505ed85265be5e92820ac4640ba12fa613"
+    },
+    {
+      "file": "btp.xpt",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.xpt",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.xpt",
+      "status": "retrieved",
+      "bytes": 438960,
+      "sha256": "92f8ec6e4b5535cf87fa79b8c4c5f8a04ee8ea51fa75f2ecbc4f2e9ad702ebbf"
+    },
+    {
+      "file": "lab.sas",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/lab.sas",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/lab.sas",
+      "status": "retrieved",
+      "bytes": 42079,
+      "sha256": "fe804748e3881bb8f2a92c57af816d603bdd02e1587f835547cbfc4f82ab8304",
+      "maximum_download_bytes": 100000000
+    },
+    {
+      "file": "exam.sas",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam.sas",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam.sas",
+      "status": "retrieved",
+      "bytes": 258558,
+      "sha256": "240d4c917c3f437063240dbb038184d8e34e2834c5d2596a3ca389ef6ccb3fe6",
+      "maximum_download_bytes": 100000000
+    },
+    {
+      "file": "lab.pdf",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/lab-acc.pdf",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/lab-acc.pdf",
+      "status": "retrieved",
+      "bytes": 681142,
+      "sha256": "26784eaf88077dddb1766f7556c13ea8e5b6386c859262e0a7e7e49f2a6b8d0b",
+      "maximum_download_bytes": 100000000
+    },
+    {
+      "file": "exam.pdf",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam-acc.pdf",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam-acc.pdf",
+      "status": "retrieved",
+      "bytes": 4515011,
+      "sha256": "6add2277996ce1971e92009527acf6bb75b56b671c68e3b6ba6b577d23c654d0",
+      "maximum_download_bytes": 100000000
+    },
+    {
+      "file": "lab.dat",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/lab.dat",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/lab.dat",
+      "status": "retrieved",
+      "bytes": 57945628,
+      "sha256": "b87ae166c02e4907b08b7a52a1c01122b4173ec2970b891b624f43cedc038e48",
+      "maximum_download_bytes": 100000000
+    },
+    {
+      "file": "exam.dat",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam.dat",
+      "resolved_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam.dat",
+      "status": "retrieved",
+      "bytes": 195090426,
+      "sha256": "b2eba81d3c4f921a4fafe6847818e27813eab4a3494bcc26f90a6fe3fcc71fec",
+      "maximum_download_bytes": 220000000
+    }
+  ]
+}
