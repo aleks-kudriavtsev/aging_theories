@@ -1,0 +1,51 @@
+name: Binary28 nested protein model checks
+on:
+  push:
+    branches: [research/binary-protein-28]
+    paths: ['research/mortality/binary28/**', 'tests/test_binary28*.py', '.github/workflows/binary28-checks.yml']
+  pull_request:
+    paths: ['research/mortality/binary28/**', 'tests/test_binary28*.py', '.github/workflows/binary28-checks.yml']
+permissions:
+  contents: read
+jobs:
+  synthetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install numpy==2.3.5 pandas==2.2.3 scipy==1.17.0 scikit-learn==1.8.0
+      - env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python -m unittest discover -s tests -p 'test_binary28*.py' -v
+  empirical:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.3.5 pandas==2.2.3 scipy==1.17.0 scikit-learn==1.8.0
+      - name: Public inputs in temporary runner directory
+        run: python -m research.mortality.cohort27.retrieve --out /tmp/binary28_cdc
+      - name: New binary nested model and full paired refitting
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python -m research.mortality.binary28.analyze --source /tmp/binary28_cdc --out /tmp/binary28_results
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: binary28-aggregates
+          path: /tmp/binary28_results/
+          retention-days: 14
+          if-no-files-found: error

@@ -1,0 +1,14 @@
+{
+  "schema": "binary28_lock/1",
+  "base_commit": "e86693194c6ed983838902aa9534e0d2104af4cd",
+  "horizon_years": 8,
+  "bootstrap_replicates": 500,
+  "seed": 20261031,
+  "study_metadata_sha256": {
+    "ANALYSIS_PLAN.md": "2e6a1e3dac026f2b51bf917396c41364a9747b9e23c9c0a61c0551a50c89d6e5",
+    "CLINICAL_FIELDS.json": "bbbda288bc0f9c4bfcc7a6aaa4cd21044f837b0ce547189aadf18cac9469c8d7",
+    "CLINICAL_REVIEW.md": "a0f3b029a21f8707f31bdf025e3a452181df59c2c743a995f6bb26045c0e6211",
+    "ASSAY_REVIEW.md": "bdcf3164d00c1bbd838f4502cc1a95fe744b55e5660ff90474fc16c532efe127"
+  },
+  "prior_source_manifest_sha256": "2a5918b1cfdbebc632bd809898c5ec4114c78eefe976a7b6b2e41ca9b27e27f4"
+}
