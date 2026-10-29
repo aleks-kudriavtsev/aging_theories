@@ -1,0 +1,23 @@
+{
+  "schema": "freeze30-lock/1",
+  "base_commit": "3f1a45b2bef3c77e0533d65e17707fb83f263276",
+  "metadata_sha256": {
+    "FREEZE_PLAN.md": "ad5bb9f55a6517e86f1d77ad691ce31354538aee0ec888d54d5e17f45e7396dd",
+    "CONTRACT.json": "17bafd359e32f9873d77c93d63e921f2bf97783a9049fb7c66ba61719c61eca6",
+    "routine29/RESULTS_SUMMARY.json": "424e98cb4a5771a2a656659e9855a571ce4686d10d1b5f5b3f7a190570da501f",
+    "routine29/SOURCE_MANIFEST.json": "ab5b80912a62311376166efa84cccd524a425507a47b94eeca1bde38996094f8",
+    "routine29/LOCK.json": "a157aa8c819be597bfd0ce663aa105aa9cc60a46887eb4a6d52c2ca86cf93f28",
+    "SOURCE_POLICY.md": "d1dacec343513967e2980b802bc5f740bc7fdfa3dbeaebe65facb787a8c804ac"
+  },
+  "expected_training_n": 3730,
+  "expected_events8": 563,
+  "final_inner_folds": 3,
+  "inner_salt": "freeze30:final-inner:v1",
+  "penalties": [
+    1.0,
+    10.0,
+    100.0
+  ],
+  "tie_tolerance": 1e-12,
+  "export_training_predictions": false
+}

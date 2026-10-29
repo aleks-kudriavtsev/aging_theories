@@ -1,0 +1,37 @@
+{
+  "plan_commit": "5cbf90e",
+  "scientific_code_commit": "16e2eb8fe0abd51b351a6c3775a7180ebdd25354",
+  "scientific_run_id": 40903512074,
+  "final_training_job_id": 123551907162,
+  "workbench_run_id": 40903512040,
+  "all_scientific_conclusions": "success",
+  "new_external_evaluations": 0,
+  "aggregate_transfer": "two exact marked job-stdout blocks per file; no ZIP or participant rows",
+  "artifact": {
+    "id": 12909263659,
+    "url": "https://github.com/aleks-kudriavtsev/aging_theories/actions/runs/40903512074/artifacts/12909263659",
+    "bytes": 14426,
+    "api_zip_sha256": "4e9d2838066474a4d726ba31e4845a3e942a5adb4ae55143c267540669f1ca7d",
+    "expires": "2026-11-12T15:38:42Z",
+    "zip_downloaded": false
+  },
+  "file_sha256": {
+    "FROZEN_MODELS.json": "70d29bf6e60d0967a11534634ebd1769a8b513b97ecb1fe8c66c6a5392534d43",
+    "FREEZE_MANIFEST.json": "f33df537280ead416406139412c4155f05ba8215e37408873f8442df7c4ab488",
+    "CANDIDATE_MANIFEST.json": "170957b392a4c5e6e6c267a110a842e164ab6d7c53260a8af9fb64d31b363fdb",
+    "QUALIFICATION_RESULTS.json": "7681b494f18ac4d1064240e92e514436d28b4c5971217a386d1c42bba945c687"
+  },
+  "prior_PR122": {
+    "browser_run": 40900913543,
+    "model_run": 40900913507,
+    "both": "success"
+  },
+  "documentation_only_head_CI": "skip; scientific CI refers to scientific code commit",
+  "independent_audit": {
+    "passed": 106,
+    "total": 106,
+    "sha256": "8e66ad6243a39abdef9a268805f1c1da73b04fe91922efb80ef1af842cb31046",
+    "script": "tools/verify_freeze30_aggregates.py",
+    "new_raw_manifest_bytes_available_to_reviewer": false
+  }
+}
