@@ -1,0 +1,89 @@
+{
+  "schema": "cause33-definitions/1",
+  "underlying_cause_field": "UCOD_LEADING",
+  "not_contributing_flags": true,
+  "supported_baseline_start_years": [
+    1999,
+    2001,
+    2003
+  ],
+  "horizon_months": 96,
+  "groups": {
+    "001": {
+      "id": "heart",
+      "label_ru": "Болезни сердца",
+      "ucod113": "054-068",
+      "icd10": "I00-I09,I11,I13,I20-I51",
+      "eligible_for_defined_clinical_ranking": true
+    },
+    "002": {
+      "id": "malignant",
+      "label_ru": "Злокачественные новообразования",
+      "ucod113": "019-043",
+      "icd10": "C00-C97",
+      "eligible_for_defined_clinical_ranking": true
+    },
+    "003": {
+      "id": "clrd",
+      "label_ru": "Хронические болезни нижних дыхательных путей",
+      "ucod113": "082-086",
+      "icd10": "J40-J47",
+      "eligible_for_defined_clinical_ranking": true
+    },
+    "004": {
+      "id": "accidents",
+      "label_ru": "Несчастные случаи",
+      "ucod113": "112-123",
+      "icd10": "V01-X59,Y85-Y86",
+      "eligible_for_defined_clinical_ranking": true
+    },
+    "005": {
+      "id": "cerebrovascular",
+      "label_ru": "Цереброваскулярные болезни",
+      "ucod113": "070",
+      "icd10": "I60-I69",
+      "eligible_for_defined_clinical_ranking": true
+    },
+    "006": {
+      "id": "alzheimer",
+      "label_ru": "Болезнь Альцгеймера",
+      "ucod113": "052",
+      "icd10": "G30",
+      "eligible_for_defined_clinical_ranking": true
+    },
+    "007": {
+      "id": "diabetes",
+      "label_ru": "Сахарный диабет",
+      "ucod113": "046",
+      "icd10": "E10-E14",
+      "eligible_for_defined_clinical_ranking": true
+    },
+    "008": {
+      "id": "influenza_pneumonia",
+      "label_ru": "Грипп и пневмония",
+      "ucod113": "076-078",
+      "icd10": "J10-J18",
+      "eligible_for_defined_clinical_ranking": true
+    },
+    "009": {
+      "id": "renal_broad",
+      "label_ru": "Нефрит, нефротический синдром и нефроз",
+      "ucod113": "097-101",
+      "icd10": "N00-N07,N17-N19,N25-N27",
+      "eligible_for_defined_clinical_ranking": true
+    },
+    "010": {
+      "id": "other",
+      "label_ru": "Все остальные причины",
+      "ucod113": "residual",
+      "icd10": "residual",
+      "eligible_for_defined_clinical_ranking": false
+    }
+  },
+  "unknown_early_cause_policy": "block_all_comparative_fits_not_all_negative",
+  "public_2015_2018_baseline_exposes_only": [
+    "001",
+    "002",
+    "010"
+  ]
+}
