@@ -1,0 +1,50 @@
+name: Temporal26 frozen-panel assessment
+on:
+  push:
+    branches: [research/temporal-panel-26]
+    paths: ['research/mortality/temporal26/**', 'tests/test_temporal26.py', '.github/workflows/temporal26-checks.yml']
+  pull_request:
+    paths: ['research/mortality/temporal26/**', 'tests/test_temporal26.py', '.github/workflows/temporal26-checks.yml']
+permissions:
+  contents: read
+jobs:
+  synthetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install numpy==2.3.5 pandas==2.2.3 scipy==1.17.0 scikit-learn==1.8.0
+      - env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python -m unittest discover -s tests -p test_temporal26.py -v
+  empirical:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.3.5 pandas==2.2.3 scipy==1.17.0 scikit-learn==1.8.0
+      - name: Public inputs in temporary runner directory
+        run: python -m research.mortality.temporal26.retrieve --out /tmp/temporal26_cdc
+      - name: Evaluate locked frozen models with aggregate provenance
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python -m research.mortality.temporal26.analyze --source /tmp/temporal26_cdc --out /tmp/temporal26_results
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: temporal26-aggregates
+          path: /tmp/temporal26_results/
+          retention-days: 14
+          if-no-files-found: error
