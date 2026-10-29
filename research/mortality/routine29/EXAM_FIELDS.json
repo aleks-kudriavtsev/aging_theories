@@ -1,0 +1,104 @@
+{
+  "checked_date": "2026-10-29",
+  "metadata_only": true,
+  "participant_records_accessed": false,
+  "release": "NHANESIII_1a_first_exam",
+  "index_url": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx",
+  "data": {
+    "expected_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam.dat",
+    "basename": "exam.dat",
+    "href_independently_resolved": false,
+    "resolve_href_from_official_index": true,
+    "index_size_text": "190 MB",
+    "actual_data_bytes_verified": false,
+    "maximum_download_bytes": 220000000
+  },
+  "sas_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam.sas",
+  "codebook_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam-acc.pdf",
+  "expected_record_count": 31311,
+  "MEC_record_count": 30818,
+  "home_record_count": 493,
+  "nominal_record_content_width": 6233,
+  "SAS_LRECL_including_CRLF": 6235,
+  "SAS_MISSOVER": true,
+  "nominal_complete_CRLF_bytes": 195224085,
+  "physical_widths_verified": false,
+  "positions_1_based_inclusive": {
+    "SEQN": [
+      1,
+      5
+    ],
+    "BMPWTFLG": [
+      1514,
+      1514
+    ],
+    "BMPBMI": [
+      1524,
+      1527
+    ],
+    "BMPHTFLG": [
+      1533,
+      1533
+    ]
+  },
+  "minimum_selected_width_with_flags": 1533,
+  "BMPBMI": {
+    "definition": "released_weight_kg_divided_by_standing_height_m_squared",
+    "unit": "kg/m2",
+    "missing_codes": [
+      8888
+    ],
+    "blank_is_missing": true,
+    "positive_finite_required": true,
+    "released_frequency_range": [
+      7.3,
+      79.6
+    ],
+    "frequency_range_is_clinical_cutoff": false,
+    "input_kind": "column_numeric_no_implied_decimal_informat",
+    "output_format": "Z6.1",
+    "output_format_must_not_rescale_input": true,
+    "may_use_CDC_substituted_weight_height": true
+  },
+  "BMPWTFLG": {
+    "allowed_published_codes": [
+      0,
+      3,
+      4
+    ],
+    "meaning": {
+      "0": "no_substitution",
+      "3": "modelled_from_reported_value",
+      "4": "reported_value"
+    },
+    "blank_is_missing": true
+  },
+  "BMPHTFLG": {
+    "allowed_published_codes": [
+      0,
+      1,
+      2,
+      3,
+      5
+    ],
+    "meaning": {
+      "0": "no_substitution",
+      "1": "modelled_from_spirometry_height",
+      "2": "spirometry_height",
+      "3": "modelled_from_reported_value",
+      "5": "recumbent_length"
+    },
+    "blank_is_missing": true
+  },
+  "primary_recommendation": "retain_released_positive_BMI_and_report_source_flag_aggregates_no_new_imputation",
+  "not_repeat_release3a": true,
+  "shared_model_weight_remains": "WTCYPEX6",
+  "reader_validation": [
+    "isolate_INPUT_from_LENGTH_and_FORMAT",
+    "validate_exact_positions",
+    "manual_float_tokens_and_independent_read_fwf",
+    "preserve_all_valid_source_records",
+    "check_SEQN_unique_and_join_universe",
+    "store_width_counts_bytes_SHA_count"
+  ]
+}
