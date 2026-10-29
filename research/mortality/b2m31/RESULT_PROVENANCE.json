@@ -1,0 +1,62 @@
+{
+  "schema": "b2m31-result-provenance/1",
+  "plan_commit": "6774fbe600acad62cacbb9bece716f22ccef3560",
+  "precomparison_source_amendment_and_scientific_code_commit": "f27c7b47157db7fbaf31dc998bbb5c55c1c4f7e8",
+  "scientific_run_id": 40908831254,
+  "empirical_job_id": 123570909752,
+  "actual_PR_merge_checkout_sha": "a752d10a251f4bc0a381fe44d9d9c0a117d64f6e",
+  "scientific_python_files_matching_code_head": 90,
+  "all_scientific_conclusions": "success",
+  "tests_per_Python_version": 66,
+  "Python_versions": [
+    "3.11",
+    "3.13"
+  ],
+  "workbench_run_id": 40908831274,
+  "initial_intake_failure": {
+    "run_id": 40907895237,
+    "job_id": 123567576780,
+    "commit": "db366080c1ad551f25bb8de4b0bbf699b2dca7e0",
+    "comparison_step": "skipped",
+    "two_PDF_outcomes": "HTTP403 denied_not_retried"
+  },
+  "aggregate_transfer": "exact7markedJSON_CSVblocks from completed authorized job stdout; noZIP/participantdata",
+  "artifact": {
+    "id": 12912673687,
+    "url": "https://github.com/aleks-kudriavtsev/aging_theories/actions/runs/40908831254/artifacts/12912673687",
+    "bytes": 230208,
+    "api_zip_sha256": "a3c4aefac7825f38f3d1ae8f00d7c36794d358b8ed8c10ee9d26c5659bb8a1bf",
+    "expires": "2026-11-12T16:16:21Z",
+    "zip_downloaded": false
+  },
+  "file_sha256": {
+    "RESULTS_SUMMARY.json": "37dd1cebd823bafd1d249f516bd44a201321688fe6a83f302a4fec23c7a85542",
+    "SOURCE_MANIFEST.json": "6d6614b5c4a93445859fb87f48c6b19c74720e0174e5c996e68c5739bd6c87b9",
+    "FOLD_PARAMETERS.json": "41b4dc126ab8cc04b23ea38c804fd63334dd74e267ea42bb151b1779ad6bfa56",
+    "CALIBRATION_BINS.json": "8ea5918390185263119ac16ba5b8582c8c4661f67da8a58ad989f1e6d8508352",
+    "bootstrap_aggregates.csv": "c21bc78bb6cc9fa4fb9a8821f4ee3f73540a91ffee069d4046856eeeb95cbece",
+    "primary_bootstrap.csv": "ab055858e534a050e5e444c012b3390f9e9a047b9f28794902d0b540ebea2ba3",
+    "secondary_bootstrap.csv": "c80920413cb76ce68b00d0a2b18118c54bce6025bf825eeb0eb7c1e552e63585",
+    "INDEPENDENT_VERIFICATION.json": "72ee5361a30639413199d029376b49c1c62f406207b41c84fc891a142c9d2ccf",
+    "SOURCE_INDEPENDENT_VERIFICATION.json": "68e0918e02486f8e90302227443e70e4623807c6433951ff0064ec514316561f"
+  },
+  "independent_numeric_checks": {
+    "passed": 221,
+    "total": 221,
+    "script": "tools/verify_b2m31_aggregates.py",
+    "raw_records_reprocessed": false
+  },
+  "prior_PR123": {
+    "browser_run_id": 40904909281,
+    "model_run_id": 40904909011,
+    "both_conclusions": "success"
+  },
+  "documentation_only_head_CI": "skip; scientific CI refers to scientific commit and identical90scientific file hashes",
+  "independent_source_checks": {
+    "passed": 398,
+    "failed": 0,
+    "script": "tools/audit_b2m31_sources.py",
+    "script_sha256": "05c8ad67f323f1bd2534bc4748477bfcd06390e19b97adb697fdee106e6e95bc",
+    "raw_records_reprocessed": false
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "schema": "b2m31-source-spec/1",
+  "review_date": "2026-10-29",
+  "sscard": {
+    "id": "SSCARD_A_202207",
+    "metadata_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SSCARD_A.htm",
+    "index_url": "https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Laboratory",
+    "data_filename_from_codebook": "SSCARD_A.xpt",
+    "data_url": null,
+    "direct_link_resolved": false,
+    "public_release_confirmed": true,
+    "last_revised": "2022-07",
+    "biological_baseline": "1999-2004 serum",
+    "assayed": "2018-2020",
+    "expected_rows_full_release": 21890,
+    "required_fields": [
+      "SEQN",
+      "WTSSCB2Y",
+      "WTSSCB4Y",
+      "SSB2M",
+      "SSB2ML",
+      "SSCYST",
+      "SSCYSTL",
+      "SSPRIS"
+    ],
+    "primary_key": [
+      "SEQN"
+    ],
+    "unit": {
+      "SSB2M": "mg/L",
+      "SSCYST": "mg/L"
+    },
+    "matrix": "serum",
+    "platform": "Siemens Dimension Vista 1500",
+    "detection_limits_mg_l": {
+      "SSB2M": [
+        0.72,
+        23.0
+      ],
+      "SSCYST": [
+        0.23,
+        8.0
+      ]
+    },
+    "limit_type_in_source": "LOD; do not relabel LOQ",
+    "flag_codes": {
+      "0": "within detection limits",
+      "1": "below LLOD; released LLOD/sqrt(2)",
+      "2": "above ULOD; exact fill rule not separately described"
+    },
+    "metadata_marginal_flag_counts": {
+      "SSB2ML": {
+        "0": 21824,
+        "1": 15,
+        "2": 24,
+        "missing": 27
+      },
+      "SSCYSTL": {
+        "0": 21824,
+        "1": 22,
+        "2": 2,
+        "missing": 42
+      }
+    },
+    "metadata_marginal_pristine_counts": {
+      "SSPRIS": {
+        "0": 1674,
+        "1": 20216,
+        "missing": 0
+      }
+    },
+    "metadata_weight_counts": {
+      "WTSSCB2Y": {
+        "positive": 21890,
+        "zero": 0,
+        "missing": 0
+      },
+      "WTSSCB4Y": {
+        "positive": 14656,
+        "zero": 0,
+        "missing": 7234
+      }
+    },
+    "beta_trace_protein_present": false,
+    "pristine_warning_scope": "codebook warning specifically concerns glycated albumin; no automatic Cys/B2M exclusion inferred",
+    "source_bytes_verified_this_review": false,
+    "prior_manifest_filename": "1999_SSCARD_A.xpt",
+    "prior_manifest_sha256_not_newly_verified": "63c8342280dee3bd67c1322141ef42bc6a350e479cbaeb69fc4474a67b14796d"
+  },
+  "sscard_index_url": "https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Laboratory",
+  "sscard_resolution_rule": "extract unique official .xpt href named SSCARD_A.xpt from retrieved catalogue HTML; no extension-guess fallback",
+  "cycles": [
+    {
+      "year": 1999,
+      "cycle_code": 1,
+      "demo_rows": 9965,
+      "stratum_range": [
+        1,
+        13
+      ],
+      "allowed_psu": [
+        1,
+        2,
+        3
+      ],
+      "creatinine_component": "LAB18",
+      "creatinine_variable": "LBXSCR",
+      "components": {
+        "DEMO": {
+          "required_fields": [
+            "SEQN",
+            "SDDSRVYR",
+            "RIDSTATR",
+            "RIDAGEYR",
+            "RIAGENDR",
+            "SDMVSTRA",
+            "SDMVPSU"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.xpt"
+        },
+        "BPX": {
+          "required_fields": [
+            "SEQN",
+            "BPXSY1",
+            "BPXSY2",
+            "BPXSY3"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPX.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPX.xpt"
+        },
+        "BMX": {
+          "required_fields": [
+            "SEQN",
+            "BMXBMI"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BMX.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BMX.xpt"
+        },
+        "SMQ": {
+          "required_fields": [
+            "SEQN",
+            "SMQ020",
+            "SMQ040"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SMQ.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SMQ.xpt"
+        },
+        "LAB18": {
+          "required_fields": [
+            "SEQN",
+            "LBXSCR"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB18.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB18.xpt"
+        },
+        "LAB10": {
+          "required_fields": [
+            "SEQN",
+            "LBXGH"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB10.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB10.xpt"
+        },
+        "LAB16": {
+          "required_fields": [
+            "SEQN",
+            "URXUMA",
+            "URXUCR"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB16.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB16.xpt"
+        }
+      },
+      "mortality_url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_1999_2000_MORT_2019_PUBLIC.dat"
+    },
+    {
+      "year": 2001,
+      "cycle_code": 2,
+      "demo_rows": 11039,
+      "stratum_range": [
+        14,
+        28
+      ],
+      "allowed_psu": [
+        1,
+        2
+      ],
+      "creatinine_component": "L40_B",
+      "creatinine_variable": "LBDSCR",
+      "components": {
+        "DEMO_B": {
+          "required_fields": [
+            "SEQN",
+            "SDDSRVYR",
+            "RIDSTATR",
+            "RIDAGEYR",
+            "RIAGENDR",
+            "SDMVSTRA",
+            "SDMVPSU"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.xpt"
+        },
+        "BPX_B": {
+          "required_fields": [
+            "SEQN",
+            "BPXSY1",
+            "BPXSY2",
+            "BPXSY3"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPX_B.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPX_B.xpt"
+        },
+        "BMX_B": {
+          "required_fields": [
+            "SEQN",
+            "BMXBMI"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BMX_B.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BMX_B.xpt"
+        },
+        "SMQ_B": {
+          "required_fields": [
+            "SEQN",
+            "SMQ020",
+            "SMQ040"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/SMQ_B.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/SMQ_B.xpt"
+        },
+        "L40_B": {
+          "required_fields": [
+            "SEQN",
+            "LBDSCR"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L40_B.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L40_B.xpt"
+        },
+        "L10_B": {
+          "required_fields": [
+            "SEQN",
+            "LBXGH"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L10_B.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L10_B.xpt"
+        },
+        "L16_B": {
+          "required_fields": [
+            "SEQN",
+            "URXUMA",
+            "URXUCR"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L16_B.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L16_B.xpt"
+        }
+      },
+      "mortality_url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2001_2002_MORT_2019_PUBLIC.dat"
+    },
+    {
+      "year": 2003,
+      "cycle_code": 3,
+      "demo_rows": 10122,
+      "stratum_range": [
+        29,
+        43
+      ],
+      "allowed_psu": [
+        1,
+        2
+      ],
+      "creatinine_component": "L40_C",
+      "creatinine_variable": "LBXSCR",
+      "components": {
+        "DEMO_C": {
+          "required_fields": [
+            "SEQN",
+            "SDDSRVYR",
+            "RIDSTATR",
+            "RIDAGEYR",
+            "RIAGENDR",
+            "SDMVSTRA",
+            "SDMVPSU"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.xpt"
+        },
+        "BPX_C": {
+          "required_fields": [
+            "SEQN",
+            "BPXSY1",
+            "BPXSY2",
+            "BPXSY3"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPX_C.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPX_C.xpt"
+        },
+        "BMX_C": {
+          "required_fields": [
+            "SEQN",
+            "BMXBMI"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BMX_C.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BMX_C.xpt"
+        },
+        "SMQ_C": {
+          "required_fields": [
+            "SEQN",
+            "SMQ020",
+            "SMQ040"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/SMQ_C.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/SMQ_C.xpt"
+        },
+        "L40_C": {
+          "required_fields": [
+            "SEQN",
+            "LBXSCR"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L40_C.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L40_C.xpt"
+        },
+        "L10_C": {
+          "required_fields": [
+            "SEQN",
+            "LBXGH"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L10_C.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L10_C.xpt"
+        },
+        "L16_C": {
+          "required_fields": [
+            "SEQN",
+            "URXUMA",
+            "URXUCR"
+          ],
+          "documentation_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L16_C.htm",
+          "historical_declared_data_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L16_C.xpt"
+        }
+      },
+      "mortality_url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/NHANES_2003_2004_MORT_2019_PUBLIC.dat"
+    }
+  ],
+  "weighting_url": "https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx",
+  "variance_url": "https://wwwn.cdc.gov/nchs/nhanes/tutorials/varianceestimation.aspx",
+  "mortality_dictionary_url": "https://www.cdc.gov/nchs/data/datalinkage/public-use-linked-mortality-files-data-dictionary.pdf",
+  "mortality_description_url": "https://www.cdc.gov/nchs/data/datalinkage/public-use-linked-mortality-file-description.pdf",
+  "source_data_fingerprint_reference": "research/mortality/nhanes04/SOURCE_DATA_SHA256.txt",
+  "source_url_provenance": "Other component URLs retain prior authorized mortality-nhanes-fetch.yml declarations; actual retrieved URLs and exact historical data SHA must verify. SSCARD href dynamically resolved first."
+}

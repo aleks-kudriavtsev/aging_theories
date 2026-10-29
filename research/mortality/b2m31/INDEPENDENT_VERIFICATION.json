@@ -1,0 +1,1286 @@
+{
+  "schema": "independent-b2m31-aggregate-audit/1",
+  "method": "stdlib_only_no_pipeline_import_no_raw_no_refit",
+  "passed": 221,
+  "total": 221,
+  "all_passed": true,
+  "summary": {
+    "science_commit": "f27c7b47157db7fbaf31dc998bbb5c55c1c4f7e8",
+    "run_id": 40908831254,
+    "job_id": 123570909752,
+    "eligible_n": 6546,
+    "n": 6044,
+    "events8": 586,
+    "effective_n": 3906.1971497065397,
+    "strata_n": 43,
+    "psu_n": 87,
+    "eligible_psu_n": 87,
+    "eligible_psu_distribution": {
+      "2": 42,
+      "3": 1
+    },
+    "primary_delta_brier": -0.0014094961681723195,
+    "primary_delta_auc": 0.011556662500187609,
+    "secondary_delta_brier": -0.00043163262529990337,
+    "secondary_delta_auc": 0.002273259022784191,
+    "primary_brier_interval": {
+      "lower": -0.002214549546082801,
+      "upper": -0.00065692033150264,
+      "valid": 500,
+      "undefined": 0,
+      "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+      "defined_draws_only": false
+    },
+    "secondary_brier_interval": {
+      "lower": -0.0010227331995214138,
+      "upper": 0.00015128361195393316,
+      "valid": 500,
+      "undefined": 0,
+      "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+      "defined_draws_only": false
+    },
+    "model_failures": {
+      "routine": 0,
+      "routine_b2m": 0,
+      "routine_cys": 0,
+      "routine_cys_b2m": 0
+    },
+    "paired_failures": {
+      "primary": 0,
+      "secondary": 0
+    },
+    "sensitivity_status": "computed",
+    "sensitivity_n": 6054,
+    "folds": 40,
+    "scientific_modules": 90,
+    "historical_modules": 84,
+    "sources": 50,
+    "historical_data_sources": 25,
+    "mortality_reader_cell_comparisons": 249008,
+    "files_sha256": {
+      "RESULTS": "37dd1cebd823bafd1d249f516bd44a201321688fe6a83f302a4fec23c7a85542",
+      "MANIFEST": "6d6614b5c4a93445859fb87f48c6b19c74720e0174e5c996e68c5739bd6c87b9",
+      "PARAMETERS": "41b4dc126ab8cc04b23ea38c804fd63334dd74e267ea42bb151b1779ad6bfa56",
+      "CALIBRATION_BINS": "8ea5918390185263119ac16ba5b8582c8c4661f67da8a58ad989f1e6d8508352",
+      "BOOTSTRAP_CSV": "c21bc78bb6cc9fa4fb9a8821f4ee3f73540a91ffee069d4046856eeeb95cbece",
+      "PRIMARY_BOOTSTRAP_CSV": "ab055858e534a050e5e444c012b3390f9e9a047b9f28794902d0b540ebea2ba3",
+      "SECONDARY_BOOTSTRAP_CSV": "c80920413cb76ce68b00d0a2b18118c54bce6025bf825eeb0eb7c1e552e63585"
+    },
+    "successful_job_log_sha256": "b320382b592dd018f84699274e421423fdda68deda78af0674695b63610d17ab",
+    "point": {
+      "routine": {
+        "n": 6044,
+        "events": 586,
+        "n_positive_weight": 6044,
+        "events_positive_weight": 586,
+        "weight_sum": 100001258.45371333,
+        "auc": 0.7910697200654359,
+        "brier": 0.06069524763893989,
+        "observed": 0.07449933999845938,
+        "predicted": 0.07461053081911441,
+        "bias_pp": 0.011119082065502717,
+        "observed_expected": 0.9985097167995681,
+        "calibration_in_large": -0.001849051989337599,
+        "calibration_intercept": -0.042326850049914516,
+        "calibration_slope": 0.9805623138723721,
+        "calibration_status": "computed",
+        "calibration_gradient_max": 1.9608284995698e-09,
+        "calibration_probability_clip": 1e-12,
+        "calibration_clipped_positive_weight_n": 0
+      },
+      "routine_b2m": {
+        "n": 6044,
+        "events": 586,
+        "n_positive_weight": 6044,
+        "events_positive_weight": 586,
+        "weight_sum": 100001258.45371333,
+        "auc": 0.8026263825656235,
+        "brier": 0.05928575147076757,
+        "observed": 0.07449933999845938,
+        "predicted": 0.07467535619878024,
+        "bias_pp": 0.01760162003208582,
+        "observed_expected": 0.997642914486376,
+        "calibration_in_large": -0.002999343484857147,
+        "calibration_intercept": -0.07194128956421215,
+        "calibration_slope": 0.9660468689550774,
+        "calibration_status": "computed",
+        "calibration_gradient_max": 2.488929895516634e-09,
+        "calibration_probability_clip": 1e-12,
+        "calibration_clipped_positive_weight_n": 0
+      },
+      "routine_cys": {
+        "n": 6044,
+        "events": 586,
+        "n_positive_weight": 6044,
+        "events_positive_weight": 586,
+        "weight_sum": 100001258.45371333,
+        "auc": 0.8021807612639787,
+        "brier": 0.059656189072266684,
+        "observed": 0.07449933999845938,
+        "predicted": 0.07475547725043052,
+        "bias_pp": 0.02561372519711419,
+        "observed_expected": 0.9965736657514327,
+        "calibration_in_large": -0.004336083468665302,
+        "calibration_intercept": -0.06044219946762854,
+        "calibration_slope": 0.9725256420550459,
+        "calibration_status": "computed",
+        "calibration_gradient_max": 1.882557197629975e-08,
+        "calibration_probability_clip": 1e-12,
+        "calibration_clipped_positive_weight_n": 0
+      },
+      "routine_cys_b2m": {
+        "n": 6044,
+        "events": 586,
+        "n_positive_weight": 6044,
+        "events_positive_weight": 586,
+        "weight_sum": 100001258.45371333,
+        "auc": 0.8044540202867629,
+        "brier": 0.05922455644696678,
+        "observed": 0.07449933999845938,
+        "predicted": 0.07468930398585033,
+        "bias_pp": 0.01899639873909481,
+        "observed_expected": 0.997456610555282,
+        "calibration_in_large": -0.003237492342142898,
+        "calibration_intercept": -0.06189637987669051,
+        "calibration_slope": 0.9711281922475538,
+        "calibration_status": "computed",
+        "calibration_gradient_max": 1.5081904350400244e-08,
+        "calibration_probability_clip": 1e-12,
+        "calibration_clipped_positive_weight_n": 0
+      }
+    },
+    "calibration_valid_counts": {
+      "routine": {
+        "calibration_in_large": 498,
+        "calibration_intercept": 481,
+        "calibration_slope": 481
+      },
+      "routine_b2m": {
+        "calibration_in_large": 498,
+        "calibration_intercept": 489,
+        "calibration_slope": 489
+      },
+      "routine_cys": {
+        "calibration_in_large": 500,
+        "calibration_intercept": 492,
+        "calibration_slope": 492
+      },
+      "routine_cys_b2m": {
+        "calibration_in_large": 497,
+        "calibration_intercept": 487,
+        "calibration_slope": 487
+      }
+    },
+    "calibration_status_counts": {
+      "routine": {
+        "computed": 481,
+        "offset_only_full_fit_nonconverged": 17,
+        "undefined_offset_fit_nonconverged": 2
+      },
+      "routine_b2m": {
+        "computed": 489,
+        "undefined_offset_fit_nonconverged": 2,
+        "offset_only_full_fit_nonconverged": 9
+      },
+      "routine_cys": {
+        "computed": 492,
+        "offset_only_full_fit_nonconverged": 8
+      },
+      "routine_cys_b2m": {
+        "computed": 487,
+        "offset_only_full_fit_nonconverged": 10,
+        "undefined_offset_fit_nonconverged": 3
+      }
+    },
+    "synthetic_tests_per_python": 66,
+    "independently_queried_ci_jobs": [
+      {
+        "id": 123570909752,
+        "name": "empirical",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 40908831254,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run python -m pip install numpy==2.3.5 pandas==2.2.3 scipy==1.17.0 scikit-learn==1.8.0",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Resolve official source anchor and retrieve protocol-bound public inputs",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Prespecified comparisons and 500 paired full nested refits",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          }
+        ]
+      },
+      {
+        "id": 123570909967,
+        "name": "synthetic (3.13)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 40908831254,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run python -m pip install numpy==2.3.5 pandas==2.2.3 scipy==1.17.0 scikit-learn==1.8.0",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m unittest discover -s tests -p 'test_b2m31*.py' -v",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          }
+        ]
+      },
+      {
+        "id": 123570910060,
+        "name": "synthetic (3.11)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 40908831254,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run python -m pip install numpy==2.3.5 pandas==2.2.3 scipy==1.17.0 scikit-learn==1.8.0",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m unittest discover -s tests -p 'test_b2m31*.py' -v",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          }
+        ]
+      }
+    ],
+    "ci_log_sha256": {
+      "empirical": "b320382b592dd018f84699274e421423fdda68deda78af0674695b63610d17ab",
+      "synthetic (3.13)": "ec998d635822407ca8e71ca4ebc962ca5f2c134cada469b4954aa3642da310ee",
+      "synthetic (3.11)": "57881178ee063d1ff88f0b517836414772ecbee2d47ee2deb7778c92d0ba7832"
+    }
+  },
+  "checks": [
+    {
+      "name": "RESULTS saved structure matches successful log",
+      "passed": true
+    },
+    {
+      "name": "RESULTS saved canonical bytes match successful log",
+      "passed": true
+    },
+    {
+      "name": "MANIFEST saved structure matches successful log",
+      "passed": true
+    },
+    {
+      "name": "MANIFEST saved canonical bytes match successful log",
+      "passed": true
+    },
+    {
+      "name": "PARAMETERS saved structure matches successful log",
+      "passed": true
+    },
+    {
+      "name": "PARAMETERS saved canonical bytes match successful log",
+      "passed": true
+    },
+    {
+      "name": "CALIBRATION_BINS saved structure matches successful log",
+      "passed": true
+    },
+    {
+      "name": "CALIBRATION_BINS saved canonical bytes match successful log",
+      "passed": true
+    },
+    {
+      "name": "BOOTSTRAP_CSV exact bytes match successful log",
+      "passed": true
+    },
+    {
+      "name": "PRIMARY_BOOTSTRAP_CSV exact bytes match successful log",
+      "passed": true
+    },
+    {
+      "name": "SECONDARY_BOOTSTRAP_CSV exact bytes match successful log",
+      "passed": true
+    },
+    {
+      "name": "all500 refits completed in successful log",
+      "passed": true
+    },
+    {
+      "name": "independently queried completed science CI jobs",
+      "passed": true
+    },
+    {
+      "name": "empirical correct science commit included in CI checkout",
+      "passed": true
+    },
+    {
+      "name": "all seven blocks match independently fetched successful empirical log",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.13) correct science commit included in CI checkout",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.13) 66 synthetic tests succeeded",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.11) correct science commit included in CI checkout",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.11) 66 synthetic tests succeeded",
+      "passed": true
+    },
+    {
+      "name": "analysis fixed before current metrics",
+      "passed": true
+    },
+    {
+      "name": "prespecified fixed settings",
+      "passed": true
+    },
+    {
+      "name": "research scope explicit",
+      "passed": true
+    },
+    {
+      "name": "plan and lock hashes current",
+      "passed": true
+    },
+    {
+      "name": "metadata pin ANALYSIS_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin SOURCE_SPEC.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin SOURCE_WEIGHTS_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin MEASUREMENT_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin CREATININE_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin nhanes04/SOURCE_DATA_SHA256.txt",
+      "passed": true
+    },
+    {
+      "name": "metadata pin freeze30/FROZEN_MODELS.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin freeze30/FREEZE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin freeze30/SSCARD_SOURCE_METADATA.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin SOURCE_INTAKE_AMENDMENT.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin validation08/reader_reference_audit.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cohort27/INDEPENDENT_SOURCE_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "84 historical scientific modules fixed",
+      "passed": true
+    },
+    {
+      "name": "complete90 current scientific module hashes",
+      "passed": true
+    },
+    {
+      "name": "six additions exclusively b2m31",
+      "passed": true
+    },
+    {
+      "name": "manifest exact export SHA",
+      "passed": true
+    },
+    {
+      "name": "manifest lock/schema/plan",
+      "passed": true
+    },
+    {
+      "name": "exact50 required sources unique",
+      "passed": true
+    },
+    {
+      "name": "required sources successful safe and nonempty",
+      "passed": true
+    },
+    {
+      "name": "fixed URLs match independent inventory",
+      "passed": true
+    },
+    {
+      "name": "SSCARD dynamic official href filename",
+      "passed": true
+    },
+    {
+      "name": "25 historical public data SHA preserved",
+      "passed": true
+    },
+    {
+      "name": "two403 PDF denials separately retained without retry",
+      "passed": true
+    },
+    {
+      "name": "source audit inventory and stable digest",
+      "passed": true
+    },
+    {
+      "name": "original runtime source manifest exact exported hash",
+      "passed": true
+    },
+    {
+      "name": "SSCARD all source marginal guards remain pinned",
+      "passed": true
+    },
+    {
+      "name": "corrected source weight rule unaltered",
+      "passed": true
+    },
+    {
+      "name": "source-specific serum calibration",
+      "passed": true
+    },
+    {
+      "name": "three mortality readers exact8fields and249008cells",
+      "passed": true
+    },
+    {
+      "name": "22 XPT zero-representation audits",
+      "passed": true
+    },
+    {
+      "name": "actual fullDEMO inventory exactly preserved at eligibility",
+      "passed": true
+    },
+    {
+      "name": "actual PSU inventory distribution and uniqueness",
+      "passed": true
+    },
+    {
+      "name": "PSU values match each cycle dictionary",
+      "passed": true
+    },
+    {
+      "name": "eligible flow reconciles cycles",
+      "passed": true
+    },
+    {
+      "name": "common domain n events effective n coverage",
+      "passed": true
+    },
+    {
+      "name": "primary source domain marginals",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity source domain marginals",
+      "passed": true
+    },
+    {
+      "name": "overlapping exclusions reconcile union and every reason",
+      "passed": true
+    },
+    {
+      "name": "routine missingness consistent with joint exclusion",
+      "passed": true
+    },
+    {
+      "name": "eightyear outcome and reuse limitations explicit",
+      "passed": true
+    },
+    {
+      "name": "primary domain arms",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine population",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine metric algebra",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine calibration diagnostics",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine_b2m population",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine_b2m metric algebra",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine_b2m calibration diagnostics",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine_cys population",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine_cys metric algebra",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine_cys calibration diagnostics",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine_cys_b2m population",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine_cys_b2m metric algebra",
+      "passed": true
+    },
+    {
+      "name": "primary domain routine_cys_b2m calibration diagnostics",
+      "passed": true
+    },
+    {
+      "name": "primary domain common observed risk",
+      "passed": true
+    },
+    {
+      "name": "primary domain primary contrast status",
+      "passed": true
+    },
+    {
+      "name": "primary domain primary delta brier",
+      "passed": true
+    },
+    {
+      "name": "primary domain primary delta auc",
+      "passed": true
+    },
+    {
+      "name": "primary domain secondary contrast status",
+      "passed": true
+    },
+    {
+      "name": "primary domain secondary delta brier",
+      "passed": true
+    },
+    {
+      "name": "primary domain secondary delta auc",
+      "passed": true
+    },
+    {
+      "name": "primary domain flattened arm values",
+      "passed": true
+    },
+    {
+      "name": "all500 bootstrap identifiers ordered unique",
+      "passed": true
+    },
+    {
+      "name": "exact40 prespecified interval targets",
+      "passed": true
+    },
+    {
+      "name": "independent percentile primary|delta_auc",
+      "passed": true
+    },
+    {
+      "name": "independent percentile primary|delta_brier",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_b2m|auc",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_b2m|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_b2m|brier",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_b2m|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_b2m|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_b2m|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_b2m|observed",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_b2m|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_b2m|predicted",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys_b2m|auc",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys_b2m|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys_b2m|brier",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys_b2m|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys_b2m|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys_b2m|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys_b2m|observed",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys_b2m|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys_b2m|predicted",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys|auc",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys|brier",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys|observed",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine_cys|predicted",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine|auc",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine|brier",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine|observed",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "independent percentile routine|predicted",
+      "passed": true
+    },
+    {
+      "name": "independent percentile secondary|delta_auc",
+      "passed": true
+    },
+    {
+      "name": "independent percentile secondary|delta_brier",
+      "passed": true
+    },
+    {
+      "name": "all500 arm metric/status and paired delta arithmetic",
+      "passed": true
+    },
+    {
+      "name": "routine failure count and2500 fold selection counts",
+      "passed": true
+    },
+    {
+      "name": "routine calibration validity distinguished from model failure",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m failure count and2500 fold selection counts",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m calibration validity distinguished from model failure",
+      "passed": true
+    },
+    {
+      "name": "routine_cys failure count and2500 fold selection counts",
+      "passed": true
+    },
+    {
+      "name": "routine_cys calibration validity distinguished from model failure",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m failure count and2500 fold selection counts",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m calibration validity distinguished from model failure",
+      "passed": true
+    },
+    {
+      "name": "primary500 narrow rows agree with full wide CSV",
+      "passed": true
+    },
+    {
+      "name": "primary paired contrast failure count",
+      "passed": true
+    },
+    {
+      "name": "secondary500 narrow rows agree with full wide CSV",
+      "passed": true
+    },
+    {
+      "name": "secondary paired contrast failure count",
+      "passed": true
+    },
+    {
+      "name": "BOOTSTRAP_CSV exact file hash",
+      "passed": true
+    },
+    {
+      "name": "PRIMARY_BOOTSTRAP_CSV exact file hash",
+      "passed": true
+    },
+    {
+      "name": "SECONDARY_BOOTSTRAP_CSV exact file hash",
+      "passed": true
+    },
+    {
+      "name": "sensitivity distinct conditional domain no bootstrap pooling",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity arms",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine population",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine metric algebra",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine calibration diagnostics",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine_b2m population",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine_b2m metric algebra",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine_b2m calibration diagnostics",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine_cys population",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine_cys metric algebra",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine_cys calibration diagnostics",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine_cys_b2m population",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine_cys_b2m metric algebra",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity routine_cys_b2m calibration diagnostics",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity common observed risk",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity primary contrast status",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity primary delta brier",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity primary delta auc",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity secondary contrast status",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity secondary delta brier",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity secondary delta auc",
+      "passed": true
+    },
+    {
+      "name": "reported sensitivity flattened arm values",
+      "passed": true
+    },
+    {
+      "name": "sensitivity event count",
+      "passed": true
+    },
+    {
+      "name": "exact5fold fourarm parameter records per computed domain",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine fold totals",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine complete feature/scaling layout",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine independent penalty selection",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine convergence/normalization",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine calibration-bin counts",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine independent calibration-bin weighted moments",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_b2m fold totals",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_b2m complete feature/scaling layout",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_b2m independent penalty selection",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_b2m convergence/normalization",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_b2m calibration-bin counts",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_b2m independent calibration-bin weighted moments",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys fold totals",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys complete feature/scaling layout",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys independent penalty selection",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys convergence/normalization",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys calibration-bin counts",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys independent calibration-bin weighted moments",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys_b2m fold totals",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys_b2m complete feature/scaling layout",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys_b2m independent penalty selection",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys_b2m convergence/normalization",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys_b2m calibration-bin counts",
+      "passed": true
+    },
+    {
+      "name": "primary_common routine_cys_b2m independent calibration-bin weighted moments",
+      "passed": true
+    },
+    {
+      "name": "primary_common same wholePSU folds across all four arms",
+      "passed": true
+    },
+    {
+      "name": "primary_common training/scoring totalweights reconcile",
+      "passed": true
+    },
+    {
+      "name": "primary total PSU count from each fold",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine fold totals",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine complete feature/scaling layout",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine independent penalty selection",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine convergence/normalization",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine calibration-bin counts",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine independent calibration-bin weighted moments",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_b2m fold totals",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_b2m complete feature/scaling layout",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_b2m independent penalty selection",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_b2m convergence/normalization",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_b2m calibration-bin counts",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_b2m independent calibration-bin weighted moments",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys fold totals",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys complete feature/scaling layout",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys independent penalty selection",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys convergence/normalization",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys calibration-bin counts",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys independent calibration-bin weighted moments",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys_b2m fold totals",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys_b2m complete feature/scaling layout",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys_b2m independent penalty selection",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys_b2m convergence/normalization",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys_b2m calibration-bin counts",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity routine_cys_b2m independent calibration-bin weighted moments",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity same wholePSU folds across all four arms",
+      "passed": true
+    },
+    {
+      "name": "reported_values_sensitivity training/scoring totalweights reconcile",
+      "passed": true
+    },
+    {
+      "name": "calibration bins exclusively computed domains/arms",
+      "passed": true
+    },
+    {
+      "name": "aggregate exports have no individual ID or prediction vector keys",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "No raw participant/XPT/ASCII/ZIP downloads, individual prediction access or refitting occurred in this audit.",
+    "Source SHA values are reconciled across locked historical pins, current exported manifest, runtime audit and success log; this is not an independent local rehash of raw source bytes.",
+    "Full-release SSCARD marginal counts and corrected weight counts are checked by the pinned runtime guard; no separate observed full-release marginal table is exported. The independent audit verifies those guards and exported conditional-domain marginals, not a second XPT parse.",
+    "Person-level Brier/AUC and fitted calibration regressions cannot be recomputed from aggregate exports; independently checked quantities are interval arithmetic, pair differences, metric identities and calibration-bin weighted moments.",
+    "500 rescaled-stratified-PSU bootstrap draws repeat training, scaling and inner tuning but hold the original whole-PSU partitions fixed. Assay standardization and prior model/marker selection uncertainty are excluded.",
+    "Cohort1999-2004 and Cys have prior use; B2M was previously loaded. These are exploratory new binary models on reused persons, not independent external validation.",
+    "Both official mortality PDFs remained denied HTTP403, denied_not_retried, separate from50 required sources. The amendment retains prior primary definition review, pinned public ASCII hashes and two-reader agreement without changing the endpoint.",
+    "The flags0/1 sensitivity uses a different conditional domain and supplies within-domain paired point comparisons only; it is not an additional bootstrap interval or external validation."
+  ]
+}
