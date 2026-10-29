@@ -1,0 +1,51 @@
+name: Cause33B separate cancer and heart marker checks
+on:
+  push:
+    branches: [research/cause-biomarkers-33b]
+    paths: ['research/mortality/cause33b/**', 'tests/test_cause33b*.py', '.github/workflows/cause33b-checks.yml']
+  pull_request:
+    paths: ['research/mortality/cause33b/**', 'tests/test_cause33b*.py', '.github/workflows/cause33b-checks.yml']
+permissions:
+  contents: read
+jobs:
+  synthetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install numpy==2.3.5 pandas==2.2.3 scipy==1.17.0 scikit-learn==1.8.0
+      - env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python -m unittest discover -s tests -p 'test_cause33b*.py' -v
+  empirical:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.3.5 pandas==2.2.3 scipy==1.17.0 scikit-learn==1.8.0
+      - name: Preserved official inputs without retrying denied documentation
+        run: python -m research.mortality.cause33b.retrieve --out /tmp/cause33b_cdc
+      - name: Separate supported-cause CIF comparisons with shared paired full refits
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python -m research.mortality.cause33b.analyze --source /tmp/cause33b_cdc --out /tmp/cause33b_results
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: cause33b-aggregates
+          path: /tmp/cause33b_results/
+          retention-days: 14
+          if-no-files-found: error
