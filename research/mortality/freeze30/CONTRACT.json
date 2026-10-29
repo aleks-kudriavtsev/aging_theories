@@ -1,0 +1,188 @@
+{
+  "schema": "freeze30-contract/1",
+  "input_schema": "freeze30-input/1",
+  "artifact_schema": "freeze30-model/1",
+  "mapping_id": "NHANESIII_FIRST_EXAM_REPORTED_V1",
+  "supported_mappings": [
+    "NHANESIII_FIRST_EXAM_REPORTED_V1"
+  ],
+  "external_mappings_approved": [],
+  "fields": {
+    "age_years": {
+      "unit": "years",
+      "type": "integer",
+      "minimum": 40,
+      "maximum": 75,
+      "source": "HSAGEIR interview age"
+    },
+    "sex": {
+      "unit": "category",
+      "values": [
+        "male",
+        "female"
+      ],
+      "source": "HSSEX 1/2"
+    },
+    "smoking": {
+      "unit": "category",
+      "values": [
+        "never",
+        "current",
+        "former"
+      ],
+      "source": "HAR1=2 never; HAR1=1 with HAR3=1 current /2 former"
+    },
+    "sbp_mmhg": {
+      "unit": "mmHg",
+      "source": "HAZMNK1R mean released SBP, HAZNOK1R 1..6",
+      "sentinels": [
+        888
+      ]
+    },
+    "sbp_measurement_count": {
+      "unit": "count",
+      "type": "integer",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "bmi_kg_m2": {
+      "unit": "kg/m^2",
+      "source": "BMPBMI released edited/derived",
+      "sentinels": [
+        8888
+      ]
+    },
+    "bmi_weight_flag": {
+      "unit": "code",
+      "type": "integer",
+      "values": [
+        0,
+        3,
+        4
+      ]
+    },
+    "bmi_height_flag": {
+      "unit": "code",
+      "type": "integer",
+      "values": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "hba1c_percent": {
+      "unit": "percent",
+      "source": "GHP original DCCT-aligned reported",
+      "sentinels": [
+        8888
+      ]
+    },
+    "hba1c_method": {
+      "unit": "code",
+      "type": "integer",
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "creatinine_historical_mg_dl": {
+      "unit": "mg/dL",
+      "source": "CEP original historical Jaffe serum; not IDMS input",
+      "sentinels": [
+        8888
+      ]
+    },
+    "urine_creatinine_mg_dl": {
+      "unit": "mg/dL",
+      "source": "URP original urine; no serum calibration",
+      "minimum": 10,
+      "sentinels": [
+        88888
+      ]
+    },
+    "urine_albumin_ug_ml": {
+      "unit": "ug/mL",
+      "source": "UBP reported; retain published0.4 substitution",
+      "sentinels": [
+        888888
+      ]
+    },
+    "cystatin_c_reported_mg_l": {
+      "unit": "mg/L",
+      "source": "SSCYSTAT27a original reported, not modern standardized"
+    },
+    "beta2_microglobulin_reported_mg_l": {
+      "unit": "mg/L",
+      "source": "SSB2M36a original reported"
+    },
+    "beta_trace_protein_reported_mg_l": {
+      "unit": "mg/L",
+      "source": "SSBTP36a original reported"
+    }
+  },
+  "units": {
+    "age_years": "years",
+    "sex": "category",
+    "smoking": "category",
+    "sbp_mmhg": "mmHg",
+    "sbp_measurement_count": "count",
+    "bmi_kg_m2": "kg/m^2",
+    "bmi_weight_flag": "code",
+    "bmi_height_flag": "code",
+    "hba1c_percent": "percent",
+    "hba1c_method": "code",
+    "creatinine_historical_mg_dl": "mg/dL",
+    "urine_creatinine_mg_dl": "mg/dL",
+    "urine_albumin_ug_ml": "ug/mL",
+    "cystatin_c_reported_mg_l": "mg/L",
+    "beta2_microglobulin_reported_mg_l": "mg/L",
+    "beta_trace_protein_reported_mg_l": "mg/L"
+  },
+  "models": [
+    "routine",
+    "routine_all3"
+  ],
+  "target": {
+    "endpoint": "all_cause_death",
+    "horizon_months": 96,
+    "time_origin": "first_exam",
+    "population_interview_age": [
+      40,
+      75
+    ],
+    "no_early_censoring_required_for_binary_evaluation": true
+  },
+  "policy": {
+    "missing": "reject_no_imputation",
+    "numeric": "strict_finite_positive_except_explicit_categories",
+    "unknown_fields": "reject",
+    "unknown_units": "reject_no_automatic_conversion",
+    "unknown_assay_mapping": "reject",
+    "reported_values_not_QC_LOQ_certification": true,
+    "no_clinical_use": true,
+    "no_participant_exports": true,
+    "no_scoring_cli": true
+  },
+  "calibration": {
+    "serum_creatinine": "0.960*original_CEP-0.184 mg/dL; must remain positive",
+    "eGFR": "CKD-EPI2021 creatinine-only race-free, historical calibrated serum CEP",
+    "UACR": "100*urine_albumin_ug_ml/urine_creatinine_mg_dl",
+    "Cys_B2M_BTP": "original reported mg/L; log2; no calibration or clipping"
+  },
+  "source_references": [
+    "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/lab-acc.pdf",
+    "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam-acc.pdf",
+    "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/SSCYSTAT.pdf",
+    "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.htm",
+    "https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/glomerular-filtration-rate-equations/adults"
+  ]
+}
