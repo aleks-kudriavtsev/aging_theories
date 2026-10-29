@@ -1,0 +1,73 @@
+{
+  "schema": "cause33b-provenance/1",
+  "plan_commit": "d772b874198a9f7739225bbce5d1b6b6dfcd0c08",
+  "scientific_code_commit": "ab09ca0b605b44544f49d21d1161c61609ef92d1",
+  "actual_PR_merge_checkout_sha": "819b97537bdbf0fec55f50e4aa4a882fd3da67f5",
+  "scientific_run_id": 40928005361,
+  "empirical_job_id": 123638594625,
+  "synthetic_jobs": {
+    "3.13": 123638593998,
+    "3.11": 123638594430
+  },
+  "tests_per_Python_version": 30,
+  "workbench_run_id": 40928005687,
+  "old33A_automatic_regression_run_id": 40928005320,
+  "all_scientific_CI_conclusions": "success",
+  "scientific_python_files": 103,
+  "historical_scientific_files_preserved": 99,
+  "source_scientific_projection_float_checks": 3974,
+  "source_scientific_projection_float_differences": 0,
+  "aggregate_transfer": "6 exact marked completed-job plaintext blocks; strip only timestamp prefixes including 2 chunk BOMs; no payload modification or ZIP",
+  "artifact": {
+    "id": 12922485580,
+    "bytes": 577527,
+    "api_zip_sha256": "0ef59d3c45a136418c05d95167716cb6bea12cdffa92071ddd9ee616ff05ffa5",
+    "expires": "2026-11-12T18:15:16Z",
+    "zip_downloaded": false
+  },
+  "file_sha256": {
+    "RESULTS_SUMMARY.json": "952a23344a6d16a453654de50bc4af437da605df9f8b2d120ced58fbbc9ec855",
+    "FOLD_PARAMETERS.json": "dbab78011cbe7e4b55b8454ab57a6db900b984829604246016b3658e160ecf80",
+    "CALIBRATION_BINS.json": "3d8b83ebadc006cb60565a131c3bfd1f2f1a92f10be48fda665054a69b2f46d5",
+    "SOURCE_MANIFEST.json": "e66fe74725768f2a0e858f50a294761fc7c7f9d7ac556c886d8298f88c4a5794",
+    "bootstrap_aggregates.csv": "4bd749db42fd8a7def7629bb962d956b7f3b5e6d77bbeb0676049ddfd7a1a356",
+    "paired_bootstrap.csv": "ca0304ac0d0d3f5eada54de75600bab627166ee7cad4910a5889d2efa4a34878",
+    "INDEPENDENT_VERIFICATION.json": "433162f9baa0ed3fcbf1f6650657eb0e8649a71382adb0737b00bc8f4d1489dc"
+  },
+  "independent_audit": {
+    "passed": 265,
+    "failed": 0,
+    "raw_records_reprocessed": false,
+    "model_refits_repeated": false
+  },
+  "cause_counts": {
+    "002": 176,
+    "001": 148
+  },
+  "cause_controls": {
+    "002": 5868,
+    "001": 5896
+  },
+  "all_eight_delta_Brier_AUC_intervals_cross_zero": true,
+  "predictive_fit_failures": 0,
+  "calibration_full_valid_counts": {
+    "002": {
+      "routine": 498,
+      "routine_b2m": 497,
+      "routine_cys": 495,
+      "routine_cys_b2m": 499
+    },
+    "001": {
+      "routine": 496,
+      "routine_b2m": 497,
+      "routine_cys": 499,
+      "routine_cys_b2m": 498
+    }
+  },
+  "interval_scope": "95% marginal exploratory paired full-refit percentiles conditional on fixed partition/forms/measurements; no simultaneous confirmation",
+  "between_cause_effect_difference_tested": false,
+  "joint_integration_and_Fine_Gray": "deferred_not_implemented_or_run",
+  "lab_report_v3_and_presentation_touched": false,
+  "documentation_only_head_CI": "skip; scientific CI refers toab09ca0b and identical103source hashes",
+  "PR125_and_PR126_checks_verified": "model-check and ui-check success before33B"
+}

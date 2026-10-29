@@ -1,0 +1,1503 @@
+{
+  "schema": "independent-cause33B-aggregate-audit/1",
+  "passed": 265,
+  "total": 265,
+  "all_passed": true,
+  "summary": {
+    "science_commit": "ab09ca0b605b44544f49d21d1161c61609ef92d1",
+    "plan_commit": "d772b874198a9f7739225bbce5d1b6b6dfcd0c08",
+    "run_id": 40928005361,
+    "job_id": 123638594625,
+    "actual_PR_merge_checkout": "819b97537bdbf0fec55f50e4aa4a882fd3da67f5",
+    "tests_per_python": 30,
+    "n": 6044,
+    "events8": {
+      "002": 176,
+      "001": 148
+    },
+    "controls8": {
+      "002": 5868,
+      "001": 5896
+    },
+    "point": {
+      "002": {
+        "routine": {
+          "n": 6044,
+          "events": 176,
+          "n_positive_weight": 6044,
+          "events_positive_weight": 176,
+          "weight_sum": 100001258.45371333,
+          "auc": 0.7276493072486291,
+          "brier": 0.02281478404286156,
+          "observed": 0.0238349712474126,
+          "predicted": 0.024051722345466302,
+          "bias_pp": 0.02167510980537017,
+          "observed_expected": 0.9909881257175515,
+          "calibration_in_large": -0.009473548293296899,
+          "calibration_intercept": -0.0927153656918953,
+          "calibration_slope": 0.9753674524514878,
+          "calibration_status": "computed",
+          "calibration_gradient_max": 3.293801988796252e-08,
+          "calibration_probability_clip": 1e-12,
+          "calibration_clipped_positive_weight_n": 0
+        },
+        "routine_b2m": {
+          "n": 6044,
+          "events": 176,
+          "n_positive_weight": 6044,
+          "events_positive_weight": 176,
+          "weight_sum": 100001258.45371333,
+          "auc": 0.7389631591365227,
+          "brier": 0.02274661854645347,
+          "observed": 0.0238349712474126,
+          "predicted": 0.024118191656646602,
+          "bias_pp": 0.028322040923400155,
+          "observed_expected": 0.9882569799068683,
+          "calibration_in_large": -0.012428569220087737,
+          "calibration_intercept": -0.15533232951758852,
+          "calibration_slope": 0.9571344021644154,
+          "calibration_status": "computed",
+          "calibration_gradient_max": 2.0825718927142134e-10,
+          "calibration_probability_clip": 1e-12,
+          "calibration_clipped_positive_weight_n": 0
+        },
+        "routine_cys": {
+          "n": 6044,
+          "events": 176,
+          "n_positive_weight": 6044,
+          "events_positive_weight": 176,
+          "weight_sum": 100001258.45371333,
+          "auc": 0.7355827434651994,
+          "brier": 0.022757823360827035,
+          "observed": 0.0238349712474126,
+          "predicted": 0.02407605403912204,
+          "bias_pp": 0.02410827917094377,
+          "observed_expected": 0.9899866152768351,
+          "calibration_in_large": -0.010572353370815576,
+          "calibration_intercept": -0.15008383849543996,
+          "calibration_slope": 0.9582934280552657,
+          "calibration_status": "computed",
+          "calibration_gradient_max": 8.933310191583388e-08,
+          "calibration_probability_clip": 1e-12,
+          "calibration_clipped_positive_weight_n": 0
+        },
+        "routine_cys_b2m": {
+          "n": 6044,
+          "events": 176,
+          "n_positive_weight": 6044,
+          "events_positive_weight": 176,
+          "weight_sum": 100001258.45371333,
+          "auc": 0.7366809427564273,
+          "brier": 0.02275395366149159,
+          "observed": 0.0238349712474126,
+          "predicted": 0.024047446303309534,
+          "bias_pp": 0.021247505589693308,
+          "observed_expected": 0.991164340145852,
+          "calibration_in_large": -0.00934315255858473,
+          "calibration_intercept": -0.20600980938776364,
+          "calibration_slope": 0.9410375135319583,
+          "calibration_status": "computed",
+          "calibration_gradient_max": 7.818391760394672e-09,
+          "calibration_probability_clip": 1e-12,
+          "calibration_clipped_positive_weight_n": 0
+        }
+      },
+      "001": {
+        "routine": {
+          "n": 6044,
+          "events": 148,
+          "n_positive_weight": 6044,
+          "events_positive_weight": 148,
+          "weight_sum": 100001258.45371333,
+          "auc": 0.7773586036473229,
+          "brier": 0.017721563298096658,
+          "observed": 0.018821755284355042,
+          "predicted": 0.018758214910410236,
+          "bias_pp": -0.006354037394480649,
+          "observed_expected": 1.0033873358551588,
+          "calibration_in_large": 0.0036601845068777615,
+          "calibration_intercept": -0.13743526913472048,
+          "calibration_slope": 0.9588028859771915,
+          "calibration_status": "computed",
+          "calibration_gradient_max": 3.6566034783414025e-09,
+          "calibration_probability_clip": 1e-12,
+          "calibration_clipped_positive_weight_n": 0
+        },
+        "routine_b2m": {
+          "n": 6044,
+          "events": 148,
+          "n_positive_weight": 6044,
+          "events_positive_weight": 148,
+          "weight_sum": 100001258.45371333,
+          "auc": 0.7867016119080787,
+          "brier": 0.01751076215426503,
+          "observed": 0.018821755284355042,
+          "predicted": 0.018499769293585596,
+          "bias_pp": -0.0321985990769446,
+          "observed_expected": 1.0174048651991074,
+          "calibration_in_large": 0.018927630423393096,
+          "calibration_intercept": -0.20893446159948148,
+          "calibration_slope": 0.9321859738794629,
+          "calibration_status": "computed",
+          "calibration_gradient_max": 4.1944775430735604e-10,
+          "calibration_probability_clip": 1e-12,
+          "calibration_clipped_positive_weight_n": 0
+        },
+        "routine_cys": {
+          "n": 6044,
+          "events": 148,
+          "n_positive_weight": 6044,
+          "events_positive_weight": 148,
+          "weight_sum": 100001258.45371333,
+          "auc": 0.7862270075194042,
+          "brier": 0.01746346176926625,
+          "observed": 0.018821755284355042,
+          "predicted": 0.018470392724910654,
+          "bias_pp": -0.035136255944438755,
+          "observed_expected": 1.0190230150856787,
+          "calibration_in_large": 0.020608266806323303,
+          "calibration_intercept": -0.16213201356694137,
+          "calibration_slope": 0.9459694308805326,
+          "calibration_status": "computed",
+          "calibration_gradient_max": 7.28532570173912e-08,
+          "calibration_probability_clip": 1e-12,
+          "calibration_clipped_positive_weight_n": 0
+        },
+        "routine_cys_b2m": {
+          "n": 6044,
+          "events": 148,
+          "n_positive_weight": 6044,
+          "events_positive_weight": 148,
+          "weight_sum": 100001258.45371333,
+          "auc": 0.7894182722496438,
+          "brier": 0.017454373724564497,
+          "observed": 0.018821755284355042,
+          "predicted": 0.01864321760224093,
+          "bias_pp": -0.017853768211411117,
+          "observed_expected": 1.009576548744067,
+          "calibration_in_large": 0.010435688066057984,
+          "calibration_intercept": -0.0964624103204949,
+          "calibration_slope": 0.9683324569742277,
+          "calibration_status": "computed",
+          "calibration_gradient_max": 9.283820795458197e-10,
+          "calibration_probability_clip": 1e-12,
+          "calibration_clipped_positive_weight_n": 0
+        }
+      }
+    },
+    "contrasts": {
+      "002": {
+        "primary|status": "computed",
+        "primary|delta_brier": -6.816549640809022e-05,
+        "primary|delta_auc": 0.011313851887893578,
+        "secondary|status": "computed",
+        "secondary|delta_brier": -3.869699335443816e-06,
+        "secondary|delta_auc": 0.001098199291227897
+      },
+      "001": {
+        "primary|status": "computed",
+        "primary|delta_brier": -0.0002108011438316272,
+        "primary|delta_auc": 0.009343008260755847,
+        "secondary|status": "computed",
+        "secondary|delta_brier": -9.088044701753561e-06,
+        "secondary|delta_auc": 0.0031912647302395625
+      }
+    },
+    "contrast_intervals": {
+      "002": {
+        "primary|delta_brier": {
+          "lower": -0.00023702270516629177,
+          "upper": 0.00016682720868200362,
+          "valid": 500,
+          "undefined": 0,
+          "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+          "defined_draws_only": false,
+          "marginal_exploratory": true,
+          "simultaneous_familywise_coverage": false,
+          "endpoint_selection_uncertainty_included": false
+        },
+        "primary|delta_auc": {
+          "lower": -0.009970811649810526,
+          "upper": 0.039263552656707695,
+          "valid": 500,
+          "undefined": 0,
+          "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+          "defined_draws_only": false,
+          "marginal_exploratory": true,
+          "simultaneous_familywise_coverage": false,
+          "endpoint_selection_uncertainty_included": false
+        },
+        "secondary|delta_brier": {
+          "lower": -0.00014822128519791506,
+          "upper": 0.0002113158154427012,
+          "valid": 500,
+          "undefined": 0,
+          "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+          "defined_draws_only": false,
+          "marginal_exploratory": true,
+          "simultaneous_familywise_coverage": false,
+          "endpoint_selection_uncertainty_included": false
+        },
+        "secondary|delta_auc": {
+          "lower": -0.016781308558736267,
+          "upper": 0.016097964247292523,
+          "valid": 500,
+          "undefined": 0,
+          "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+          "defined_draws_only": false,
+          "marginal_exploratory": true,
+          "simultaneous_familywise_coverage": false,
+          "endpoint_selection_uncertainty_included": false
+        }
+      },
+      "001": {
+        "primary|delta_brier": {
+          "lower": -0.0005336794627724806,
+          "upper": 0.00012534873092178572,
+          "valid": 500,
+          "undefined": 0,
+          "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+          "defined_draws_only": false,
+          "marginal_exploratory": true,
+          "simultaneous_familywise_coverage": false,
+          "endpoint_selection_uncertainty_included": false
+        },
+        "primary|delta_auc": {
+          "lower": -0.009427794829103017,
+          "upper": 0.04192884066555767,
+          "valid": 500,
+          "undefined": 0,
+          "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+          "defined_draws_only": false,
+          "marginal_exploratory": true,
+          "simultaneous_familywise_coverage": false,
+          "endpoint_selection_uncertainty_included": false
+        },
+        "secondary|delta_brier": {
+          "lower": -0.0003101009316588021,
+          "upper": 0.00017543682314518846,
+          "valid": 500,
+          "undefined": 0,
+          "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+          "defined_draws_only": false,
+          "marginal_exploratory": true,
+          "simultaneous_familywise_coverage": false,
+          "endpoint_selection_uncertainty_included": false
+        },
+        "secondary|delta_auc": {
+          "lower": -0.007643984841639329,
+          "upper": 0.02526043725778365,
+          "valid": 500,
+          "undefined": 0,
+          "scope": "nested_preprocessing_tuning_refitting_with_fixed_partition",
+          "defined_draws_only": false,
+          "marginal_exploratory": true,
+          "simultaneous_familywise_coverage": false,
+          "endpoint_selection_uncertainty_included": false
+        }
+      }
+    },
+    "calibration_valid_counts": {
+      "002": {
+        "routine": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 498,
+          "calibration_slope": 498
+        },
+        "routine_b2m": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 497,
+          "calibration_slope": 497
+        },
+        "routine_cys": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 495,
+          "calibration_slope": 495
+        },
+        "routine_cys_b2m": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 499,
+          "calibration_slope": 499
+        }
+      },
+      "001": {
+        "routine": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 496,
+          "calibration_slope": 496
+        },
+        "routine_b2m": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 497,
+          "calibration_slope": 497
+        },
+        "routine_cys": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 499,
+          "calibration_slope": 499
+        },
+        "routine_cys_b2m": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 498,
+          "calibration_slope": 498
+        }
+      }
+    },
+    "bootstrap_failures": {
+      "002": {
+        "model_failure_counts": {
+          "routine": 0,
+          "routine_b2m": 0,
+          "routine_cys": 0,
+          "routine_cys_b2m": 0
+        },
+        "contrast_failure_counts": {
+          "primary": 0,
+          "secondary": 0
+        },
+        "fit_or_metric_error_reasons": {
+          "routine": {},
+          "routine_b2m": {},
+          "routine_cys": {},
+          "routine_cys_b2m": {}
+        },
+        "calibration_undefined_reasons": {
+          "routine": {
+            "offset_only_full_fit_nonconverged": 2
+          },
+          "routine_b2m": {
+            "offset_only_full_fit_nonconverged": 3
+          },
+          "routine_cys": {
+            "offset_only_full_fit_nonconverged": 5
+          },
+          "routine_cys_b2m": {
+            "offset_only_full_fit_nonconverged": 1
+          }
+        }
+      },
+      "001": {
+        "model_failure_counts": {
+          "routine": 0,
+          "routine_b2m": 0,
+          "routine_cys": 0,
+          "routine_cys_b2m": 0
+        },
+        "contrast_failure_counts": {
+          "primary": 0,
+          "secondary": 0
+        },
+        "fit_or_metric_error_reasons": {
+          "routine": {},
+          "routine_b2m": {},
+          "routine_cys": {},
+          "routine_cys_b2m": {}
+        },
+        "calibration_undefined_reasons": {
+          "routine": {
+            "offset_only_full_fit_nonconverged": 4
+          },
+          "routine_b2m": {
+            "offset_only_full_fit_nonconverged": 3
+          },
+          "routine_cys": {
+            "offset_only_full_fit_nonconverged": 1
+          },
+          "routine_cys_b2m": {
+            "offset_only_full_fit_nonconverged": 2
+          }
+        }
+      }
+    },
+    "point_fit_records": 40,
+    "scientific_files": 103,
+    "historical_files": 99,
+    "source_files": 50,
+    "data_files": 25,
+    "source_projection": {
+      "floating_values_checked": 3974,
+      "floating_values_different": 0,
+      "maximum_float_abs_difference": 0.0
+    },
+    "output_sha256": {
+      "RESULTS_SUMMARY.json": "952a23344a6d16a453654de50bc4af437da605df9f8b2d120ced58fbbc9ec855",
+      "FOLD_PARAMETERS.json": "dbab78011cbe7e4b55b8454ab57a6db900b984829604246016b3658e160ecf80",
+      "CALIBRATION_BINS.json": "3d8b83ebadc006cb60565a131c3bfd1f2f1a92f10be48fda665054a69b2f46d5",
+      "SOURCE_MANIFEST.json": "e66fe74725768f2a0e858f50a294761fc7c7f9d7ac556c886d8298f88c4a5794",
+      "bootstrap_aggregates.csv": "4bd749db42fd8a7def7629bb962d956b7f3b5e6d77bbeb0676049ddfd7a1a356",
+      "paired_bootstrap.csv": "ca0304ac0d0d3f5eada54de75600bab627166ee7cad4910a5889d2efa4a34878"
+    },
+    "empirical_log_sha256": "9f9fe3f286aea64a972c8cdb96d6038acf2947768c231bd74ac50838194bd10b"
+  },
+  "checks": [
+    {
+      "name": "RESULTS_SUMMARY.json exact completed-job marked bytes",
+      "passed": true
+    },
+    {
+      "name": "FOLD_PARAMETERS.json exact completed-job marked bytes",
+      "passed": true
+    },
+    {
+      "name": "CALIBRATION_BINS.json exact completed-job marked bytes",
+      "passed": true
+    },
+    {
+      "name": "SOURCE_MANIFEST.json exact completed-job marked bytes",
+      "passed": true
+    },
+    {
+      "name": "bootstrap_aggregates.csv exact completed-job marked bytes",
+      "passed": true
+    },
+    {
+      "name": "paired_bootstrap.csv exact completed-job marked bytes",
+      "passed": true
+    },
+    {
+      "name": "protocol committed before final sciencehead",
+      "passed": true
+    },
+    {
+      "name": "plan contract and lock hashes",
+      "passed": true
+    },
+    {
+      "name": "metadata pin ANALYSIS_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin CONTRACT.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin METHOD_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33/LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33/GATE_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33/CAUSE_DEFINITIONS.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33/SUPPORT_RULES.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33/GATE_RESULTS.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33/SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin cause33/INDEPENDENT_VERIFICATION.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/ANALYSIS_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/SOURCE_SPEC.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/MEASUREMENT_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/CREATININE_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/SOURCE_WEIGHTS_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/SOURCE_INTAKE_AMENDMENT.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin nhanes04/SOURCE_DATA_SHA256.txt",
+      "passed": true
+    },
+    {
+      "name": "metadata pin freeze30/FROZEN_MODELS.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin forward32/RESULTS_SUMMARY.json",
+      "passed": true
+    },
+    {
+      "name": "all99 historical scientific modules unchanged",
+      "passed": true
+    },
+    {
+      "name": "all103 scientific module hashes current",
+      "passed": true
+    },
+    {
+      "name": "four new modules restricted to cause33b",
+      "passed": true
+    },
+    {
+      "name": "exact result output SHA FOLD_PARAMETERS.json",
+      "passed": true
+    },
+    {
+      "name": "exact result output SHA CALIBRATION_BINS.json",
+      "passed": true
+    },
+    {
+      "name": "exact result output SHA SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "exact result output SHA bootstrap_aggregates.csv",
+      "passed": true
+    },
+    {
+      "name": "exact result output SHA paired_bootstrap.csv",
+      "passed": true
+    },
+    {
+      "name": "source manifest export SHA",
+      "passed": true
+    },
+    {
+      "name": "exact fixed cases controls common domain horizon",
+      "passed": true
+    },
+    {
+      "name": "fixed bootstrap and models from contract",
+      "passed": true
+    },
+    {
+      "name": "correct controls multiplicity and scope flags",
+      "passed": true
+    },
+    {
+      "name": "paired fullrefit fixed domain partition declarations",
+      "passed": true
+    },
+    {
+      "name": "all500 attempted full-refits completed",
+      "passed": true
+    },
+    {
+      "name": "frozen33A source pins exact",
+      "passed": true
+    },
+    {
+      "name": "source33A science projection exact types counts fixed tolerance",
+      "passed": true
+    },
+    {
+      "name": "source stage proves two supported targets before fitting",
+      "passed": true
+    },
+    {
+      "name": "source wrapper current plan and base hashes",
+      "passed": true
+    },
+    {
+      "name": "all50 source fingerprints linked",
+      "passed": true
+    },
+    {
+      "name": "official retrieval rows and25 historical data SHA",
+      "passed": true
+    },
+    {
+      "name": "two previousPDF403 never retried or replaced",
+      "passed": true
+    },
+    {
+      "name": "uncensoring and two-reader mortality retained",
+      "passed": true
+    },
+    {
+      "name": "002 allcause gate disjoint control accounting",
+      "passed": true
+    },
+    {
+      "name": "002 point pair and local metric arithmetic",
+      "passed": true
+    },
+    {
+      "name": "002 routine point status retained",
+      "passed": true
+    },
+    {
+      "name": "002 routine identical n control weight denominator",
+      "passed": true
+    },
+    {
+      "name": "002 routine calibration diagnostic convergence",
+      "passed": true
+    },
+    {
+      "name": "002 routine calibration-bin counts and weighted moments",
+      "passed": true
+    },
+    {
+      "name": "002 routine_b2m point status retained",
+      "passed": true
+    },
+    {
+      "name": "002 routine_b2m identical n control weight denominator",
+      "passed": true
+    },
+    {
+      "name": "002 routine_b2m calibration diagnostic convergence",
+      "passed": true
+    },
+    {
+      "name": "002 routine_b2m calibration-bin counts and weighted moments",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys point status retained",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys identical n control weight denominator",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys calibration diagnostic convergence",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys calibration-bin counts and weighted moments",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys_b2m point status retained",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys_b2m identical n control weight denominator",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys_b2m calibration diagnostic convergence",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys_b2m calibration-bin counts and weighted moments",
+      "passed": true
+    },
+    {
+      "name": "001 allcause gate disjoint control accounting",
+      "passed": true
+    },
+    {
+      "name": "001 point pair and local metric arithmetic",
+      "passed": true
+    },
+    {
+      "name": "001 routine point status retained",
+      "passed": true
+    },
+    {
+      "name": "001 routine identical n control weight denominator",
+      "passed": true
+    },
+    {
+      "name": "001 routine calibration diagnostic convergence",
+      "passed": true
+    },
+    {
+      "name": "001 routine calibration-bin counts and weighted moments",
+      "passed": true
+    },
+    {
+      "name": "001 routine_b2m point status retained",
+      "passed": true
+    },
+    {
+      "name": "001 routine_b2m identical n control weight denominator",
+      "passed": true
+    },
+    {
+      "name": "001 routine_b2m calibration diagnostic convergence",
+      "passed": true
+    },
+    {
+      "name": "001 routine_b2m calibration-bin counts and weighted moments",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys point status retained",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys identical n control weight denominator",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys calibration diagnostic convergence",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys calibration-bin counts and weighted moments",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys_b2m point status retained",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys_b2m identical n control weight denominator",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys_b2m calibration diagnostic convergence",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys_b2m calibration-bin counts and weighted moments",
+      "passed": true
+    },
+    {
+      "name": "five pointfold records per completed nested fit",
+      "passed": true
+    },
+    {
+      "name": "002 routine pointfold totals no PSU leakage",
+      "passed": true
+    },
+    {
+      "name": "002 routine registered features scales coefficients",
+      "passed": true
+    },
+    {
+      "name": "002 routine independent innerBrier lambda tie selection",
+      "passed": true
+    },
+    {
+      "name": "002 routine gradients normalizedtraining likelihood",
+      "passed": true
+    },
+    {
+      "name": "002 routine_b2m pointfold totals no PSU leakage",
+      "passed": true
+    },
+    {
+      "name": "002 routine_b2m registered features scales coefficients",
+      "passed": true
+    },
+    {
+      "name": "002 routine_b2m independent innerBrier lambda tie selection",
+      "passed": true
+    },
+    {
+      "name": "002 routine_b2m gradients normalizedtraining likelihood",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys pointfold totals no PSU leakage",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys registered features scales coefficients",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys independent innerBrier lambda tie selection",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys gradients normalizedtraining likelihood",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys_b2m pointfold totals no PSU leakage",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys_b2m registered features scales coefficients",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys_b2m independent innerBrier lambda tie selection",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys_b2m gradients normalizedtraining likelihood",
+      "passed": true
+    },
+    {
+      "name": "001 routine pointfold totals no PSU leakage",
+      "passed": true
+    },
+    {
+      "name": "001 routine registered features scales coefficients",
+      "passed": true
+    },
+    {
+      "name": "001 routine independent innerBrier lambda tie selection",
+      "passed": true
+    },
+    {
+      "name": "001 routine gradients normalizedtraining likelihood",
+      "passed": true
+    },
+    {
+      "name": "001 routine_b2m pointfold totals no PSU leakage",
+      "passed": true
+    },
+    {
+      "name": "001 routine_b2m registered features scales coefficients",
+      "passed": true
+    },
+    {
+      "name": "001 routine_b2m independent innerBrier lambda tie selection",
+      "passed": true
+    },
+    {
+      "name": "001 routine_b2m gradients normalizedtraining likelihood",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys pointfold totals no PSU leakage",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys registered features scales coefficients",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys independent innerBrier lambda tie selection",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys gradients normalizedtraining likelihood",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys_b2m pointfold totals no PSU leakage",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys_b2m registered features scales coefficients",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys_b2m independent innerBrier lambda tie selection",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys_b2m gradients normalizedtraining likelihood",
+      "passed": true
+    },
+    {
+      "name": "routine fold0 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine fold1 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine fold2 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine fold3 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine fold4 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m fold0 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m fold1 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m fold2 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m fold3 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m fold4 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_cys fold0 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_cys fold1 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_cys fold2 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_cys fold3 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_cys fold4 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m fold0 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m fold1 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m fold2 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m fold3 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m fold4 exact crosscause preprocessing and frame identity",
+      "passed": true
+    },
+    {
+      "name": "independent preserved31 outermap fingerprint",
+      "passed": true
+    },
+    {
+      "name": "outer0 independent innerfold fingerprint",
+      "passed": true
+    },
+    {
+      "name": "outer1 independent innerfold fingerprint",
+      "passed": true
+    },
+    {
+      "name": "outer2 independent innerfold fingerprint",
+      "passed": true
+    },
+    {
+      "name": "outer3 independent innerfold fingerprint",
+      "passed": true
+    },
+    {
+      "name": "outer4 independent innerfold fingerprint",
+      "passed": true
+    },
+    {
+      "name": "all500 ordered retained wide attempts",
+      "passed": true
+    },
+    {
+      "name": "all2000 paired causecontrast tuples unique",
+      "passed": true
+    },
+    {
+      "name": "shared draw valid positive weights and zero-row retention",
+      "passed": true
+    },
+    {
+      "name": "500variable shared-draw weight fingerprints",
+      "passed": true
+    },
+    {
+      "name": "disjoint cause positive-event weights no larger than samecommon frame",
+      "passed": true
+    },
+    {
+      "name": "002500 arm pair status and metric identities",
+      "passed": true
+    },
+    {
+      "name": "002 same shared draw denominator and knownnoncase controls",
+      "passed": true
+    },
+    {
+      "name": "002 exactly40 registered interval targets",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine|auc",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine|brier",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine|observed",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine|predicted",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_b2m|auc",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_b2m|brier",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_b2m|observed",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_b2m|predicted",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_b2m|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_b2m|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_b2m|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_b2m|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_b2m|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys|auc",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys|brier",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys|observed",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys|predicted",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys_b2m|auc",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys_b2m|brier",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys_b2m|observed",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys_b2m|predicted",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys_b2m|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys_b2m|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys_b2m|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys_b2m|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile routine_cys_b2m|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile primary|delta_brier",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile primary|delta_auc",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile secondary|delta_brier",
+      "passed": true
+    },
+    {
+      "name": "002 independent percentile secondary|delta_auc",
+      "passed": true
+    },
+    {
+      "name": "002 routine separate fit-metric calibration failure reasons",
+      "passed": true
+    },
+    {
+      "name": "002 routine5foldlambda counts persuccessful predictive fit",
+      "passed": true
+    },
+    {
+      "name": "002 routine_b2m separate fit-metric calibration failure reasons",
+      "passed": true
+    },
+    {
+      "name": "002 routine_b2m5foldlambda counts persuccessful predictive fit",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys separate fit-metric calibration failure reasons",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys5foldlambda counts persuccessful predictive fit",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys_b2m separate fit-metric calibration failure reasons",
+      "passed": true
+    },
+    {
+      "name": "002 routine_cys_b2m5foldlambda counts persuccessful predictive fit",
+      "passed": true
+    },
+    {
+      "name": "002 primary paired failure count",
+      "passed": true
+    },
+    {
+      "name": "002 secondary paired failure count",
+      "passed": true
+    },
+    {
+      "name": "001500 arm pair status and metric identities",
+      "passed": true
+    },
+    {
+      "name": "001 same shared draw denominator and knownnoncase controls",
+      "passed": true
+    },
+    {
+      "name": "001 exactly40 registered interval targets",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine|auc",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine|brier",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine|observed",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine|predicted",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_b2m|auc",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_b2m|brier",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_b2m|observed",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_b2m|predicted",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_b2m|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_b2m|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_b2m|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_b2m|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_b2m|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys|auc",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys|brier",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys|observed",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys|predicted",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys_b2m|auc",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys_b2m|brier",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys_b2m|observed",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys_b2m|predicted",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys_b2m|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys_b2m|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys_b2m|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys_b2m|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile routine_cys_b2m|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile primary|delta_brier",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile primary|delta_auc",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile secondary|delta_brier",
+      "passed": true
+    },
+    {
+      "name": "001 independent percentile secondary|delta_auc",
+      "passed": true
+    },
+    {
+      "name": "001 routine separate fit-metric calibration failure reasons",
+      "passed": true
+    },
+    {
+      "name": "001 routine5foldlambda counts persuccessful predictive fit",
+      "passed": true
+    },
+    {
+      "name": "001 routine_b2m separate fit-metric calibration failure reasons",
+      "passed": true
+    },
+    {
+      "name": "001 routine_b2m5foldlambda counts persuccessful predictive fit",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys separate fit-metric calibration failure reasons",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys5foldlambda counts persuccessful predictive fit",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys_b2m separate fit-metric calibration failure reasons",
+      "passed": true
+    },
+    {
+      "name": "001 routine_cys_b2m5foldlambda counts persuccessful predictive fit",
+      "passed": true
+    },
+    {
+      "name": "001 primary paired failure count",
+      "passed": true
+    },
+    {
+      "name": "001 secondary paired failure count",
+      "passed": true
+    },
+    {
+      "name": "all2000 paired values and metric-local statuses exactly matchwide",
+      "passed": true
+    },
+    {
+      "name": "independent final CI all3jobs success",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.13) scientific commit in checkout",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.13) exact synthetic testcount",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.11) scientific commit in checkout",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.11) exact synthetic testcount",
+      "passed": true
+    },
+    {
+      "name": "empirical scientific commit in checkout",
+      "passed": true
+    },
+    {
+      "name": "six exports match independently fetched completed empiricallog",
+      "passed": true
+    },
+    {
+      "name": "aggregate exports lack participant keys labels probabilities orbootstrapcoefficients",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Exploratory, internally nested comparisons on reused persons/proteins after full-cohort outcome-based source/support selection; no independent external or prospective validation.",
+    "All80 intervals are marginal conditional percentile summaries, without familywise coverage, multiplicity-adjusted confirmation, p-values or a between-cause interaction contrast. Different interval signs or sizes do not establish different marker effects between causes.",
+    "Controls include known early competing deaths, deathsafter96months and observed-through96 survivors. A competing death is a noncase of the fixed-horizon target, not censoring or proof of being alive.",
+    "One eligible-frame PSU draw is reused across causes/arms; weight SHA values and moment/observed-risk invariants are checked, but the unpublished weight vector cannot be independently reconstructed or rehashed from aggregates.",
+    "500 refits repeat preprocessing/tuning/training with fixed rows/folds/forms. Metric-local undefined draws are retained; defined-only bounds are not complete nominal95% coverage. Assay/storage/calibration, public perturbation, endpoint/model-selection history and transport uncertainty are excluded.",
+    "Source hashes, source projection, point parameter layout/diagnostics, bin moments, deltas and all interval percentiles are independently reconciled; no raw person-record read or model refit occurred. Person-level Brier/AUC and optimizer gradients are not recomputed from aggregates.",
+    "Independent binary cause probabilities are not summed or advertised as a coherent joint model. Fine–Gray/joint integration, frozen models and laboratory reportv3/presentation remain outside this change."
+  ]
+}
