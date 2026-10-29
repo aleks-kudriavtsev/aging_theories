@@ -1,0 +1,11 @@
+{
+  "plan_commit": "a15532f",
+  "plan_sha256": "64a2fca0eb1062323ad7138d031a195ced91e186899bf156adddcc68be8dc34b",
+  "contract_sha256": "dc729ca5333645e26ab3df052482852dad3e3e52c033e1662612c9b6358e7b2d",
+  "horizon_years": 8,
+  "age_range_interview_years": [
+    40,
+    75
+  ],
+  "source_map_sha256": "18f100d481248a9a18364cdc3a7033e60a4548b25e3fcd7db0bdda20387d3e96"
+}

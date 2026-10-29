@@ -1,0 +1,61 @@
+{
+  "cohort_id": "NHANESIII_FIRST_EXAM",
+  "data_class": "public_unrestricted",
+  "execution_context": "github_actions",
+  "source_permission_evidence": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx",
+  "source_reviewed": true,
+  "baseline_visit": "first_exam",
+  "endpoint": {
+    "kind": "all_cause_death",
+    "baseline_origin": "exam",
+    "followup_unit": "months",
+    "followup_after_baseline_verified": true,
+    "linkage_same_person_verified": true,
+    "horizon_years": 8
+  },
+  "sampling": {
+    "weight_variable": "WTCYPEX6",
+    "subsample_weights_documented": true
+  },
+  "assays": {
+    "CST3": {
+      "variable": "SSCYSTAT",
+      "uniprot": "P01034",
+      "unit": "mg/L",
+      "matrix": "serum",
+      "scale": "absolute_concentration",
+      "baseline_visit": "first_exam",
+      "source_locator": "https://wwwn.cdc.gov/nchs/data/nhanes3/27a/SSCYSTAT.pdf",
+      "method": "Dade Behring N Latex cystatin C original2006",
+      "quantification_policy": "released_values_numeric_availability_only_not_LOQ_adjudicated"
+    },
+    "B2M": {
+      "variable": "SSB2M",
+      "uniprot": "P61769",
+      "unit": "mg/L",
+      "matrix": "serum",
+      "scale": "absolute_concentration",
+      "baseline_visit": "first_exam",
+      "source_locator": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.htm",
+      "method": "Siemens N Latex beta2 microglobulin2009",
+      "quantification_policy": "released_values_numeric_availability_only_not_LOQ_adjudicated"
+    },
+    "BTP": {
+      "variable": "SSBTP",
+      "uniprot": "P41222",
+      "unit": "mg/L",
+      "matrix": "serum",
+      "scale": "absolute_concentration",
+      "baseline_visit": "first_exam",
+      "source_locator": "https://wwwn.cdc.gov/nchs/data/nhanes3/36a/SSNH3BTP.htm",
+      "method": "Siemens N Latex beta-trace protein2009",
+      "quantification_policy": "released_values_numeric_availability_only_not_LOQ_adjudicated"
+    }
+  },
+  "frozen_model": {
+    "required_features_mapping_verified": false,
+    "clinical_semantics_verified": false,
+    "assay_transport_reviewed": false,
+    "baseline_model_sha256": "87a8623b9fd5cb793ce2da5311a17a56b7d94251da5df335de3d406e437a55da"
+  }
+}
