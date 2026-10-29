@@ -1,0 +1,4325 @@
+{
+  "schema": "freeze30-candidates/1",
+  "candidates": [
+    {
+      "candidate_id": "NHANESIII_FIRST_EXAM",
+      "biological_baseline": "1988–1994",
+      "public_person_level_release_documented": true,
+      "access_status": "public_release_metadata_confirmed",
+      "protein_observation": "all three; training source already used27–29",
+      "endpoint_routine_observation": "routine and8y endpoint already used",
+      "decisive_blocker": "reuse; no external independence",
+      "source_reference": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "NHANESIII_FIRST_EXAM",
+        "cohort_name": "NHANES III first examination",
+        "release_id": "1988–1994",
+        "data_class": "public_unrestricted",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx",
+            "publisher_domain": "wwwn.cdc.gov",
+            "release_id": "1988–1994",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": false,
+            "requires_agreement": null,
+            "public_release_reference": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "all_cause_death",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    },
+    {
+      "candidate_id": "NHANESIII_SECOND_EXAM",
+      "biological_baseline": "1988–1994 repeat",
+      "public_person_level_release_documented": true,
+      "access_status": "public_release_metadata_confirmed",
+      "protein_observation": "all three; distinct calibration; convenience sample876",
+      "endpoint_routine_observation": "no population weights; repeated participants",
+      "decisive_blocker": "reuse and unsupported repeat-visit mapping",
+      "source_reference": "https://wwwn.cdc.gov/nchs/data/nhanes3/37a/SSNH3CYS.htm",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "NHANESIII_SECOND_EXAM",
+        "cohort_name": "NHANES III repeat examination",
+        "release_id": "1988–1994 repeat",
+        "data_class": "public_unrestricted",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://wwwn.cdc.gov/nchs/data/nhanes3/37a/SSNH3CYS.htm",
+            "publisher_domain": "wwwn.cdc.gov",
+            "release_id": "1988–1994 repeat",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": false,
+            "requires_agreement": null,
+            "public_release_reference": "https://wwwn.cdc.gov/nchs/data/nhanes3/37a/SSNH3CYS.htm"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "all_cause_death",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://wwwn.cdc.gov/nchs/data/nhanes3/37a/SSNH3CYS.htm"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    },
+    {
+      "candidate_id": "NHANES1999_2004_SSCARD",
+      "biological_baseline": "1999–2004",
+      "public_person_level_release_documented": true,
+      "access_status": "public_release_metadata_confirmed",
+      "protein_observation": "Cys+B2M; BTP absent from complete codebook",
+      "endpoint_routine_observation": "2019 public mortality; joint8y domain not counted",
+      "decisive_blocker": "BTP absent; prior programme participants and existing source manifest",
+      "source_reference": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SSCARD_A.htm",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "NHANES1999_2004_SSCARD",
+        "cohort_name": "NHANES 1999–2004 SSCARD_A",
+        "release_id": "1999–2004",
+        "data_class": "public_unrestricted",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SSCARD_A.htm",
+            "publisher_domain": "wwwn.cdc.gov",
+            "release_id": "1999–2004",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": false,
+            "requires_agreement": null,
+            "public_release_reference": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SSCARD_A.htm"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "all_cause_death",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SSCARD_A.htm"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    },
+    {
+      "candidate_id": "NHANES2009_2010",
+      "biological_baseline": "2009–2010",
+      "public_person_level_release_documented": true,
+      "access_status": "public_release_metadata_confirmed",
+      "protein_observation": "full3 not found in inspected official catalogs",
+      "endpoint_routine_observation": "2019 public mortality; joint8y domain not counted",
+      "decisive_blocker": "source/assay not qualified; prior programme cycle",
+      "source_reference": "https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Laboratory&CycleBeginYear=2009",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "NHANES2009_2010",
+        "cohort_name": "NHANES 2009–2010",
+        "release_id": "2009–2010",
+        "data_class": "public_unrestricted",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Laboratory&CycleBeginYear=2009",
+            "publisher_domain": "wwwn.cdc.gov",
+            "release_id": "2009–2010",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": false,
+            "requires_agreement": null,
+            "public_release_reference": "https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Laboratory&CycleBeginYear=2009"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "all_cause_death",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Laboratory&CycleBeginYear=2009"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    },
+    {
+      "candidate_id": "ARIC_VISIT4",
+      "biological_baseline": "1996–1998",
+      "public_person_level_release_documented": false,
+      "access_status": "not_requested_not_granted",
+      "protein_observation": "Cys+B2M+BTP serum concentration assays",
+      "endpoint_routine_observation": "mortality through2023; HbA1c visit4 not confirmed",
+      "decisive_blocker": "BioLINCC approval/RMDA and same-visit HbA1c/assay bridge missing",
+      "source_reference": "https://biolincc.nhlbi.nih.gov/studies/aric/",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "ARIC_VISIT4",
+        "cohort_name": "ARIC visit4",
+        "release_id": "1996–1998",
+        "data_class": "controlled",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://biolincc.nhlbi.nih.gov/studies/aric/",
+            "publisher_domain": "biolincc.nhlbi.nih.gov",
+            "release_id": "1996–1998",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": true,
+            "requires_agreement": true,
+            "public_release_reference": "https://biolincc.nhlbi.nih.gov/studies/aric/"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "all_cause_death",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://biolincc.nhlbi.nih.gov/studies/aric/"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    },
+    {
+      "candidate_id": "MESA_KIDNEY2012_2014",
+      "biological_baseline": "2012–2014",
+      "public_person_level_release_documented": false,
+      "access_status": "not_requested_not_granted",
+      "protein_observation": "all3 kidney ancillary; published n273/275 discrepancy",
+      "endpoint_routine_observation": "package events2020 insufficient for8y from latest visits; same-visit core unresolved",
+      "decisive_blocker": "approved ancillary access and sufficient endpoint release missing",
+      "source_reference": "https://biolincc.nhlbi.nih.gov/studies/mesa/",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "MESA_KIDNEY2012_2014",
+        "cohort_name": "MESA-Kidney Baltimore ancillary",
+        "release_id": "2012–2014",
+        "data_class": "controlled",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://biolincc.nhlbi.nih.gov/studies/mesa/",
+            "publisher_domain": "biolincc.nhlbi.nih.gov",
+            "release_id": "2012–2014",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": true,
+            "requires_agreement": true,
+            "public_release_reference": "https://biolincc.nhlbi.nih.gov/studies/mesa/"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "all_cause_death",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://biolincc.nhlbi.nih.gov/studies/mesa/"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    },
+    {
+      "candidate_id": "CHS1992_1993",
+      "biological_baseline": "1992–1993",
+      "public_person_level_release_documented": false,
+      "access_status": "not_requested_not_granted",
+      "protein_observation": "exact all3 concentration panel not qualified; RFU not mg/L",
+      "endpoint_routine_observation": "long followup described; joint routine domain unresolved",
+      "decisive_blocker": "BioLINCC/direct CHS approval; exact assay/domain mapping missing",
+      "source_reference": "https://biolincc.nhlbi.nih.gov/studies/chs/",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "CHS1992_1993",
+        "cohort_name": "Cardiovascular Health Study",
+        "release_id": "1992–1993",
+        "data_class": "controlled",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://biolincc.nhlbi.nih.gov/studies/chs/",
+            "publisher_domain": "biolincc.nhlbi.nih.gov",
+            "release_id": "1992–1993",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": true,
+            "requires_agreement": true,
+            "public_release_reference": "https://biolincc.nhlbi.nih.gov/studies/chs/"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "all_cause_death",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://biolincc.nhlbi.nih.gov/studies/chs/"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    },
+    {
+      "candidate_id": "HRS2016VBS",
+      "biological_baseline": "2016–2017",
+      "public_person_level_release_documented": false,
+      "access_status": "provider_prohibited_in_AI",
+      "protein_observation": "Cys confirmed; B2M/BTP not qualified",
+      "endpoint_routine_observation": "Tracker2022/2023 does not establish8y; HbA1c/UACR baseline unresolved",
+      "decisive_blocker": "person-level AI processing prohibited by provider; products/endpoint unavailable",
+      "source_reference": "https://hrsdata.isr.umich.edu/data-products/ai-llm-use-policy",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "HRS2016VBS",
+        "cohort_name": "Health and Retirement Study2016 VBS",
+        "release_id": "2016–2017",
+        "data_class": "controlled",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://hrsdata.isr.umich.edu/data-products/ai-llm-use-policy",
+            "publisher_domain": "hrsdata.isr.umich.edu",
+            "release_id": "2016–2017",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": true,
+            "requires_agreement": true,
+            "public_release_reference": "https://hrsdata.isr.umich.edu/data-products/ai-llm-use-policy"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "all_cause_death",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://hrsdata.isr.umich.edu/data-products/ai-llm-use-policy"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    },
+    {
+      "candidate_id": "UKB2006_2010",
+      "biological_baseline": "2006–2010",
+      "public_person_level_release_documented": false,
+      "access_status": "provider_new_applications_paused",
+      "protein_observation": "CST3/B2M/PTGDS NPX targets, not serum mg/L",
+      "endpoint_routine_observation": "routine fields and death dates exist; joint/censor domain unknown",
+      "decisive_blocker": "applications paused; approved project and assay bridge absent",
+      "source_reference": "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "UKB2006_2010",
+        "cohort_name": "UK Biobank",
+        "release_id": "2006–2010",
+        "data_class": "controlled",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/",
+            "publisher_domain": "www.ukbiobank.ac.uk",
+            "release_id": "2006–2010",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": true,
+            "requires_agreement": true,
+            "public_release_reference": "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "all_cause_death",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "NPX",
+            "matrix": "plasma",
+            "scale": "relative_abundance",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "NPX",
+            "matrix": "plasma",
+            "scale": "relative_abundance",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "NPX",
+            "matrix": "plasma",
+            "scale": "relative_abundance",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    },
+    {
+      "candidate_id": "AGES_KIDNEY2010",
+      "biological_baseline": "2010–2011",
+      "public_person_level_release_documented": false,
+      "access_status": "not_requested_not_granted",
+      "protein_observation": "all3 concentrations in683 age71–91, not large SomaScan cohort",
+      "endpoint_routine_observation": "exact HbA1c and8y death/censor linkage not qualified",
+      "decisive_blocker": "IHA collaboration/DUA; exact kidney domain and assay bridge missing",
+      "source_reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5572311/",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "AGES_KIDNEY2010",
+        "cohort_name": "AGES-Kidney ancillary",
+        "release_id": "2010–2011",
+        "data_class": "controlled",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5572311/",
+            "publisher_domain": "pmc.ncbi.nlm.nih.gov",
+            "release_id": "2010–2011",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": true,
+            "requires_agreement": true,
+            "public_release_reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5572311/"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "all_cause_death",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5572311/"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": true,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    },
+    {
+      "candidate_id": "CRIC",
+      "biological_baseline": "baseline release not qualified",
+      "public_person_level_release_documented": false,
+      "access_status": "not_verified",
+      "protein_observation": "all3 in primary publication;2024 erratum needs review",
+      "endpoint_routine_observation": "exact routine and8y release not qualified",
+      "decisive_blocker": "NIDDK metadata403; actual access/release not verified",
+      "source_reference": "https://repository.niddk.nih.gov/studies/cric/",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "CRIC",
+        "cohort_name": "Chronic Renal Insufficiency Cohort",
+        "release_id": "baseline release not qualified",
+        "data_class": "unknown",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://repository.niddk.nih.gov/studies/cric/",
+            "publisher_domain": "repository.niddk.nih.gov",
+            "release_id": "baseline release not qualified",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": true,
+            "requires_agreement": true,
+            "public_release_reference": "https://repository.niddk.nih.gov/studies/cric/"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "all_cause_death",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://repository.niddk.nih.gov/studies/cric/"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    },
+    {
+      "candidate_id": "UCI_CKD",
+      "biological_baseline": "hospital collection about2months",
+      "public_person_level_release_documented": true,
+      "access_status": "public_release_metadata_confirmed",
+      "protein_observation": "no Cys/B2M/BTP in24-feature schema",
+      "endpoint_routine_observation": "CKD classification; no mortality time/status",
+      "decisive_blocker": "assay and endpoint absent",
+      "source_reference": "https://archive.ics.uci.edu/dataset/336/chronic%2Bkidney%2Bdisease",
+      "qualification_metadata": {
+        "schema_version": "external_qualification30/1",
+        "cohort_id": "UCI_CKD",
+        "cohort_name": "UCI Chronic Kidney Disease",
+        "release_id": "hospital collection about2months",
+        "data_class": "public_unrestricted",
+        "execution_context": "ai_session",
+        "sources": [
+          {
+            "official_url": "https://archive.ics.uci.edu/dataset/336/chronic%2Bkidney%2Bdisease",
+            "publisher_domain": "archive.ics.uci.edu",
+            "release_id": "hospital collection about2months",
+            "kind": "metadata_only",
+            "direct_download": false,
+            "requires_account": false,
+            "requires_agreement": null,
+            "public_release_reference": "https://archive.ics.uci.edu/dataset/336/chronic%2Bkidney%2Bdisease"
+          }
+        ],
+        "overlap": {},
+        "endpoint": {
+          "kind": "CKD_classification",
+          "baseline_origin": "baseline_exam",
+          "baseline_visit": "baseline_exam",
+          "target_age_min_years": 40,
+          "target_age_max_years": 75,
+          "horizon_years": 8,
+          "definition_reference": "https://archive.ics.uci.edu/dataset/336/chronic%2Bkidney%2Bdisease"
+        },
+        "routine_core": {
+          "age_linear": {
+            "available": false,
+            "semantic_id": "interview_age_minus60_div10",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "age_quadratic": {
+            "available": false,
+            "semantic_id": "square_of_age_linear",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "age_years"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "male": {
+            "available": false,
+            "semantic_id": "recorded_male1_female0",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "current": {
+            "available": false,
+            "semantic_id": "current_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "former": {
+            "available": false,
+            "semantic_id": "former_cigarettes_after100_lifetime",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "ever100_cigarettes",
+              "current_cigarettes"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "sbp": {
+            "available": false,
+            "semantic_id": "baseline_mean_sbp_minus130_div20",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "systolic_bp"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "bmi": {
+            "available": false,
+            "semantic_id": "baseline_bmi_minus27_div5",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "bmi"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "hba1c": {
+            "available": false,
+            "semantic_id": "baseline_DCCT_aligned_hba1c_percent",
+            "unit": "%",
+            "raw_inputs": [
+              "hba1c"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_low": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_min60_div15",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "egfr_high": {
+            "available": false,
+            "semantic_id": "CKDEPI2021_creatinine_above60_div30",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "serum_creatinine",
+              "age_years",
+              "sex"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          },
+          "log_uacr": {
+            "available": false,
+            "semantic_id": "log2_UACR_mg_per_g",
+            "unit": "dimensionless",
+            "raw_inputs": [
+              "urine_albumin",
+              "urine_creatinine"
+            ],
+            "source_variables": [],
+            "definition_reference": null,
+            "baseline_visit": null,
+            "derivation_reviewed": false
+          }
+        },
+        "raw_measurements": {
+          "age_years": {
+            "available": false,
+            "source_variable": null,
+            "unit": "years",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "sex": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "ever100_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "current_cigarettes": {
+            "available": false,
+            "source_variable": null,
+            "unit": "coded",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "systolic_bp": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mmHg",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "bmi": {
+            "available": false,
+            "source_variable": null,
+            "unit": "kg/m2",
+            "matrix": "not_applicable",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "hba1c": {
+            "available": false,
+            "source_variable": null,
+            "unit": "%",
+            "matrix": "whole_blood",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "serum_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "serum",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_albumin": {
+            "available": false,
+            "source_variable": null,
+            "unit": "ug/mL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          },
+          "urine_creatinine": {
+            "available": false,
+            "source_variable": null,
+            "unit": "mg/dL",
+            "matrix": "urine",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "definition_reference": null,
+            "missing_and_substitution_policy": null,
+            "calibration_basis": null,
+            "transport": {}
+          }
+        },
+        "proteins": {
+          "CST3": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P01034",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "B2M": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P61769",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          },
+          "BTP": {
+            "available": false,
+            "source_variable": null,
+            "uniprot": "P41222",
+            "unit": "mg/L",
+            "matrix": "serum",
+            "scale": "absolute_concentration",
+            "baseline_visit": null,
+            "method": null,
+            "method_version": null,
+            "quantification_policy": null,
+            "source_reference": null,
+            "transport": {}
+          }
+        },
+        "sampling": {},
+        "protocol": {},
+        "mapping_id": null
+      }
+    }
+  ]
+}
