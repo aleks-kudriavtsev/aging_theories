@@ -1,0 +1,1111 @@
+{
+  "schema": "independent-forward32-aggregate-audit/1",
+  "method": "stdlib_only_no_pipeline_import_no_raw_no_refit",
+  "passed": 203,
+  "total": 203,
+  "all_passed": true,
+  "summary": {
+    "science_commit": "59b0626767c0169107652cc7b7d51a416c8e7668",
+    "run_id": 40917437691,
+    "job_id": 123601312507,
+    "status": "computed",
+    "train_n": 4020,
+    "train_events8": 383,
+    "late_n": 2024,
+    "late_events8": 203,
+    "train_effective_n": 2572.544990986074,
+    "late_effective_n": 1333.6926844386942,
+    "train_event_bearing_psu_n": 57,
+    "late_event_bearing_psu_n": 30,
+    "point": {
+      "routine": {
+        "n": 2024,
+        "events": 203,
+        "n_positive_weight": 2024,
+        "events_positive_weight": 203,
+        "weight_sum": 101970999.131736,
+        "auc": 0.8024809278205395,
+        "brier": 0.05962233259495552,
+        "observed": 0.07132986736099632,
+        "predicted": 0.07639542945602168,
+        "bias_pp": 0.5065562095025358,
+        "observed_expected": 0.9336928644672201,
+        "calibration_in_large": -0.08448202312883639,
+        "calibration_intercept": -0.10753148506388446,
+        "calibration_slope": 0.988717140851362,
+        "calibration_status": "computed",
+        "calibration_gradient_max": 1.274919647076267e-07,
+        "calibration_probability_clip": 1e-12,
+        "calibration_clipped_positive_weight_n": 0
+      },
+      "routine_b2m": {
+        "n": 2024,
+        "events": 203,
+        "n_positive_weight": 2024,
+        "events_positive_weight": 203,
+        "weight_sum": 101970999.131736,
+        "auc": 0.8141118666437992,
+        "brier": 0.05787822021689121,
+        "observed": 0.07132986736099632,
+        "predicted": 0.07657140907971358,
+        "bias_pp": 0.5241541718717255,
+        "observed_expected": 0.9315470123677544,
+        "calibration_in_large": -0.08837219017390889,
+        "calibration_intercept": -0.03305129497739235,
+        "calibration_slope": 1.0277613860382353,
+        "calibration_status": "computed",
+        "calibration_gradient_max": 7.663286580306128e-08,
+        "calibration_probability_clip": 1e-12,
+        "calibration_clipped_positive_weight_n": 0
+      },
+      "routine_cys": {
+        "n": 2024,
+        "events": 203,
+        "n_positive_weight": 2024,
+        "events_positive_weight": 203,
+        "weight_sum": 101970999.131736,
+        "auc": 0.8136439930690667,
+        "brier": 0.05865295484091768,
+        "observed": 0.07132986736099632,
+        "predicted": 0.07066618535496283,
+        "bias_pp": -0.06636820060334919,
+        "observed_expected": 1.0093917904680967,
+        "calibration_in_large": 0.011555189089326082,
+        "calibration_intercept": 0.024625826415190507,
+        "calibration_slope": 1.0062218771399398,
+        "calibration_status": "computed",
+        "calibration_gradient_max": 3.689960142994053e-10,
+        "calibration_probability_clip": 1e-12,
+        "calibration_clipped_positive_weight_n": 0
+      },
+      "routine_cys_b2m": {
+        "n": 2024,
+        "events": 203,
+        "n_positive_weight": 2024,
+        "events_positive_weight": 203,
+        "weight_sum": 101970999.131736,
+        "auc": 0.8158999245344893,
+        "brier": 0.05790774648332059,
+        "observed": 0.07132986736099632,
+        "predicted": 0.07323025747190107,
+        "bias_pp": 0.19003901109047455,
+        "observed_expected": 0.9740491133513501,
+        "calibration_in_large": -0.032703842354503125,
+        "calibration_intercept": 0.0190378149791509,
+        "calibration_slope": 1.025283593125976,
+        "calibration_status": "computed",
+        "calibration_gradient_max": 1.2943678531773806e-07,
+        "calibration_probability_clip": 1e-12,
+        "calibration_clipped_positive_weight_n": 0
+      }
+    },
+    "contrasts": {
+      "primary|status": "computed",
+      "primary|delta_brier": -0.001744112378064315,
+      "primary|delta_auc": 0.011630938823259718,
+      "secondary|status": "computed",
+      "secondary|delta_brier": -0.000745208357597095,
+      "secondary|delta_auc": 0.002255931465422689
+    },
+    "uncertainty": {
+      "fixed_training": {
+        "contrasts": {
+          "primary|delta_auc": {
+            "lower": -0.0021557248918267656,
+            "upper": 0.023720841820909336,
+            "valid": 500,
+            "undefined": 0,
+            "scope": "late_PSU_resampling_with_fixed_early_training",
+            "defined_draws_only": false,
+            "uncertainty_mode": "fixed_training",
+            "early_training_refitted": false
+          },
+          "primary|delta_brier": {
+            "lower": -0.003185719275323107,
+            "upper": -0.00027903081763082545,
+            "valid": 500,
+            "undefined": 0,
+            "scope": "late_PSU_resampling_with_fixed_early_training",
+            "defined_draws_only": false,
+            "uncertainty_mode": "fixed_training",
+            "early_training_refitted": false
+          },
+          "secondary|delta_brier": {
+            "lower": -0.0013643449011064806,
+            "upper": -0.0001108725807720666,
+            "valid": 500,
+            "undefined": 0,
+            "scope": "late_PSU_resampling_with_fixed_early_training",
+            "defined_draws_only": false,
+            "uncertainty_mode": "fixed_training",
+            "early_training_refitted": false
+          },
+          "secondary|delta_auc": {
+            "lower": -0.005737928873712161,
+            "upper": 0.00879514653908126,
+            "valid": 500,
+            "undefined": 0,
+            "scope": "late_PSU_resampling_with_fixed_early_training",
+            "defined_draws_only": false,
+            "uncertainty_mode": "fixed_training",
+            "early_training_refitted": false
+          }
+        },
+        "model_failure_counts": {
+          "routine": 0,
+          "routine_b2m": 0,
+          "routine_cys": 0,
+          "routine_cys_b2m": 0
+        },
+        "contrast_failure_counts": {
+          "primary": 0,
+          "secondary": 0
+        }
+      },
+      "joint_refit": {
+        "contrasts": {
+          "primary|delta_auc": {
+            "lower": -0.002703263025251312,
+            "upper": 0.02568628403157289,
+            "valid": 500,
+            "undefined": 0,
+            "scope": "independent_early_and_late_PSU_resampling_with_full_early_preprocessing_tuning_refitting",
+            "defined_draws_only": false,
+            "uncertainty_mode": "joint_refit",
+            "early_training_refitted": true
+          },
+          "primary|delta_brier": {
+            "lower": -0.0032533155852408897,
+            "upper": -1.3081464121040813e-05,
+            "valid": 500,
+            "undefined": 0,
+            "scope": "independent_early_and_late_PSU_resampling_with_full_early_preprocessing_tuning_refitting",
+            "defined_draws_only": false,
+            "uncertainty_mode": "joint_refit",
+            "early_training_refitted": true
+          },
+          "secondary|delta_brier": {
+            "lower": -0.0015307437334940571,
+            "upper": 9.723232595999206e-05,
+            "valid": 500,
+            "undefined": 0,
+            "scope": "independent_early_and_late_PSU_resampling_with_full_early_preprocessing_tuning_refitting",
+            "defined_draws_only": false,
+            "uncertainty_mode": "joint_refit",
+            "early_training_refitted": true
+          },
+          "secondary|delta_auc": {
+            "lower": -0.006203054865342975,
+            "upper": 0.010950735286524446,
+            "valid": 500,
+            "undefined": 0,
+            "scope": "independent_early_and_late_PSU_resampling_with_full_early_preprocessing_tuning_refitting",
+            "defined_draws_only": false,
+            "uncertainty_mode": "joint_refit",
+            "early_training_refitted": true
+          }
+        },
+        "model_failure_counts": {
+          "routine": 0,
+          "routine_b2m": 0,
+          "routine_cys": 0,
+          "routine_cys_b2m": 0
+        },
+        "contrast_failure_counts": {
+          "primary": 0,
+          "secondary": 0
+        }
+      }
+    },
+    "calibration_valid_counts": {
+      "fixed_training": {
+        "routine": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 500,
+          "calibration_slope": 500
+        },
+        "routine_b2m": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 500,
+          "calibration_slope": 500
+        },
+        "routine_cys": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 499,
+          "calibration_slope": 499
+        },
+        "routine_cys_b2m": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 500,
+          "calibration_slope": 500
+        }
+      },
+      "joint_refit": {
+        "routine": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 500,
+          "calibration_slope": 500
+        },
+        "routine_b2m": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 500,
+          "calibration_slope": 500
+        },
+        "routine_cys": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 500,
+          "calibration_slope": 500
+        },
+        "routine_cys_b2m": {
+          "calibration_in_large": 500,
+          "calibration_intercept": 500,
+          "calibration_slope": 500
+        }
+      }
+    },
+    "training_selected_penalties": {
+      "routine": 10.0,
+      "routine_b2m": 10.0,
+      "routine_cys": 10.0,
+      "routine_cys_b2m": 10.0
+    },
+    "source_count50": 50,
+    "scientific_module_count95": 95,
+    "historical_module_count90": 90,
+    "files_sha256": {
+      "RESULTS": "7e115b9f290ab7291153e3dcf29287a4da6e4eb864b16ae96b85ef9d617bfe12",
+      "MANIFEST": "99f0a00797ca5eac0da459b60774f2f0ed99cc785d481e008ce6e389c257bbb9",
+      "MODEL_ARTIFACTS": "9e1aaaf02dfbaff9bbb0adf0401093cb8d79806baf96d102731b80b12739810f",
+      "CALIBRATION_BINS": "e2ddf3eb21e80afea75257c127fdf6a9a0e351644fd2e9503451cfa6d2a0304e",
+      "FIXED_TRAINING_BOOTSTRAP_CSV": "cb8147fb85b1ca44f37cc91f70d317e85daf9913fe10bf5329f8036a799dd759",
+      "JOINT_REFIT_BOOTSTRAP_CSV": "fc9891ed7adeb768940d52f92ea117164166403739481ec3bdf8a41c8abb9b3c",
+      "PAIRED_BOOTSTRAP_CSV": "ff93c75f3772e0c54f6d00e86440b5d8ed4c1114d877e36292eab0ec5d396ccc"
+    },
+    "empirical_log_sha256": "a2845b70ba08829f36eb6e8ccaf454715e01c7c3bf2ba79f6988971232556ad4"
+  },
+  "checks": [
+    {
+      "name": "RESULTS exact bytes agree with successful marked job stdout",
+      "passed": true
+    },
+    {
+      "name": "MANIFEST exact bytes agree with successful marked job stdout",
+      "passed": true
+    },
+    {
+      "name": "MODEL_ARTIFACTS exact bytes agree with successful marked job stdout",
+      "passed": true
+    },
+    {
+      "name": "CALIBRATION_BINS exact bytes agree with successful marked job stdout",
+      "passed": true
+    },
+    {
+      "name": "FIXED_TRAINING_BOOTSTRAP_CSV exact bytes agree with successful marked job stdout",
+      "passed": true
+    },
+    {
+      "name": "JOINT_REFIT_BOOTSTRAP_CSV exact bytes agree with successful marked job stdout",
+      "passed": true
+    },
+    {
+      "name": "PAIRED_BOOTSTRAP_CSV exact bytes agree with successful marked job stdout",
+      "passed": true
+    },
+    {
+      "name": "plan ancestor of final science commit",
+      "passed": true
+    },
+    {
+      "name": "predeclared settings unchanged",
+      "passed": true
+    },
+    {
+      "name": "research and mode labels honest",
+      "passed": true
+    },
+    {
+      "name": "plan and lock hashes",
+      "passed": true
+    },
+    {
+      "name": "metadata pin ANALYSIS_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin WEIGHTS_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin WEIGHTS_RULES.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin METHOD_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin SUPPORT_GATE_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/ANALYSIS_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/LOCK.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/SOURCE_SPEC.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/RESULTS_SUMMARY.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin b2m31/SOURCE_INTAKE_AMENDMENT.md",
+      "passed": true
+    },
+    {
+      "name": "metadata pin nhanes04/SOURCE_DATA_SHA256.txt",
+      "passed": true
+    },
+    {
+      "name": "metadata pin freeze30/FROZEN_MODELS.json",
+      "passed": true
+    },
+    {
+      "name": "metadata pin IMPLEMENTATION_NOTES.md",
+      "passed": true
+    },
+    {
+      "name": "all90 historical scientific module hashes unchanged",
+      "passed": true
+    },
+    {
+      "name": "all95 actual scientific module hashes agree with empirical runner",
+      "passed": true
+    },
+    {
+      "name": "five additions solely forward32",
+      "passed": true
+    },
+    {
+      "name": "output exact SHA SOURCE_MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "output exact SHA MODEL_ARTIFACTS.json",
+      "passed": true
+    },
+    {
+      "name": "output exact SHA CALIBRATION_BINS.json",
+      "passed": true
+    },
+    {
+      "name": "output exact SHA fixed_training_bootstrap.csv",
+      "passed": true
+    },
+    {
+      "name": "output exact SHA joint_refit_bootstrap.csv",
+      "passed": true
+    },
+    {
+      "name": "output exact SHA paired_bootstrap.csv",
+      "passed": true
+    },
+    {
+      "name": "source manifest export SHA",
+      "passed": true
+    },
+    {
+      "name": "new source wrapper bound to final protocol",
+      "passed": true
+    },
+    {
+      "name": "all50 fresh required sources with consistent fingerprints",
+      "passed": true
+    },
+    {
+      "name": "25 historical public source data hashes fixed",
+      "passed": true
+    },
+    {
+      "name": "all mandatory source rows retrieved from official safe hosts",
+      "passed": true
+    },
+    {
+      "name": "existing two PDF403 denials remain explicit without retry",
+      "passed": true
+    },
+    {
+      "name": "zero participant and masked PSU overlap",
+      "passed": true
+    },
+    {
+      "name": "train full eligible common masked design identical",
+      "passed": true
+    },
+    {
+      "name": "train primary-domain support and native weight invariants",
+      "passed": true
+    },
+    {
+      "name": "late full eligible common masked design identical",
+      "passed": true
+    },
+    {
+      "name": "late primary-domain support and native weight invariants",
+      "passed": true
+    },
+    {
+      "name": "source gate exactly reconciles pass or block",
+      "passed": true
+    },
+    {
+      "name": "independent SHA early eligible3fold mapping",
+      "passed": true
+    },
+    {
+      "name": "independently queried final-science CI completed successfully",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.11) sciencehead in CI checkout",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.11)54 tests pass",
+      "passed": true
+    },
+    {
+      "name": "empirical sciencehead in CI checkout",
+      "passed": true
+    },
+    {
+      "name": "all blocks match independent successful-job fetch",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.13) sciencehead in CI checkout",
+      "passed": true
+    },
+    {
+      "name": "synthetic (3.13)54 tests pass",
+      "passed": true
+    },
+    {
+      "name": "computed fixed forward implementation settings",
+      "passed": true
+    },
+    {
+      "name": "split n events agree with source-qualified aggregate",
+      "passed": true
+    },
+    {
+      "name": "all500 paired attempts completed in successful log",
+      "passed": true
+    },
+    {
+      "name": "point flattened metrics and paired contrasts",
+      "passed": true
+    },
+    {
+      "name": "routine late point n weights and metric algebra",
+      "passed": true
+    },
+    {
+      "name": "routine calibration bins population and weighted moment reconstruction",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m late point n weights and metric algebra",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m calibration bins population and weighted moment reconstruction",
+      "passed": true
+    },
+    {
+      "name": "routine_cys late point n weights and metric algebra",
+      "passed": true
+    },
+    {
+      "name": "routine_cys calibration bins population and weighted moment reconstruction",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m late point n weights and metric algebra",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m calibration bins population and weighted moment reconstruction",
+      "passed": true
+    },
+    {
+      "name": "point4 arm statuses and artifact presence",
+      "passed": true
+    },
+    {
+      "name": "artifact training scope and no late leakage flags",
+      "passed": true
+    },
+    {
+      "name": "3innerfold totals and no PSU overlap",
+      "passed": true
+    },
+    {
+      "name": "routine feature layout coefficients and training-only scales",
+      "passed": true
+    },
+    {
+      "name": "routine final preprocessing independent aggregate moment match",
+      "passed": true
+    },
+    {
+      "name": "routine early-only lambda selection independently reconstructed",
+      "passed": true
+    },
+    {
+      "name": "routine final fit finite normalized and converged",
+      "passed": true
+    },
+    {
+      "name": "routine all9 early innerfits convergence and normalization",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m feature layout coefficients and training-only scales",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m final preprocessing independent aggregate moment match",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m early-only lambda selection independently reconstructed",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m final fit finite normalized and converged",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m all9 early innerfits convergence and normalization",
+      "passed": true
+    },
+    {
+      "name": "routine_cys feature layout coefficients and training-only scales",
+      "passed": true
+    },
+    {
+      "name": "routine_cys final preprocessing independent aggregate moment match",
+      "passed": true
+    },
+    {
+      "name": "routine_cys early-only lambda selection independently reconstructed",
+      "passed": true
+    },
+    {
+      "name": "routine_cys final fit finite normalized and converged",
+      "passed": true
+    },
+    {
+      "name": "routine_cys all9 early innerfits convergence and normalization",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m feature layout coefficients and training-only scales",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m final preprocessing independent aggregate moment match",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m early-only lambda selection independently reconstructed",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m final fit finite normalized and converged",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m all9 early innerfits convergence and normalization",
+      "passed": true
+    },
+    {
+      "name": "exact two separate uncertainty modes primaryjoint",
+      "passed": true
+    },
+    {
+      "name": "fixed_training500 ordered unique attempted replicates",
+      "passed": true
+    },
+    {
+      "name": "fixed_training all40 interval targets",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile primary|delta_auc",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile primary|delta_brier",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_b2m|auc",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_b2m|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_b2m|brier",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_b2m|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_b2m|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_b2m|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_b2m|observed",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_b2m|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_b2m|predicted",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys_b2m|auc",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys_b2m|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys_b2m|brier",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys_b2m|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys_b2m|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys_b2m|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys_b2m|observed",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys_b2m|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys_b2m|predicted",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys|auc",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys|brier",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys|observed",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine_cys|predicted",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine|auc",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine|brier",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine|observed",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile routine|predicted",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile secondary|delta_auc",
+      "passed": true
+    },
+    {
+      "name": "fixed_training independent percentile secondary|delta_brier",
+      "passed": true
+    },
+    {
+      "name": "fixed_training500 paired metrics and resampled observed risks",
+      "passed": true
+    },
+    {
+      "name": "fixed_training early resample usage flag",
+      "passed": true
+    },
+    {
+      "name": "fixed_training routine failures match retained statuses",
+      "passed": true
+    },
+    {
+      "name": "fixed_training routine_b2m failures match retained statuses",
+      "passed": true
+    },
+    {
+      "name": "fixed_training routine_cys failures match retained statuses",
+      "passed": true
+    },
+    {
+      "name": "fixed_training routine_cys_b2m failures match retained statuses",
+      "passed": true
+    },
+    {
+      "name": "fixed_training primary failures match paired statuses",
+      "passed": true
+    },
+    {
+      "name": "fixed_training secondary failures match paired statuses",
+      "passed": true
+    },
+    {
+      "name": "fixed_training valid nonnegative weight and positive-row summaries",
+      "passed": true
+    },
+    {
+      "name": "joint_refit500 ordered unique attempted replicates",
+      "passed": true
+    },
+    {
+      "name": "joint_refit all40 interval targets",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile primary|delta_auc",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile primary|delta_brier",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_b2m|auc",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_b2m|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_b2m|brier",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_b2m|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_b2m|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_b2m|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_b2m|observed",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_b2m|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_b2m|predicted",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys_b2m|auc",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys_b2m|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys_b2m|brier",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys_b2m|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys_b2m|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys_b2m|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys_b2m|observed",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys_b2m|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys_b2m|predicted",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys|auc",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys|brier",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys|observed",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine_cys|predicted",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine|auc",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine|bias_pp",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine|brier",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine|calibration_in_large",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine|calibration_intercept",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine|calibration_slope",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine|observed",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine|observed_expected",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile routine|predicted",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile secondary|delta_auc",
+      "passed": true
+    },
+    {
+      "name": "joint_refit independent percentile secondary|delta_brier",
+      "passed": true
+    },
+    {
+      "name": "joint_refit500 paired metrics and resampled observed risks",
+      "passed": true
+    },
+    {
+      "name": "joint_refit early resample usage flag",
+      "passed": true
+    },
+    {
+      "name": "joint_refit routine failures match retained statuses",
+      "passed": true
+    },
+    {
+      "name": "joint_refit routine_b2m failures match retained statuses",
+      "passed": true
+    },
+    {
+      "name": "joint_refit routine_cys failures match retained statuses",
+      "passed": true
+    },
+    {
+      "name": "joint_refit routine_cys_b2m failures match retained statuses",
+      "passed": true
+    },
+    {
+      "name": "joint_refit primary failures match paired statuses",
+      "passed": true
+    },
+    {
+      "name": "joint_refit secondary failures match paired statuses",
+      "passed": true
+    },
+    {
+      "name": "joint_refit valid nonnegative weight and positive-row summaries",
+      "passed": true
+    },
+    {
+      "name": "same exact late resampling summaries in both modes each500 paired draw",
+      "passed": true
+    },
+    {
+      "name": "late resample varies across500attempts",
+      "passed": true
+    },
+    {
+      "name": "fixed early weight summaries constant but joint vary",
+      "passed": true
+    },
+    {
+      "name": "fixed early summaries equal pointtraining source aggregate",
+      "passed": true
+    },
+    {
+      "name": "routine joint500 finalfit lambda selections retained separately",
+      "passed": true
+    },
+    {
+      "name": "routine_b2m joint500 finalfit lambda selections retained separately",
+      "passed": true
+    },
+    {
+      "name": "routine_cys joint500 finalfit lambda selections retained separately",
+      "passed": true
+    },
+    {
+      "name": "routine_cys_b2m joint500 finalfit lambda selections retained separately",
+      "passed": true
+    },
+    {
+      "name": "1000 paired export rows unique by mode and replicate",
+      "passed": true
+    },
+    {
+      "name": "all paired contrasts exactly reflect own uncertainty mode",
+      "passed": true
+    },
+    {
+      "name": "exported JSON aggregate-only no personID or prediction vector keys",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Retrospective baseline-calendar split, not operational prospective validation: early1999–2002 eight-year labels can mature in2007–2010, after late2003–2004 recruitment. Late labels are absent from fit, but training labels were not all available at the late baseline calendar.",
+    "Both periods and late outcomes were previously used. This is exploratory reused-cohort evaluation, not untouched or independent external validation; no frozen30 transport or clinical readiness claim.",
+    "Primary uncertainty is joint_refit. fixed_training conditions on one fitted early model and excludes training uncertainty; the two500-draw distributions are separate, not pooled or interchangeable.",
+    "The primary joint-refit upper Brier bound is only about1.3e-5 below zero. With500 Monte Carlo draws and this near-zero boundary, describe the result as limited exploratory support, not robust confirmation or a formal discovery; do not replace it with the narrower fixed-trained interval.",
+    "All80 percentile intervals are independently recomputed by sorted-order linear interpolation; finite-sample nominal coverage is not established for nonlinear penalized fitting, discrete tuning and AUC/calibration. Undefined metric-local draws remain disclosed.",
+    "Bootstrap holds the feature forms, domain, inner partition and observed measurements fixed. Assay/storage/calibration/prior-selection and unknown future-calendar uncertainty are excluded.",
+    "Individual assay batch/date/storage duration and release-specific Cys traceability are unavailable. Calendar differences cannot identify biological drift separately from storage/batch effects.",
+    "Source bytes were fetched/checked by the empirical runner. This audit reconciles exported fingerprints, locked historical hashes, exact stdout blocks and source-wrapper hashes; it is not an independent second download or local rehash of raw public records.",
+    "Only aggregates/source metadata/coefficients were read; no person records, XPT/ASCII/ZIP downloads, predictions or model refits. Point Brier/AUC and optimizer gradients cannot be independently recomputed from aggregates; checks cover arithmetic, source hashes, fitted layout, reported diagnostics and bin moments."
+  ]
+}

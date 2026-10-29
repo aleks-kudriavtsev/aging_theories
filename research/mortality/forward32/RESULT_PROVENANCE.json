@@ -1,0 +1,57 @@
+{
+  "schema": "forward32-provenance/1",
+  "plan_commit": "377778ca0ddbf48af5e0dc1735b88c24c6b8a11c",
+  "implementation_clarification_commit": "0a277179fbf3104f51086ad8899132e13d96071e",
+  "scientific_code_commit": "59b0626767c0169107652cc7b7d51a416c8e7668",
+  "scientific_run_id": 40917437691,
+  "empirical_job_id": 123601312507,
+  "actual_PR_merge_checkout_sha": "def39d99ab86bb6f7b022554bdb9f7cb077e3d27",
+  "scientific_python_files_matching_code_head": 95,
+  "historical_scientific_files_preserved": 90,
+  "tests_per_Python_version": 54,
+  "Python_versions": [
+    "3.11",
+    "3.13"
+  ],
+  "workbench_run_id": 40917437642,
+  "all_scientific_conclusions": "success",
+  "superseded_run_not_used": 40917121566,
+  "aggregate_transfer": "7 exact marked completed-job stdout JSON/CSV blocks; no participant vectors or ZIP",
+  "artifact": {
+    "id": 12916392469,
+    "url": "https://github.com/aleks-kudriavtsev/aging_theories/actions/runs/40917437691/artifacts/12916392469",
+    "bytes": 502193,
+    "api_zip_sha256": "dee1e75c8482d2b68021ee927e9b63446403d9c91ae99844316762b902bcaa49",
+    "expires": "2026-11-12T17:04:21Z",
+    "zip_downloaded": false
+  },
+  "file_sha256": {
+    "RESULTS_SUMMARY.json": "7e115b9f290ab7291153e3dcf29287a4da6e4eb864b16ae96b85ef9d617bfe12",
+    "SOURCE_MANIFEST.json": "99f0a00797ca5eac0da459b60774f2f0ed99cc785d481e008ce6e389c257bbb9",
+    "MODEL_ARTIFACTS.json": "9e1aaaf02dfbaff9bbb0adf0401093cb8d79806baf96d102731b80b12739810f",
+    "CALIBRATION_BINS.json": "e2ddf3eb21e80afea75257c127fdf6a9a0e351644fd2e9503451cfa6d2a0304e",
+    "fixed_training_bootstrap.csv": "cb8147fb85b1ca44f37cc91f70d317e85daf9913fe10bf5329f8036a799dd759",
+    "joint_refit_bootstrap.csv": "fc9891ed7adeb768940d52f92ea117164166403739481ec3bdf8a41c8abb9b3c",
+    "paired_bootstrap.csv": "ff93c75f3772e0c54f6d00e86440b5d8ed4c1114d877e36292eab0ec5d396ccc",
+    "INDEPENDENT_VERIFICATION.json": "6e3190261b47e0f0474876f85c0eb33792945cbd865b4a882a9f3b49f299b3e9",
+    "SOURCE_INDEPENDENT_VERIFICATION.json": "d3a53e05b85448cf3c845246e03d54f0094266d4cf0da73f36a922151fec2481"
+  },
+  "independent_audits": {
+    "numerical_passed": 203,
+    "numerical_failed": 0,
+    "source_passed": 380,
+    "source_failed": 0,
+    "raw_records_reprocessed": false
+  },
+  "documentation_only_head_CI": "skip; scientific CI associated with scientific head/identical95source hashes",
+  "latest_user_scope": {
+    "current_iteration": "finish32 allcause reliability",
+    "next_priority": "separate incremental marker assessment for up to5 leading defined causes by weighted mortality burden and actual events in an explicit cohort/horizon",
+    "joint_cause_integration": "deferred",
+    "Fine_Gray_benchmark": "deferred_not_started",
+    "new_cause_specific_model_fits_started": false,
+    "read_only_code_metadata_notes_only": true,
+    "historical_five_cause_engine_unchanged": true,
+    "scheduled_tasks_created": false
+  }
+}
