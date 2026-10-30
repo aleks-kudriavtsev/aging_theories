@@ -1,0 +1,11 @@
+{
+  "schema": "period39-persisted-audit-replay/1",
+  "command": "/usr/bin/python3 research/mortality/period39/verify_results.py --repo /workspace/aging_theories_period39_local --results research/mortality/period39 --out /tmp/period39_persisted_root_audit.json",
+  "python": "3.13.5",
+  "exit_code": 0,
+  "checks_passed": 10295,
+  "checks_total": 10295,
+  "saved_audit_sha256": "ad583d730884122f450dd27e697dd5f8ea18dffd2fc2ebbfa45dc719f41222fc",
+  "replay_audit_sha256": "ad583d730884122f450dd27e697dd5f8ea18dffd2fc2ebbfa45dc719f41222fc",
+  "audit_byte_identical": true
+}

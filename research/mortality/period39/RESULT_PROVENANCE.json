@@ -1,0 +1,111 @@
+{
+  "schema": "period39-result-provenance/1",
+  "base_commit": "20874fe7e106e30faa20b4cd498942dbe38ee063",
+  "protocol_commit": "c0a570e0ac40de94da8a05b53f5e9d80aaf7aacf",
+  "scientific_code_commit": "151fe91b1540b91926baf3b3cc782cc7515ae55b",
+  "branch": "research/period39-local",
+  "code_manifest_sha256": "f1aa57c37244fdbf06def5e2361696fabc7b4bdd63ed4159be9eeaada64bf8f7",
+  "execution": [
+    {
+      "command": "python -m research.mortality.period39.analyze --out /tmp/period39_run_151fe91/aggregate",
+      "exit_code": 0,
+      "python": "3.12.14"
+    },
+    {
+      "command": "python -m unittest tests.test_period39 tests.test_analyze39 -q",
+      "exit_code": 0,
+      "python": "3.12.14",
+      "tests_passed": 27
+    },
+    {
+      "command": "/usr/bin/python3 -m unittest tests.test_period39 tests.test_analyze39 -q",
+      "exit_code": 0,
+      "python": "3.13.5",
+      "tests_passed": 27
+    },
+    {
+      "command": "MPLCONFIGDIR=/tmp/period39_mpl_cache XDG_CACHE_HOME=/tmp/period39_font_cache python -m research.mortality.period39.plot --results /tmp/period39_run_151fe91/aggregate/RESULTS_SUMMARY.json --svg /tmp/period39_run_151fe91/PERIOD_REFERENCE_CACHECHECK.svg --png-preview /tmp/period39_run_151fe91/PERIOD_REFERENCE_CACHECHECK.png",
+      "exit_code": 0,
+      "python": "3.12.14"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "RESULTS_SUMMARY.json",
+      "sha256": "dd5e688effd6324fbc07315722c3c3603ca44ae25a6f535ece79b4e0a7ce5846"
+    },
+    {
+      "path": "REFERENCE_TABLE.csv",
+      "sha256": "5234470d6af5c0e3c449f8d8de0762c6e496494c4c5b5b02d8be45650e960f66"
+    },
+    {
+      "path": "run.log",
+      "sha256": "961523a6eead4cb07f9ad6dbcbf55ddeadc10f1235427add1d397bbf0564dcaf"
+    },
+    {
+      "path": "tests_python312.log",
+      "sha256": "620a60b8b0a6db078c0b044dcb49ed4d132ed541837acc143860bd040316fa37"
+    },
+    {
+      "path": "tests_python313.log",
+      "sha256": "93e12129e0781614a454adf778c6a90b2593ba1bc71bc73f8ecba861baf7dd26"
+    },
+    {
+      "path": "PERIOD_REFERENCE.svg",
+      "sha256": "0c12ac2b7dbd07894528f8dcc0322b1cd2ad6adac204156dc3cbde156e4cd77f"
+    },
+    {
+      "path": "PERIOD_REFERENCE.png",
+      "sha256": "78c280d2789426f56dcda6e280b15a879e17470101d93e728a66f275556080c9"
+    },
+    {
+      "path": "chart_initial.log",
+      "sha256": "5375bf48cb5b5735bcd0054265c4a399297a2deaa7bc9751963b3bc423af4c5e"
+    },
+    {
+      "path": "chart_clean.log",
+      "sha256": "2cb749fdcbe33316205bf30aae4189b27e592c18c29279a4dd55b091522e954e"
+    },
+    {
+      "path": "CHART_PROVENANCE.json",
+      "sha256": "6ccf583530a0b11c04912e4ddc483ff0a75e17bf6ca1a8361182ab00e4748566"
+    }
+  ],
+  "scope": "provisional_local_derived_population_period_reference_under_declared_units",
+  "clinical_validation": false,
+  "current_calendar_forecast": false,
+  "new_person_level_inputs": 0,
+  "publication": "local_only_no_push_PR_merge_deploy",
+  "independent_verification": {
+    "checks_passed": 10295,
+    "checks_total": 10295,
+    "negative_fixtures_rejected": 5,
+    "producer_imports_or_replays": false,
+    "files": [
+      {
+        "path": "verify_results.py",
+        "sha256": "64d662dbe9e22464eae93d4ce20f9e5492d6d0fe87d6987c803b173f4f1912e8"
+      },
+      {
+        "path": "INDEPENDENT_AUDIT.json",
+        "sha256": "ad583d730884122f450dd27e697dd5f8ea18dffd2fc2ebbfa45dc719f41222fc"
+      },
+      {
+        "path": "INDEPENDENT_AUDIT.md",
+        "sha256": "875c60f7408f0a0aa4c7e78e14e05ec0903b238ad19eb1ad83b32da8037ce4bd"
+      },
+      {
+        "path": "INDEPENDENT_REVIEW.md",
+        "sha256": "334b9ba2d06b9fba13df0593d2bc0b486c7dafa1195e2987bff19c1e96efe20b"
+      },
+      {
+        "path": "INDEPENDENT_NEGATIVE_CHECKS.json",
+        "sha256": "ff3d985c3f4e3df4409aa1f77a033e77211ae06b4621f5c2c8158a20c2fa9e1a"
+      },
+      {
+        "path": "PERSISTED_AUDIT_REPLAY.json",
+        "sha256": "cdf88ff1463b97b31aa9272f2ef243baca5e244736376381ae9aad7b594d8f96"
+      }
+    ]
+  }
+}

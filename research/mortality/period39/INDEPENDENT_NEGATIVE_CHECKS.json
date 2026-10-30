@@ -1,0 +1,56 @@
+{
+  "schema": "period39-independent-auditor-corruption-fixtures/1",
+  "passed": true,
+  "aggregate_outputs_only": true,
+  "original_sources_or_repository_modified": false,
+  "producer_imports_or_CLI": false,
+  "chart_checks_skipped_only_for_these_mutation_fixtures": true,
+  "fixtures": [
+    {
+      "id": "CF_decimal_corruption",
+      "rejected": true,
+      "failed_arithmetic_or_scope_checks": [
+        "row.0.85digit.constant_force.probability",
+        "row.0.bounds_order.constant_force",
+        "results.selected_rows_exact",
+        "CSV.0.decimal_exact_JSON.CF_probability"
+      ],
+      "updated_result_and_CSV_log_hashes_consistent": true
+    },
+    {
+      "id": "CSV_rounding_lower_corruption",
+      "rejected": true,
+      "failed_arithmetic_or_scope_checks": [
+        "CSV.0.decimal_exact_JSON.CF_rounding_lower",
+        "CSV.0.independent.CF_rounding_lower"
+      ],
+      "updated_result_and_CSV_log_hashes_consistent": true
+    },
+    {
+      "id": "age80_support_corruption",
+      "rejected": true,
+      "failed_arithmetic_or_scope_checks": [
+        "row.163.attained_ages",
+        "results.selected_rows_exact",
+        "age80_10_support.M"
+      ],
+      "updated_result_and_CSV_log_hashes_consistent": true
+    },
+    {
+      "id": "chain_pass_claim_corruption",
+      "rejected": true,
+      "failed_arithmetic_or_scope_checks": [
+        "chain.0.declared.constant_force"
+      ],
+      "updated_result_and_CSV_log_hashes_consistent": true
+    },
+    {
+      "id": "biomarker_claim_corruption",
+      "rejected": true,
+      "failed_arithmetic_or_scope_checks": [
+        "results.false.biomarker_adjusted"
+      ],
+      "updated_result_and_CSV_log_hashes_consistent": true
+    }
+  ]
+}
