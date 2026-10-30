@@ -1,0 +1,20 @@
+{
+  "schema": "period39-review-manifest/1",
+  "files": [
+    {
+      "path": "METHOD_REVIEW.md",
+      "sha256": "3e2cac22d71d6ae51db2656574d92d5cc2fc68c5398b22dbc4db9934b58abd72"
+    },
+    {
+      "path": "SHFM_REVIEW.md",
+      "sha256": "cedc4dc8d6a6dad344b9a2ae882694729985b65c3a987310ad12de23e5640f7e"
+    },
+    {
+      "path": "SHFM_RIGHTS.md",
+      "sha256": "ef583d4d887ea7e8bc416625e1fdc9e061eee0ae2b98236f75d9b63306136849"
+    }
+  ],
+  "original_RDA_bytes_retrieved": false,
+  "SHFM_5year_model_reproduced": false,
+  "current_numerical_scope": "local_derived_period_reference_under_declared_units_and_assumptions"
+}
