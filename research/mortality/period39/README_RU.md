@@ -130,6 +130,11 @@ MPLCONFIGDIR=/tmp/period39_mpl_cache XDG_CACHE_HOME=/tmp/period39_font_cache pyt
 устранены заданием writable cache environment при повторном **только chart**
 экспорте; SVG/PNG оказались побайтно идентичны. Численный164grid не повторялся.
 ГрафикPNG визуально осмотрен, provenance вCHART_PROVENANCE.json.
+Стандартный MatplotlibSVG содержит конечные пробелы внутри многострочных path
+attributes. ПервичныйGit whitespacecheck их отметил; исходные audited bytes
+сохранены. Локальная.gitattributes исключает только generatedSVG из whitespace
+lint; source/data/schema/численные проверки остаются прежними. Полная проверка
+остального diff после этого прошла. Это не изменение рисунка или результатов.
 
 Протокол: `c0a570e0ac40de94da8a05b53f5e9d80aaf7aacf`.
 Scientific code: `151fe91b1540b91926baf3b3cc782cc7515ae55b`.
