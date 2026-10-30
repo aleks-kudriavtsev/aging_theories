@@ -1,0 +1,25 @@
+name: Period39 offline source and arithmetic checks
+on:
+  pull_request:
+    paths: ['research/mortality/period39/**', 'tests/test_period39.py', 'tests/test_analyze39.py', '.github/workflows/period39-checks.yml']
+  push:
+    branches: [main, research/period39-main]
+    paths: ['research/mortality/period39/**', 'tests/test_period39.py', 'tests/test_analyze39.py', '.github/workflows/period39-checks.yml']
+permissions:
+  contents: read
+jobs:
+  scientific:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest tests.test_period39 tests.test_analyze39 -v
+      - name: Independently verify all frozen numerical aggregates and cached source bytes
+        run: python research/mortality/period39/verify_publication.py --repo . --results research/mortality/period39 --out "$RUNNER_TEMP/period39_audit.json"

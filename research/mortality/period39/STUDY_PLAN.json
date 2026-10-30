@@ -1,0 +1,105 @@
+{
+  "schema": "period39-study-plan/1",
+  "date": "2026-10-30",
+  "base_commit": "20874fe7e106e30faa20b4cd498942dbe38ee063",
+  "target": {
+    "country": "RUS",
+    "exact_baseline_ages_inclusive": [
+      40,
+      80
+    ],
+    "source_sexes": [
+      "F",
+      "M"
+    ],
+    "horizons_years": [
+      5,
+      10
+    ]
+  },
+  "source": {
+    "manifest": "SOURCE_MANIFEST.json",
+    "manifest_sha256": "13569348125ba78e44ec08168541c1d45825cd1a00d06518845c1b2182e11680",
+    "csv": "data/mortality/mx_qx_usa_deu_rus.csv",
+    "csv_sha256": "59104bce947c3ab1132893e71decf946af3725c151fa5ff6f64bef440d4b54a2",
+    "year": 2023,
+    "series": "estimate",
+    "required_age_rows_inclusive": [
+      40,
+      89
+    ],
+    "required_source_rows": 100,
+    "schema": [
+      "country",
+      "sex",
+      "year",
+      "age",
+      "mx",
+      "qx",
+      "series"
+    ],
+    "rate_unit": "annual_deaths_per_person_year",
+    "mx_decimals": 6,
+    "qx_decimals": 6,
+    "stored_qx_versus_recomputed_CF_tolerance": 1e-06,
+    "latest_year_claim": "latest_in_pinned_local_CSV_only_not_current_official_release",
+    "source_is_UN_model_estimate_not_registered2023deaths": true
+  },
+  "estimand": {
+    "kind": "population_period_reference_conditional_alive_at_exact_birthday_not_individual_forecast",
+    "calendar_assumption": "use2023age_specific_schedule_at_all_future_attained_ages",
+    "year_intervals": "start_age through start_age+horizon-1; end_at_birthday_start_age+horizon",
+    "source_population_includes_diseased": true,
+    "not_disease_free_or_stage_specific_baseline": true,
+    "sexes_not_averaged_without_population_weights": true,
+    "clinical_validation": false
+  },
+  "prespecified_methods": {
+    "primary": "constant_force_approximation Q=1-exp(-sum_age_mx)",
+    "secondary": "UDD_ax_0.5 one_year_q=mx/(1+0.5*mx); Q=1-product(1-q); not chosen by outcomes",
+    "rounding_sensitivity": "independent source_mx rounded_to_nearest6decimals; each originalmx in[max(0,mx-0.5e-6),mx+0.5e-6]; propagate monotone_CF_and_UDD; not_CI",
+    "stored_qx_diagnostic": "1-product(1-stored_author_qx) and delta_vs_recomputed_CF; never_official_WPP_qx",
+    "no_hazard_fitting": true,
+    "no_individual_calibration_or_outcome_metrics": true
+  },
+  "output_plan": {
+    "reference_grid_rows": 164,
+    "table": "all41integerages*2sexes*2horizons;aggregates_only",
+    "report_selected_ages": [
+      40,
+      50,
+      60,
+      70,
+      80
+    ],
+    "horizon_coherence": "10y>=5y",
+    "chaining": "Q_a10=Q_a5+(1-Q_a5)*Q_a+5,5 for start_age40..75;72checks",
+    "age_order": "diagnostic_only_no_smoothing_or_forced_monotonicity",
+    "rounding_width_guard": "each_method_width<=horizon*1e-6*(1+1e-5) on observed_rates; report_not_infer_epidemiological_uncertainty",
+    "plot": "optional_export_staticSVG_from_frozen_primary_grid; clearly_period2023_not_person_forecast"
+  },
+  "strict_adapter": {
+    "explicit_age_origin": "exact_birthday",
+    "integer_age_only": true,
+    "explicit_period_assumption_required": true,
+    "no_unknown_fields_or_implicit_units": true,
+    "unsupported_sex_B_or_country_year_or_horizon_rejected": true,
+    "biomarker_and_disease_free_use_fields_rejected": true,
+    "no_interpolation_extrapolation_or_prob_normalization": true
+  },
+  "parallel_SHFM_review": "read_only_official_updated2013source; no reproduced5yearmortalitywithoutcompletebaselines/coefficients/rights",
+  "verification": [
+    "fake_constant_rate_hand_calculated_fixture",
+    "independent85digitDecimal_equations",
+    "input/schema/age80through89/unit/clock/purpose_negative_tests",
+    "all_source_hashes_checked_before_CSV_parse",
+    "protocol_code_source_and_result_hashes_Git_pins",
+    "independent_aggregate_verifier_and_corruption_cases"
+  ],
+  "preservation": {
+    "old_models_results_main_reportv3_presentation_unchanged": true,
+    "no_new_push_PR_merge_deploy": true,
+    "no_accounts_terms_contacts_restricted_data": true,
+    "no_ZIP_or_denied_source_retries": true
+  }
+}

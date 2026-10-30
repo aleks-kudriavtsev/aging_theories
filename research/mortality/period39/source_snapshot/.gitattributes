@@ -1,0 +1,2 @@
+# Cached source uses CRLF; preserve exact SHA256 and allow its original line endings.
+data/mortality/mx_qx_usa_deu_rus.csv -text whitespace=cr-at-eol

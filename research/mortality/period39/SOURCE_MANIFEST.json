@@ -1,0 +1,28 @@
+{
+  "schema": "period39-source-manifest/1",
+  "source_root": "/workspace/aging_biomarkers",
+  "source_commit": "31fff9249237a33d9a10ac107d6710a04bfec517",
+  "files": [
+    {
+      "path": "data/mortality/mx_qx_usa_deu_rus.csv",
+      "sha256": "59104bce947c3ab1132893e71decf946af3725c151fa5ff6f64bef440d4b54a2"
+    },
+    {
+      "path": "data/mortality/README.md",
+      "sha256": "f54f34b69e67e3c25ce0a8b4cbf95b6640d42a2d3dd0d4abbbf2bb72b90101ed"
+    },
+    {
+      "path": "docs/12_cross_country_mortality.md",
+      "sha256": "ba87e883a6a149c49d1c74d00d0eb2f105c2e3c46e290c603368fed761a55268"
+    },
+    {
+      "path": "tools/fetch_wpp_mortality.py",
+      "sha256": "2b652175319688d7f0932db44d2a732ba5f349e897c08727604cab06379a8519"
+    }
+  ],
+  "official_raw_RDA_sha256": null,
+  "declared_mx_unit": "annual_deaths_per_person_year",
+  "verified_unit_level": "local_extractor_and_repo_docs; official_raw_RDA_numeric_scaling_not_reverified",
+  "qx_is_author_derived_not_official": true,
+  "new_raw_source_downloads": false
+}

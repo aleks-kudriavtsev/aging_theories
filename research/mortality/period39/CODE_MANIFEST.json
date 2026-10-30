@@ -1,0 +1,62 @@
+{
+  "schema": "period39-code-manifest/1",
+  "protocol_commit": "c0a570e0ac40de94da8a05b53f5e9d80aaf7aacf",
+  "files": [
+    {
+      "path": "research/mortality/period39/IMPLEMENTATION_NOTES_RU.md",
+      "sha256": "3f249d02d0aed04b4bb8c29a9c1a6a9848bf09df73daa8a2c1d926b10e4afd94"
+    },
+    {
+      "path": "research/mortality/period39/METHOD_REVIEW.md",
+      "sha256": "3e2cac22d71d6ae51db2656574d92d5cc2fc68c5398b22dbc4db9934b58abd72"
+    },
+    {
+      "path": "research/mortality/period39/PROTOCOL_RU.md",
+      "sha256": "4cd07c55297d103a7d150d724344b53fe604660d51f816b7eb30df2e21087096"
+    },
+    {
+      "path": "research/mortality/period39/REVIEW_MANIFEST.json",
+      "sha256": "a9084b47e99ff2270c726a6cbb3efc53da6cc1afc80987ac1b217a853c9d748c"
+    },
+    {
+      "path": "research/mortality/period39/SHFM_REVIEW.md",
+      "sha256": "cedc4dc8d6a6dad344b9a2ae882694729985b65c3a987310ad12de23e5640f7e"
+    },
+    {
+      "path": "research/mortality/period39/SHFM_RIGHTS.md",
+      "sha256": "ef583d4d887ea7e8bc416625e1fdc9e061eee0ae2b98236f75d9b63306136849"
+    },
+    {
+      "path": "research/mortality/period39/SOURCE_MANIFEST.json",
+      "sha256": "13569348125ba78e44ec08168541c1d45825cd1a00d06518845c1b2182e11680"
+    },
+    {
+      "path": "research/mortality/period39/STUDY_PLAN.json",
+      "sha256": "3c93c327c56a86a2015ad2d1f0e13d2041246fb8832655eccbb15d5ace864731"
+    },
+    {
+      "path": "research/mortality/period39/__init__.py",
+      "sha256": "af738869c09c57ec95ce924d0bcb04839e151fa218db389c4174573411caef56"
+    },
+    {
+      "path": "research/mortality/period39/analyze.py",
+      "sha256": "e23b3cb61ab92495e75c8425c8cbf49cf7da34ccc6e953675f7c065c8944157f"
+    },
+    {
+      "path": "research/mortality/period39/plot.py",
+      "sha256": "51edb85829b20bf4e8ea91817eefb67011e9bdb49414b8c457773a7b5801e686"
+    },
+    {
+      "path": "research/mortality/period39/reference.py",
+      "sha256": "a1ab2c473d7ee20d273555a00bff577d0474191dfc4896ae219398b87cd8c6ce"
+    },
+    {
+      "path": "tests/test_analyze39.py",
+      "sha256": "9d41ad0871d5a6f0d0cbc00b711daf618614f81cfb483fd79f1d6ac1ff59467e"
+    },
+    {
+      "path": "tests/test_period39.py",
+      "sha256": "e9571f61be72870b748893c6a21198a614152fbb149b850e60e38231790c7596"
+    }
+  ]
+}

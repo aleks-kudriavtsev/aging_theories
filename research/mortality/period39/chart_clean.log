@@ -1,0 +1,1 @@
+{"schema": "period39-chart-provenance/1", "source_results_sha256": "dd5e688effd6324fbc07315722c3c3603ca44ae25a6f535ece79b4e0a7ce5846", "svg_sha256": "0c12ac2b7dbd07894528f8dcc0322b1cd2ad6adac204156dc3cbde156e4cd77f", "png_sha256": "78c280d2789426f56dcda6e280b15a879e17470101d93e728a66f275556080c9", "matplotlib_version": "3.10.8", "clinical_validation": false}

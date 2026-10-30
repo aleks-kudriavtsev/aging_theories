@@ -1,0 +1,3 @@
+# Preserve the audited, byte-exact Matplotlib SVG, including coordinate spacing.
+# Source/data/schema checks remain enabled; only generated SVG whitespace lint is disabled.
+PERIOD_REFERENCE.svg -whitespace

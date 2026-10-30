@@ -1,0 +1,63 @@
+{
+  "schema": "period39-independent-compact-audit/1",
+  "passed": true,
+  "checks_passed": 10295,
+  "checks_total": 10295,
+  "failures": [],
+  "scientific_commit": "151fe91b1540b91926baf3b3cc782cc7515ae55b",
+  "protocol_commit": "c0a570e0ac40de94da8a05b53f5e9d80aaf7aacf",
+  "source_commit": "31fff9249237a33d9a10ac107d6710a04bfec517",
+  "execution_origin": "local",
+  "producer_imports_or_replays": false,
+  "new_network_or_person_data": false,
+  "charts_checked": true,
+  "hashes": {
+    "result_sha256": "dd5e688effd6324fbc07315722c3c3603ca44ae25a6f535ece79b4e0a7ce5846",
+    "reference_csv_sha256": "5234470d6af5c0e3c449f8d8de0762c6e496494c4c5b5b02d8be45650e960f66",
+    "code_manifest_sha256": "f1aa57c37244fdbf06def5e2361696fabc7b4bdd63ed4159be9eeaada64bf8f7",
+    "source_manifest_sha256": "13569348125ba78e44ec08168541c1d45825cd1a00d06518845c1b2182e11680",
+    "plan_sha256": "3c93c327c56a86a2015ad2d1f0e13d2041246fb8832655eccbb15d5ace864731",
+    "svg_sha256": "0c12ac2b7dbd07894528f8dcc0322b1cd2ad6adac204156dc3cbde156e4cd77f",
+    "png_sha256": "78c280d2789426f56dcda6e280b15a879e17470101d93e728a66f275556080c9"
+  },
+  "checked_counts": {
+    "code_pins": 14,
+    "protocol_files": 3,
+    "source_pins": 4,
+    "target_source_rows": 100,
+    "reference_cells": 164,
+    "selected_reference_cells": 20,
+    "methods_per_cell": 2,
+    "chaining_rows": 72,
+    "chaining_method_checks": 144,
+    "horizon_coherence_checks": 164,
+    "review_pins": 3
+  },
+  "independent_reference": {
+    "decimal_digits": 85,
+    "CF_form": "product_of_annual_exponential_survivals",
+    "UDD_form": "exact_Fraction_product_(2-m)/(2+m)",
+    "stored_qx_form": "exact_Fraction_survival_product",
+    "max_absolute_decimal_error": "4E-85",
+    "decimal_absolute_comparison_tolerance": "3E-83",
+    "max_float_error": 0.0,
+    "max_one_year_stored_qx_rounding_error": "8.917781556398804504019853252780953115764825731806130600609642453721487468943022E-7",
+    "max_float_chain_error": 1.1102230246251565e-16
+  },
+  "diagnostics": {
+    "max_UDD_CF_absolute_difference": 0.00048584871375179084,
+    "max_stored_qx_CF_absolute_difference": 2.3495934003669877e-06,
+    "rounding_envelope_max_width": {
+      "constant_force": 9.715204115932907e-06,
+      "UDD_ax_0_5": 9.715224846756215e-06
+    },
+    "age_decreases_count": 0
+  },
+  "limits": [
+    "Conditional provisional local-derived population period reference under declared annual units; original UN RDA bytes and numeric scaling are not reauthenticated. Hashes authenticate local files and pinned Git blobs only.",
+    "Calendar2023 rates are held at future attained ages. This is not a current-calendar or cohort forecast, disease-free/stage baseline, personalized prediction, biomarker model or clinical validation. Mixed-population all-cause mortality must not be added to postdiagnosis all-cause risk.",
+    "CF and UDD are predeclared within-age assumptions. Rounded-mx box envelopes are arithmetic sensitivity bounds, not stochastic confidence intervals or forecasts; method differences do not quantify all model uncertainty.",
+    "SHFM updated2013 five-year reproduction remains blocked/unperformed; source/rights reviews are preserved, with no model code or numerical baselines inferred.",
+    "Saved local logs labelled Python312/313 show27 tests/OK; plain log text alone does not authenticate interpreter binaries or remote CI. Chart checks authenticate bytes/source-SHA linkage, not independent rendering or epidemiological validity."
+  ]
+}
